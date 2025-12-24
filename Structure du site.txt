@@ -1,0 +1,16 @@
+/
+├── index.html
+├── portfolio.html
+├── prestations.html
+├── contact.html
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       └── scripts.js
+└── assets/
+    └── img/
+        ├── logo-placeholder.svg
+        ├── about-portrait-placeholder.jpg  // remplacer ici par votre photo
+        ├── hero-banner-placeholder.jpg    // remplacer ici par votre photo
+        └── gallery-placeholders.jpg (x15) // remplacer ici par vos photos
