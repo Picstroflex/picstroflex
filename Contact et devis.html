@@ -4,22 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact & Devis | Picstroflex Photographie</title>
-    <meta name="description" content="Contactez Picstroflex pour toute demande de renseignement ou remplissez le formulaire détaillé pour obtenir un devis personnalisé.">
+    <meta name="description" content="Contactez Picstroflex pour toute demande de renseignement ou obtenez un devis personnalisé.">
 
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-<header id="main-header" class="header-opaque">
-    <!-- Header -->
-</header>
+<header id="main-header" class="header-opaque"></header>
 
 <main>
 
 <section class="page-intro container fade-in-up">
     <h1>Contactez-moi</h1>
     <p class="intro-text">
-        J'étudie chaque projet avec soin. Envoyez-moi un message via le formulaire ci-dessous.
+        J'étudie chaque projet avec soin. Remplissez le formulaire ci-dessous pour obtenir un devis personnalisé.
     </p>
 </section>
 
@@ -27,13 +25,9 @@
 
 <!-- FORMULAIRE -->
 <div class="form-container fade-in">
-    <h2 id="devis-form">Demande de Devis Détaillée</h2>
+    <h2 id="devis-form">Demande de Devis</h2>
 
-    <form 
-        action="https://formspree.io/f/mdanvdwy"
-        method="POST"
-        class="devis-form"
-    >
+    <form action="https://formspree.io/f/mdanvdwy" method="POST" class="devis-form">
 
         <div class="form-group">
             <label for="nom">Nom complet *</label>
@@ -53,12 +47,12 @@
         <div class="form-group half-width">
             <label for="prestation">Type de prestation *</label>
             <select id="prestation" name="prestation" required>
-                <option value="">-- Choisir un service --</option>
-                <option value="Reportage événementiel">Reportage Événementiel</option>
-                <option value="Shooting extérieur">Shooting Extérieur / Nature</option>
-                <option value="Portrait">Portrait Professionnel / Artistique</option>
-                <option value="Photographie sportive">Photographie Sportive</option>
-                <option value="Autre">Autre / Demande spécifique</option>
+                <option value="">-- Choisir --</option>
+                <option value="evenementiel">Reportage événementiel</option>
+                <option value="exterieur">Shooting extérieur</option>
+                <option value="portrait">Portrait</option>
+                <option value="sport">Sport</option>
+                <option value="autre">Autre</option>
             </select>
         </div>
 
@@ -69,64 +63,56 @@
 
         <div class="form-group">
             <label for="lieu">Lieu</label>
-            <input type="text" id="lieu" name="lieu" placeholder="Ville, région ou pays">
+            <input type="text" id="lieu" name="lieu" placeholder="Ville / Région">
         </div>
 
         <div class="form-group">
-            <label for="message">Message détaillé *</label>
-            <textarea 
-                id="message" 
-                name="message" 
-                rows="5" 
-                required
-                placeholder="Décrivez votre projet (date, durée, budget estimé...)">
-            </textarea>
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
         </div>
 
-        <!-- Anti-spam Formspree -->
-        <input type="hidden" name="_subject" value="Nouvelle demande de devis - Picstroflex">
+        <!-- Anti-spam invisible -->
         <input type="text" name="_gotcha" style="display:none">
 
+        <!-- Page de confirmation (optionnel) -->
+        <input type="hidden" name="_redirect" value="merci.html">
+
         <button type="submit" class="btn btn-primary btn-submit">
-            Envoyer ma demande
+            Envoyer la demande
         </button>
 
         <p class="small-info">* Champs obligatoires</p>
     </form>
 </div>
 
-<!-- INFOS -->
+<!-- INFOS + MAP -->
 <div class="info-map-container fade-in">
-    <h2>Coordonnées & Localisation</h2>
+    <h2>Coordonnées</h2>
 
     <div class="contact-info">
-        <p><strong>Email :</strong> picstroflex@gmail.com</p>
+        <p><strong>Email :</strong> <a href="mailto:picstroflex@gmail.com">picstroflex@gmail.com</a></p>
         <p><strong>Téléphone :</strong> +33 7 82 24 35 82</p>
         <p><strong>Basé à :</strong> Paris, France</p>
     </div>
 
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2627.027!2d2.3488!3d48.8588"
-        width="100%" 
-        height="300" 
-        style="border:0;" 
-        allowfullscreen 
-        loading="lazy">
-    </iframe>
+    <div class="map-placeholder">
+        <iframe
+            src="https://www.google.com/maps?q=Paris,France&output=embed"
+            width="100%"
+            height="300"
+            style="border:0;"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
 </div>
 
 </section>
+
 </main>
 
-<footer class="main-footer">
-    <!-- Footer -->
-</footer>
+<footer class="main-footer"></footer>
 
 <script src="assets/js/scripts.js"></script>
-</body>
-</html>
-
-
-    <script src="assets/js/scripts.js"></script>
 </body>
 </html>
