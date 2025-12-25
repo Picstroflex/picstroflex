@@ -1,16 +1,19 @@
-/
-├── index.html
-├── portfolio.html
-├── prestations.html
-├── contact.html
+picstroflex-site/
+├── index.html                 # Page d'accueil
+├── contact-devis.html         # Page contact / formulaire de devis
+├── portfolio.html             # Page portfolio
+├── sitemap.xml                # Sitemap pour Google Search Console
+├── robots.txt                 # Fichier robots pour SEO
 ├── assets/
 │   ├── css/
-│   │   └── style.css
-│   └── js/
-│       └── scripts.js
-└── assets/
-    └── img/
-        ├── logo-placeholder.svg
-        ├── about-portrait-placeholder.jpg  // remplacer ici par votre photo
-        ├── hero-banner-placeholder.jpg    // remplacer ici par votre photo
-        └── gallery-placeholders.jpg (x15) // remplacer ici par vos photos
+│   │   └── style.css          # Styles principaux
+│   ├── js/
+│   │   └── scripts.js         # Scripts JS éventuels
+│   └── img/
+│       ├── logo.svg           # Logo du site
+│       ├── hero-banner.jpg    # Bannière principale
+│       ├── about-portrait.jpg # Portrait du photographe
+│       ├── gallery1.jpg       # Photos portfolio
+│       ├── gallery2.jpg
+│       ├── gallery3.jpg
+│       └── ... (jusqu'à gallery15.jpg)
