@@ -1,7 +1,7 @@
 picstroflex-site/
-├── index.html                 # Page d'accueil
-├── contact-devis.html         # Page contact / formulaire de devis
-├── presentations.html         # prestations
+├── index.html                 # Page d'accueil | Menu : Accueil / Présentations / Réserver
+├── presentations.html         # Page prestations | Menu : Accueil / Présentations / Réserver
+├── contact-devis.html         # Page contact / formulaire de devis | Menu : Accueil / Présentations / Réserver
 ├── sitemap.xml                # Sitemap pour Google Search Console
 ├── robots.txt                 # Fichier robots pour SEO
 ├── assets/
@@ -13,7 +13,18 @@ picstroflex-site/
 │       ├── logo.svg           # Logo du site
 │       ├── hero-banner.jpg    # Bannière principale
 │       ├── about-portrait.jpg # Portrait du photographe
-│       ├── gallery1.jpg       # Photos portfolio
+│       ├── gallery1.jpg       # Photo portfolio
 │       ├── gallery2.jpg
 │       ├── gallery3.jpg
-│       └── ... (jusqu'à gallery15.jpg)
+│       ├── gallery4.jpg
+│       ├── gallery5.jpg
+│       ├── gallery6.jpg
+│       ├── gallery7.jpg
+│       ├── gallery8.jpg
+│       ├── gallery9.jpg
+│       ├── gallery10.jpg
+│       ├── gallery11.jpg
+│       ├── gallery12.jpg
+│       ├── gallery13.jpg
+│       ├── gallery14.jpg
+│       └── gallery15.jpg
