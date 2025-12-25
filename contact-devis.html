@@ -26,12 +26,20 @@
 </head>
 
 <body>
-
-<header id="main-header" class="header-opaque"></header>
+<header id="main-header" class="header-opaque">
+    <!-- Header content, logo et navigation -->
+    <nav class="nav-container">
+        <a href="index.html" class="logo">Picstroflex</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="presentations.html">Présentations</a></li>
+            <li><a href="contact-devis.html">Réserver</a></li>
+        </ul>
+    </nav>
+</header>
 
 <main>
 
-<!-- H1 PRINCIPAL -->
 <section class="page-intro container fade-in-up">
     <h1>Photographie artistique et commande en Île-de-France</h1>
     <p class="intro-text">
@@ -43,8 +51,6 @@
 
 <!-- FORMULAIRE -->
 <div class="form-container fade-in">
-
-    <!-- H2 FORMULAIRE -->
     <h2 id="devis-form">Formulaire de devis</h2>
 
     <form action="https://formspree.io/f/mdanvdwy" method="POST" class="devis-form">
@@ -97,10 +103,7 @@
         <!-- Redirection -->
         <input type="hidden" name="_redirect" value="merci.html">
 
-        <button type="submit" class="btn btn-primary btn-submit">
-            Envoyer la demande
-        </button>
-
+        <button type="submit" class="btn btn-primary btn-submit">Envoyer la demande</button>
         <p class="small-info">* Champs obligatoires</p>
     </form>
 </div>
@@ -112,15 +115,8 @@
     <div class="contact-info">
         <p><strong>Email :</strong> <a href="mailto:picstroflex@gmail.com">picstroflex@gmail.com</a></p>
         <p><strong>Téléphone :</strong> +33 7 82 24 35 82</p>
-        <p><strong>Localisation :</strong> Paris – Île-de-France</p>
-
-        <!-- INSTAGRAM -->
-        <p>
-            <strong>Instagram :</strong>
-            <a href="https://www.instagram.com/picstroflex/" target="_blank" rel="noopener noreferrer">
-                @picstroflex
-            </a>
-        </p>
+        <p><strong>Localisation :</strong> Gif-sur-Yvette – Île-de-France</p>
+        <p><strong>Instagram :</strong> <a href="https://www.instagram.com/picstroflex/" target="_blank" rel="noopener noreferrer">@picstroflex</a></p>
     </div>
 
     <div class="map-placeholder">
@@ -138,7 +134,9 @@
 
 </main>
 
-<footer class="main-footer"></footer>
+<footer class="main-footer">
+    <p>&copy; 2025 Picstroflex. Tous droits réservés.</p>
+</footer>
 
 <script src="assets/js/scripts.js"></script>
 </body>
