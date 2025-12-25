@@ -146,6 +146,26 @@
             .hero-content .slogan { font-size: 1.2rem; }
             .btn { display: block; margin: 15px auto; width: 80%; max-width: 300px; }
         }
+
+        /* Force le widget darkmode à être visible */
+        .darkmode--activated img, .darkmode-toggle {
+            z-index: 9999 !important;
+        }
+        .darkmode-toggle {
+            background-color: #fff !important;
+            border: 2px solid #333 !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+            width: 60px !important;
+            height: 60px !important;
+            border-radius: 50% !important;
+            font-size: 24px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+        .darkmode-ignore {
+            background-color: transparent !important;
+        }
     </style>
 
     <!-- Ton style.css existant -->
@@ -209,4 +229,56 @@
     <section class="cta-section container">
         <h2>Prêt(e) à capturer vos moments uniques ?</h2>
         <p>Contactez-moi pour un devis personnalisé ou réservez directement via Instagram.</p>
-        <a
+        <a href="contact-devis.html" class="btn btn-primary btn-large">Demande de Devis</a>
+        <p>Vous pouvez également me contacter via <a href="https://www.instagram.com/picstroflex/" target="_blank" rel="noopener">@picstroflex</a></p>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="container footer-content">
+        <div class="footer-col logo-col">
+            <a href="index.html" class="logo-footer">Picstroflex</a>
+            <img src="assets/logo.png" alt="Copyright Picstroflex" style="max-width:150px; margin-top:5px;">
+        </div>
+        <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="presentations.html">Présentations</a></li>
+                <li><a href="contact-devis.html">Réserver</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contact & Réseaux</h4>
+            <p>Email : 
+                <span id="email-text">picstroflex@gmail.com</span>
+                <button onclick="navigator.clipboard.writeText('picstroflex@gmail.com')">Copier</button>
+            </p>
+            <p>Téléphone : +33 7 82 24 35 82</p>
+            <p>Instagram : <a href="https://www.instagram.com/picstroflex/" target="_blank" rel="noopener">@picstroflex</a></p>
+        </div>
+    </div>
+</footer>
+
+<!-- Chargement et activation du Dark Mode (corrigé) -->
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    new Darkmode({
+      bottom: '32px',
+      right: '32px',
+      time: '0.3s',
+      mixColor: '#fff',
+      backgroundColor: '#fff',
+      buttonColorDark: '#100f2c',
+      buttonColorLight: '#fff',
+      label: '🌓',
+      saveInCookies: true,
+    }).showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+</body>
+</html>
