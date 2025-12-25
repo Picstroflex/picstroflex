@@ -4,149 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO TITLE -->
-    <title>Photographie artistique à Gif-sur-Yvette, Essonne 91190, France - Picstroflex</title>
-
-    <!-- META DESCRIPTION -->
+    <title>Photographie artistique à Gif-sur-Yvette, Essonne - Picstroflex</title>
     <meta name="description" content="Photographe en région parisienne spécialisé en séries expérimentales pour événement et portrait. Découvrez mes projets et demandez un devis personnalisé.">
 
     <!-- SEO Local -->
     <meta name="geo.region" content="FR-91">
     <meta name="geo.placename" content="Gif-sur-Yvette">
     <meta name="geo.position" content="48.7019;2.1341">
-    <meta name="ICBM" content="48.7019, 2.1341">
+    <meta name="ICBM" content="48.7019,2.1341">
 
-    <!-- Réseaux sociaux -->
-    <meta property="og:title" content="Picstroflex – Photographie artistique en Île-de-France">
-    <meta property="og:description" content="Photographe événementiel, portrait et sport en région parisienne.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.instagram.com/picstroflex/">
-
-    <!-- Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+
 <header id="main-header" class="header-opaque">
-    <!-- Header content, logo et navigation -->
-  <header id="main-header" class="header-opaque">
-    <div class="container header-content">
-        <nav class="nav-container">
-            <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="presentations.html">Présentations</a></li>
-                <li><a href="contact-devis.html">Réserver</a></li>
-            </ul>
-            <!-- Logo à droite, taille réduite -->
-            <a href="index.html" class="logo-link">
-                <img src="assets/logo.png" alt="Picstroflex Logo" class="logo-small">
-            </a>
-        </nav>
-    </div>
+    <nav class="nav-container">
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="presentations.html">Présentations</a></li>
+            <li><a href="contact-devis.html">Réserver</a></li>
+        </ul>
+    </nav>
 </header>
 
 <main>
-
-<section class="page-intro container fade-in-up">
-    <h1>Photographie artistique et commande en Île-de-France</h1>
-    <p class="intro-text">
-        J'étudie chaque projet avec soin. Remplissez le formulaire ci-dessous pour obtenir un devis personnalisé.
-    </p>
-</section>
-
-<section class="contact-grid container">
-
-<!-- FORMULAIRE -->
-<div class="form-container fade-in">
-    <h2 id="devis-form">Formulaire de devis</h2>
-
-    <form action="https://formspree.io/f/mdanvdwy" method="POST" class="devis-form">
-
-        <div class="form-group">
-            <label for="nom">Nom complet *</label>
-            <input type="text" id="nom" name="nom" required>
+    <!-- Hero Section -->
+    <section class="hero-section" style="background-image: url('assets/img/hero-banner.jpg');">
+        <div class="hero-content fade-in-up">
+            <h1>Capturer l'Émotion et la Lumière Naturelle</h1>
+            <p class="slogan">Approche artistique et professionnelle pour vos portraits, événements et projets sportifs.</p>
+            <div class="hero-actions">
+                <a href="presentations.html" class="btn btn-primary">Réserver une séance</a>
+                <a href="contact-devis.html" class="btn btn-secondary">Formulaire de contact</a>
+            </div>
         </div>
+    </section>
 
-        <div class="form-group half-width">
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" required>
+    <!-- About Section -->
+    <section class="about-section container fade-in">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>À propos de Picstroflex</h2>
+                <p>Photographe basé en Essonne, passionné par la lumière naturelle et les instants authentiques. Je capture les événements, portraits et scènes sportives avec discrétion et élégance pour créer des images uniques qui racontent votre histoire.</p>
+                <p>Chaque image est travaillée avec soin pour créer un récit visuel élégant et intemporel, reflétant la beauté de l’instant et la personnalité des sujets. Mon style privilégie la discrétion, l’esthétique et la connexion avec les moments réels, produisant des photographies mémorables et inspirantes.</p>
+                <a href="presentations.html" class="btn btn-tertiary">Découvrir mes prestations</a>
+            </div>
         </div>
+    </section>
 
-        <div class="form-group half-width">
-            <label for="telephone">Téléphone</label>
-            <input type="tel" id="telephone" name="telephone">
-        </div>
-
-        <div class="form-group half-width">
-            <label for="prestation">Type de prestation *</label>
-            <select id="prestation" name="prestation" required>
-                <option value="">-- Choisir --</option>
-                <option value="evenementiel">Reportage événementiel</option>
-                <option value="exterieur">Shooting extérieur</option>
-                <option value="portrait">Portrait</option>
-                <option value="sport">Sport</option>
-                <option value="autre">Autre</option>
-            </select>
-        </div>
-
-        <div class="form-group half-width">
-            <label for="date">Date souhaitée</label>
-            <input type="date" id="date" name="date">
-        </div>
-
-        <div class="form-group">
-            <label for="lieu">Lieu</label>
-            <input type="text" id="lieu" name="lieu" placeholder="Ville / Région">
-        </div>
-
-        <div class="form-group">
-            <label for="message">Message *</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-
-        <!-- Anti-spam -->
-        <input type="text" name="_gotcha" style="display:none">
-
-        <!-- Redirection -->
-        <input type="hidden" name="_redirect" value="merci.html">
-
-        <button type="submit" class="btn btn-primary btn-submit">Envoyer la demande</button>
-        <p class="small-info">* Champs obligatoires</p>
-    </form>
-</div>
-
-<!-- INFOS + MAP -->
-<div class="info-map-container fade-in">
-    <h2>Coordonnées</h2>
-
-    <div class="contact-info">
-        <p><strong>Email :</strong> <a href="mailto:picstroflex@gmail.com">picstroflex@gmail.com</a></p>
-        <p><strong>Téléphone :</strong> +33 7 82 24 35 82</p>
-        <p><strong>Localisation :</strong> Gif-sur-Yvette – Île-de-France</p>
-        <p><strong>Instagram :</strong> <a href="https://www.instagram.com/picstroflex/" target="_blank" rel="noopener noreferrer">@picstroflex</a></p>
-    </div>
-
-    <div class="map-placeholder">
-        <iframe
-            src="https://www.google.com/maps?q=Gif-sur-Yvette,France&output=embed"
-            width="100%"
-            height="300"
-            style="border:0;"
-            loading="lazy">
-        </iframe>
-    </div>
-</div>
-
-</section>
-
+    <!-- Call To Action -->
+    <section class="cta-section container center-content fade-in">
+        <h2>Prêt(e) à capturer vos moments uniques ?</h2>
+        <p>Contactez-moi pour un devis personnalisé ou réservez directement via Instagram.</p>
+        <a href="contact-devis.html" class="btn btn-primary btn-large">Demande de Devis</a>
+        <p>Vous pouvez également me contacter via <a href="https://www.instagram.com/picstroflex/" target="_blank" rel="noopener">@picstroflex</a></p>
+    </section>
 </main>
 
+<!-- Footer -->
 <footer class="main-footer">
     <div class="container footer-content">
-        <div class="footer-col logo-col">
-            <img src="assets/logo.png" alt="Picstroflex Logo" class="footer-logo">
-            <p>&copy; 2025 Picstroflex. Tous droits réservés.</p>
-        </div>
         <div class="footer-col">
             <h4>Navigation</h4>
             <ul>
