@@ -3,19 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact & Devis | Picstroflex Photographie</title>
-    <meta name="description" content="Contactez Picstroflex pour toute demande de renseignement ou obtenez un devis personnalisé.">
+
+    <!-- SEO TITLE -->
+    <title>Photographie artistique à Gif-sur-Yvette, Essonne 91190, France - Picstroflex</title>
+
+    <!-- META DESCRIPTION -->
+    <meta name="description" content="Photographe en région parisienne spécialisé en séries expérimentales pour événement et portrait. Découvrez mes projets et demandez un devis personnalisé.">
+
+    <!-- SEO Local -->
+    <meta name="geo.region" content="FR-91">
+    <meta name="geo.placename" content="Gif-sur-Yvette">
+    <meta name="geo.position" content="48.7019;2.1341">
+    <meta name="ICBM" content="48.7019, 2.1341">
+
+    <!-- Réseaux sociaux -->
+    <meta property="og:title" content="Picstroflex – Photographie artistique en Île-de-France">
+    <meta property="og:description" content="Photographe événementiel, portrait et sport en région parisienne.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.instagram.com/picstroflex/">
 
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
 <header id="main-header" class="header-opaque"></header>
 
 <main>
 
+<!-- H1 PRINCIPAL -->
 <section class="page-intro container fade-in-up">
-    <h1>Contactez-moi</h1>
+    <h1>Photographie artistique et commande en Île-de-France</h1>
     <p class="intro-text">
         J'étudie chaque projet avec soin. Remplissez le formulaire ci-dessous pour obtenir un devis personnalisé.
     </p>
@@ -25,7 +43,9 @@
 
 <!-- FORMULAIRE -->
 <div class="form-container fade-in">
-    <h2 id="devis-form">Demande de Devis</h2>
+
+    <!-- H2 FORMULAIRE -->
+    <h2 id="devis-form">Formulaire de devis</h2>
 
     <form action="https://formspree.io/f/mdanvdwy" method="POST" class="devis-form">
 
@@ -71,10 +91,10 @@
             <textarea id="message" name="message" rows="5" required></textarea>
         </div>
 
-        <!-- Anti-spam invisible -->
+        <!-- Anti-spam -->
         <input type="text" name="_gotcha" style="display:none">
 
-        <!-- Page de confirmation (optionnel) -->
+        <!-- Redirection -->
         <input type="hidden" name="_redirect" value="merci.html">
 
         <button type="submit" class="btn btn-primary btn-submit">
@@ -92,17 +112,24 @@
     <div class="contact-info">
         <p><strong>Email :</strong> <a href="mailto:picstroflex@gmail.com">picstroflex@gmail.com</a></p>
         <p><strong>Téléphone :</strong> +33 7 82 24 35 82</p>
-        <p><strong>Basé à :</strong> Paris, France</p>
+        <p><strong>Localisation :</strong> Paris – Île-de-France</p>
+
+        <!-- INSTAGRAM -->
+        <p>
+            <strong>Instagram :</strong>
+            <a href="https://www.instagram.com/picstroflex/" target="_blank" rel="noopener noreferrer">
+                @picstroflex
+            </a>
+        </p>
     </div>
 
     <div class="map-placeholder">
         <iframe
-            src="https://www.google.com/maps?q=Paris,France&output=embed"
+            src="https://www.google.com/maps?q=Gif-sur-Yvette,France&output=embed"
             width="100%"
             height="300"
             style="border:0;"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
+            loading="lazy">
         </iframe>
     </div>
 </div>
