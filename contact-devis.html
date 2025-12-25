@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Fonts - Polices propres et modernes (identiques à index & presentations) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-    <!-- SEO TITLE -->
-    <title>Photographie artistique à Gif-sur-Yvette, Essonne 91190, France - Picstroflex</title>
-
-    <!-- META DESCRIPTION -->
-    <meta name="description" content="Photographe en région parisienne spécialisé en séries expérimentales pour événement et portrait. Découvrez mes projets et demandez un devis personnalisé.">
+    <!-- SEO -->
+    <title>Contact & Devis | Picstroflex - Photographe Artistique en Essonne</title>
+    <meta name="description" content="Contactez Picstroflex pour un devis personnalisé : reportage événementiel, shooting extérieur, portrait, photographie sportive. Basé à Gif-sur-Yvette, Essonne.">
 
     <!-- SEO Local -->
     <meta name="geo.region" content="FR-91">
@@ -16,133 +19,244 @@
     <meta name="geo.position" content="48.7019;2.1341">
     <meta name="ICBM" content="48.7019,2.1341">
 
-    <!-- Réseaux sociaux -->
-    <meta property="og:title" content="Picstroflex – Photographie artistique en Île-de-France">
-    <meta property="og:description" content="Photographe événementiel, portrait et sport en région parisienne.">
+    <!-- Open Graph / Réseaux sociaux -->
+    <meta property="og:title" content="Contact & Devis | Picstroflex">
+    <meta property="og:description" content="Demandez un devis personnalisé pour votre projet photo en Île-de-France.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.instagram.com/picstroflex/">
+    <meta property="og:url" content="https://picstroflex.github.io/picstroflex/contact-devis.html">
+    <meta property="og:image" content="assets/img/hero-banner.jpg">
 
-    <!-- Styles -->
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/logo.svg">
+
+    <!-- Styles personnalisés (cohérents avec index & presentations) -->
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: #fff;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            padding: 20px 0;
+            background: rgba(255,255,255,0.95);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { font-size: 1.8rem; font-weight: 700; text-decoration: none; color: #333; }
+        nav ul { list-style: none; display: flex; gap: 30px; margin: 0; padding: 0; }
+        nav a { text-decoration: none; color: #333; font-weight: 600; }
+
+        main { padding: 60px 0; }
+        .page-intro { text-align: center; margin-bottom: 60px; }
+        .page-intro h1 { font-size: 2.8rem; margin-bottom: 20px; }
+        .page-intro p { max-width: 800px; margin: 0 auto; font-size: 1.1rem; }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        .form-container { background: #fafafa; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .form-container h2 { text-align: left; font-size: 2rem; margin-bottom: 30px; }
+        .devis-form label { display: block; margin-bottom: 8px; font-weight: 600; }
+        .devis-form input,
+        .devis-form select,
+        .devis-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        .form-group.half-width { display: inline-block; width: 48%; margin-right: 4%; }
+        .form-group.half-width:last-of-type { margin-right: 0; }
+        .btn-primary {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-primary:hover { background: #ff5252; transform: translateY(-3px); }
+        .small-info { font-size: 0.9rem; color: #777; text-align: center; margin-top: 10px; }
+
+        .info-map-container { background: #fafafa; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .info-map-container h2 { text-align: left; font-size: 2rem; margin-bottom: 30px; }
+        .contact-info p { margin: 15px 0; font-size: 1.1rem; }
+        .contact-info a { color: #ff6b6b; text-decoration: none; }
+        .map-placeholder iframe { border-radius: 15px; margin-top: 30px; }
+
+        /* Responsive */
+        @media (max-width: 868px) {
+            .contact-grid { grid-template-columns: 1fr; }
+            .form-group.half-width { width: 100%; margin-right: 0; }
+        }
+
+        /* Force darkmode widget */
+        .darkmode-toggle {
+            z-index: 9999 !important;
+            width: 60px !important;
+            height: 60px !important;
+            border-radius: 50% !important;
+            font-size: 24px !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+        }
+    </style>
+
+    <!-- Ton style.css existant (si tu en as un spécifique) -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
-<header id="main-header" class="header-opaque">
-    <nav class="nav-container">
+
+<header>
+    <div class="container header-content">
         <a href="index.html" class="logo">Picstroflex</a>
-        <ul class="nav-links">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="presentations.html">Présentations</a></li>
-            <li><a href="contact-devis.html">Réserver</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="presentations.html">Présentations</a></li>
+                <li><a href="contact-devis.html">Réserver</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<main>
-<section class="page-intro container fade-in-up">
-    <h1>Photographie artistique et commande en Île-de-France</h1>
-    <p class="intro-text">J'étudie chaque projet avec soin. Remplissez le formulaire ci-dessous pour obtenir un devis personnalisé.</p>
-</section>
+<main class="container">
+    <section class="page-intro">
+        <h1>Photographie artistique et commande en Île-de-France</h1>
+        <p class="intro-text">J'étudie chaque projet avec soin. Remplissez le formulaire ci-dessous pour obtenir un devis personnalisé.</p>
+    </section>
 
-<section class="contact-grid container">
+    <section class="contact-grid">
+        <!-- FORMULAIRE -->
+        <div class="form-container">
+            <h2 id="devis-form">Formulaire de devis</h2>
 
-    <!-- FORMULAIRE -->
-    <div class="form-container fade-in">
-        <h2 id="devis-form">Formulaire de devis</h2>
+            <form action="https://formspree.io/f/mdanvdwy" method="POST" class="devis-form">
 
-        <form action="https://formspree.io/f/mdanvdwy" method="POST" class="devis-form">
+                <div class="form-group">
+                    <label for="nom">Nom complet *</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
 
-            <div class="form-group">
-                <label for="nom">Nom complet *</label>
-                <input type="text" id="nom" name="nom" required>
-            </div>
+                <div class="form-group half-width">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-            <div class="form-group half-width">
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" required>
-            </div>
+                <div class="form-group half-width">
+                    <label for="telephone">Téléphone</label>
+                    <input type="tel" id="telephone" name="telephone">
+                </div>
 
-            <div class="form-group half-width">
-                <label for="telephone">Téléphone</label>
-                <input type="tel" id="telephone" name="telephone">
-            </div>
+                <div class="form-group half-width">
+                    <label for="prestation">Type de prestation *</label>
+                    <select id="prestation" name="prestation" required>
+                        <option value="">-- Choisir --</option>
+                        <option value="evenementiel">Reportage événementiel</option>
+                        <option value="exterieur">Shooting extérieur</option>
+                        <option value="portrait">Portrait</option>
+                        <option value="sport">Sport</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
 
-            <div class="form-group half-width">
-                <label for="prestation">Type de prestation *</label>
-                <select id="prestation" name="prestation" required>
-                    <option value="">-- Choisir --</option>
-                    <option value="evenementiel">Reportage événementiel</option>
-                    <option value="exterieur">Shooting extérieur</option>
-                    <option value="portrait">Portrait</option>
-                    <option value="sport">Sport</option>
-                    <option value="autre">Autre</option>
-                </select>
-            </div>
+                <div class="form-group half-width">
+                    <label for="date">Date souhaitée</label>
+                    <input type="date" id="date" name="date">
+                </div>
 
-            <div class="form-group half-width">
-                <label for="date">Date souhaitée</label>
-                <input type="date" id="date" name="date">
-            </div>
+                <div class="form-group">
+                    <label for="lieu">Lieu</label>
+                    <input type="text" id="lieu" name="lieu" placeholder="Ville / Région">
+                </div>
 
-            <div class="form-group">
-                <label for="lieu">Lieu</label>
-                <input type="text" id="lieu" name="lieu" placeholder="Ville / Région">
-            </div>
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
 
-            <div class="form-group">
-                <label for="message">Message *</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
+                <!-- Anti-spam -->
+                <input type="text" name="_gotcha" style="display:none">
 
-            <!-- Anti-spam -->
-            <input type="text" name="_gotcha" style="display:none">
+                <!-- Redirection après envoi -->
+                <input type="hidden" name="_redirect" value="merci.html">
 
-            <!-- Redirection après envoi -->
-            <input type="hidden" name="_redirect" value="merci.html">
-
-            <button type="submit" class="btn btn-primary btn-submit">Envoyer la demande</button>
-            <p class="small-info">* Champs obligatoires</p>
-        </form>
-    </div>
-
-    <!-- INFOS + MAP -->
-    <div class="info-map-container fade-in">
-        <h2>Coordonnées</h2>
-
-        <div class="contact-info">
-            <p><strong>Email :</strong> <a href="mailto:picstroflex@gmail.com">picstroflex@gmail.com</a></p>
-            <p><strong>Téléphone :</strong> +33 7 82 24 35 82</p>
-            <p><strong>Localisation :</strong> Gif-sur-Yvette – Île-de-France</p>
-            <p><strong>Instagram :</strong> <a href="https://www.instagram.com/picstroflex/" target="_blank" rel="noopener noreferrer">@picstroflex</a></p>
+                <button type="submit" class="btn-primary">Envoyer la demande</button>
+                <p class="small-info">* Champs obligatoires</p>
+            </form>
         </div>
 
-        <div class="map-placeholder">
-            <iframe
-                src="https://www.google.com/maps?q=Gif-sur-Yvette,France&output=embed"
-                width="100%"
-                height="300"
-                style="border:0;"
-                loading="lazy">
-            </iframe>
-        </div>
-    </div>
+        <!-- INFOS + MAP -->
+        <div class="info-map-container">
+            <h2>Coordonnées</h2>
 
-</section>
+            <div class="contact-info">
+                <p><strong>Email :</strong> <a href="mailto:picstroflex@gmail.com">picstroflex@gmail.com</a></p>
+                <p><strong>Téléphone :</strong> +33 7 82 24 35 82</p>
+                <p><strong>Localisation :</strong> Gif-sur-Yvette – Île-de-France</p>
+                <p><strong>Instagram :</strong> <a href="https://www.instagram.com/picstroflex/" target="_blank" rel="noopener">@picstroflex</a></p>
+            </div>
+
+            <div class="map-placeholder">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2628.068!2d2.1341!3d48.7019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67d8b4f1d5d8d%3A0x6f0a9c1e0b0f0e6c!2sGif-sur-Yvette!5e0!3m2!1sfr!2sfr!4v1630000000000"
+                    width="100%"
+                    height="350"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
 </main>
 
-<footer class="main-footer">
+<footer class="main-footer" style="background:#333; color:#fff; padding:40px 20px; text-align:center;">
     <p>&copy; 2025 Picstroflex. Tous droits réservés.</p>
 </footer>
 
-<script src="assets/js/scripts.js"></script>
+<!-- Dark Mode corrigé (identique aux autres pages) -->
 <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 <script>
-  new Darkmode({
-    bottom: '32px', // position du bouton
-    right: '32px',
-    time: '0.3s', // transition douce
-    label: '🌓' // icône du toggle
-  }).showWidget();
+  function addDarkmodeWidget() {
+    new Darkmode({
+      bottom: '32px',
+      right: '32px',
+      time: '0.3s',
+      label: '🌓',
+      saveInCookies: true,
+    }).showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
 </script>
 </body>
 </html>
