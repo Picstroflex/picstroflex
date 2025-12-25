@@ -1,7 +1,6 @@
 picstroflex-site/
 ├── index.html                 # Page d'accueil
 ├── contact-devis.html         # Page contact / formulaire de devis
-├── portfolio.html             # Page portfolio
 ├── sitemap.xml                # Sitemap pour Google Search Console
 ├── robots.txt                 # Fichier robots pour SEO
 ├── assets/
