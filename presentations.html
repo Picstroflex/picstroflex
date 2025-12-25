@@ -1,177 +1,295 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-<script>
-  new Darkmode({
-    bottom: '32px', // position du bouton
-    right: '32px',
-    time: '0.3s', // transition douce
-    label: '🌓' // icône du toggle
-  }).showWidget();
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prestations et Tarifs | Photographie Artistique Gif-sur-Yvette - Picstroflex</title>
-    <meta name="description" content="Découvrez les services photo de Picstroflex : reportage événementiel, shooting extérieur, portrait, et photographie sportive. Tarifs indicatifs et options. Réservez via Instagram.">
+    
+    <!-- Google Fonts - Polices propres et modernes (identiques à index) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- SEO -->
+    <title>Prestations et Tarifs | Picstroflex - Photographe Artistique en Essonne</title>
+    <meta name="description" content="Découvrez les services photo de Picstroflex : reportage événementiel, shooting extérieur, portrait, et photographie sportive. Tarifs indicatifs et exemples. Réservez via Instagram.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Prestations et Tarifs | Picstroflex">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://picstroflex.github.io/picstroflex/presentations.html">
+    <meta property="og:image" content="assets/img/hero-banner.jpg">
+    <meta property="og:description" content="Prestations et tarifs de photographie artistique : événementiel, extérieur/nature, portrait pro, sport.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/logo.svg">
+
+    <!-- Styles personnalisés (cohérents avec index.html) -->
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: #fff;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            padding: 20px 0;
+            background: rgba(255,255,255,0.95);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { font-size: 1.8rem; font-weight: 700; text-decoration: none; color: #333; }
+        nav ul { list-style: none; display: flex; gap: 30px; margin: 0; padding: 0; }
+        nav a { text-decoration: none; color: #333; font-weight: 600; }
+
+        main { padding: 60px 0; }
+        .page-intro { text-align: center; margin-bottom: 60px; }
+        .page-intro h1 { font-size: 2.8rem; margin-bottom: 20px; }
+        .page-intro p { max-width: 800px; margin: 0 auto; font-size: 1.1rem; }
+
+        .prestation-section {
+            background: #fafafa;
+            padding: 60px 20px;
+            margin-bottom: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        .prestation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .prestation-text { text-align: left; }
+        .prestation-text h2 { text-align: left; font-size: 2.2rem; margin-bottom: 20px; }
+        .prestation-text ul { padding-left: 20px; margin: 15px 0; }
+        .prestation-text .pricing-pack { background: #fff; padding: 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .prestation-text .pricing-pack h3 { text-align: left; font-size: 1.4rem; margin-bottom: 10px; }
+        .prestation-text .price { font-size: 1.8rem; font-weight: 700; color: #ff6b6b; }
+        .instagram-embed { text-align: center; }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #ff6b6b;
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        .btn-primary:hover { background: #ff5252; transform: translateY(-3px); }
+
+        .cta-section {
+            text-align: center;
+            padding: 80px 20px;
+            background: #f8f8f8;
+        }
+        .cta-section h2 { font-size: 2.5rem; margin-bottom: 20px; }
+
+        /* Responsive */
+        @media (max-width: 868px) {
+            .prestation-grid { grid-template-columns: 1fr; }
+            .prestation-text h2 { text-align: center; }
+        }
+
+        /* Force darkmode widget */
+        .darkmode-toggle {
+            z-index: 9999 !important;
+            width: 60px !important;
+            height: 60px !important;
+            border-radius: 50% !important;
+            font-size: 24px !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+        }
+    </style>
+
+    <!-- Ton style.css existant -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<header id="main-header" class="header-opaque">
-    <!-- Header content, logo et navigation -->
-    <nav class="nav-container">
+
+<header>
+    <div class="container header-content">
         <a href="index.html" class="logo">Picstroflex</a>
-        <ul class="nav-links">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="presentations.html">Présentations</a></li>
-            <li><a href="contact-devis.html">Réserver</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="presentations.html">Présentations</a></li>
+                <li><a href="contact-devis.html">Réserver</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<main>
+<main class="container">
+    <section class="page-intro">
+        <h1>Photographie artistique et services professionnels</h1>
+        <p class="intro-text">Chaque projet est unique. Découvrez mes prestations principales avec tarifs indicatifs. Pour un devis personnalisé, utilisez le formulaire de contact.</p>
+    </section>
 
-<section class="page-intro container fade-in-up">
-    <h1>Photographie artistique et services professionnels</h1>
-    <p class="intro-text">Chaque projet est unique. Découvrez mes prestations principales avec tarifs indicatifs. Pour un devis personnalisé, utilisez le formulaire de contact.</p>
-</section>
+    <!-- Reportage Événementiel -->
+    <section class="prestation-section">
+        <div class="prestation-grid">
+            <div class="prestation-text">
+                <h2>Reportage Événementiel</h2>
+                <p>Couverture complète de mariages, soirées, séminaires ou événements associatifs. Mise en lumière de l'ambiance, des invités et des moments clés avec discrétion.</p>
 
-<section class="services-list container">
+                <div class="pricing-pack">
+                    <h3>PACK 1 — SOIRÉE ESSENTIEL</h3>
+                    <p class="price">300 €</p>
+                    <ul>
+                        <li>Présence jusqu’à 6h</li>
+                        <li>40 à 60 photos livrées</li>
+                        <li>Tri + retouches légères (luminosité, contraste, cadrage)</li>
+                        <li>Livraison sous 72h</li>
+                        <li>Galerie privée en ligne</li>
+                    </ul>
+                    <p><strong>Cession de droits :</strong> réseaux sociaux, site web, communication événementielle (durée 2 ans, France)</p>
+                </div>
 
-    <!-- 1. Reportage Événementiel -->
-    <div class="service-card fade-in">
-        <div class="service-icon event-icon"></div>
-        <h2>Reportage Événementiel</h2>
-        <p>Couverture complète de mariages, soirées, séminaires ou événements associatifs. Mise en lumière de l'ambiance, des invités et des moments clés avec discrétion.</p>
+                <div class="pricing-pack">
+                    <h3>PACK 2 — ÉVÉNEMENT PRO</h3>
+                    <p class="price">500 €</p>
+                    <ul>
+                        <li>Présence jusqu’à 8h</li>
+                        <li>80 à 120 photos livrées</li>
+                        <li>Retouches complètes (colorimétrie, peau, ambiance)</li>
+                        <li>Livraison sous 48h</li>
+                        <li>Galerie privée + téléchargement HD</li>
+                        <li>5 photos prioritaires sous 24h (teaser)</li>
+                    </ul>
+                    <p><strong>Cession de droits :</strong> réseaux sociaux, site web, supports print, communication presse locale (durée 3 ans, France)</p>
+                </div>
 
-        <!-- PACK 1 -->
-        <div class="pricing-pack">
-            <h3>PACK 1 — SOIRÉE ESSENTIEL</h3>
-            <p>💰 300 €</p>
-            <ul>
-                <li>Présence jusqu’à 6h</li>
-                <li>40 à 60 photos livrées</li>
-                <li>Tri + retouches légères (luminosité, contraste, cadrage)</li>
-                <li>Livraison sous 72h</li>
-                <li>Galerie privée en ligne</li>
-            </ul>
-            <p><strong>Cession de droits :</strong> réseaux sociaux, site web, communication événementielle (durée 2 ans, France)</p>
-            <p>💡 Idéal pour : bars, soirées, associations, clubs</p>
+                <div class="pricing-pack">
+                    <h3>PACK 3 — CORPORATE / MARQUE</h3>
+                    <p class="price">950 € à 1 200 €</p>
+                    <ul>
+                        <li>Journée complète (jusqu’à 10h)</li>
+                        <li>150 à 250 photos livrées</li>
+                        <li>Retouches premium</li>
+                        <li>Livraison sous 72h</li>
+                        <li>Galerie client + archivage 1 an</li>
+                        <li>Sélection optimisée pour communication</li>
+                    </ul>
+                    <p><strong>Cession de droits :</strong> tous supports (web, print, affichage), réseaux sociaux sponsorisés, communication commerciale (durée 5 ans, Monde)</p>
+                </div>
+
+                <p class="small-note">La cession de droits d’exploitation porte exclusivement sur l’utilisation des photos pour l’événement, durée et territoire indiqués. Toute utilisation non prévue sera facturée. L’auteur conserve ses droits moraux.</p>
+                <a href="contact-devis.html" class="btn-primary">Demander un devis événementiel</a>
+            </div>
+            <div class="instagram-embed">
+                <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DAG-sflq8tJ/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/DAG-sflq8tJ/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Voir cette publication sur Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/DAG-sflq8tJ/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Une publication partagée par @picstroflex</a></p></div></blockquote>
+            </div>
         </div>
+    </section>
 
-        <!-- PACK 2 -->
-        <div class="pricing-pack">
-            <h3>PACK 2 — ÉVÉNEMENT PRO</h3>
-            <p>💰 500 €</p>
-            <ul>
-                <li>Présence jusqu’à 8h</li>
-                <li>80 à 120 photos livrées</li>
-                <li>Retouches complètes (colorimétrie, peau, ambiance)</li>
-                <li>Livraison sous 48h</li>
-                <li>Galerie privée + téléchargement HD</li>
-                <li>5 photos prioritaires sous 24h (teaser)</li>
-            </ul>
-            <p><strong>Cession de droits :</strong> réseaux sociaux, site web, supports print, communication presse locale (durée 3 ans, France)</p>
-            <p>💡 Idéal pour : mairies, entreprises locales, festivals, événements pro</p>
+    <!-- Shooting Extérieur / Nature -->
+    <section class="prestation-section">
+        <div class="prestation-grid">
+            <div class="prestation-text">
+                <h2>Shooting Extérieur / Nature</h2>
+                <p>Séances lifestyle en pleine nature ou milieu urbain. Idéal pour couples, familles ou projets artistiques personnels.</p>
+                <p class="price">À partir de 250 € (2h)</p>
+                <ul>
+                    <li>2h de shooting</li>
+                    <li>Conseils de lieu</li>
+                    <li>30 photos retouchées HD</li>
+                </ul>
+                <p><strong>Options :</strong> Maquilleuse / styliste professionnelle, déplacement au-delà de 50 km, heures supplémentaires de shooting.</p>
+                <a href="contact-devis.html" class="btn-primary">Demander un devis shooting</a>
+            </div>
+            <div class="instagram-embed">
+                <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/C69KNUxoCgE/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/C69KNUxoCgE/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Voir cette publication sur Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/C69KNUxoCgE/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Une publication partagée par @picstroflex</a></p></div></blockquote>
+            </div>
         </div>
+    </section>
 
-        <!-- PACK 3 -->
-        <div class="pricing-pack">
-            <h3>PACK 3 — CORPORATE / MARQUE</h3>
-            <p>💰 950 € à 1 200 €</p>
-            <ul>
-                <li>Journée complète (jusqu’à 10h)</li>
-                <li>150 à 250 photos livrées</li>
-                <li>Retouches premium</li>
-                <li>Livraison sous 72h</li>
-                <li>Galerie client + archivage 1 an</li>
-                <li>Sélection optimisée pour communication</li>
-            </ul>
-            <p><strong>Cession de droits :</strong> tous supports (web, print, affichage), réseaux sociaux sponsorisés, communication commerciale (durée 5 ans, Monde)</p>
-            <p>💡 Pour : marques, agences, gros événements, institutions</p>
+    <!-- Portrait Pro / Artistique -->
+    <section class="prestation-section">
+        <div class="prestation-grid">
+            <div class="prestation-text">
+                <h2>Portrait Pro / Artistique</h2>
+                <p>Pour branding personnel, CV, réseaux sociaux ou portraits artistiques.</p>
+                <p class="price">À partir de 180 € (1h)</p>
+                <ul>
+                    <li>1h de shooting</li>
+                    <li>1 tenue</li>
+                    <li>10 photos retouchées HD</li>
+                    <li>Droits d'utilisation pro web</li>
+                </ul>
+                <p><strong>Options :</strong> Pack "Équipe" pour entreprises, retouches spécifiques (Haute-Couture).</p>
+                <a href="contact-devis.html" class="btn-primary">Demander un devis portrait</a>
+            </div>
+            <div class="instagram-embed">
+                <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CuzY2FUoSbs/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/CuzY2FUoSbs/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Voir cette publication sur Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CuzY2FUoSbs/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Une publication partagée par @picstroflex</a></p></div></blockquote>
+            </div>
         </div>
+    </section>
 
-        <p class="small-note">La cession de droits d’exploitation porte exclusivement sur l’utilisation des photos pour l’événement, durée et territoire indiqués. Toute utilisation non prévue sera facturée. L’auteur conserve ses droits moraux.</p>
-    </div>
-
-    <!-- 2. Shooting Extérieur / Nature -->
-    <div class="service-card fade-in">
-        <div class="service-icon nature-icon"></div>
-        <h2>Shooting Extérieur / Nature</h2>
-        <p>Séances lifestyle en pleine nature ou milieu urbain. Idéal pour couples, familles ou projets artistiques personnels.</p>
-        <div class="pricing">
-            <h3>À partir de : <span class="price-placeholder">250 €</span> (2h)</h3>
-            <p>Comprend : 2h de shooting, conseils de lieu, 30 photos retouchées HD.</p>
+    <!-- Photographie Sportive -->
+    <section class="prestation-section">
+        <div class="prestation-grid">
+            <div class="prestation-text">
+                <h2>Photographie Sportive</h2>
+                <p>Couverture de compétitions, portraits d'athlètes ou contenu pour clubs et sponsors. Saisir l'énergie et la détermination.</p>
+                <p class="price">Devis sur mesure uniquement</p>
+                <p>Évaluation spécifique selon durée, conditions et type de sport.</p>
+                <a href="contact-devis.html" class="btn-primary">Demander un devis sport</a>
+            </div>
+            <div class="instagram-embed">
+                <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DDCYbOVNPQ4/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/DDCYbOVNPQ4/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Voir cette publication sur Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/DDCYbOVNPQ4/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Une publication partagée par @picstroflex</a></p></div></blockquote>
+            </div>
         </div>
-        <div class="options">
-            <h4>Options :</h4>
-            <ul>
-                <li>Maquilleuse / styliste professionnelle</li>
-                <li>Déplacement au-delà de 50 km</li>
-                <li>Heures supplémentaires de shooting</li>
-            </ul>
-        </div>
-    </div>
+    </section>
 
-    <!-- 3. Portrait Professionnel / Artistique -->
-    <div class="service-card fade-in">
-        <div class="service-icon portrait-icon"></div>
-        <h2>Portrait Pro / Artistique</h2>
-        <p>Pour branding personnel, CV, réseaux sociaux ou portraits artistiques en studio ou à domicile.</p>
-        <div class="pricing">
-            <h3>À partir de : <span class="price-placeholder">180 €</span> (1h)</h3>
-            <p>Comprend : 1h de shooting, 1 tenue, 10 photos retouchées HD, droits d'utilisation pro web.</p>
-        </div>
-        <div class="options">
-            <h4>Options :</h4>
-            <ul>
-                <li>Pack "Équipe" pour entreprises</li>
-                <li>Fonds de couleurs variés</li>
-                <li>Retouches spécifiques (Haute-Couture)</li>
-            </ul>
-        </div>
-    </div>
+    <section class="cta-section">
+        <h2>Prêt(e) à concrétiser votre projet ?</h2>
+        <p>Obtenez un devis précis et personnalisé en fonction de vos besoins et de la nature exacte de la prestation.</p>
+        <a href="contact-devis.html" class="btn-primary" style="font-size:1.2rem; padding:15px 40px;">Demande de Devis</a>
+        <p style="margin-top:20px;">Vous pouvez aussi me contacter ou réserver via <a href="https://www.instagram.com/picstroflex/" target="_blank" rel="noopener">Instagram @picstroflex</a></p>
+    </section>
+</main>
 
-    <!-- 4. Photographie Sportive -->
-    <div class="service-card fade-in">
-        <div class="service-icon sport-icon"></div>
-        <h2>Photographie Sportive</h2>
-        <p>Couverture de compétitions, portraits d'athlètes ou contenu pour clubs et sponsors. Saisir l'énergie et la détermination.</p>
-        <div class="pricing">
-            <h3>Devis sur mesure uniquement</h3>
-            <p>Évaluation spécifique selon durée, conditions et type de sport.</p>
-        </div>
-        <div class="options">
-            <h4>Options :</h4>
-            <ul>
-                <li>Couverture vidéo de l'événement</li>
-            </ul>
-        </div>
-    </div>
-
-</section>
-
-<!-- CTA Devis -->
-<section class="cta-devis container center-content fade-in">
-    <h2>Prêt(e) à concrétiser votre projet ?</h2>
-    <p>Obtenez un devis précis et personnalisé en fonction de vos besoins et de la nature exacte de la prestation.</p>
-    <a href="contact-devis.html#devis-form" class="btn btn-primary btn-large">Demande de Devis</a>
-    <p>Vous pouvez aussi me contacter ou réserver via <a href="https://www.instagram.com/picstroflex/" target="_blank" rel="noopener">Instagram @picstroflex</a></p>
-</section>
-
-<footer class="main-footer">
+<footer class="main-footer" style="background:#333; color:#fff; padding:40px 20px; text-align:center;">
     <p>&copy; 2025 Picstroflex. Tous droits réservés.</p>
 </footer>
 
-<script src="assets/js/scripts.js"></script>
+<!-- Dark Mode corrigé -->
 <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 <script>
-  new Darkmode({
-    bottom: '32px', // position du bouton
-    right: '32px',
-    time: '0.3s', // transition douce
-    label: '🌓' // icône du toggle
-  }).showWidget();
+  function addDarkmodeWidget() {
+    new Darkmode({
+      bottom: '32px',
+      right: '32px',
+      time: '0.3s',
+      label: '🌓',
+      saveInCookies: true,
+    }).showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
 </script>
+
+<script async src="//www.instagram.com/embed.js"></script>
 </body>
 </html>
