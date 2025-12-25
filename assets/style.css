@@ -1,0 +1,65 @@
+/* Responsive général pour mobile */
+@media (max-width: 868px) {
+    /* Header : menu en colonne ou burger (si tu veux un burger plus tard) */
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    /* Hero section */
+    .hero-section {
+        height: 60vh;
+        min-height: 400px;
+    }
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .hero-content .slogan {
+        font-size: 1.2rem;
+    }
+    .hero-actions .btn {
+        display: block;
+        width: 80%;
+        max-width: 300px;
+        margin: 15px auto;
+    }
+
+    /* Grilles (Instagram, prestations, contact) */
+    .instagram-grid,
+    .prestation-grid,
+    .contact-grid {
+        grid-template-columns: 1fr !important; /* Passe en une colonne sur mobile */
+    }
+
+    /* Formulaires */
+    .form-group.half-width {
+        width: 100% !important;
+        margin-right: 0 !important;
+    }
+
+    /* Sections générales */
+    .container {
+        padding: 0 15px;
+    }
+    h1 { font-size: 2.4rem; }
+    h2 { font-size: 2rem; }
+    .page-intro, .cta-section, .prestation-section {
+        padding: 40px 15px;
+    }
+}
+
+/* Très petits écrans (iPhone SE, etc.) */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .btn-primary {
+        padding: 14px 20px;
+        font-size: 1rem;
+    }
+}
