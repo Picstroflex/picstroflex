@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://picstroflex.github.io/picstroflex/sitemap.xml
