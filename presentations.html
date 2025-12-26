@@ -10,109 +10,49 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
     <style>
-        body {
-            margin: 0;
-            font-family: 'Open Sans', sans-serif;
-            background: #ffffff;
-            color: #222;
-        }
+        /* Reset et typographie */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Open Sans', sans-serif; color: #222; background: #fff; line-height: 1.6; }
+        h1, h2 { font-family: 'Montserrat', sans-serif; }
+        ul { list-style: none; padding-left: 20px; }
 
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 0 20px;
-        }
+        /* Conteneur */
+        .container { max-width: 1200px; margin: auto; padding: 0 20px; }
 
-        header {
-            padding: 25px 0;
-            border-bottom: 1px solid #eee;
-        }
+        /* Header */
+        header { padding: 25px 0; border-bottom: 1px solid #eee; }
+        nav ul { display: flex; gap: 30px; }
+        nav a { text-decoration: none; font-weight: 600; color: #222; }
 
-        nav ul {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+        /* Intro */
+        .intro { text-align: center; padding: 70px 20px; }
+        .intro h1 { font-size: 2.6rem; margin-bottom: 15px; }
 
-        nav a {
-            text-decoration: none;
-            font-weight: 600;
-            color: #222;
-        }
+        /* Prestations */
+        .prestation { display: flex; gap: 50px; margin-bottom: 80px; align-items: flex-start; flex-wrap: wrap; }
+        .prestation:nth-child(even) { flex-direction: row-reverse; }
+        .prestation-text { flex: 1; min-width: 280px; }
+        .prestation-text h2 { font-size: 2rem; margin-bottom: 15px; }
+        .price { font-weight: 700; font-size: 1.4rem; color: #ff6b6b; margin: 15px 0; }
+        .options li { margin-bottom: 8px; }
 
-        h1, h2 {
-            font-family: 'Montserrat', sans-serif;
-        }
+        /* Instagram */
+        .instagram-embed { flex: 1; min-width: 280px; max-width: 420px; }
+        blockquote.instagram-media { width: 100% !important; max-width: 100% !important; margin: 0 auto !important; }
 
-        .intro {
-            text-align: center;
-            padding: 70px 20px;
-        }
+        /* Boutons */
+        .btn { display: inline-block; margin-top: 20px; padding: 14px 28px; background: #ff6b6b; color: #fff; text-decoration: none; border-radius: 40px; font-weight: 600; }
 
-        .intro h1 {
-            font-size: 2.6rem;
-            margin-bottom: 15px;
-        }
+        /* CTA */
+        .cta { text-align: center; padding: 80px 20px; background: #f8f8f8; }
+        .cta .btn { margin-top: 20px; }
 
-        .prestation {
-            display: flex;
-            gap: 50px;
-            margin-bottom: 80px;
-            align-items: center;
-        }
-
-        .prestation:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        .prestation-text {
-            flex: 1;
-        }
-
-        .prestation-text h2 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-
-        .price {
-            font-weight: 700;
-            font-size: 1.4rem;
-            color: #ff6b6b;
-            margin: 15px 0;
-        }
-
-        .options {
-            padding-left: 20px;
-        }
-
-        .instagram-embed {
-            flex: 1;
-            max-width: 420px;
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 14px 28px;
-            background: #ff6b6b;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 40px;
-            font-weight: 600;
-        }
-
-        .cta {
-            text-align: center;
-            padding: 80px 20px;
-            background: #f8f8f8;
-        }
-
+        /* Responsive mobile */
         @media (max-width: 900px) {
-            .prestation {
-                flex-direction: column;
-            }
+            .prestation { flex-direction: column; gap: 30px; }
+            .prestation:nth-child(even) { flex-direction: column; }
+            .intro h1 { font-size: 2rem; }
+            .prestation-text h2 { font-size: 1.6rem; }
         }
     </style>
 </head>
@@ -135,7 +75,7 @@
         <h1>Mes Services Photo Professionnels</h1>
         <p>
             Chaque projet est unique. Voici une présentation de mes prestations principales avec des tarifs indicatifs.
-            Pour une offre sur mesure, veuillez utiliser le formulaire de devis. Chaque prestations comprend l'édition des photos
+            Pour une offre sur mesure, veuillez utiliser le formulaire de devis. Chaque prestation comprend l'édition des photos.
         </p>
     </section>
 
@@ -153,24 +93,17 @@
                 Couverture complète de mariages, baptêmes, soirées d’entreprise ou séminaires.
                 Je capture l’ambiance, les émotions et les moments clés avec discrétion et sens du détail.
             </p>
-
             <div class="price">À partir de 850 € (journée)</div>
-
             <p>Inclus :</p>
             <ul class="options">
                 <li>8h de présence</li>
                 <li>150+ photos ultra HD retouchées</li>
                 <li>Livraison en 7 jours</li>
-              
-                
             </ul>
-
             <p>Options :</p>
             <ul class="options">
-                
                 <li>Séance engagement / pré-événement</li>
             </ul>
-
             <a class="btn" href="contact-devis.html">Demander un devis</a>
         </div>
     </section>
@@ -189,17 +122,13 @@
                 Séances lifestyle en pleine nature ou en milieu urbain.
                 Idéal pour couples, familles ou projets artistiques personnels.
             </p>
-
             <div class="price">À partir de 250 € (2h)</div>
-
             <ul class="options">
                 <li>Conseils de lieu et d’ambiance</li>
                 <li>30 photos ultra HD retouchées</li>
                 <li>Accompagnement pendant la séance</li>
                 <li>Livraison en 72h</li>
-                
-            </ul> 
-
+            </ul>
             <a class="btn" href="contact-devis.html">Demander un devis</a>
         </div>
     </section>
@@ -218,16 +147,13 @@
                 Portraits professionnels pour CV, réseaux sociaux, branding personnel
                 ou créations artistiques en studio ou à domicile.
             </p>
-
             <div class="price">À partir de 180 € (1h)</div>
-
             <ul class="options">
                 <li>1 tenue</li>
                 <li>10 photos HD retouchées</li>
                 <li>Droits d’utilisation web pro</li>
                 <li>Livraison en 24h</li>
             </ul>
-
             <a class="btn" href="contact-devis.html">Demander un devis</a>
         </div>
     </section>
