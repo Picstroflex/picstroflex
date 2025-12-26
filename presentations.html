@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <!-- Viewport optimisé pour iPhone/iOS (anti-zoom forcé) -->
+    <!-- Viewport anti-zoom pour iPhone/Android -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <!-- Google Fonts -->
@@ -12,7 +12,7 @@
 
     <!-- SEO -->
     <title>Prestations et Tarifs | Picstroflex - Photographe Artistique en Essonne</title>
-    <meta name="description" content="Découvrez les services photo de Picstroflex : reportage événementiel, shooting extérieur, portrait, et photographie sportive. Tarifs indicatifs et exemples.">
+    <meta name="description" content="Découvrez les services photo de Picstroflex : reportage événementiel, shooting extérieur, portrait, et photographie sportive. Tarifs indicatifs et exemples. Réservez via Instagram.">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Prestations et Tarifs | Picstroflex">
@@ -26,7 +26,10 @@
 
     <!-- Styles -->
     <style>
-        /* Reset de base + anti-zoom iOS */
+        /* Reset strict anti-bug mobile */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
         html, body {
             width: 100%;
             overflow-x: hidden;
@@ -50,10 +53,10 @@
         }
 
         .container {
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
-            box-sizing: border-box;
         }
 
         header {
@@ -66,309 +69,4 @@
         }
 
         .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            text-decoration: none;
-            color: #333;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 600;
-        }
-
-        main {
-            padding: 60px 0;
-        }
-
-        .page-intro {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .page-intro h1 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-        }
-
-        .page-intro p {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-        }
-
-        .prestation-section {
-            background: #fafafa;
-            padding: 60px 20px;
-            margin-bottom: 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-        }
-
-        .prestation-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: start;
-        }
-
-        .prestation-text {
-            text-align: left;
-        }
-
-        .prestation-text h2 {
-            text-align: left;
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-        }
-
-        .prestation-text ul {
-            padding-left: 20px;
-            margin: 15px 0;
-        }
-
-        .prestation-text .pricing-pack {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .prestation-text .pricing-pack h3 {
-            text-align: left;
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-        }
-
-        .prestation-text .price {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #ff6b6b;
-        }
-
-        .instagram-embed {
-            text-align: center;
-        }
-
-        .btn-primary {
-            display: inline-block;
-            padding: 12px 30px;
-            background: #ff6b6b;
-            color: white;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 20px;
-            transition: all 0.3s;
-        }
-
-        .btn-primary:hover {
-            background: #ff5252;
-            transform: translateY(-3px);
-        }
-
-        .cta-section {
-            text-align: center;
-            padding: 80px 20px;
-            background: #f8f8f8;
-        }
-
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        /* Force embeds Instagram à s'afficher correctement */
-        .instagram-media {
-            width: 100% !important;
-            max-width: 540px !important;
-            margin: 0 auto !important;
-            display: block !important;
-        }
-
-        img, iframe, blockquote {
-            max-width: 100% !important;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        /* Responsive mobile */
-        @media (max-width: 868px) {
-            .prestation-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .prestation-text h2 {
-                text-align: center;
-            }
-
-            .container {
-                padding: 0 15px;
-            }
-
-            .prestation-section {
-                padding: 40px 15px;
-            }
-        }
-
-        /* Très petits écrans (iPhone) */
-        @media (max-width: 480px) {
-            .page-intro h1 {
-                font-size: 2.4rem;
-            }
-
-            .prestation-text h2 {
-                font-size: 2rem;
-            }
-
-            .btn-primary {
-                padding: 14px 24px;
-                font-size: 1.1rem;
-            }
-        }
-
-        /* Dark mode widget */
-        .darkmode-toggle {
-            z-index: 9999 !important;
-            width: 60px !important;
-            height: 60px !important;
-            border-radius: 50% !important;
-            font-size: 24px !important;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
-        }
-    </style>
-
-    <!-- Ton style.css existant -->
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-
-<header>
-    <div class="container header-content">
-        <a href="index.html" class="logo">Picstroflex</a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="presentations.html">Présentations</a></li>
-                <li><a href="contact-devis.html">Réserver</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<main class="container">
-    <section class="page-intro">
-        <h1>Photographie artistique et services professionnels</h1>
-        <p class="intro-text">Chaque projet est unique. Découvrez mes prestations principales avec tarifs indicatifs. Pour un devis personnalisé, utilisez le formulaire de contact.</p>
-    </section>
-
-    <!-- Reportage Événementiel -->
-    <section class="prestation-section">
-        <div class="prestation-grid">
-            <div class="prestation-text">
-                <h2>Reportage Événementiel</h2>
-                <p>Couverture complète de mariages, soirées, séminaires ou événements associatifs. Mise en lumière de l'ambiance, des invités et des moments clés avec discrétion.</p>
-
-                <div class="pricing-pack">
-                    <h3>PACK 1 — SOIRÉE ESSENTIEL</h3>
-                    <p class="price">300 €</p>
-                    <ul>
-                        <li>Présence jusqu’à 6h</li>
-                        <li>40 à 60 photos livrées</li>
-                        <li>Tri + retouches légères (luminosité, contraste, cadrage)</li>
-                        <li>Livraison sous 72h</li>
-                        <li>Galerie privée en ligne</li>
-                    </ul>
-                    <p><strong>Cession de droits :</strong> réseaux sociaux, site web, communication événementielle (durée 2 ans, France)</p>
-                </div>
-
-                <div class="pricing-pack">
-                    <h3>PACK 2 — ÉVÉNEMENT PRO</h3>
-                    <p class="price">500 €</p>
-                    <ul>
-                        <li>Présence jusqu’à 8h</li>
-                        <li>80 à 120 photos livrées</li>
-                        <li>Retouches complètes (colorimétrie, peau, ambiance)</li>
-                        <li>Livraison sous 48h</li>
-                        <li>Galerie privée + téléchargement HD</li>
-                        <li>5 photos prioritaires sous 24h (teaser)</li>
-                    </ul>
-                    <p><strong>Cession de droits :</strong> réseaux sociaux, site web, supports print, communication presse locale (durée 3 ans, France)</p>
-                </div>
-
-                <div class="pricing-pack">
-                    <h3>PACK 3 — CORPORATE / MARQUE</h3>
-                    <p class="price">950 € à 1 200 €</p>
-                    <ul>
-                        <li>Journée complète (jusqu’à 10h)</li>
-                        <li>150 à 250 photos livrées</li>
-                        <li>Retouches premium</li>
-                        <li>Livraison sous 72h</li>
-                        <li>Galerie client + archivage 1 an</li>
-                        <li>Sélection optimisée pour communication</li>
-                    </ul>
-                    <p><strong>Cession de droits :</strong> tous supports (web, print, affichage), réseaux sociaux sponsorisés, communication commerciale (durée 5 ans, Monde)</p>
-                </div>
-
-                <p class="small-note">La cession de droits d’exploitation porte exclusivement sur l’utilisation des photos pour l’événement, durée et territoire indiqués. Toute utilisation non prévue sera facturée. L’auteur conserve ses droits moraux.</p>
-                <a href="contact-devis.html" class="btn-primary">Demander un devis événementiel</a>
-            </div>
-            <div class="instagram-embed">
-                <!-- Embed Reportage -->
-                <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DAG-sflq8tJ/" data-instgrm-version="14">
-                    <div style="padding:16px;"> <!-- Tout le contenu complet de l'embed que tu avais avant --> </div>
-                </blockquote>
-            </div>
-        </div>
-    </section>
-
-    <!-- Les autres sections (Shooting, Portrait, Sport) de la même façon avec leurs embeds -->
-
-    <section class="cta-section">
-        <h2>Prêt(e) à concrétiser votre projet ?</h2>
-        <p>Obtenez un devis précis et personnalisé en fonction de vos besoins et de la nature exacte de la prestation.</p>
-        <a href="contact-devis.html" class="btn-primary" style="font-size:1.2rem; padding:15px 40px;">Demande de Devis</a>
-        <p style="margin-top:20px;">Vous pouvez aussi me contacter ou réserver via <a href="https://www.instagram.com/picstroflex/" target="_blank" rel="noopener">Instagram @picstroflex</a></p>
-    </section>
-</main>
-
-<footer class="main-footer" style="background:#333; color:#fff; padding:40px 20px; text-align:center;">
-    <p>&copy; 2025 Picstroflex. Tous droits réservés.</p>
-</footer>
-
-<!-- Dark Mode -->
-<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-<script>
-  function addDarkmodeWidget() {
-    new Darkmode({
-      bottom: '32px',
-      right: '32px',
-      time: '0.3s',
-      label: '🌓',
-      saveInCookies: true,
-    }).showWidget();
-  }
-  window.addEventListener('load', addDarkmodeWidget);
-</script>
-
-<!-- Chargement des embeds Instagram -->
-<script async src="//www.instagram.com/embed.js"></script>
-</body>
-</html>
+            display
