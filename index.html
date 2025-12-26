@@ -301,6 +301,39 @@
             font-size: 24px !important;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
         }
+        /* FIX DEFINITIF INSTAGRAM CROP SUR MOBILE (iPhone/Android/PC) */
+.instagram-embed {
+    width: 100%;
+    max-width: 100%;
+    margin: 30px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.instagram-media {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.instagram-media > div,
+.instagram-media iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 500px !important; /* Ajuste selon besoin, évite le crop vertical */
+    border: none !important;
+}
+
+/* Force le conteneur à être responsive */
+blockquote.instagram-media {
+    display: block !important;
+    margin: 0 auto !important;
+}
     </style>
 
     <link rel="stylesheet" href="assets/css/style.css">
