@@ -285,13 +285,31 @@
 <header>
     <div class="container header-content">
         <a href="index.html" class="logo">Picstroflex</a>
-        <nav>
+
+        <!-- Menu desktop -->
+        <nav class="nav-desktop">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="presentations.html">Présentations</a></li>
                 <li><a href="contact-devis.html">Réserver</a></li>
             </ul>
         </nav>
+
+        <!-- Bouton burger mobile -->
+        <button class="burger-btn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <!-- Menu mobile (plein écran) -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="presentations.html">Présentations</a></li>
+            <li><a href="contact-devis.html">Réserver</a></li>
+        </ul>
     </div>
 </header>
 
@@ -388,6 +406,24 @@
     }).showWidget();
   }
   window.addEventListener('load', addDarkmodeWidget);
+    <script>
+// Menu burger
+const burger = document.querySelector('.burger-btn');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+});
+
+// Fermer au clic sur un lien
+document.querySelectorAll('.mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        burger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+    });
+});
+</script>
 </script>
 
 <!-- Chargement Instagram -->
