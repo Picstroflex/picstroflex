@@ -2,9 +2,10 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Viewport optimisé pour iPhone/iOS - anti-zoom forcé -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <!-- Google Fonts - Polices propres et modernes (identiques à index & presentations) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -19,7 +20,7 @@
     <meta name="geo.position" content="48.7019;2.1341">
     <meta name="ICBM" content="48.7019,2.1341">
 
-    <!-- Open Graph / Réseaux sociaux -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Contact & Devis | Picstroflex">
     <meta property="og:description" content="Demandez un devis personnalisé pour votre projet photo en Île-de-France.">
     <meta property="og:type" content="website">
@@ -29,26 +30,42 @@
     <!-- Favicon -->
     <link rel="icon" href="assets/img/logo.svg">
 
-    <!-- Styles personnalisés (cohérents avec index & presentations) -->
+    <!-- Styles -->
     <style>
+        /* Reset strict pour iOS */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%;
+            -webkit-overflow-scrolling: touch;
+        }
+
         body {
             font-family: 'Open Sans', sans-serif;
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
             color: #333;
             background: #fff;
         }
+
         h1, h2, h3, h4 {
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             text-align: center;
         }
+
         .container {
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
+
+        /* Header */
         header {
             padding: 20px 0;
             background: rgba(255,255,255,0.95);
@@ -57,19 +74,53 @@
             z-index: 10;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
+
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        .logo { font-size: 1.8rem; font-weight: 700; text-decoration: none; color: #333; }
-        nav ul { list-style: none; display: flex; gap: 30px; margin: 0; padding: 0; }
-        nav a { text-decoration: none; color: #333; font-weight: 600; }
 
-        main { padding: 60px 0; }
-        .page-intro { text-align: center; margin-bottom: 60px; }
-        .page-intro h1 { font-size: 2.8rem; margin-bottom: 20px; }
-        .page-intro p { max-width: 800px; margin: 0 auto; font-size: 1.1rem; }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+
+        main {
+            padding: 60px 0;
+        }
+
+        .page-intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .page-intro h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .page-intro p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
 
         .contact-grid {
             display: grid;
@@ -77,25 +128,53 @@
             gap: 60px;
             align-items: start;
         }
-        .form-container { background: #fafafa; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
-        .form-container h2 { text-align: left; font-size: 2rem; margin-bottom: 30px; }
-        .devis-form label { display: block; margin-bottom: 8px; font-weight: 600; }
+
+        .form-container,
+        .info-map-container {
+            background: #fafafa;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .form-container h2,
+        .info-map-container h2 {
+            text-align: left;
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .devis-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
         .devis-form input,
         .devis-form select,
         .devis-form textarea {
             width: 100%;
-            padding: 12px;
+            padding: 14px;
             margin-bottom: 20px;
             border: 1px solid #ddd;
             border-radius: 8px;
             font-size: 1rem;
         }
-        .form-group.half-width { display: inline-block; width: 48%; margin-right: 4%; }
-        .form-group.half-width:last-of-type { margin-right: 0; }
+
+        .form-group.half-width {
+            display: inline-block;
+            width: 48%;
+            margin-right: 4%;
+        }
+
+        .form-group.half-width:last-of-type {
+            margin-right: 0;
+        }
+
         .btn-primary {
             display: block;
             width: 100%;
-            padding: 15px;
+            padding: 16px;
             background: #ff6b6b;
             color: white;
             border: none;
@@ -105,22 +184,92 @@
             cursor: pointer;
             transition: all 0.3s;
         }
-        .btn-primary:hover { background: #ff5252; transform: translateY(-3px); }
-        .small-info { font-size: 0.9rem; color: #777; text-align: center; margin-top: 10px; }
 
-        .info-map-container { background: #fafafa; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
-        .info-map-container h2 { text-align: left; font-size: 2rem; margin-bottom: 30px; }
-        .contact-info p { margin: 15px 0; font-size: 1.1rem; }
-        .contact-info a { color: #ff6b6b; text-decoration: none; }
-        .map-placeholder iframe { border-radius: 15px; margin-top: 30px; }
-
-        /* Responsive */
-        @media (max-width: 868px) {
-            .contact-grid { grid-template-columns: 1fr; }
-            .form-group.half-width { width: 100%; margin-right: 0; }
+        .btn-primary:hover {
+            background: #ff5252;
+            transform: translateY(-3px);
         }
 
-        /* Force darkmode widget */
+        .small-info {
+            font-size: 0.9rem;
+            color: #777;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .contact-info p {
+            margin: 15px 0;
+            font-size: 1.1rem;
+        }
+
+        .contact-info a {
+            color: #ff6b6b;
+            text-decoration: none;
+        }
+
+        .map-placeholder iframe {
+            width: 100%;
+            height: 350px;
+            border-radius: 15px;
+            margin-top: 30px;
+            border: 0;
+        }
+
+        /* Responsive mobile */
+        @media (max-width: 868px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.half-width {
+                width: 100%;
+                margin-right: 0;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .form-container,
+            .info-map-container {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-intro h1 {
+                font-size: 2.4rem;
+            }
+
+            .form-container h2,
+            .info-map-container h2 {
+                font-size: 1.8rem;
+            }
+
+            .btn-primary {
+                padding: 14px;
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Anti-zoom & fixes iOS */
+        img, iframe {
+            max-width: 100% !important;
+            height: auto;
+        }
+
+        /* Dark mode widget */
         .darkmode-toggle {
             z-index: 9999 !important;
             width: 60px !important;
@@ -131,7 +280,6 @@
         }
     </style>
 
-    <!-- Ton style.css existant (si tu en as un spécifique) -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -161,7 +309,6 @@
             <h2 id="devis-form">Formulaire de devis</h2>
 
             <form action="https://formspree.io/f/mdanvdwy" method="POST" class="devis-form">
-
                 <div class="form-group">
                     <label for="nom">Nom complet *</label>
                     <input type="text" id="nom" name="nom" required>
@@ -204,10 +351,7 @@
                     <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
 
-                <!-- Anti-spam -->
                 <input type="text" name="_gotcha" style="display:none">
-
-                <!-- Redirection après envoi -->
                 <input type="hidden" name="_redirect" value="merci.html">
 
                 <button type="submit" class="btn-primary">Envoyer la demande</button>
@@ -231,7 +375,6 @@
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2628.068!2d2.1341!3d48.7019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67d8b4f1d5d8d%3A0x6f0a9c1e0b0f0e6c!2sGif-sur-Yvette!5e0!3m2!1sfr!2sfr!4v1630000000000"
                     width="100%"
                     height="350"
-                    style="border:0;"
                     allowfullscreen=""
                     loading="lazy">
                 </iframe>
@@ -244,7 +387,7 @@
     <p>&copy; 2025 Picstroflex. Tous droits réservés.</p>
 </footer>
 
-<!-- Dark Mode corrigé (identique aux autres pages) -->
+<!-- Dark Mode -->
 <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 <script>
   function addDarkmodeWidget() {
