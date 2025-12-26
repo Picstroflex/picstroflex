@@ -1,458 +1,167 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <!-- Viewport optimisé pour iPhone/iOS - anti-zoom forcé -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO -->
-    <title>Picstroflex - Photographe Artistique en Essonne</title>
-    <meta name="description" content="Photographe professionnel en Essonne, spécialisé en portrait, événementiel et sport. Réservez votre séance via Instagram ou formulaire de contact.">
+<title>Picstroflex - Photographe Artistique en Essonne</title>
+<meta name="description" content="Photographe professionnel en Essonne, spécialisé en portrait, événementiel et sport.">
 
-    <!-- SEO Local -->
-    <meta name="geo.region" content="FR-91">
-    <meta name="geo.placename" content="Essonne">
-    <meta name="geo.position" content="48.7019;2.1341">
-    <meta name="ICBM" content="48.7019,2.1341">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Picstroflex - Photographe Artistique en Essonne">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://picstroflex.github.io/picstroflex/">
-    <meta property="og:image" content="assets/img/hero-banner.jpg">
-    <meta property="og:description" content="Photographe professionnel en Essonne, spécialisé en portrait, événementiel et sport.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+font-family:'Open Sans',sans-serif;
+color:#333;
+line-height:1.6
+}
+h1,h2,h3{font-family:'Montserrat',sans-serif}
 
-    <!-- Favicon -->
-    <link rel="icon" href="assets/img/logo.svg">
+header{
+position:sticky;
+top:0;
+background:#fff;
+z-index:10;
+box-shadow:0 2px 10px rgba(0,0,0,.1)
+}
+.container{max-width:1200px;margin:auto;padding:0 20px}
+.header-content{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 0
+}
+.logo{font-weight:700;font-size:1.8rem;text-decoration:none;color:#333}
+nav ul{display:flex;gap:30px;list-style:none}
+nav a{text-decoration:none;font-weight:600;color:#333}
 
-    <!-- Styles -->
-    <style>
-        /* Reset strict pour iOS */
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
-        html, body {
-            width: 100%;
-            overflow-x: hidden;
-            margin: 0;
-            padding: 0;
-            -webkit-text-size-adjust: 100%;
-            -webkit-overflow-scrolling: touch;
-        }
+.hero-section{
+height:80vh;
+background:url("assets/img/hero-banner.jpg") center/cover no-repeat;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:#fff
+}
+.hero-section::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.45)
+}
+.hero-content{position:relative;z-index:1;padding:40px}
+.hero-content h1{font-size:3rem;margin-bottom:20px}
+.hero-content p{font-size:1.3rem;margin-bottom:40px}
 
-        body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #fff;
-        }
+.btn{
+display:inline-block;
+padding:15px 40px;
+border-radius:40px;
+font-weight:600;
+text-decoration:none;
+transition:.3s
+}
+.btn-primary{background:#ff6b6b;color:#fff}
+.btn-primary:hover{background:#ff5252}
+.btn-secondary{border:2px solid #fff;color:#fff}
 
-        h1, h2, h3, h4 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-        }
+section{padding:80px 20px;text-align:center}
 
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            padding: 20px 0;
-            background: rgba(255,255,255,0.95);
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            text-decoration: none;
-            color: #333;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 600;
-        }
-
-        /* Hero Section - Fix principal pour iPhone */
-        .hero-section {
-            background: url('assets/img/hero-banner.jpg') center/cover no-repeat;
-            height: 80vh;
-            min-height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
-        }
-
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(0,0,0,0.4);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            width: 100%;
-            max-width: none;
-            padding: 40px 20px;
-            margin: 0;
-        }
-
-        .hero-content h1 {
-            font-size: 3rem;
-            margin: 0 0 20px 0;
-        }
-
-        .hero-content .slogan {
-            font-size: 1.4rem;
-            margin: 0 0 40px 0;
-            max-width: 90%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-actions {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .btn {
-            display: block;
-            width: 80%;
-            max-width: 320px;
-            padding: 16px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            text-align: center;
-            transition: all 0.3s;
-        }
-
-        .btn-primary {
-            background: #ff6b6b;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #ff5252;
-            transform: translateY(-3px);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: #333;
-        }
-
-        /* Sections générales */
-        .about-section, .cta-section {
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .about-text {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .about-text p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-        }
-
-        /* Instagram Section */
-        .instagram-section {
-            background: #fafafa;
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .instagram-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .instagram-grid blockquote {
-            margin: 0 auto;
-            width: 100%;
-            max-width: 540px;
-        }
-
-        .cta-section {
-            background: #f8f8f8;
-        }
-
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        /* Responsive mobile */
-        @media (max-width: 868px) {
-            .header-content {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 15px;
-                text-align: center;
-            }
-
-            .hero-section {
-                height: 70vh;
-                min-height: 450px;
-            }
-
-            .hero-content h1 {
-                font-size: 2.6rem;
-            }
-
-            .hero-content .slogan {
-                font-size: 1.3rem;
-            }
-
-            .instagram-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .container {
-                padding: 0 15px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-content h1 {
-                font-size: 2.3rem;
-            }
-
-            .hero-content .slogan {
-                font-size: 1.2rem;
-            }
-
-            .btn {
-                padding: 14px 24px;
-                font-size: 1.1rem;
-            }
-        }
-
-        /* Force embeds Instagram */
-        .instagram-media {
-            width: 100% !important;
-            max-width: 540px !important;
-            margin: 20px auto !important;
-            display: block !important;
-        }
-
-        img, iframe, blockquote {
-            max-width: 100% !important;
-            height: auto;
-        }
-
-        /* Dark mode widget */
-        .darkmode-toggle {
-            z-index: 9999 !important;
-            width: 60px !important;
-            height: 60px !important;
-            border-radius: 50% !important;
-            font-size: 24px !important;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
-        }
-        /* FIX DEFINITIF INSTAGRAM CROP SUR MOBILE (iPhone/Android/PC) */
-.instagram-embed {
-    width: 100%;
-    max-width: 100%;
-    margin: 30px 0;
-    text-align: center;
-    overflow: hidden;
+.instagram-section{background:#fafafa}
+.instagram-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+max-width:1000px;
+margin:auto
 }
 
-.instagram-media {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-    border: none !important;
-    box-shadow: none !important;
+/* FIX INSTAGRAM */
+.instagram-media{
+width:100%!important;
+max-width:540px!important;
+margin:auto!important
 }
 
-.instagram-media > div,
-.instagram-media iframe {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    min-height: 500px !important; /* Ajuste selon besoin, évite le crop vertical */
-    border: none !important;
+@media(max-width:768px){
+.instagram-grid{grid-template-columns:1fr}
+.hero-content h1{font-size:2.3rem}
 }
-
-/* Force le conteneur à être responsive */
-blockquote.instagram-media {
-    display: block !important;
-    margin: 0 auto !important;
-}
-    </style>
-
-    <link rel="stylesheet" href="assets/css/style.css">
+</style>
 </head>
+
 <body>
 
 <header>
-    <div class="container header-content">
-        <a href="index.html" class="logo">Picstroflex</a>
-
-        <!-- Menu desktop -->
-        <nav class="nav-desktop">
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="presentations.html">Présentations</a></li>
-                <li><a href="contact-devis.html">Réserver</a></li>
-            </ul>
-        </nav>
-
-        <!-- Bouton burger mobile -->
-        <button class="burger-btn" aria-label="Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </div>
-
-    <!-- Menu mobile (plein écran) -->
-    <div class="mobile-menu">
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="presentations.html">Présentations</a></li>
-            <li><a href="contact-devis.html">Réserver</a></li>
-        </ul>
-    </div>
+<div class="container header-content">
+<a class="logo" href="index.html">Picstroflex</a>
+<nav>
+<ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="presentations.html">Présentations</a></li>
+<li><a href="contact-devis.html">Réserver</a></li>
+</ul>
+</nav>
+</div>
 </header>
 
 <main>
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1>Capturer l'Émotion et la Lumière Naturelle</h1>
-            <p class="slogan">Approche artistique et professionnelle pour vos portraits, événements et projets sportifs.</p>
-            <div class="hero-actions">
-                <a href="presentations.html" class="btn btn-primary">Réserver une séance</a>
-                <a href="contact-devis.html" class="btn btn-secondary">Formulaire de contact</a>
-            </div>
-        </div>
-    </section>
 
-    <section class="about-section container">
-        <div class="about-text">
-            <h2>À propos de Picstroflex</h2>
-            <p>Photographe basé en Essonne, passionné par la lumière naturelle et les instants authentiques. Je capture les événements, portraits et scènes sportives avec discrétion et élégance pour créer des images uniques qui racontent votre histoire.</p>
-            <p>Chaque image est travaillée avec soin pour créer un récit visuel élégant et intemporel, reflétant la beauté de l’instant et la personnalité des sujets. Mon style privilégie la discrétion, l’esthétique et la connexion avec les moments réels, produisant des photographies mémorables et inspirantes.</p>
-            <a href="presentations.html" class="btn btn-primary">Découvrir mes prestations</a>
-        </div>
-    </section>
+<section class="hero-section">
+<div class="hero-content">
+<h1>Capturer l’Émotion et la Lumière</h1>
+<p>Portrait · Événement · Sport</p>
+<a class="btn btn-primary" href="contact-devis.html">Réserver une séance</a>
+</div>
+</section>
 
-    <section class="instagram-section">
-        <div class="container">
-            <h2>Mes Derniers Posts Instagram</h2>
-            <div class="instagram-grid">
-                <!-- Post 1 -->
-                <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DSr_QGejNoE/" data-instgrm-version="14">
-                    <!-- Contenu complet de l'embed (placeholder ou réel) -->
-                    <div style="padding:16px;">...</div>
-                </blockquote>
+<section>
+<div class="container">
+<h2>À propos de Picstroflex</h2>
+<p>
+Photographe basé en Essonne, je travaille la lumière naturelle
+et l’instant authentique pour raconter des histoires visuelles fortes.
+</p>
+</div>
+</section>
 
-                <!-- Post 2 -->
-                <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DIgNAJxqApl/" data-instgrm-version="14">
-                    <div style="padding:16px;">...</div>
-                </blockquote>
-            </div>
-        </div>
-        <script async src="//www.instagram.com/embed.js"></script>
-    </section>
+<section class="instagram-section">
+<div class="container">
+<h2>Dernières créations</h2>
 
-    <section class="cta-section container">
-        <h2>Prêt(e) à capturer vos moments uniques ?</h2>
-        <p>Contactez-moi pour un devis personnalisé ou réservez directement via Instagram.</p>
-        <a href="contact-devis.html" class="btn btn-primary" style="font-size:1.2rem; padding:15px 40px;">Demande de Devis</a>
-        <p style="margin-top:20px;">Ou directement sur <a href="https://www.instagram.com/picstroflex/" target="_blank" rel="noopener">@picstroflex</a></p>
-    </section>
+<div class="instagram-grid">
+
+<blockquote class="instagram-media"
+data-instgrm-permalink="https://www.instagram.com/p/DSr_QGejNoE/"
+data-instgrm-version="14"></blockquote>
+
+<blockquote class="instagram-media"
+data-instgrm-permalink="https://www.instagram.com/p/DIgNAJxqApl/"
+data-instgrm-version="14"></blockquote>
+
+</div>
+</div>
+</section>
+
+<section>
+<h2>Un projet en tête ?</h2>
+<p>Discutons ensemble de votre besoin</p>
+<a class="btn btn-primary" href="contact-devis.html">Demande de devis</a>
+</section>
+
 </main>
 
-<footer class="main-footer" style="background:#333; color:#fff; padding:40px 20px; text-align:center;">
-    <p>&copy; 2025 Picstroflex. Tous droits réservés.</p>
+<footer style="background:#333;color:#fff;padding:40px;text-align:center">
+<p>&copy; 2025 Picstroflex</p>
 </footer>
 
-<!-- Dark Mode -->
-<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-<script>
-  function addDarkmodeWidget() {
-    new Darkmode({
-      bottom: '32px',
-      right: '32px',
-      time: '0.3s',
-      label: '🌓',
-      saveInCookies: true,
-    }).showWidget();
-  }
-  window.addEventListener('load', addDarkmodeWidget);
-    <script>
-// Menu burger
-const burger = document.querySelector('.burger-btn');
-const mobileMenu = document.querySelector('.mobile-menu');
+<!-- SCRIPT INSTAGRAM (UNE FOIS) -->
+<script async src="https://www.instagram.com/embed.js"></script>
 
-burger.addEventListener('click', () => {
-    burger.classList.toggle('active');
-    mobileMenu.classList.toggle('active');
-});
-
-// Fermer au clic sur un lien
-document.querySelectorAll('.mobile-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        burger.classList.remove('active');
-        mobileMenu.classList.remove('active');
-    });
-});
-</script>
 </body>
 </html>
