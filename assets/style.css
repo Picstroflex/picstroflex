@@ -1,6 +1,6 @@
 /* Responsive général pour mobile */
 @media (max-width: 868px) {
-    /* Header : menu en colonne ou burger (si tu veux un burger plus tard) */
+    /* Header en colonne (avant burger) */
     .header-content {
         flex-direction: column;
         gap: 20px;
@@ -33,7 +33,7 @@
     .instagram-grid,
     .prestation-grid,
     .contact-grid {
-        grid-template-columns: 1fr !important; /* Passe en une colonne sur mobile */
+        grid-template-columns: 1fr !important;
     }
 
     /* Formulaires */
@@ -63,56 +63,63 @@
         font-size: 1rem;
     }
 }
-/* Anti-zoom forcé sur mobile */
+
+/* Anti-zoom forcé sur mobile (iOS/Android) */
 html, body {
     width: 100%;
-    overflow-x: hidden; /* Empêche le scroll horizontal qui force le zoom */
-    -webkit-text-size-adjust: 100%; /* Empêche iOS de zoomer sur les inputs */
+    overflow-x: hidden !important;
+    -webkit-text-size-adjust: 100%;
 }
 
-img, iframe, blockquote, .instagram-media {
+/* Images, iframes et embeds généraux */
+img, iframe, blockquote {
     max-width: 100% !important;
     height: auto;
     display: block;
     margin: 0 auto;
 }
 
-/* Spécifique pour les embeds Instagram qui sont parfois trop larges */
-.instagram-media {
+/* FIX INSTAGRAM CROPPÉ / ZOOM MOBILE - Version renforcée */
+.instagram-media,
+.instagram-media > div,
+.instagram-media iframe {
     width: 100% !important;
-    max-width: 540px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    height: auto !important;
+    margin: 30px 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    border: none !important;
 }
-@viewport {
-    width: device-width;
-    zoom: 1.0;
+
+.instagram-embed {
+    width: 100%;
+    text-align: center;
 }
-/* MENU BURGER MOBILE */
+
+/* MENU BURGER MOBILE - Version finale (la plus fluide) */
 .burger-btn {
     display: none;
     flex-direction: column;
-    justify-content: space-between;
-    width: 40px;
-    height: 30px;
-    background: transparent;
+    gap: 6px;
+    background: none;
     border: none;
     cursor: pointer;
-    padding: 0;
-    z-index: 1000;
+    padding: 10px;
+    z-index: 1001;
 }
 
 .burger-btn span {
-    display: block;
-    height: 4px;
-    width: 100%;
+    width: 30px;
+    height: 3px;
     background: #333;
     border-radius: 2px;
     transition: all 0.3s ease;
 }
 
 .burger-btn.active span:nth-child(1) {
-    transform: rotate(45deg) translate(10px, 10px);
+    transform: rotate(45deg) translate(6px, 6px);
 }
 
 .burger-btn.active span:nth-child(2) {
@@ -120,7 +127,7 @@ img, iframe, blockquote, .instagram-media {
 }
 
 .burger-btn.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
+    transform: rotate(-45deg) translate(6px, -6px);
 }
 
 .mobile-menu {
@@ -129,12 +136,13 @@ img, iframe, blockquote, .instagram-media {
     left: -100%;
     width: 100%;
     height: 100vh;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.98);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: left 0.4s ease;
-    z-index: 999;
+    z-index: 1000;
+    padding: 20px;
 }
 
 .mobile-menu.active {
@@ -148,17 +156,17 @@ img, iframe, blockquote, .instagram-media {
 }
 
 .mobile-menu li {
-    margin: 30px 0;
+    margin: 40px 0;
 }
 
 .mobile-menu a {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
     color: #333;
     text-decoration: none;
 }
 
-/* Affichage responsive */
+/* Activation du burger sur mobile */
 @media (max-width: 868px) {
     .nav-desktop {
         display: none;
@@ -166,26 +174,4 @@ img, iframe, blockquote, .instagram-media {
     .burger-btn {
         display: flex;
     }
-}
-
-/* FIX INSTAGRAM CROPPÉ / ZOOM MOBILE */
-.instagram-media {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    margin: 30px auto !important;
-    padding: 0 !important;
-    overflow: hidden;
-}
-
-.instagram-media iframe {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-}
-
-/* Anti-zoom global iOS/Android */
-html, body {
-    overflow-x: hidden;
-    -webkit-text-size-adjust: 100%;
 }
