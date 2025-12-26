@@ -63,3 +63,28 @@
         font-size: 1rem;
     }
 }
+/* Anti-zoom forcé sur mobile */
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Empêche le scroll horizontal qui force le zoom */
+    -webkit-text-size-adjust: 100%; /* Empêche iOS de zoomer sur les inputs */
+}
+
+img, iframe, blockquote, .instagram-media {
+    max-width: 100% !important;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Spécifique pour les embeds Instagram qui sont parfois trop larges */
+.instagram-media {
+    width: 100% !important;
+    max-width: 540px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+@viewport {
+    width: device-width;
+    zoom: 1.0;
+}
