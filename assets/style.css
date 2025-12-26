@@ -88,3 +88,104 @@ img, iframe, blockquote, .instagram-media {
     width: device-width;
     zoom: 1.0;
 }
+/* MENU BURGER MOBILE */
+.burger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1000;
+}
+
+.burger-btn span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.burger-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.burger-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.4s ease;
+    z-index: 999;
+}
+
+.mobile-menu.active {
+    left: 0;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.mobile-menu li {
+    margin: 30px 0;
+}
+
+.mobile-menu a {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Affichage responsive */
+@media (max-width: 868px) {
+    .nav-desktop {
+        display: none;
+    }
+    .burger-btn {
+        display: flex;
+    }
+}
+
+/* FIX INSTAGRAM CROPPÉ / ZOOM MOBILE */
+.instagram-media {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 30px auto !important;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.instagram-media iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* Anti-zoom global iOS/Android */
+html, body {
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+}
