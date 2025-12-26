@@ -33,6 +33,43 @@
 
     <!-- Styles personnalisés -->
     <style>
+        /* Fix hero texte centré et plein largeur sur mobile */
+.hero-content {
+    width: 100%;
+    max-width: none !important; /* Supprime la limite qui crée l'espace blanc */
+    padding: 20px !important;
+    text-align: center !important; /* Force le centrage du texte */
+    box-sizing: border-box;
+}
+
+.hero-actions {
+    display: flex;
+    flex-direction: column; /* Boutons empilés sur mobile */
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.hero-actions .btn {
+    width: 80%;
+    max-width: 300px;
+}
+
+/* Assure que le background couvre bien tout l'écran */
+.hero-section {
+    background-position: center center !important; /* Centre l'image de fond */
+    background-size: cover !important;
+}
+
+/* Sur très petits écrans */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.2rem !important;
+    }
+    .hero-content .slogan {
+        font-size: 1.2rem !important;
+    }
+}
         body {
             font-family: 'Open Sans', sans-serif;
             line-height: 1.6;
