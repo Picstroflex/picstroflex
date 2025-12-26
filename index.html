@@ -12,39 +12,43 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Open Sans',sans-serif;color:#333;line-height:1.6}
-h1,h2,h3{font-family:'Montserrat',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Open Sans',sans-serif;color:#333;line-height:1.6;}
+h1,h2,h3{font-family:'Montserrat',sans-serif;}
 
-header{position:sticky;top:0;background:#fff;z-index:10;box-shadow:0 2px 10px rgba(0,0,0,.1)}
-.container{max-width:1200px;margin:auto;padding:0 20px}
-.header-content{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
-.logo img{height:50px} /* Ajuste la taille selon ton logo */
-nav ul{display:flex;gap:30px;list-style:none}
-nav a{text-decoration:none;font-weight:600;color:#333}
+header{position:sticky;top:0;background:#fff;z-index:10;box-shadow:0 2px 10px rgba(0,0,0,.1);}
+.container{max-width:1200px;margin:auto;padding:0 20px;}
+.header-content{display:flex;justify-content:space-between;align-items:center;padding:20px 0;}
+.logo img{height:60px;width:auto;} /* Logo s'adapte à la hauteur de la bande blanche */
+nav ul{display:flex;gap:30px;list-style:none;}
+nav a{text-decoration:none;font-weight:600;color:#333;}
 
-.hero-section{height:80vh;background:url("assets/img/hero-banner.jpg") center/cover no-repeat;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff}
-.hero-section::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.45)}
-.hero-content{position:relative;z-index:1;padding:40px}
-.hero-content h1{font-size:3rem;margin-bottom:20px}
-.hero-content p{font-size:1.3rem;margin-bottom:40px}
+.hero-section{height:80vh;background:url("assets/img/hero-banner.jpg") center/cover no-repeat;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;}
+.hero-section::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.45);}
+.hero-content{position:relative;z-index:1;padding:40px;}
+.hero-content h1{font-size:3rem;margin-bottom:20px;}
+.hero-content p.slogan{font-size:1.3rem;margin-bottom:40px;}
 
-.btn{display:inline-block;padding:15px 40px;border-radius:40px;font-weight:600;text-decoration:none;transition:.3s}
-.btn-primary{background:#ff6b6b;color:#fff}
-.btn-primary:hover{background:#ff5252}
-.btn-secondary{border:2px solid #fff;color:#fff}
+.btn{display:inline-block;padding:15px 40px;border-radius:40px;font-weight:600;text-decoration:none;transition:.3s;}
+.btn-primary{background:#ff6b6b;color:#fff;}
+.btn-primary:hover{background:#ff5252;}
+.btn-secondary{border:2px solid #fff;color:#fff;}
+.btn-secondary:hover{background:#fff;color:#333;}
 
-section{padding:80px 20px;text-align:center}
+.about-section{padding:80px 20px;text-align:center;}
+.about-section p{margin-bottom:20px;}
+.about-section .btn-primary{margin-top:30px;display:inline-block;} /* Centrer le bouton */
 
-.instagram-section{background:#fafafa}
-.instagram-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:1000px;margin:auto}
+.instagram-section{background:#fafafa;padding:80px 20px;text-align:center;}
+.instagram-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:1000px;margin:auto;}
+.instagram-media{width:100%!important;max-width:540px!important;margin:auto!important;}
 
-/* FIX INSTAGRAM */
-.instagram-media{width:100%!important;max-width:540px!important;margin:auto!important}
+footer{background:#333;color:#fff;text-align:center;padding:40px 20px;}
 
 @media(max-width:768px){
-.instagram-grid{grid-template-columns:1fr}
-.hero-content h1{font-size:2.3rem}
+  .hero-content h1{font-size:2.3rem;}
+  .hero-content p.slogan{font-size:1.2rem;}
+  .instagram-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -79,29 +83,24 @@ Approche artistique et professionnelle pour vos portraits, événements et proje
 </section>
 
 <section class="about-section container">
-    <div class="about-text">
-        <h2>À propos de Picstroflex</h2>
+<h2>À propos de Picstroflex</h2>
+<p>
+Photographe basé en Essonne, passionné par la lumière naturelle et les instants authentiques.
+</p>
 
-        <p class="about-text">
-            Photographe basé en Essonne, passionné par la lumière naturelle et les instants authentiques.
-        </p>
+<p>
+Je capture les événements, portraits et scènes sportives avec discrétion et élégance
+pour créer des images uniques qui racontent votre histoire.
+</p>
 
-        <p class="about-text">
-            Je capture les événements, portraits et scènes sportives avec discrétion et élégance
-            pour créer des images uniques qui racontent votre histoire.
-        </p>
-
-        <p class="about-text">
-            Chaque image est travaillée avec soin pour créer un récit visuel élégant et intemporel,
-            reflétant la beauté de l’instant et la personnalité des sujets.
-            Mon style privilégie la discrétion, l’esthétique et la connexion avec les moments réels,
-            produisant des photographies mémorables et inspirantes.
-        </p>
-    </div>
-</section>
+<p>
+Chaque image est travaillée avec soin pour créer un récit visuel élégant et intemporel,
+reflétant la beauté de l’instant et la personnalité des sujets.
+Mon style privilégie la discrétion, l’esthétique et la connexion avec les moments réels,
+produisant des photographies mémorables et inspirantes.
+</p>
 
 <a href="presentations.html" class="btn btn-primary">Découvrir mes prestations</a>
-</div>
 </section>
 
 <section class="instagram-section">
@@ -127,11 +126,10 @@ data-instgrm-version="14"></blockquote>
 
 </main>
 
-<footer style="background:#333;color:#fff;padding:40px;text-align:center">
+<footer>
 <p>&copy; 2025 Picstroflex</p>
 </footer>
 
-<!-- SCRIPT INSTAGRAM (UNE FOIS) -->
 <script async src="https://www.instagram.com/embed.js"></script>
 
 </body>
