@@ -1,65 +1,65 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Prestations & Tarifs | Picstroflex</title>
-    <meta name="description" content="Photographe professionnel en Essonne. Reportage événementiel, portrait, shooting extérieur et photographie sportive. Tarifs indicatifs et devis sur mesure.">
+<title>Picstroflex - Photographe Artistique en Essonne</title>
+<meta name="description" content="Photographe professionnel en Essonne, spécialisé en portrait, événementiel et sport.">
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-    <style>
-        /* Reset et typographie */
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Open Sans', sans-serif; color: #222; background: #fff; line-height: 1.6; }
-        h1, h2 { font-family: 'Montserrat', sans-serif; }
-        ul { list-style: none; padding-left: 20px; }
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Open Sans',sans-serif;color:#333;line-height:1.6;}
+h1,h2,h3{font-family:'Montserrat',sans-serif;}
 
-        /* Conteneur */
-        .container { max-width: 1200px; margin: auto; padding: 0 20px; }
+header{position:sticky;top:0;background:#fff;z-index:10;box-shadow:0 2px 10px rgba(0,0,0,.1);}
+.container{max-width:1200px;margin:auto;padding:0 20px;}
+.header-content{display:flex;justify-content:space-between;align-items:center;padding:20px 0;}
+.logo img{height:60px;width:auto;} /* Logo s'adapte à la hauteur de la bande blanche */
+nav ul{display:flex;gap:30px;list-style:none;}
+nav a{text-decoration:none;font-weight:600;color:#333;}
 
-        /* Header */
-        header { padding: 25px 0; border-bottom: 1px solid #eee; }
-        nav ul { display: flex; gap: 30px; }
-        nav a { text-decoration: none; font-weight: 600; color: #222; }
+.hero-section{height:80vh;background:url("assets/img/hero-banner.jpg") center/cover no-repeat;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;}
+.hero-section::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.45);}
+.hero-content{position:relative;z-index:1;padding:40px;}
+.hero-content h1{font-size:3rem;margin-bottom:20px;}
+.hero-content p.slogan{font-size:1.3rem;margin-bottom:40px;}
 
-        /* Intro */
-        .intro { text-align: center; padding: 70px 20px; }
-        .intro h1 { font-size: 2.6rem; margin-bottom: 15px; }
+.btn{display:inline-block;padding:15px 40px;border-radius:40px;font-weight:600;text-decoration:none;transition:.3s;}
+.btn-primary{background:#ff6b6b;color:#fff;}
+.btn-primary:hover{background:#ff5252;}
+.btn-secondary{border:2px solid #fff;color:#fff;}
+.btn-secondary:hover{background:#fff;color:#333;}
 
-        /* Prestations */
-        .prestation { display: flex; gap: 50px; margin-bottom: 80px; align-items: flex-start; flex-wrap: wrap; }
-        .prestation:nth-child(even) { flex-direction: row-reverse; }
-        .prestation-text { flex: 1; min-width: 280px; }
-        .prestation-text h2 { font-size: 2rem; margin-bottom: 15px; }
-        .price { font-weight: 700; font-size: 1.4rem; color: #ff6b6b; margin: 15px 0; }
-        .options li { margin-bottom: 8px; }
+.about-section{padding:80px 20px;text-align:center;}
+.about-section p{margin-bottom:20px;}
+.about-section .btn-primary{margin-top:30px;display:inline-block;} /* Centrer le bouton */
 
-        /* Instagram */
-        .instagram-embed { flex: 1; min-width: 280px; max-width: 420px; }
-        blockquote.instagram-media { width: 100% !important; max-width: 100% !important; margin: 0 auto !important; }
+.instagram-section{background:#fafafa;padding:80px 20px;text-align:center;}
+.instagram-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:1000px;margin:auto;}
+.instagram-media{width:100%!important;max-width:540px!important;margin:auto!important;}
 
-        /* Boutons */
-        .btn { display: inline-block; margin-top: 20px; padding: 14px 28px; background: #ff6b6b; color: #fff; text-decoration: none; border-radius: 40px; font-weight: 600; }
+footer{background:#333;color:#fff;text-align:center;padding:40px 20px;}
 
-        /* CTA */
-        .cta { text-align: center; padding: 80px 20px; background: #f8f8f8; }
-        .cta .btn { margin-top: 20px; }
-
-        /* Responsive mobile */
-        @media (max-width: 900px) {
-            .prestation { flex-direction: column; gap: 30px; }
-            .prestation:nth-child(even) { flex-direction: column; }
-            .intro h1 { font-size: 2rem; }
-            .prestation-text h2 { font-size: 1.6rem; }
-        }
-    </style>
+@media(max-width:768px){
+  .hero-content h1{font-size:2.3rem;}
+  .hero-content p.slogan{font-size:1.2rem;}
+  .instagram-grid{grid-template-columns:1fr;}
+}
+</style>
 </head>
 
 <body>
 
-<header class="container">
+<header>
+<div class="container header-content">
+    <a class="logo" href="index.html">
+        <img src="assets/logo2.png" alt="Picstroflex Logo">
+    </a>
     <nav>
         <ul>
             <li><a href="index.html">Accueil</a></li>
@@ -67,106 +67,70 @@
             <li><a href="contact-devis.html">Réserver</a></li>
         </ul>
     </nav>
+</div>
 </header>
 
-<main class="container">
+<main>
 
-    <section class="intro">
-        <h1>Mes Services Photo Professionnels</h1>
-        <p>
-            Chaque projet est unique. Voici une présentation de mes prestations principales avec des tarifs indicatifs.
-            Pour une offre sur mesure, veuillez utiliser le formulaire de devis. Chaque prestation comprend l'édition des photos.
-        </p>
-    </section>
+<section class="hero-section">
+<div class="hero-content">
+<h1>Capturer l'Émotion et la Lumière Naturelle</h1>
+<p class="slogan">
+Approche artistique et professionnelle pour vos portraits, événements et projets sportifs
+</p>
+<a class="btn btn-primary" href="contact-devis.html">Réserver une séance</a>
+</div>
+</section>
 
-    <!-- REPORTAGE ÉVÉNEMENTIEL -->
-    <section class="prestation">
-        <div class="instagram-embed">
-            <blockquote class="instagram-media"
-              data-instgrm-permalink="https://www.instagram.com/p/DHJkl5lK3qP/"
-              data-instgrm-version="14"></blockquote>
-        </div>
+<section class="about-section container">
+<h2>À propos de Picstroflex</h2>
+<p>
+Photographe basé en Essonne, passionné par la lumière naturelle et les instants authentiques.
+</p>
 
-        <div class="prestation-text">
-            <h2>Reportage Événementiel</h2>
-            <p>
-                Couverture complète de mariages, baptêmes, soirées d’entreprise ou séminaires.
-                Je capture l’ambiance, les émotions et les moments clés avec discrétion et sens du détail.
-            </p>
-            <div class="price">À partir de 850 € (journée)</div>
-            <p>Inclus :</p>
-            <ul class="options">
-                <li>8h de présence</li>
-                <li>150+ photos ultra HD retouchées</li>
-                <li>Livraison en 7 jours</li>
-            </ul>
-            <p>Options :</p>
-            <ul class="options">
-                <li>Séance engagement / pré-événement</li>
-            </ul>
-            <a class="btn" href="contact-devis.html">Demander un devis</a>
-        </div>
-    </section>
+<p>
+Je capture les événements, portraits et scènes sportives avec discrétion et élégance
+pour créer des images uniques qui racontent votre histoire.
+</p>
 
-    <!-- SHOOTING EXTÉRIEUR -->
-    <section class="prestation">
-        <div class="instagram-embed">
-            <blockquote class="instagram-media"
-              data-instgrm-permalink="https://www.instagram.com/p/C8PHOiHIoN0/"
-              data-instgrm-version="14"></blockquote>
-        </div>
+<p>
+Chaque image est travaillée avec soin pour créer un récit visuel élégant et intemporel,
+reflétant la beauté de l’instant et la personnalité des sujets.
+Mon style privilégie la discrétion, l’esthétique et la connexion avec les moments réels,
+produisant des photographies mémorables et inspirantes.
+</p>
 
-        <div class="prestation-text">
-            <h2>Shooting Extérieur / Nature</h2>
-            <p>
-                Séances lifestyle en pleine nature ou en milieu urbain.
-                Idéal pour couples, familles ou projets artistiques personnels.
-            </p>
-            <div class="price">À partir de 250 € (2h)</div>
-            <ul class="options">
-                <li>Conseils de lieu et d’ambiance</li>
-                <li>30 photos ultra HD retouchées</li>
-                <li>Accompagnement pendant la séance</li>
-                <li>Livraison en 72h</li>
-            </ul>
-            <a class="btn" href="contact-devis.html">Demander un devis</a>
-        </div>
-    </section>
+<a href="presentations.html" class="btn btn-primary">Découvrir mes prestations</a>
+</section>
 
-    <!-- PORTRAIT PRO -->
-    <section class="prestation">
-        <div class="instagram-embed">
-            <blockquote class="instagram-media"
-              data-instgrm-permalink="https://www.instagram.com/p/CxTJx7yo_ey/"
-              data-instgrm-version="14"></blockquote>
-        </div>
+<section class="instagram-section">
+<div class="container">
+<h2>Dernières créations</h2>
+<div class="instagram-grid">
+<blockquote class="instagram-media"
+data-instgrm-permalink="https://www.instagram.com/p/DSr_QGejNoE/"
+data-instgrm-version="14"></blockquote>
 
-        <div class="prestation-text">
-            <h2>Portrait Pro / Artistique</h2>
-            <p>
-                Portraits professionnels pour CV, réseaux sociaux, branding personnel
-                ou créations artistiques en studio ou à domicile.
-            </p>
-            <div class="price">À partir de 180 € (1h)</div>
-            <ul class="options">
-                <li>1 tenue</li>
-                <li>10 photos HD retouchées</li>
-                <li>Droits d’utilisation web pro</li>
-                <li>Livraison en 24h</li>
-            </ul>
-            <a class="btn" href="contact-devis.html">Demander un devis</a>
-        </div>
-    </section>
+<blockquote class="instagram-media"
+data-instgrm-permalink="https://www.instagram.com/p/DIgNAJxqApl/"
+data-instgrm-version="14"></blockquote>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Un projet en tête ?</h2>
+<p>Discutons ensemble de votre besoin</p>
+<a class="btn btn-primary" href="contact-devis.html">Demande de devis</a>
+</section>
 
 </main>
 
-<section class="cta">
-    <h2>Prêt(e) à concrétiser votre projet ?</h2>
-    <p>Obtenez un devis précis et personnalisé selon vos besoins.</p>
-    <a class="btn" href="contact-devis.html">Demande de devis</a>
-</section>
+<footer>
+<p>&copy; 2025 Picstroflex</p>
+</footer>
 
-<script async src="//www.instagram.com/embed.js"></script>
+<script async src="https://www.instagram.com/embed.js"></script>
 
 </body>
 </html>
