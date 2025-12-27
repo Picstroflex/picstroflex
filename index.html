@@ -161,18 +161,63 @@ data-instgrm-version="14"></blockquote>
 </section>
 
 <section class="contact-section">
-<div class="container">
-<h2>Un projet en tête ?</h2>
-<p>Discutons ensemble de votre besoin</p>
-<a class="btn btn-primary" href="contact-devis.html">Demande de devis</a>
+  <div class="container">
+    <h2>Un projet en tête ?</h2>
+    <p>Discutons ensemble de votre besoin</p>
 
-<!-- Bouton Google Maps -->
-<a class="google-maps-link" href="https://share.google/nZLkT88O3DkEqXSpQ" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Google_Maps_icon_%282020%29.svg" alt="Google Maps">
-  Nous trouver sur Google
-</a>
-</div>
+    <!-- Conteneur pour centrer les boutons et espacer correctement -->
+    <div class="contact-buttons" style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:20px;">
+
+      <!-- Bouton demande de devis -->
+      <a class="btn btn-primary" href="contact-devis.html">Demande de devis</a>
+
+      <!-- Bouton Google Maps avec logo -->
+      <a class="google-maps-link" href="https://share.google/nZLkT88O3DkEqXSpQ" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Google_Maps_icon_%282020%29.svg" alt="Google Maps Logo" style="width:24px;height:24px;">
+        Nous trouver sur Google
+      </a>
+    </div>
+  </div>
 </section>
+
+<style>
+/* Boutons contact alignés */
+.contact-buttons a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 40px;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+/* Bouton Google Maps */
+.google-maps-link {
+  background: #4285F4;
+  color: #fff;
+}
+.google-maps-link:hover {
+  background: #3367D6;
+}
+
+/* Bouton demande de devis */
+.btn-primary {
+  background: #ff6b6b;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #ff5252;
+}
+
+/* Logo dans le bouton Google Maps */
+.google-maps-link img {
+  display: inline-block;
+  vertical-align: middle;
+}
+</style>
 
 </main>
 
