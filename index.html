@@ -159,63 +159,55 @@ data-instgrm-version="14"></blockquote>
 </div>
 </div>
 </section>
-
 <section class="contact-section">
   <div class="container">
     <h2>Un projet en tête ?</h2>
     <p>Discutons ensemble de votre besoin</p>
 
-    <!-- Conteneur pour centrer les boutons et espacer correctement -->
+    <!-- Conteneur pour centrer les boutons et les aligner -->
     <div class="contact-buttons" style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:20px;">
 
       <!-- Bouton demande de devis -->
-      <a class="btn btn-primary" href="contact-devis.html">Demande de devis</a>
+      <a class="btn-contact" href="contact-devis.html">Demande de devis</a>
 
-      <!-- Bouton Google Maps avec logo -->
-      <a class="google-maps-link" href="https://share.google/nZLkT88O3DkEqXSpQ" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Google_Maps_icon_%282020%29.svg" alt="Google Maps Logo" style="width:24px;height:24px;">
-        Nous trouver sur Google
-      </a>
+      <!-- Bouton Google Maps sans logo -->
+      <a class="btn-contact btn-maps" href="https://share.google/nZLkT88O3DkEqXSpQ" target="_blank">Nous trouver sur Google Maps</a>
     </div>
   </div>
 </section>
 
 <style>
-/* Boutons contact alignés */
-.contact-buttons a {
+/* Style commun pour les boutons contact */
+.btn-contact {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
   text-decoration: none;
   font-weight: 600;
   padding: 12px 24px;
   border-radius: 40px;
   transition: 0.3s;
   font-size: 1rem;
-}
-
-/* Bouton Google Maps */
-.google-maps-link {
-  background: #4285F4;
-  color: #fff;
-}
-.google-maps-link:hover {
-  background: #3367D6;
+  min-width: 220px; /* même largeur minimale pour tous les boutons */
+  text-align: center;
 }
 
 /* Bouton demande de devis */
-.btn-primary {
+.btn-contact[href="contact-devis.html"] {
   background: #ff6b6b;
   color: #fff;
 }
-.btn-primary:hover {
+.btn-contact[href="contact-devis.html"]:hover {
   background: #ff5252;
 }
 
-/* Logo dans le bouton Google Maps */
-.google-maps-link img {
-  display: inline-block;
-  vertical-align: middle;
+/* Bouton Google Maps */
+.btn-maps {
+  background: #4285F4;
+  color: #fff;
+}
+.btn-maps:hover {
+  background: #3367D6;
 }
 </style>
 
