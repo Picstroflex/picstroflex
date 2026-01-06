@@ -175,3 +175,7 @@ img, iframe, blockquote {
         display: flex;
     }
 }
+.instagram-section img[aria-hidden="true"] {
+    display: none;
+}
+
