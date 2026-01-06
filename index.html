@@ -175,28 +175,74 @@ Mon style privilégie la discrétion, l’esthétique et la connexion avec les m
 </section>
 
 <section class="instagram-section">
-<div class="container">
-<h2>Capturer l’émotion et la lumière naturelle</h2>
-<div class="instagram-grid">
+  <div class="container">
+    <div class="instagram-grid">
+      <!-- Carrousel Instagram 1 -->
+      <div class="instagram-item">
+        <blockquote class="instagram-media"
+          data-instgrm-permalink="https://www.instagram.com/p/DSr_QGejNoE/"
+          data-instgrm-version="14"></blockquote>
+        <h2 class="instagram-title">Capturer l’émotion et la lumière naturelle</h2>
+        <img 
+          src="https://www.instagram.com/p/DSr_QGejNoE/media/?size=l"
+          alt="Carrousel de portraits et paysages d'Asie du Sud-Est"
+          aria-hidden="true"
+          loading="lazy">
+      </div>
 
-  <blockquote class="instagram-media"
-        data-instgrm-permalink="https://www.instagram.com/p/DSr_QGejNoE/"
-        data-instgrm-version="14"></blockquote>
+      <!-- Carrousel Instagram 2 -->
+      <div class="instagram-item">
+        <blockquote class="instagram-media"
+          data-instgrm-permalink="https://www.instagram.com/p/DIgNAJxqApl/"
+          data-instgrm-version="14"></blockquote>
+        <h2 class="instagram-title">Capturer l’émotion et la lumière naturelle</h2>
+        <img 
+          src="https://www.instagram.com/p/DIgNAJxqApl/media/?size=l"
+          alt="Portrait artistique des Sœurs de l'Absurde Élégance"
+          aria-hidden="true"
+          loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
 
-  <blockquote class="instagram-media"
-        data-instgrm-permalink="https://www.instagram.com/p/DIgNAJxqApl/"
-        data-instgrm-version="14"></blockquote>
+<style>
+.instagram-section {
+    background:#fafafa;
+    position:relative;
+}
+.instagram-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    max-width:1000px;
+    margin:0 auto;
+}
+.instagram-item {
+    position:relative;
+}
+.instagram-title {
+    position:absolute;
+    bottom:15px;
+    left:15px;
+    color:#fff;
+    font-size:1.5rem;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    margin:0;
+    pointer-events:none;
+}
 
-  <!-- Images invisibles SEO -->
-  <img 
-  src="https://www.instagram.com/p/DSr_QGejNoE/media/?size=l"
-  alt="Carrousel de portraits et paysages d'Asie du Sud-Est"
-  aria-hidden="true" loading="lazy">
+/* Images SEO invisibles */
+.instagram-item img[aria-hidden="true"] {
+    display:none;
+}
 
-  <img 
-  src="https://www.instagram.com/p/DIgNAJxqApl/media/?size=l"
-  alt="Portrait artistique des Sœurs de l'Absurde Élégance"
-  aria-hidden="true" loading="lazy">
+/* Responsive */
+@media(max-width:768px){
+    .instagram-grid {grid-template-columns:1fr; gap:20px;}
+    .instagram-title {font-size:1.2rem; bottom:10px; left:10px;}
+}
+</style>
 
 </div>
 </div>
