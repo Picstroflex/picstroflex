@@ -4,27 +4,18 @@ picstroflex-site/
 ├── contact-devis.html         # Page contact / formulaire de devis | Menu : Accueil / Présentations / Réserver
 ├── sitemap.xml                # Sitemap pour Google Search Console
 ├── robots.txt                 # Fichier robots pour SEO
+├── favicon/
+│   ├── favicon.ico            # Favicon classique
+│   ├── favicon.svg            # Favicon SVG
+│   ├── favicon-96x96.png      # Favicon 96x96 px
+│   ├── apple-touch-icon.png   # Apple Touch Icon
+│   ├── site.webmanifest       # Manifest pour PWA
+│   └── logo-google.png        # Logo pour JSON-LD / Google
 ├── assets/
 │   ├── css/
-│   │   └── style.css          # Styles principaux
+│   │   └── style.css          # Styles principaux (si séparé)
 │   ├── js/
 │   │   └── scripts.js         # Scripts JS éventuels
 │   └── img/
-│       ├── logo.svg           # Logo du site
-│       ├── hero-banner.jpg    # Bannière principale
-│       ├── about-portrait.jpg # Portrait du photographe
-│       ├── gallery1.jpg       # Photo portfolio
-│       ├── gallery2.jpg
-│       ├── gallery3.jpg
-│       ├── gallery4.jpg
-│       ├── gallery5.jpg
-│       ├── gallery6.jpg
-│       ├── gallery7.jpg
-│       ├── gallery8.jpg
-│       ├── gallery9.jpg
-│       ├── gallery10.jpg
-│       ├── gallery11.jpg
-│       ├── gallery12.jpg
-│       ├── gallery13.jpg
-│       ├── gallery14.jpg
-│       └── gallery15.jpg
+│       ├── logo2.png          # Logo affiché dans le header
+│       ├── regard-intense-oeil-marron-eclairage-artistique.jpg # Hero banner
