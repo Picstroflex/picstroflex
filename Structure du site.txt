@@ -4,6 +4,7 @@ picstroflex-site/
 ├── contact-devis.html         # Page contact / formulaire de devis | Menu : Accueil / Présentations / Réserver
 ├── sitemap.xml                # Sitemap pour Google Search Console
 ├── robots.txt                 # Fichier robots pour SEO
+├── googlea9c76baaff915e15.html
 ├── favicon/
 │   ├── favicon.ico            # Favicon classique
 │   ├── favicon.svg            # Favicon SVG
