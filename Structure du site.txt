@@ -18,4 +18,4 @@ picstroflex-site/
 │   │   └── scripts.js         # Scripts JS éventuels
 │   └── img/
 │       ├── logo2.png          # Logo affiché dans le header
-│       ├── regard-intense-oeil-marron-eclairage-artistique.jpg # Hero banner
+│       └── regard-intense-oeil-marron-eclairage-artistique.jpg # Hero banner
