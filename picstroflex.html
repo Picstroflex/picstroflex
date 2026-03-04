@@ -966,8 +966,26 @@ function handleSubmit(e) {
     alert('Veuillez remplir les champs obligatoires (Nom, Email, Message).');
     return;
   }
-  document.getElementById('form').style.display    = 'none';
-  document.getElementById('confirm').style.display = 'block';
+
+  fetch('https://formspree.io/f/mdanvdwy', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      nom,
+      email,
+      telephone: document.getElementById('f-tel').value,
+      date:      document.getElementById('f-date').value,
+      lieu:      document.getElementById('f-lieu').value,
+      message:   msg,
+      prestation: [...document.querySelectorAll('.chip.on')].map(c => c.dataset.val).join(', ')
+    })
+  })
+  .then(r => r.ok ? r.json() : Promise.reject())
+  .then(() => {
+    document.getElementById('form').style.display    = 'none';
+    document.getElementById('confirm').style.display = 'block';
+  })
+  .catch(() => alert('Erreur lors de l\'envoi. Réessayez ou contactez directement picstroflex@gmail.com'));
 }
 </script>
 </body>
