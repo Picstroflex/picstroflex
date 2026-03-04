@@ -1,28 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Page d'accueil -->
-  <url>
-    <loc>https://picstroflex.github.io/picstroflex/</loc>
-    <lastmod>2025-12-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- Page contact/devis -->
-  <url>
-    <loc>https://picstroflex.github.io/picstroflex/contact-devis.html</loc>
-    <lastmod>2025-12-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Page présentations -->
-  <url>
-    <loc>https://picstroflex.github.io/picstroflex/presentations.html</loc>
-    <lastmod>2025-12-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-</urlset>
+<url>
+  <loc>https://picstroflex.github.io/picstroflex/</loc>
+</url>
