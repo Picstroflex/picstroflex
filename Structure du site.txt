@@ -1,7 +1,5 @@
 picstroflex-site/
-├── index.html                 # Page d'accueil | Menu : Accueil / Présentations / Réserver
-├── presentations.html         # Page prestations | Menu : Accueil / Présentations / Réserver
-├── contact-devis.html         # Page contact / formulaire de devis | Menu : Accueil / Présentations / Réserver
+├── index.html                 # Page d'accueil | Menu : Accueil / Présentations / Réserver / Prestations / Contact
 ├── sitemap.xml                # Sitemap pour Google Search Console
 ├── robots.txt                 # Fichier robots pour SEO
 ├── googlea9c76baaff915e15.html
