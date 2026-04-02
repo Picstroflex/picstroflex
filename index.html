@@ -447,16 +447,26 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
    ║              ★  ZONE DE CONFIGURATION PHOTOS  ★             ║
    ╚══════════════════════════════════════════════════════════════╝ */
 const CONFIG = {
-  logo: "assets/logo2.png",
-  hero: "assets/mu-ko-ang-thong.jpg",
+  logo: "assets/picstroflex-photographe-idf.png",
+  logoAlt: "Picstroflex — Photographe événementiel et portrait en Île-de-France",
+  hero: "assets/photographe-ile-de-france-reportage-paysage.jpg",
+  heroAlt: "Photographe Île-de-France — Reportage, portrait et shooting sur mesure en Essonne",
   cards: [
-    { photo: "assets/edit53.jpg" },
-    { photo: "assets/edit65.jpg" },
-    { photo: "assets/edit51.jpg" },
+    {
+      photo: "assets/reportage-evenementiel-paris-fashion-week-robes.jpg",
+      alt: "Reportage photo événementiel Paris Fashion Week — deux femmes en robes rouge et noire, Île-de-France"
+    },
+    {
+      photo: "assets/shooting-exterieur-nature-femme-robe-parc-essonne.jpg",
+      alt: "Shooting extérieur nature — femme en robe noire avec bouquet de fleurs dans un parc, Essonne"
+    },
+    {
+      photo: "assets/portrait-professionnel-femme-beret-rouge-idf.jpg",
+      alt: "Portrait professionnel femme au béret rouge — photographe portrait artistique Île-de-France"
+    },
   ],
 };
 /* ════════════════════════ FIN CONFIG ════════════════════════════ */
-
 document.addEventListener('DOMContentLoaded', () => {
   // Logo
   const navImg = document.getElementById('nav-logo-img');
