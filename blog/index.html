@@ -465,7 +465,7 @@ function renderArticles(list) {
       <div class="af-meta">${first.date} &ensp;·&ensp; ${first.lecture} de lecture</div>
       <div class="af-title">${first.titre}</div>
       <p class="af-excerpt">${first.extrait}</p>
-      <a class="af-read" href="javascript:void(0)" href="fashion-week-paris-reportage-photo.html">Lire l'article</a>
+      <a class="af-read" href="javascript:void(0)" href="javascript:void(0)" onclick="openArticle(${first.id})">Lire l'article</a>
     </div>
   `;
   main.appendChild(featured);
