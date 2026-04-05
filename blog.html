@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Picstroflex · Photographe Essonne & Île-de-France</title>
+<meta name="description" content="Le blog de Picstroflex : coulisses de reportages, conseils photo, lieux de shooting en Essonne et Île-de-France, portraits et événements.">
+<link rel="canonical" href="https://picstroflex.github.io/picstroflex/blog.html">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Josefin+Sans:wght@100;300;400&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════
+   BASE — reprend exactement les variables du site
+═══════════════════════════════════════════════════════ */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --noir:#0c0b09; --charbon:#141310; --brun:#1c1913; --brun-clair:#252016;
+  --or:#c9a96e; --or-clair:#e2cfa0; --or-pale:#f0e8d4; --creme:#f0e8d8;
+  --gris:#7a7468; --gris-mid:#a09790; --gris-clair:#c0b9ad;
+  --rule:rgba(201,169,110,0.12);
+}
+html { scroll-behavior:smooth; }
+body { background:var(--noir); color:var(--creme); font-family:'Josefin Sans',sans-serif; font-weight:300; cursor:none; overflow-x:hidden; }
+
+/* ── Curseur ── */
+.cursor { position:fixed; width:7px; height:7px; background:var(--or); border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); transition:width .15s,height .15s; }
+.cursor-ring { position:fixed; width:34px; height:34px; border:1px solid rgba(201,169,110,.45); border-radius:50%; pointer-events:none; z-index:9998; transform:translate(-50%,-50%); transition:all .2s ease; }
+body.hovering .cursor-ring { width:52px; height:52px; border-color:rgba(201,169,110,.75); }
+body.hovering .cursor { width:4px; height:4px; }
+
+/* ── Nav ── */
+nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify-content:space-between; align-items:center; padding:26px 56px; transition:background .4s,padding .4s; }
+nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16px 56px; border-bottom:1px solid var(--rule); }
+.nav-logo-wrap { display:flex; align-items:center; gap:14px; text-decoration:none; }
+.logo-text { font-family:'Cormorant Garamond',serif; font-size:21px; font-weight:300; letter-spacing:.28em; text-transform:uppercase; color:var(--or-clair); }
+.logo-text b { color:var(--or); font-weight:300; }
+.nav-links { display:flex; gap:40px; list-style:none; align-items:center; }
+.nav-links a { font-size:11px; letter-spacing:.35em; text-transform:uppercase; color:var(--gris-mid); text-decoration:none; transition:color .3s; position:relative; }
+.nav-links a::after { content:''; position:absolute; bottom:-3px; left:0; width:0; height:1px; background:var(--or); transition:width .3s; }
+.nav-links a:hover { color:var(--or-clair); }
+.nav-links a:hover::after { width:100%; }
+.nav-cta { border:1px solid rgba(201,169,110,.35)!important; padding:10px 24px; color:var(--or)!important; transition:background .3s,color .3s!important; }
+.nav-cta:hover { background:var(--or)!important; color:var(--noir)!important; }
+.nav-cta::after { display:none!important; }
+.nav-active { color:var(--or-clair)!important; }
+.nav-active::after { width:100%!important; }
+
+/* ── Hero Blog ── */
+.blog-hero { min-height:52vh; display:flex; align-items:flex-end; padding:0 56px 80px; position:relative; overflow:hidden; background:var(--charbon); }
+.blog-hero-grid { position:absolute; inset:0; background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px); background-size:80px 80px; opacity:.3; }
+.blog-hero-glow { position:absolute; inset:0; background:radial-gradient(ellipse 50% 60% at 30% 60%,rgba(201,169,110,.05) 0%,transparent 70%); }
+.grain { position:absolute; inset:0; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.07'/%3E%3C/svg%3E"); background-size:300px; opacity:.4; pointer-events:none; }
+.blog-hero-content { position:relative; z-index:10; max-width:900px; }
+.blog-eyebrow { font-size:11px; letter-spacing:.48em; text-transform:uppercase; color:var(--or); margin-bottom:20px; display:flex; align-items:center; gap:16px; animation:up .9s .3s ease both; }
+.blog-eyebrow::before { content:''; width:36px; height:1px; background:var(--or); }
+.blog-hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(44px,6vw,82px); font-weight:300; line-height:1.04; letter-spacing:-.02em; animation:up .9s .5s ease both; }
+.blog-hero h1 em { font-style:italic; color:var(--or-clair); }
+.blog-hero-sub { font-size:15px; letter-spacing:.08em; color:var(--gris-clair); line-height:1.85; margin-top:24px; max-width:560px; animation:up .9s .7s ease both; }
+
+/* ── Filtres catégories ── */
+.blog-filters { background:var(--charbon); padding:32px 56px; border-bottom:1px solid var(--rule); display:flex; gap:12px; align-items:center; flex-wrap:wrap; position:sticky; top:0; z-index:100; backdrop-filter:blur(10px); }
+.filter-label { font-size:11px; letter-spacing:.38em; text-transform:uppercase; color:var(--or); margin-right:8px; }
+.filter-chip { font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--gris-clair); border:1px solid rgba(201,169,110,.2); padding:8px 18px; cursor:none; user-select:none; transition:all .25s; background:transparent; }
+.filter-chip.active, .filter-chip:hover { color:var(--or); border-color:var(--or); background:rgba(201,169,110,.05); }
+
+/* ── Grille articles ── */
+.blog-main { background:var(--noir); padding:80px 56px 120px; }
+
+/* Article en vedette (le plus récent) */
+.article-featured { display:grid; grid-template-columns:1.2fr 1fr; gap:0; margin-bottom:4px; background:var(--charbon); border:1px solid transparent; transition:border-color .4s; position:relative; overflow:hidden; }
+.article-featured::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(to right,transparent,var(--or),transparent); transform:scaleX(0); transition:transform .6s ease; z-index:2; }
+.article-featured:hover { border-color:var(--rule); }
+.article-featured:hover::before { transform:scaleX(1); }
+
+.af-img { position:relative; min-height:480px; overflow:hidden; background:var(--brun); }
+.af-img img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .8s ease; }
+.article-featured:hover .af-img img { transform:scale(1.04); }
+.af-img-overlay { position:absolute; inset:0; background:linear-gradient(to right,transparent 60%,var(--charbon) 100%); z-index:1; }
+.af-img-placeholder { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
+.af-img-placeholder span { font-family:'Cormorant Garamond',serif; font-size:140px; font-weight:300; color:rgba(201,169,110,.05); line-height:1; }
+
+.af-body { padding:60px 52px; display:flex; flex-direction:column; justify-content:center; }
+.af-badge { display:inline-flex; align-items:center; gap:12px; margin-bottom:28px; }
+.af-badge-tag { font-size:10px; letter-spacing:.42em; text-transform:uppercase; color:var(--or); border:1px solid rgba(201,169,110,.35); padding:6px 14px; }
+.af-badge-new { font-size:10px; letter-spacing:.28em; text-transform:uppercase; color:var(--noir); background:var(--or); padding:6px 12px; }
+.af-meta { font-size:12px; letter-spacing:.18em; color:var(--gris-mid); margin-bottom:18px; }
+.af-title { font-family:'Cormorant Garamond',serif; font-size:clamp(28px,3.2vw,44px); font-weight:400; line-height:1.12; color:var(--creme); margin-bottom:20px; }
+.af-excerpt { font-size:14px; line-height:1.95; color:var(--gris-clair); margin-bottom:36px; }
+.af-read { font-size:11px; letter-spacing:.32em; text-transform:uppercase; color:var(--or); text-decoration:none; display:flex; align-items:center; gap:14px; transition:gap .3s; }
+.af-read::after { content:'→'; transition:transform .3s; }
+.af-read:hover { gap:20px; }
+
+/* Grille secondaire */
+.blog-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:3px; margin-top:3px; }
+
+.bcard { background:var(--charbon); position:relative; overflow:hidden; border:1px solid transparent; transition:border-color .4s; display:flex; flex-direction:column; }
+.bcard::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(to right,transparent,var(--or),transparent); transform:scaleX(0); transition:transform .6s ease; z-index:2; }
+.bcard:hover { border-color:var(--rule); }
+.bcard:hover::before { transform:scaleX(1); }
+
+.bcard-img { position:relative; height:220px; overflow:hidden; background:var(--brun); flex-shrink:0; }
+.bcard-img img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .7s ease; }
+.bcard:hover .bcard-img img { transform:scale(1.06); }
+.bcard-img-placeholder { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
+.bcard-img-placeholder span { font-family:'Cormorant Garamond',serif; font-size:80px; font-weight:300; color:rgba(201,169,110,.07); line-height:1; }
+.bcard-cat { position:absolute; bottom:12px; left:12px; font-size:10px; letter-spacing:.35em; text-transform:uppercase; color:rgba(201,169,110,.85); background:rgba(12,11,9,.55); padding:5px 10px; backdrop-filter:blur(4px); z-index:2; }
+
+.bcard-body { padding:30px 28px 36px; display:flex; flex-direction:column; flex:1; }
+.bcard-meta { font-size:12px; letter-spacing:.15em; color:var(--gris-mid); margin-bottom:12px; }
+.bcard-title { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:400; line-height:1.2; color:var(--creme); margin-bottom:14px; }
+.bcard-excerpt { font-size:13px; line-height:1.85; color:var(--gris-clair); margin-bottom:24px; flex:1; }
+.bcard-read { font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--or); text-decoration:none; display:flex; align-items:center; gap:10px; transition:gap .3s; margin-top:auto; }
+.bcard-read::after { content:'→'; }
+.bcard-read:hover { gap:16px; }
+
+/* Séparateur vide quand pas assez d'articles */
+.blog-empty { grid-column:1/-1; padding:80px 0; text-align:center; color:var(--gris-mid); font-family:'Cormorant Garamond',serif; font-size:28px; font-style:italic; }
+
+/* ── Modal article ── */
+.modal-overlay { position:fixed; inset:0; background:rgba(12,11,9,.96); z-index:500; display:flex; align-items:flex-start; justify-content:center; overflow-y:auto; opacity:0; pointer-events:none; transition:opacity .4s ease; padding:0; }
+.modal-overlay.open { opacity:1; pointer-events:all; }
+.modal { max-width:820px; width:100%; padding:120px 56px 100px; position:relative; animation:modalIn .5s ease both; }
+@keyframes modalIn { from { opacity:0; transform:translateY(32px); } to { opacity:1; transform:none; } }
+.modal-close { position:fixed; top:32px; right:40px; font-size:11px; letter-spacing:.38em; text-transform:uppercase; color:var(--gris-clair); cursor:none; display:flex; align-items:center; gap:10px; transition:color .3s; background:none; border:none; z-index:10; }
+.modal-close::before { content:'×'; font-size:22px; font-weight:300; color:var(--or); }
+.modal-close:hover { color:var(--or-clair); }
+.modal-cat { font-size:11px; letter-spacing:.48em; text-transform:uppercase; color:var(--or); margin-bottom:20px; display:flex; align-items:center; gap:16px; }
+.modal-cat::before { content:''; width:36px; height:1px; background:var(--or); }
+.modal-title { font-family:'Cormorant Garamond',serif; font-size:clamp(36px,5vw,62px); font-weight:300; line-height:1.06; letter-spacing:-.02em; color:var(--creme); margin-bottom:20px; }
+.modal-title em { font-style:italic; color:var(--or-clair); }
+.modal-meta { font-size:13px; letter-spacing:.15em; color:var(--gris-mid); margin-bottom:40px; padding-bottom:32px; border-bottom:1px solid var(--rule); display:flex; gap:20px; }
+.modal-hero-img { width:100%; max-height:500px; object-fit:cover; margin-bottom:48px; display:block; }
+.modal-hero-img-placeholder { width:100%; height:320px; background:var(--brun); display:flex; align-items:center; justify-content:center; margin-bottom:48px; }
+.modal-hero-img-placeholder span { font-family:'Cormorant Garamond',serif; font-size:120px; font-weight:300; color:rgba(201,169,110,.06); }
+.modal-body { font-size:16px; line-height:2.05; color:var(--gris-clair); }
+.modal-body p { margin-bottom:24px; }
+.modal-body h2 { font-family:'Cormorant Garamond',serif; font-size:28px; font-weight:400; color:var(--creme); margin:40px 0 16px; }
+.modal-body h3 { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:400; color:var(--or-clair); margin:32px 0 12px; }
+.modal-body blockquote { border-left:2px solid rgba(201,169,110,.4); padding:16px 24px; margin:32px 0; color:var(--creme); font-family:'Cormorant Garamond',serif; font-size:22px; font-style:italic; line-height:1.6; }
+.modal-body strong { color:var(--or-clair); font-weight:400; }
+.modal-body ul { margin:16px 0 24px; padding-left:0; list-style:none; }
+.modal-body ul li { padding:6px 0 6px 24px; position:relative; }
+.modal-body ul li::before { content:'—'; color:var(--or); position:absolute; left:0; font-size:10px; top:9px; }
+.modal-footer { margin-top:60px; padding-top:32px; border-top:1px solid var(--rule); display:flex; justify-content:space-between; align-items:center; }
+.modal-tags { display:flex; gap:8px; flex-wrap:wrap; }
+.modal-tag { font-size:11px; letter-spacing:.2em; color:var(--gris-clair); border:1px solid rgba(201,169,110,.18); padding:7px 14px; }
+.modal-share { font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--or); }
+
+/* ── Footer ── */
+footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 56px; display:flex; justify-content:space-between; align-items:center; }
+.ft-logo-text { font-family:'Cormorant Garamond',serif; font-size:19px; font-weight:300; letter-spacing:.28em; text-transform:uppercase; color:var(--or-clair); }
+.ft-logo-text b { color:var(--or); font-weight:300; }
+.ft-copy { font-size:13px; color:var(--gris-clair); letter-spacing:.10em; }
+.ft-links { display:flex; gap:24px; }
+.ft-links a { font-size:12px; letter-spacing:.20em; text-transform:uppercase; color:var(--gris-clair); text-decoration:none; transition:color .3s; }
+.ft-links a:hover { color:var(--or); }
+
+/* ── Animations ── */
+.reveal { opacity:1; transform:none; transition:opacity .85s ease,transform .85s ease; }
+.reveal.hidden { opacity:0; transform:translateY(44px); }
+.reveal.up { opacity:1; transform:none; }
+.reveal-delay-1 { transition-delay:.12s; }
+.reveal-delay-2 { transition-delay:.24s; }
+.reveal-delay-3 { transition-delay:.36s; }
+@keyframes up { from { opacity:0; transform:translateY(36px); } to { opacity:1; transform:none; } }
+
+/* ── Responsive ── */
+@media (max-width:1000px) {
+  nav { padding:20px 24px; } nav.solid { padding:14px 24px; } .nav-links { display:none; }
+  .blog-hero { padding:0 24px 60px; min-height:44vh; }
+  .blog-filters { padding:24px; top:64px; }
+  .blog-main { padding:52px 24px 80px; }
+  .article-featured { grid-template-columns:1fr; }
+  .af-img { min-height:300px; }
+  .af-img-overlay { background:linear-gradient(to bottom,transparent 50%,var(--charbon) 100%); }
+  .af-body { padding:36px 28px; }
+  .blog-grid { grid-template-columns:1fr; }
+  .modal { padding:80px 24px 80px; }
+  .modal-close { right:20px; top:20px; }
+  footer { flex-direction:column; gap:14px; text-align:center; padding:28px 24px; }
+  .ft-links { flex-wrap:wrap; justify-content:center; }
+}
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="ring"></div>
+
+<nav id="nav">
+  <a class="nav-logo-wrap" href="index.html" style="text-decoration:none;">
+    <span class="logo-text">Picstro<b>flex</b></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#prestations">Prestations & Tarifs</a></li>
+    <li><a href="blog.html" class="nav-active">Blog</a></li>
+    <li><a href="index.html#devis" class="nav-cta">Réserver</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="blog-hero">
+  <div class="blog-hero-grid"></div>
+  <div class="blog-hero-glow"></div>
+  <div class="grain"></div>
+  <div class="blog-hero-content">
+    <div class="blog-eyebrow">Journal · Coulisses · Conseils</div>
+    <h1>Le blog<br><em>Picstroflex</em></h1>
+    <p class="blog-hero-sub">Coulisses de reportages, conseils photo, lieux de shooting en Essonne et Île-de-France — une fenêtre sur mon travail et ma vision artistique.</p>
+  </div>
+</div>
+
+<!-- FILTRES -->
+<div class="blog-filters" id="blog-filters">
+  <span class="filter-label">Filtrer</span>
+  <button class="filter-chip active" data-cat="Tous" onclick="filterArticles('Tous',this)">Tous</button>
+  <!-- Les filtres de catégories sont générés automatiquement depuis CONFIG -->
+</div>
+
+<!-- CONTENU PRINCIPAL -->
+<div class="blog-main" id="blog-main">
+  <!-- Généré dynamiquement depuis CONFIG -->
+</div>
+
+<!-- MODAL ARTICLE -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+  <div class="modal" id="modal">
+    <button class="modal-close" onclick="closeModal()">Fermer</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="ft-logo-text">Picstro<b>flex</b></div>
+  <div class="ft-copy">© 2026 Picstroflex · Tous droits réservés</div>
+  <div class="ft-links">
+    <a href="https://www.instagram.com/picstroflex/" target="_blank">Instagram</a>
+    <a href="https://www.linkedin.com/in/alexandre-poulain-b1ab191a7" target="_blank">Linkedin</a>
+    <a href="index.html#devis">Contact</a>
+  </div>
+</footer>
+
+<script>
+/* ╔══════════════════════════════════════════════════════════════════════════╗
+   ║                   ★  ZONE DE CONFIGURATION DU BLOG  ★                  ║
+   ║                                                                          ║
+   ║  Pour ajouter un article, copiez le bloc entre {} et remplissez         ║
+   ║  les champs. L'ordre ici = ordre d'affichage (le 1er = en vedette).     ║
+   ╚══════════════════════════════════════════════════════════════════════════╝ */
+
+const ARTICLES = [
+
+  /* ── ARTICLE 1 (EN VEDETTE — le plus récent) ──────────────────────────── */
+  {
+    id: 1,
+    titre:     "Fashion Week Paris — Dans les coulisses d'un reportage événementiel",
+    /* Quelques mots pour résumer l'article */
+    extrait:   "Retour sur ma couverture de la Fashion Week parisienne : la préparation, les défis techniques et les moments forts capturés en direct. Comment anticiper l'imprévu quand chaque seconde compte ?",
+    /* Catégorie affiché sur la carte et le filtre */
+    categorie: "Reportage",
+    /* Format : JJ mois AAAA */
+    date:      "28 mars 2026",
+    /* Durée de lecture (approximatif) */
+    lecture:   "6 min",
+    /* Chemin vers l'image de couverture (laisser "" pour afficher le numéro) */
+    image:     "assets/reportage-evenementiel-paris-fashion-week-robes.jpg",
+    /* Alt de l'image pour le SEO */
+    imageAlt:  "Reportage Fashion Week Paris — deux femmes en robes rouge et noire",
+    /* Mots-clés affichés en bas de l'article */
+    tags:      ["Fashion Week", "Événementiel", "Paris", "Reportage"],
+    /* ── CONTENU DE L'ARTICLE ──────────────────────────────────────────────
+       Utilisez les balises HTML suivantes :
+         <p>    → Paragraphe
+         <h2>   → Titre de section
+         <h3>   → Sous-titre
+         <blockquote> → Citation mise en avant
+         <strong>     → Texte important en or
+         <ul><li>     → Liste à puces
+    ────────────────────────────────────────────────────────────────────── */
+    contenu: `
+      <p>Couvrir la Fashion Week de Paris, c'est accepter de travailler dans des conditions extrêmes : lumière changeante, espaces bondés, timings imprévisibles. C'est aussi l'un des défis les plus stimulants qu'un photographe événementiel puisse relever.</p>
+
+      <h2>La préparation, tout commence là</h2>
+      <p>Trois jours avant le défilé, je repère les lieux. Je note les sources de lumière naturelle, j'identifie les zones stratégiques, je prépare mes boîtiers. Pour cet événement, j'avais prévu deux appareils avec deux focales différentes — un <strong>24-70mm</strong> pour les ambiances générales, un <strong>85mm f/1.4</strong> pour les portraits en lumière faible.</p>
+
+      <blockquote>« En événementiel, l'imprévu est la règle. La préparation est ce qui vous permet d'y répondre avec calme. »</blockquote>
+
+      <h2>Sur le vif : les défis techniques</h2>
+      <p>Le show a débuté avec 20 minutes de retard — classique. La lumière des projecteurs était très chaude, en fort contraste avec les néons bleutés des backstage. J'ai dû travailler en balance des blancs manuelle pour garder une cohérence entre les séries.</p>
+
+      <h3>Gestion de la foule</h3>
+      <p>Se faufiler discrètement tout en étant au bon endroit au bon moment demande une forme d'anticipation quasi instinctive. J'observe les modèles, je lis leurs trajectoires, je me positionne avant qu'ils n'arrivent.</p>
+
+      <ul>
+        <li>ISO poussé à 3200 sans compromis sur la netteté grâce à la réduction de bruit en post</li>
+        <li>Vitesse maintenue à 1/250e minimum pour éviter le flou de bougé</li>
+        <li>Bracketing d'exposition sur les moments clés</li>
+      </ul>
+
+      <h2>Les images qui restent</h2>
+      <p>Au final, sur plus de 600 déclenchements, 35 images ont été sélectionnées et livrées en haute définition sous 7 jours. Ce sont celles qui racontent l'histoire du défilé — pas seulement les tenues, mais <strong>l'émotion, l'attente, l'éclat d'un instant</strong>.</p>
+
+      <p>Si vous organisez un événement et cherchez un photographe disponible en Île-de-France, n'hésitez pas à me contacter pour un devis personnalisé.</p>
+    `
+  },
+
+  /* ── ARTICLE 2 ────────────────────────────────────────────────────────── */
+  {
+    id: 2,
+    titre:     "5 lieux secrets pour un shooting photo en Essonne",
+    extrait:   "Forêts de lumière, étangs miroir, ruines romantiques… Voici mes spots préférés dans le 91 pour des shootings extérieurs uniques, loin des endroits déjà vus.",
+    categorie: "Conseils",
+    date:      "14 mars 2026",
+    lecture:   "4 min",
+    image:     "assets/shooting-exterieur-nature-femme-robe-parc-essonne.jpg",
+    imageAlt:  "Shooting extérieur nature en Essonne — femme en robe noire avec bouquet",
+    tags:      ["Essonne", "Lieux", "Shooting extérieur", "Conseils"],
+    contenu: `
+      <p>L'Essonne est un département souvent sous-estimé pour la photographie. Pourtant, entre ses forêts, ses vallées et ses parcs historiques, il regorge de décors magnifiques — souvent déserts, ce qui est un luxe rare en Île-de-France.</p>
+
+      <h2>1. La vallée de Chevreuse</h2>
+      <p>Incontournable. Les sous-bois aux premières heures du matin offrent des rayons de lumière filtrée absolument spectaculaires. Idéal pour des portraits artistiques ou des séances de couple.</p>
+
+      <h2>2. Les bords de l'Yvette à Gif-sur-Yvette</h2>
+      <p>À deux pas de chez moi, la rivière Yvette longe des zones sauvages peu fréquentées. En automne, les reflets sur l'eau et les tonalités dorées des feuilles créent des ambiances <strong>naturellement cinématographiques</strong>.</p>
+
+      <blockquote>« La meilleure lumière est celle du photographe qui connaît son terrain. »</blockquote>
+
+      <h2>3. Le Parc de Sceaux (côté moins connu)</h2>
+      <p>Oubliez les grandes allées bondées. Les jardins à l'anglaise du parc, côté est, offrent des perspectives moins attendues avec des structures végétales imposantes.</p>
+
+      <h2>4. Les anciennes carrières de Gif</h2>
+      <p>Un décor industriel et végétal mêlés. Parfait pour des portraits avec une atmosphère brute, contrastant avec la douceur des tons naturels alentour.</p>
+
+      <h2>5. La forêt de Verrières</h2>
+      <p>Moins connue que Fontainebleau, plus accessible depuis le 91. La densité des hêtres et chênes crée des tunnels de verdure parfaits pour les shootings lifestyle.</p>
+
+      <ul>
+        <li>Meilleure saison : automne et printemps</li>
+        <li>Meilleure heure : golden hour (1h après le lever / 1h avant le coucher)</li>
+        <li>Conseil : toujours repérer le lieu avant la séance</li>
+      </ul>
+    `
+  },
+
+  /* ── ARTICLE 3 ────────────────────────────────────────────────────────── */
+  {
+    id: 3,
+    titre:     "Portrait professionnel : pourquoi les photos de phone ne suffisent plus",
+    extrait:   "LinkedIn, portfolio, presse… Votre photo de profil est souvent le premier contact que vous avez avec un prospect ou un recruteur. Une étude le prouve : 20 secondes pour faire une impression.",
+    categorie: "Portrait",
+    date:      "5 mars 2026",
+    lecture:   "3 min",
+    image:     "assets/portrait-professionnel-femme-beret-rouge-idf.jpg",
+    imageAlt:  "Portrait professionnel femme au béret rouge — Île-de-France",
+    tags:      ["Portrait", "LinkedIn", "Branding", "Professionnel"],
+    contenu: `
+      <p>Vous avez soigné votre CV, peaufiné votre pitch, optimisé votre profil LinkedIn. Mais votre photo de profil est floue, prise à la hâte lors d'un anniversaire, rognée maladroitement. Est-ce vraiment l'image que vous voulez donner ?</p>
+
+      <h2>La première impression en chiffres</h2>
+      <p>Des études en psychologie sociale montrent qu'une photo de profil professionnelle augmente significativement les taux de réponse sur LinkedIn — certaines sources évoquent jusqu'à <strong>14 fois plus de vues</strong> qu'un profil sans photo.</p>
+
+      <blockquote>« Une bonne photo de portrait ne se remarque pas. Elle donne simplement envie de vous rencontrer. »</blockquote>
+
+      <h2>Ce que fait un photographe que votre smartphone ne fait pas</h2>
+      <p>Ce n'est pas (seulement) une question de qualité optique. C'est une question de <strong>direction artistique</strong> : l'angle du regard, la posture, la lumière qui révèle votre personnalité sans vous trahir.</p>
+
+      <ul>
+        <li>Conseils de pose et de tenue avant la séance</li>
+        <li>Lumière naturelle ou artificielle adaptée à votre morphologie</li>
+        <li>Retouche colorimétrique cohérente avec votre identité visuelle</li>
+        <li>Livraison en 24h — idéal en cas d'urgence</li>
+      </ul>
+
+      <h2>Ma formule Portrait Pro</h2>
+      <p>1h de séance, 1 tenue, 8 photos retouchées en Ultra HD. Usage web professionnel inclus. À partir de <strong>180 €</strong>, disponible en extérieur ou à domicile en Essonne et Île-de-France.</p>
+
+      <p>Réservez votre créneau via le formulaire de devis — réponse sous 48h.</p>
+    `
+  },
+
+  /* ── MODÈLE VIDE — COPIEZ/COLLEZ CE BLOC POUR AJOUTER UN ARTICLE ─────────
+
+  {
+    id:        4,                        // Numéro unique, incrémentez à chaque article
+    titre:     "Titre de votre article",
+    extrait:   "Résumé court affiché sur la carte (2-3 phrases max).",
+    categorie: "Conseils",              // Reportage / Coulisses / Portrait / Conseils / Autre
+    date:      "1 avril 2026",
+    lecture:   "5 min",
+    image:     "assets/votre-photo.jpg",
+    imageAlt:  "Description de l'image pour le SEO",
+    tags:      ["Tag1", "Tag2", "Tag3"],
+    contenu: `
+      <p>Votre texte ici...</p>
+      <h2>Titre de section</h2>
+      <p>Suite du texte...</p>
+    `
+  },
+
+  ─────────────────────────────────────────────────────────────────────── */
+
+];
+
+/* ════════════════════════════════ FIN CONFIG ═══════════════════════════════ */
+/* Ne touchez pas au code en dessous sauf si vous savez ce que vous faites.   */
+
+let filtreActif = 'Tous';
+
+function init() {
+  // Génère les boutons de filtre depuis les catégories uniques
+  const cats = ['Tous', ...new Set(ARTICLES.map(a => a.categorie))];
+  const bar = document.getElementById('blog-filters');
+  bar.innerHTML = '<span class="filter-label">Filtrer</span>';
+  cats.forEach(cat => {
+    const btn = document.createElement('button');
+    btn.className = 'filter-chip' + (cat === 'Tous' ? ' active' : '');
+    btn.dataset.cat = cat;
+    btn.textContent = cat;
+    btn.onclick = () => filterArticles(cat, btn);
+    bar.appendChild(btn);
+  });
+  renderArticles(ARTICLES);
+}
+
+function filterArticles(cat, btn) {
+  filtreActif = cat;
+  document.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const filtered = cat === 'Tous' ? ARTICLES : ARTICLES.filter(a => a.categorie === cat);
+  renderArticles(filtered);
+}
+
+function renderArticles(list) {
+  const main = document.getElementById('blog-main');
+  main.innerHTML = '';
+  if (!list.length) {
+    main.innerHTML = '<div class="blog-empty">Aucun article dans cette catégorie pour l\'instant.</div>';
+    return;
+  }
+
+  // Premier article en vedette
+  const first = list[0];
+  const featured = document.createElement('div');
+  featured.className = 'article-featured reveal';
+  featured.innerHTML = `
+    <div class="af-img">
+      <div class="af-img-placeholder"><span>0${first.id}</span></div>
+      ${first.image ? `<img src="${first.image}" alt="${first.imageAlt}" loading="lazy">` : ''}
+      <div class="af-img-overlay"></div>
+    </div>
+    <div class="af-body">
+      <div class="af-badge">
+        <span class="af-badge-tag">${first.categorie}</span>
+        ${list.indexOf(first) === 0 && filtreActif === 'Tous' ? '<span class="af-badge-new">Récent</span>' : ''}
+      </div>
+      <div class="af-meta">${first.date} &ensp;·&ensp; ${first.lecture} de lecture</div>
+      <div class="af-title">${first.titre}</div>
+      <p class="af-excerpt">${first.extrait}</p>
+      <a class="af-read" href="javascript:void(0)" onclick="openArticle(${first.id})">Lire l'article</a>
+    </div>
+  `;
+  main.appendChild(featured);
+
+  // Les autres articles en grille
+  const rest = list.slice(1);
+  if (rest.length) {
+    const grid = document.createElement('div');
+    grid.className = 'blog-grid';
+    rest.forEach((a, i) => {
+      const card = document.createElement('div');
+      card.className = `bcard reveal reveal-delay-${(i % 3) + 1}`;
+      card.innerHTML = `
+        <div class="bcard-img">
+          <div class="bcard-img-placeholder"><span>0${a.id}</span></div>
+          ${a.image ? `<img src="${a.image}" alt="${a.imageAlt}" loading="lazy">` : ''}
+          <div class="bcard-cat">${a.categorie}</div>
+        </div>
+        <div class="bcard-body">
+          <div class="bcard-meta">${a.date} &ensp;·&ensp; ${a.lecture}</div>
+          <div class="bcard-title">${a.titre}</div>
+          <p class="bcard-excerpt">${a.extrait}</p>
+          <a class="bcard-read" href="javascript:void(0)" onclick="openArticle(${a.id})">Lire l'article</a>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+    main.appendChild(grid);
+  }
+
+  // Scroll reveal
+  requestAnimationFrame(() => {
+    const els = main.querySelectorAll('.reveal');
+    els.forEach(el => el.classList.add('hidden'));
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.remove('hidden'); e.target.classList.add('up'); } });
+    }, { threshold:.1, rootMargin:'0px 0px -40px 0px' });
+    els.forEach(el => obs.observe(el));
+  });
+}
+
+function openArticle(id) {
+  const a = ARTICLES.find(x => x.id === id);
+  if (!a) return;
+  const mc = document.getElementById('modal-content');
+  mc.innerHTML = `
+    <div class="modal-cat">${a.categorie}</div>
+    <div class="modal-title">${a.titre}</div>
+    <div class="modal-meta">
+      <span>${a.date}</span>
+      <span>${a.lecture} de lecture</span>
+    </div>
+    ${a.image
+      ? `<img class="modal-hero-img" src="${a.image}" alt="${a.imageAlt}">`
+      : `<div class="modal-hero-img-placeholder"><span>0${a.id}</span></div>`
+    }
+    <div class="modal-body">${a.contenu}</div>
+    <div class="modal-footer">
+      <div class="modal-tags">${a.tags.map(t => `<span class="modal-tag">${t}</span>`).join('')}</div>
+      <div class="modal-share">Partager</div>
+    </div>
+  `;
+  document.getElementById('modal').scrollTop = 0;
+  const overlay = document.getElementById('modal-overlay');
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(e) {
+  if (e && e.target !== document.getElementById('modal-overlay') && !e.target.classList.contains('modal-close')) return;
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// ── Curseur
+const cur = document.getElementById('cursor');
+const rng = document.getElementById('ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cur.style.left=mx+'px'; cur.style.top=my+'px'; });
+(function loop(){ rx+=(mx-rx)*.13; ry+=(my-ry)*.13; rng.style.left=rx+'px'; rng.style.top=ry+'px'; requestAnimationFrame(loop); })();
+document.addEventListener('mouseover', e => {
+  if (e.target.closest('a,button,.filter-chip,.bcard,.article-featured')) document.body.classList.add('hovering');
+  else document.body.classList.remove('hovering');
+});
+
+// ── Nav scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 50));
+
+// ── Init
+init();
+</script>
+</body>
+</html>
