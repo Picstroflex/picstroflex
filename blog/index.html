@@ -466,7 +466,7 @@ function renderArticles(list) {
       <div class="af-title">${first.titre}</div>
       <p class="af-excerpt">${first.extrait}</p>
       <a class="af-read" 
-   href="/picstroflex/blog/${getArticleUrl(first.id)}" 
+   href="/picstroflex/blog/index.html${getArticleUrl(first.id)}" 
    onclick="openArticle(${first.id}); return false;">Lire l'article</a>
     </div>
   `;
@@ -490,7 +490,7 @@ function renderArticles(list) {
           <div class="bcard-title">${a.titre}</div>
           <p class="bcard-excerpt">${a.extrait}</p>
           <a class="bcard-read" 
-   href="/picstroflex/blog/${getArticleUrl(a.id)}" 
+   href="/picstroflex/blog/index.html${getArticleUrl(a.id)}" 
    onclick="openArticle(${a.id}); return false;">Lire l'article</a>
         </div>
       `;
@@ -545,7 +545,7 @@ function openArticle(id) {
 
     <!-- 🔥 BOUTON SEO IMPORTANT -->
     <div style="text-align:center; margin:30px 0;">
-      <a href="/picstroflex/blog/${articleUrlMap[id]}"
+      <a href="/picstroflex/blog/index.html${articleUrlMap[id]}"
          style="background:#000;color:#fff;padding:12px 20px;border-radius:5px;text-decoration:none;font-weight:bold;">
          Lire l’article complet →
       </a>
