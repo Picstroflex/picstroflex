@@ -508,14 +508,7 @@ function renderArticles(list) {
     els.forEach(el => obs.observe(el));
   });
 }
-function getArticleUrl(id) {
-  const map = {
-    1: "fashion-week-paris-reportage-photo.html",
-    2: "lieux-shooting-essonne.html",
-    3: "portrait-professionnel-linkedin.html"
-  };
-  return map[id] || "#";
-}
+
 function openArticle(id) {
   const articleUrlMap = {
     1: "fashion-week-paris-reportage-photo.html",
