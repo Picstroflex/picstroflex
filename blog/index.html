@@ -357,7 +357,7 @@ const ARTICLES = [
   /* ── ARTICLE 3 ────────────────────────────────────────────────────────── */
   {
     id: 3,
-    titre:     "Portrait professionnel : pourquoi les photos de phone ne suffisent plus",
+    titre:     "Portrait professionnel : pourquoi les photos au téléphone ne suffisent plus",
     extrait:   "LinkedIn, portfolio, presse… Votre photo de profil est souvent le premier contact que vous avez avec un prospect ou un recruteur. Une étude le prouve : 20 secondes pour faire une impression.",
     categorie: "Portrait",
     date:      "5 mars 2026",
@@ -465,7 +465,7 @@ function renderArticles(list) {
       <div class="af-meta">${first.date} &ensp;·&ensp; ${first.lecture} de lecture</div>
       <div class="af-title">${first.titre}</div>
       <p class="af-excerpt">${first.extrait}</p>
-      <a class="af-read" href="javascript:void(0)" onclick="openArticle(${first.id})">Lire l'article</a>
+      <a class="af-read" href="javascript:void(0)" href="fashion-week-paris-reportage-photo.html">Lire l'article</a>
     </div>
   `;
   main.appendChild(featured);
@@ -487,7 +487,7 @@ function renderArticles(list) {
           <div class="bcard-meta">${a.date} &ensp;·&ensp; ${a.lecture}</div>
           <div class="bcard-title">${a.titre}</div>
           <p class="bcard-excerpt">${a.extrait}</p>
-          <a class="bcard-read" href="javascript:void(0)" onclick="openArticle(${a.id})">Lire l'article</a>
+          <a class="bcard-read" href="javascript:void(0)" href="lieux-shooting-essonne.html">Lire l'article</a>
         </div>
       `;
       grid.appendChild(card);
@@ -508,6 +508,13 @@ function renderArticles(list) {
 function openArticle(id) {
   const a = ARTICLES.find(x => x.id === id);
   if (!a) return;
+
+  const articleUrlMap = {
+    1: "fashion-week-paris-reportage-photo.html",
+    2: "lieux-shooting-essonne.html",
+    3: "portrait-professionnel-linkedin.html"
+  };
+
   const mc = document.getElementById('modal-content');
   mc.innerHTML = `
     <div class="modal-cat">${a.categorie}</div>
@@ -516,20 +523,37 @@ function openArticle(id) {
       <span>${a.date}</span>
       <span>${a.lecture} de lecture</span>
     </div>
+
     ${a.image
       ? `<img class="modal-hero-img" src="${a.image}" alt="${a.imageAlt}">`
       : `<div class="modal-hero-img-placeholder"><span>0${a.id}</span></div>`
     }
+
     <div class="modal-body">${a.contenu}</div>
+
+    <!-- 🔥 BOUTON SEO IMPORTANT -->
+    <div style="text-align:center; margin:30px 0;">
+      <a href="${articleUrlMap[id]}" 
+         style="background:#000;color:#fff;padding:12px 20px;border-radius:5px;text-decoration:none;font-weight:bold;">
+         Lire l’article complet →
+      </a>
+    </div>
+
     <div class="modal-footer">
-      <div class="modal-tags">${a.tags.map(t => `<span class="modal-tag">${t}</span>`).join('')}</div>
+      <div class="modal-tags">
+        ${a.tags.map(t => `<span class="modal-tag">${t}</span>`).join('')}
+      </div>
       <div class="modal-share">Partager</div>
     </div>
+
     <div class="modal-cta">
       <div class="modal-cta-text">Un projet en tête ?</div>
-      <a class="modal-cta-btn" href="https://picstroflex.github.io/picstroflex/#devis">Demander un devis gratuit →</a>
+      <a class="modal-cta-btn" href="https://picstroflex.github.io/picstroflex/#devis">
+        Demander un devis gratuit →
+      </a>
     </div>
   `;
+
   document.getElementById('modal').scrollTop = 0;
   document.getElementById('modal-overlay').classList.add('open');
   document.body.style.overflow = 'hidden';
