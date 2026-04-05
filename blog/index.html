@@ -517,10 +517,6 @@ function getArticleUrl(id) {
   return map[id] || "#";
 }
 function openArticle(id) {
-  const a = ARTICLES.find(x => x.id === id);
-  if (!a) return;
-
-  
   const articleUrlMap = {
     1: "fashion-week-paris-reportage-photo.html",
     2: "lieux-shooting-essonne.html",
