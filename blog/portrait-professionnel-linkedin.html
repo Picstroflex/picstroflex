@@ -3,35 +3,225 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portrait professionnel : pourquoi les photos au téléphone ne suffisent plus | Picstroflex</title>
+<meta name="description" content="LinkedIn, portfolio, presse… Votre photo de profil est souvent le premier contact. Découvrez pourquoi un portrait professionnel fait la différence et ma formule Portrait Pro.">
+<link rel="canonical" href="https://picstroflex.github.io/picstroflex/blog/portrait-professionnel.html">
 
-<title>Portrait professionnel : pourquoi votre photo LinkedIn est cruciale</title>
-<meta name="description" content="Photo LinkedIn et portrait professionnel : pourquoi faire appel à un photographe améliore votre image et vos opportunités.">
-<link rel="canonical" href="https://picstroflex.github.io/picstroflex/portrait-professionnel-linkedin.html">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Josefin+Sans:wght@100;300;400&display=swap" rel="stylesheet">
 
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --noir:#0c0b09; --charbon:#141310; --brun:#1c1913; --brun-clair:#252016;
+  --or:#c9a96e; --or-clair:#e2cfa0; --or-pale:#f0e8d4; --creme:#f0e8d8;
+  --gris:#7a7468; --gris-mid:#a09790; --gris-clair:#c0b9ad;
+  --rule:rgba(201,169,110,0.12);
+}
+html { scroll-behavior:smooth; }
+body { background:var(--noir); color:var(--creme); font-family:'Josefin Sans',sans-serif; font-weight:300; cursor:none; overflow-x:hidden; }
+
+.cursor { position:fixed; width:7px; height:7px; background:var(--or); border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); transition:width .15s,height .15s; }
+.cursor-ring { position:fixed; width:34px; height:34px; border:1px solid rgba(201,169,110,.45); border-radius:50%; pointer-events:none; z-index:9998; transform:translate(-50%,-50%); transition:all .2s ease; }
+body.hovering .cursor-ring { width:52px; height:52px; border-color:rgba(201,169,110,.75); }
+body.hovering .cursor { width:4px; height:4px; }
+
+nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify-content:space-between; align-items:center; padding:26px 56px; transition:background .4s,padding .4s; background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16px 56px; border-bottom:1px solid var(--rule); }
+.nav-logo-wrap { display:flex; align-items:center; gap:14px; text-decoration:none; }
+.logo-text { font-family:'Cormorant Garamond',serif; font-size:21px; font-weight:300; letter-spacing:.28em; text-transform:uppercase; color:var(--or-clair); }
+.logo-text b { color:var(--or); font-weight:300; }
+.nav-links { display:flex; gap:40px; list-style:none; align-items:center; }
+.nav-links a { font-size:11px; letter-spacing:.35em; text-transform:uppercase; color:var(--gris-mid); text-decoration:none; transition:color .3s; position:relative; }
+.nav-links a::after { content:''; position:absolute; bottom:-3px; left:0; width:0; height:1px; background:var(--or); transition:width .3s; }
+.nav-links a:hover { color:var(--or-clair); }
+.nav-links a:hover::after { width:100%; }
+.nav-cta { border:1px solid rgba(201,169,110,.35)!important; padding:10px 24px; color:var(--or)!important; transition:background .3s,color .3s!important; }
+.nav-cta:hover { background:var(--or)!important; color:var(--noir)!important; }
+.nav-cta::after { display:none!important; }
+
+.article-hero { min-height:55vh; display:flex; align-items:flex-end; padding:0 56px 80px; position:relative; overflow:hidden; background:var(--charbon); margin-top:70px; }
+.article-hero-grid { position:absolute; inset:0; background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px); background-size:80px 80px; opacity:.3; }
+.article-hero-glow { position:absolute; inset:0; background:radial-gradient(ellipse 50% 60% at 30% 60%,rgba(201,169,110,.08) 0%,transparent 70%); }
+.grain { position:absolute; inset:0; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.07'/%3E%3C/svg%3E"); background-size:300px; opacity:.4; pointer-events:none; }
+.article-hero-content { position:relative; z-index:10; max-width:900px; }
+.article-cat { font-size:11px; letter-spacing:.48em; text-transform:uppercase; color:var(--or); margin-bottom:20px; display:flex; align-items:center; gap:16px; }
+.article-cat::before { content:''; width:36px; height:1px; background:var(--or); }
+.article-hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(44px,6vw,72px); font-weight:300; line-height:1.08; letter-spacing:-.02em; margin-bottom:24px; }
+.article-hero h1 em { font-style:italic; color:var(--or-clair); }
+.article-meta { font-size:13px; letter-spacing:.15em; color:var(--gris-mid); display:flex; gap:28px; margin-top:16px; }
+
+.article-main { max-width:900px; margin:0 auto; padding:80px 56px 120px; }
+.article-body { font-size:17px; line-height:2.05; color:var(--gris-clair); }
+.article-body p { margin-bottom:28px; }
+.article-body h2 { font-family:'Cormorant Garamond',serif; font-size:32px; font-weight:400; color:var(--creme); margin:56px 0 20px; }
+.article-body h3 { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:400; color:var(--or-clair); margin:40px 0 16px; }
+.article-body blockquote { border-left:3px solid var(--or); padding:20px 32px; margin:40px 0; color:var(--creme); font-family:'Cormorant Garamond',serif; font-size:24px; font-style:italic; line-height:1.5; background:rgba(201,169,110,.03); }
+.article-body strong { color:var(--or-clair); font-weight:400; }
+.article-body ul { margin:24px 0 32px; padding-left:0; list-style:none; }
+.article-body ul li { padding:8px 0 8px 28px; position:relative; }
+.article-body ul li::before { content:'—'; color:var(--or); position:absolute; left:0; top:8px; }
+.article-hero-img { width:100%; max-height:550px; object-fit:cover; margin:48px 0 56px; border-radius:2px; }
+.article-tags { display:flex; gap:12px; flex-wrap:wrap; margin:56px 0 32px; padding-top:32px; border-top:1px solid var(--rule); }
+.article-tag { font-size:11px; letter-spacing:.2em; color:var(--gris-clair); border:1px solid rgba(201,169,110,.18); padding:7px 16px; }
+
+.prix-block { background:linear-gradient(135deg, var(--brun-clair) 0%, var(--brun) 100%); padding:32px 40px; margin:48px 0 32px; border:1px solid rgba(201,169,110,.2); text-align:center; }
+.prix-block .montant { font-family:'Cormorant Garamond',serif; font-size:48px; font-weight:300; color:var(--or); letter-spacing:2px; }
+.prix-block .montant small { font-size:20px; color:var(--gris-clair); }
+.prix-block p { margin-bottom:0; }
+.prix-details { font-size:13px; color:var(--gris-mid); margin-top:16px; }
+
+.cta-block { margin:56px 0 32px; padding:44px 52px; background:var(--brun-clair); border-left:3px solid var(--or); display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap; }
+.cta-text { font-family:'Cormorant Garamond',serif; font-size:26px; font-style:italic; color:var(--or-clair); }
+.cta-btn { font-size:11px; letter-spacing:.32em; text-transform:uppercase; color:var(--or); text-decoration:none; border:1px solid rgba(201,169,110,.4); padding:14px 32px; transition:background .3s,color .3s; }
+.cta-btn:hover { background:var(--or); color:var(--noir); }
+
+.back-link { display:inline-flex; align-items:center; gap:12px; font-size:11px; letter-spacing:.32em; text-transform:uppercase; color:var(--gris-mid); text-decoration:none; margin-bottom:40px; transition:color .3s; }
+.back-link:hover { color:var(--or); }
+.back-link::before { content:'←'; font-size:14px; }
+
+.fab-devis { position:fixed; bottom:36px; right:40px; z-index:300; display:flex; align-items:center; gap:12px; background:var(--or); color:var(--noir); font-family:'Josefin Sans',sans-serif; font-size:10px; font-weight:400; letter-spacing:.38em; text-transform:uppercase; text-decoration:none; padding:14px 26px; border:1px solid var(--or); box-shadow:0 8px 40px rgba(201,169,110,.25); transition:background .3s,color .3s,transform .3s; }
+.fab-devis:hover { background:transparent; color:var(--or); transform:translateY(-3px); }
+.fab-devis svg { width:14px; height:14px; fill:currentColor; }
+
+footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 56px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px; }
+.ft-logo-text { font-family:'Cormorant Garamond',serif; font-size:19px; font-weight:300; letter-spacing:.28em; text-transform:uppercase; color:var(--or-clair); }
+.ft-logo-text b { color:var(--or); font-weight:300; }
+.ft-copy { font-size:13px; color:var(--gris-clair); letter-spacing:.10em; }
+.ft-links { display:flex; gap:24px; }
+.ft-links a { font-size:12px; letter-spacing:.20em; text-transform:uppercase; color:var(--gris-clair); text-decoration:none; transition:color .3s; }
+.ft-links a:hover { color:var(--or); }
+
+@media (max-width:1000px) {
+  nav { padding:16px 24px; }
+  .nav-links { display:none; }
+  .article-hero { padding:0 24px 50px; margin-top:60px; min-height:45vh; }
+  .article-main { padding:50px 24px 80px; }
+  .prix-block { padding:24px 20px; }
+  .prix-block .montant { font-size:36px; }
+  .cta-block { flex-direction:column; text-align:center; padding:32px 28px; }
+  .fab-devis { bottom:20px; right:20px; padding:12px 20px; font-size:9px; }
+  footer { flex-direction:column; text-align:center; padding:28px 24px; }
+}
+</style>
 </head>
+<body>
 
-<body style="font-family:Arial; max-width:800px; margin:auto; line-height:1.6;">
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="ring"></div>
 
-<h1>Portrait professionnel : pourquoi votre photo LinkedIn est cruciale</h1>
+<nav id="nav">
+  <a class="nav-logo-wrap" href="index.html" style="text-decoration:none;">
+    <span class="logo-text">Picstro<b>flex</b></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="https://www.instagram.com/picstroflex/" target="_blank">Instagram</a></li>
+    <li><a href="https://www.linkedin.com/in/alexandre-poulain-b1ab191a7" target="_blank">LinkedIn</a></li>
+    <li><a href="https://share.google/nZLkT88O3DkEqXSpQ" target="_blank">Google Maps</a></li>
+    <li style="width:1px; height:16px; background:var(--rule); margin:0 4px;"></li>
+    <li><a href="index.html#prestations">Prestations & Tarifs</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="https://picstroflex.github.io/picstroflex/#devis" class="nav-cta">Réserver</a></li>
+  </ul>
+</nav>
 
-<p><a href="blog.html">← Retour au blog</a></p>
+<div class="article-hero">
+  <div class="article-hero-grid"></div>
+  <div class="article-hero-glow"></div>
+  <div class="grain"></div>
+  <div class="article-hero-content">
+    <div class="article-cat">Portrait · Branding</div>
+    <h1>Portrait professionnel : pourquoi les photos <em>au téléphone</em> ne suffisent plus</h1>
+    <div class="article-meta">
+      <span>📅 5 mars 2026</span>
+      <span>⏱ 3 min de lecture</span>
+    </div>
+  </div>
+</div>
 
-<p>Votre photo de profil est votre première impression...</p>
+<div class="article-main">
+  <img class="article-hero-img" src="https://picstroflex.github.io/picstroflex/assets/portrait-professionnel-femme-beret-rouge-idf.jpg" alt="Portrait professionnel femme au béret rouge — Île-de-France">
+  
+  <div class="article-body">
+    <p>Vous avez soigné votre CV, peaufiné votre pitch, optimisé votre profil LinkedIn. Mais votre photo de profil est floue, prise à la hâte lors d'un anniversaire, rognée maladroitement. Est-ce vraiment l'image que vous voulez donner ?</p>
 
-<h2>Impact sur LinkedIn</h2>
-<p>Un profil avec photo obtient beaucoup plus de vues.</p>
+    <h2>La première impression en chiffres</h2>
+    <p>Des études en psychologie sociale montrent qu'une photo de profil professionnelle augmente significativement les taux de réponse sur LinkedIn — certaines sources évoquent jusqu'à <strong>14 fois plus de vues</strong> qu'un profil sans photo. Les recruteurs passent en moyenne 6 secondes sur un profil : votre photo est le premier élément remarqué.</p>
 
-<h2>Pourquoi un photographe ?</h2>
-<ul>
-<li>Lumière maîtrisée</li>
-<li>Direction artistique</li>
-<li>Image professionnelle</li>
-</ul>
+    <p>Sur un CV ou une bio d'intervenant, la photo professionnelle inspire confiance et crédibilité. À l'inverse, un selfie mal éclairé peut inconsciemment suggérer un manque de sérieux ou de professionnalisme.</p>
 
-<h2>Réserver votre portrait</h2>
-<p style="text-align:center;">
-<a href="https://picstroflex.github.io/picstroflex/#devis">📸 Faire un portrait pro</a>
-</p>
+    <blockquote>« Une bonne photo de portrait ne se remarque pas. Elle donne simplement envie de vous rencontrer. »</blockquote>
 
+    <h2>Ce que fait un photographe que votre smartphone ne fait pas</h2>
+    <p>Ce n'est pas (seulement) une question de qualité optique. C'est une question de <strong>direction artistique</strong> : l'angle du regard, la posture, la lumière qui révèle votre personnalité sans vous trahir. Le smartphone a tendance à déformer les traits (effet grand-angle) et à mal gérer les ombres du visage.</p>
+
+    <ul>
+      <li><strong>Conseils de pose et de tenue</strong> avant la séance (adaptés à votre morphologie et votre secteur d'activité)</li>
+      <li><strong>Lumière naturelle ou artificielle</strong> maîtrisée pour sculpter les traits et éviter les ombres disgracieuses</li>
+      <li><strong>Retouche colorimétrique cohérente</strong> avec votre identité visuelle (site web, charte graphique)</li>
+      <li><strong>Livraison en 24h</strong> — idéal en cas d'urgence (conférence, candidature, article de presse)</li>
+      <li><strong>Fonds variés</strong> : studio sobre, extérieur nature, ou ambiance urbaine selon votre image de marque</li>
+    </ul>
+
+    <h2>Ma formule Portrait Pro</h2>
+    <p><strong>1h de séance</strong> en extérieur ou à domicile (Essonne et Île-de-France), 1 tenue au choix, <strong>8 photos retouchées en Ultra HD</strong>. Usage web professionnel inclus (LinkedIn, site, presse, portfolio).</p>
+
+    <div class="prix-block">
+      <div class="montant">À partir de <strong>180 €</strong> <small>TTC</small></div>
+      <p class="prix-details">Déplacement offert dans un rayon de 30km · Séance en extérieur ou à domicile</p>
+    </div>
+
+    <p>Chaque séance commence par un échange pour définir vos besoins : quel message voulez-vous faire passer ? Quelle ambiance correspond à votre secteur d'activité (créatif, corporate, commercial, libéral) ? Je vous guide pas à pas pour obtenir des images naturelles mais percutantes.</p>
+
+    <p>La livraison se fait en galerie privée en ligne, avec téléchargement haute définition et version web optimisée. Les délais de retouche sont de 24 à 48h ouvrés.</p>
+
+    <p>Réservez votre créneau via le formulaire de devis — réponse sous 48h.</p>
+  </div>
+
+  <div class="article-tags">
+    <span class="article-tag">Portrait</span>
+    <span class="article-tag">LinkedIn</span>
+    <span class="article-tag">Branding</span>
+    <span class="article-tag">Professionnel</span>
+    <span class="article-tag">Île-de-France</span>
+  </div>
+
+  <div class="cta-block">
+    <div class="cta-text">Prêt à valoriser votre image professionnelle ?</div>
+    <a class="cta-btn" href="https://picstroflex.github.io/picstroflex/#devis">Demander un devis gratuit →</a>
+  </div>
+
+  <a class="back-link" href="blog.html">Retour au blog</a>
+</div>
+
+<a class="fab-devis" href="https://picstroflex.github.io/picstroflex/#devis">
+  <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm.75 10.5h-1.5v-4.5h1.5v4.5zm0-6h-1.5v-1.5h1.5v1.5z"/>
+  </svg>
+  Demander un devis
+</a>
+
+<footer>
+  <div class="ft-logo-text">Picstro<b>flex</b></div>
+  <div class="ft-copy">© 2026 Picstroflex · Tous droits réservés</div>
+  <div class="ft-links">
+    <a href="https://www.instagram.com/picstroflex/" target="_blank">Instagram</a>
+    <a href="https://www.linkedin.com/in/alexandre-poulain-b1ab191a7" target="_blank">Linkedin</a>
+    <a href="https://picstroflex.github.io/picstroflex/#devis">Contact</a>
+  </div>
+</footer>
+
+<script>
+const cur = document.getElementById('cursor');
+const rng = document.getElementById('ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cur.style.left=mx+'px'; cur.style.top=my+'px'; });
+(function loop(){ rx+=(mx-rx)*.13; ry+=(my-ry)*.13; rng.style.left=rx+'px'; rng.style.top=ry+'px'; requestAnimationFrame(loop); })();
+document.addEventListener('mouseover', e => {
+  if (e.target.closest('a,button')) document.body.classList.add('hovering');
+  else document.body.classList.remove('hovering');
+});
+
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 50));
+</script>
 </body>
 </html>
