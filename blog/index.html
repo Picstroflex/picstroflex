@@ -189,7 +189,7 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
     <li><a href="https://share.google/nZLkT88O3DkEqXSpQ" target="_blank">Google Maps</a></li>
     <li style="width:1px; height:16px; background:var(--rule); margin:0 4px;"></li>
     <li><a href="index.html#prestations">Prestations & Tarifs</a></li>
-    <li><a href="blog" class="nav-active">Blog</a></li>
+    <li><a href="/picstroflex/blog/index.html" class="nav-active">Blog</a></li>
     <li><a href="https://picstroflex.github.io/picstroflex/#devis" class="nav-cta">Réserver</a></li>
   </ul>
 </nav>
@@ -465,7 +465,9 @@ function renderArticles(list) {
       <div class="af-meta">${first.date} &ensp;·&ensp; ${first.lecture} de lecture</div>
       <div class="af-title">${first.titre}</div>
       <p class="af-excerpt">${first.extrait}</p>
-      <a class="af-read" href="javascript:void(0)" href="javascript:void(0)" onclick="openArticle(${first.id})">Lire l'article</a>
+      <a class="af-read" 
+   href="/picstroflex/blog/${getArticleUrl(first.id)}" 
+   onclick="openArticle(${first.id}); return false;">Lire l'article</a>
     </div>
   `;
   main.appendChild(featured);
@@ -487,7 +489,9 @@ function renderArticles(list) {
           <div class="bcard-meta">${a.date} &ensp;·&ensp; ${a.lecture}</div>
           <div class="bcard-title">${a.titre}</div>
           <p class="bcard-excerpt">${a.extrait}</p>
-          <a class="bcard-read" href="javascript:void(0)" href="lieux-shooting-essonne.html">Lire l'article</a>
+          <a class="bcard-read" 
+   href="/picstroflex/blog/${getArticleUrl(a.id)}" 
+   onclick="openArticle(${a.id}); return false;">Lire l'article</a>
         </div>
       `;
       grid.appendChild(card);
@@ -504,11 +508,19 @@ function renderArticles(list) {
     els.forEach(el => obs.observe(el));
   });
 }
-
+function getArticleUrl(id) {
+  const map = {
+    1: "fashion-week-paris-reportage-photo.html",
+    2: "lieux-shooting-essonne.html",
+    3: "portrait-professionnel-linkedin.html"
+  };
+  return map[id] || "#";
+}
 function openArticle(id) {
   const a = ARTICLES.find(x => x.id === id);
   if (!a) return;
 
+  
   const articleUrlMap = {
     1: "fashion-week-paris-reportage-photo.html",
     2: "lieux-shooting-essonne.html",
@@ -533,7 +545,7 @@ function openArticle(id) {
 
     <!-- 🔥 BOUTON SEO IMPORTANT -->
     <div style="text-align:center; margin:30px 0;">
-      <a href="${articleUrlMap[id]}" 
+      <a href="/picstroflex/blog/${articleUrlMap[id]}"
          style="background:#000;color:#fff;padding:12px 20px;border-radius:5px;text-decoration:none;font-weight:bold;">
          Lire l’article complet →
       </a>
