@@ -506,8 +506,15 @@ function renderArticles(list) {
 }
  
 function openArticle(id) {
-  const a = ARTICLES.find(x => x.id === id);
+  const a = ARTICLES.find(x => x.id === id);  // ← LIGNE MANQUANTE
   if (!a) return;
+  
+  const articleUrlMap = {
+    1: "fashion-week-paris-reportage-photo.html",
+    2: "lieux-shooting-essonne.html",
+    3: "portrait-professionnel-linkedin.html"
+  };
+
   const mc = document.getElementById('modal-content');
   mc.innerHTML = `
     <div class="modal-cat">${a.categorie}</div>
@@ -521,6 +528,12 @@ function openArticle(id) {
       : `<div class="modal-hero-img-placeholder"><span>0${a.id}</span></div>`
     }
     <div class="modal-body">${a.contenu}</div>
+    <div style="text-align:center; margin:30px 0;">
+      <a href="/picstroflex/${articleUrlMap[id] || '#'}"
+         style="background:#c9a96e;color:#0c0b09;padding:12px 24px;text-decoration:none;font-weight:bold;letter-spacing:2px;">
+         Lire l'article complet →
+      </a>
+    </div>
     <div class="modal-footer">
       <div class="modal-tags">${a.tags.map(t => `<span class="modal-tag">${t}</span>`).join('')}</div>
       <div class="modal-share">Partager</div>
@@ -530,33 +543,8 @@ function openArticle(id) {
       <a class="modal-cta-btn" href="https://picstroflex.github.io/picstroflex/#devis">Demander un devis gratuit →</a>
     </div>
   `;
+
   document.getElementById('modal').scrollTop = 0;
   document.getElementById('modal-overlay').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
- 
-function closeModal(e) {
-  if (e && e.target !== document.getElementById('modal-overlay') && !e.target.classList.contains('modal-close')) return;
-  document.getElementById('modal-overlay').classList.remove('open');
-  document.body.style.overflow = '';
-}
- 
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
- 
-const cur = document.getElementById('cursor');
-const rng = document.getElementById('ring');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cur.style.left=mx+'px'; cur.style.top=my+'px'; });
-(function loop(){ rx+=(mx-rx)*.13; ry+=(my-ry)*.13; rng.style.left=rx+'px'; rng.style.top=ry+'px'; requestAnimationFrame(loop); })();
-document.addEventListener('mouseover', e => {
-  if (e.target.closest('a,button,.filter-chip,.bcard,.article-featured')) document.body.classList.add('hovering');
-  else document.body.classList.remove('hovering');
-});
- 
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 50));
- 
-init();
-</script>
-</body>
-</html>
