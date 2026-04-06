@@ -4,9 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fashion Week Paris — Dans les coulisses d'un reportage événementiel | Picstroflex</title>
-<meta name="description" content="Plongez dans les coulisses d’un reportage photo à la Fashion Week Paris : préparation, réglages et conseils concrets d’un photographe événementiel.">
+<meta name="description" content="Plongez dans les coulisses d'un reportage photo à la Fashion Week Paris : préparation, réglages et conseils concrets d'un photographe événementiel.">
 <link rel="canonical" href="https://picstroflex.github.io/picstroflex/blog/fashion-week-paris-reportage.html">
-
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Josefin+Sans:wght@100;300;400&display=swap" rel="stylesheet">
 
 <style>
@@ -25,7 +24,7 @@ body { background:var(--noir); color:var(--creme); font-family:'Josefin Sans',sa
 body.hovering .cursor-ring { width:52px; height:52px; border-color:rgba(201,169,110,.75); }
 body.hovering .cursor { width:4px; height:4px; }
 
-nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify-content:space-between; align-items:center; padding:26px 56px; transition:background .4s,padding .4s; background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16px 56px; border-bottom:1px solid var(--rule); }
+nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify-content:space-between; align-items:center; padding:16px 56px; transition:background .4s,padding .4s; background:rgba(12,11,9,.94); backdrop-filter:blur(14px); border-bottom:1px solid var(--rule); }
 .nav-logo-wrap { display:flex; align-items:center; gap:14px; text-decoration:none; }
 .logo-text { font-family:'Cormorant Garamond',serif; font-size:21px; font-weight:300; letter-spacing:.28em; text-transform:uppercase; color:var(--or-clair); }
 .logo-text b { color:var(--or); font-weight:300; }
@@ -63,6 +62,38 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
 .article-tags { display:flex; gap:12px; flex-wrap:wrap; margin:56px 0 32px; padding-top:32px; border-top:1px solid var(--rule); }
 .article-tag { font-size:11px; letter-spacing:.2em; color:var(--gris-clair); border:1px solid rgba(201,169,110,.18); padding:7px 16px; }
 
+/* ─── GRILLE PHOTOS VERTICALES ─── */
+.photo-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:48px 0; }
+.photo-grid.duo { grid-template-columns:repeat(2,1fr); max-width:600px; margin-left:auto; margin-right:auto; }
+
+.photo-v {
+  position:relative;
+  aspect-ratio:2/3;
+  background:var(--brun-clair);
+  border:1px solid rgba(201,169,110,.20);
+  overflow:hidden;
+  border-radius:2px;
+  display:block;
+  transition:border-color .35s, transform .35s;
+}
+.photo-v:hover { border-color:var(--or); transform:translateY(-4px); }
+.photo-v img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s ease; }
+.photo-v:hover img { transform:scale(1.04); }
+.photo-v figcaption {
+  position:absolute; bottom:0; left:0; right:0;
+  padding:32px 16px 14px;
+  background:linear-gradient(transparent, rgba(12,11,9,.82));
+  font-size:10px; letter-spacing:.22em; text-transform:uppercase;
+  color:var(--or-clair); text-align:center;
+  pointer-events:none;
+  opacity:0; transition:opacity .35s;
+}
+.photo-v:hover figcaption { opacity:1; }
+
+.section-rule { display:flex; align-items:center; gap:20px; margin:48px 0 40px; opacity:.5; }
+.section-rule::before, .section-rule::after { content:''; flex:1; height:1px; background:var(--or); opacity:.25; }
+.section-rule span { font-size:10px; letter-spacing:.46em; text-transform:uppercase; color:var(--or); white-space:nowrap; }
+
 .cta-block { margin:56px 0 32px; padding:44px 52px; background:var(--brun-clair); border-left:3px solid var(--or); display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap; }
 .cta-text { font-family:'Cormorant Garamond',serif; font-size:26px; font-style:italic; color:var(--or-clair); }
 .cta-btn { font-size:11px; letter-spacing:.32em; text-transform:uppercase; color:var(--or); text-decoration:none; border:1px solid rgba(201,169,110,.4); padding:14px 32px; transition:background .3s,color .3s; }
@@ -89,9 +120,15 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
   .nav-links { display:none; }
   .article-hero { padding:0 24px 50px; margin-top:60px; min-height:45vh; }
   .article-main { padding:50px 24px 80px; }
+  .photo-grid { grid-template-columns:repeat(2,1fr); }
+  .photo-grid.duo { grid-template-columns:1fr 1fr; max-width:100%; }
   .cta-block { flex-direction:column; text-align:center; padding:32px 28px; }
   .fab-devis { bottom:20px; right:20px; padding:12px 20px; font-size:9px; }
   footer { flex-direction:column; text-align:center; padding:28px 24px; }
+}
+@media (max-width:600px) {
+  .photo-grid { grid-template-columns:1fr; }
+  .photo-grid.duo { grid-template-columns:1fr; }
 }
 </style>
 </head>
@@ -108,7 +145,7 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
     <li><a href="https://www.instagram.com/picstroflex/" target="_blank">Instagram</a></li>
     <li><a href="https://www.linkedin.com/in/alexandre-poulain-b1ab191a7" target="_blank">LinkedIn</a></li>
     <li><a href="https://share.google/nZLkT88O3DkEqXSpQ" target="_blank">Google Maps</a></li>
-    <li style="width:1px; height:16px; background:var(--rule); margin:0 4px;"></li>
+    <li style="width:1px;height:16px;background:var(--rule);margin:0 4px;"></li>
     <li><a href="https://picstroflex.github.io/picstroflex/#prestations">Prestations & Tarifs</a></li>
     <li><a href="https://picstroflex.github.io/picstroflex/blog/index.html">Blog</a></li>
     <li><a href="https://picstroflex.github.io/picstroflex/#devis" class="nav-cta">Réserver</a></li>
@@ -130,27 +167,59 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
 </div>
 
 <div class="article-main">
-  <img class="article-hero-img" src="https://picstroflex.github.io/picstroflex/assets/reportage-evenementiel-paris-fashion-week-robes.jpg" alt="Reportage Fashion Week Paris — deux femmes en robes rouge et noire">
-  
+
+  <img class="article-hero-img"
+       src="https://picstroflex.github.io/picstroflex/assets/reportage-evenementiel-paris-fashion-week-robes.webp"
+       alt="Reportage Fashion Week Paris — deux femmes en robes rouge et noire, photographe événementiel Paris">
+
   <div class="article-body">
     <p><em>Photographe événementiel à Paris — disponible pour vos projets (devis gratuit en bas de page)</em></p>
     <p>La Fashion Week Paris est un terrain exigeant pour tout photographe événementiel. Entre lumière changeante, foule dense et timing imprévisible, chaque instant doit être anticipé pour capturer des images fortes et exploitables.</p>
+    <p>Dans cet article, je vous emmène dans les coulisses d'un reportage photo en conditions réelles, avec des conseils concrets issus du terrain.</p>
 
-    <p>Dans cet article, je vous emmène dans les coulisses d’un reportage photo en conditions réelles, avec des conseils concrets issus du terrain.</p>
+    <!-- ─── BLOC 1 — Ambiance & street style (photos 1, 2, 3) ─── -->
+    <div class="photo-grid" role="list" aria-label="Galerie reportage Fashion Week Paris">
+
+      <figure class="photo-v" role="listitem">
+        <img
+          src="../assets/fashion-week-paris-street-style-robe-blanche-foule-reportage.webp"
+          alt="Reportage Fashion Week Paris — street style, femme en robe blanche marchant dans la foule entourée de photographes"
+          loading="lazy"
+          width="800" height="1200">
+        <figcaption>Street style — foule Fashion Week</figcaption>
+      </figure>
+
+      <figure class="photo-v" role="listitem">
+        <img
+          src="../assets/portrait-fashion-week-paris-expression-coulisses-evenementiel.webp"
+          alt="Portrait Fashion Week Paris — expression intense en coulisses, reportage événementiel photographe Paris"
+          loading="lazy"
+          width="800" height="1000">
+        <figcaption>Portrait — expression coulisses</figcaption>
+      </figure>
+
+      <figure class="photo-v" role="listitem">
+        <img
+          src="../assets/portrait-noir-blanc-fashion-week-paris-regard-intense-85mm.webp"
+          alt="Portrait noir et blanc Fashion Week Paris — regard intense, photographie au Samyang 85mm f/1.4, photographe événementiel"
+          loading="lazy"
+          width="800" height="1000">
+        <figcaption>Portrait N&B — 85mm f/1.4</figcaption>
+      </figure>
+
+    </div>
+    <!-- fin bloc 1 -->
 
     <h2>Préparer un reportage photo événementiel</h2>
-    <p>Un bon reportage événementiel à Paris commence toujours par une préparation rigoureuse. Quelques jours avant le défilé, je repère les marques, les lieux et les horaires afin d’optimiser mes déplacements.</p>
+    <p>Un bon reportage événementiel à Paris commence toujours par une préparation rigoureuse. Quelques jours avant le défilé, je repère les marques, les lieux et les horaires afin d'optimiser mes déplacements.</p>
+    <p>Une fois sur place, j'identifie rapidement les zones stratégiques : entrées, sorties, zones lumineuses et arrière-plans intéressants.</p>
+    <p>Pour cet événement, j'utilisais un <strong>Sony A7R3</strong> accompagné d'un <strong>Samyang 85mm f/1.4</strong>, un objectif idéal pour isoler les sujets et capturer des portraits détaillés même dans la foule.</p>
 
-    <p>Une fois sur place, j’identifie rapidement les zones stratégiques : entrées, sorties, zones lumineuses et arrière-plans intéressants.</p>
-
-    <p>Pour cet événement, j’utilisais un <strong>Sony A7R3</strong> accompagné d’un <strong>Samyang 85mm f/1.4</strong>, un objectif idéal pour isoler les sujets et capturer des portraits détaillés même dans la foule.</p>
-
-    <blockquote>« En photographie événementielle, l’imprévu est constant. La préparation permet d’y répondre efficacement. »</blockquote>
+    <blockquote>« En photographie événementielle, l'imprévu est constant. La préparation permet d'y répondre efficacement. »</blockquote>
 
     <h3>Gérer la foule et anticiper les mouvements</h3>
-    <p>Photographier la Fashion Week demande une capacité d’anticipation quasi instinctive. Il ne suffit pas de réagir, il faut se positionner avant que l’action ne se produise.</p>
-
-    <p>J’observe les trajectoires des modèles, les interactions et les moments clés pour me placer au bon endroit, avec un cadrage déjà prêt.</p>
+    <p>Photographier la Fashion Week demande une capacité d'anticipation quasi instinctive. Il ne suffit pas de réagir, il faut se positionner avant que l'action ne se produise.</p>
+    <p>J'observe les trajectoires des modèles, les interactions et les moments clés pour me placer au bon endroit, avec un cadrage déjà prêt.</p>
 
     <ul>
       <li>ISO 100 pour une netteté optimale en extérieur</li>
@@ -159,20 +228,44 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
       <li>Mode rafale pour capturer les instants décisifs</li>
     </ul>
 
-    <h2>Capturer l’essence d’un événement</h2>
-    <p>Sur plus de 400 photos prises, environ 200 ont été sélectionnées et retouchées. En photographie événementielle, l’objectif n’est pas la quantité mais l’impact visuel.</p>
-
+    <h2>Capturer l'essence d'un événement</h2>
+    <p>Sur plus de 400 photos prises, environ 200 ont été sélectionnées et retouchées. En photographie événementielle, l'objectif n'est pas la quantité mais l'impact visuel.</p>
     <p>Les images les plus fortes sont celles qui racontent une histoire : une émotion, une attente, une interaction ou un instant fugace.</p>
 
-    <h2>Ce qu’un reportage photo doit transmettre</h2>
-    <p>Un reportage réussi ne se limite pas à documenter un événement. Il doit transmettre une ambiance, une énergie et une vision.</p>
+    <div class="section-rule"><span>Galerie</span></div>
 
-    <p>C’est cette approche qui permet de créer un véritable storytelling visuel autour de la Fashion Week Paris.</p>
+    <!-- ─── BLOC 2 — Moments forts & détails (photos 4, 5) ─── -->
+    <div class="photo-grid duo" role="list" aria-label="Portraits Fashion Week Paris — bijoux et accessoires">
+
+      <figure class="photo-v" role="listitem">
+        <img
+          src="../assets/portrait-modele-fashion-week-paris-bijou-serpent-tresses.webp"
+          alt="Portrait modèle Fashion Week Paris — bijou serpent spectaculaire et tresses, maquillage graphique, Sony A7R3"
+          loading="lazy"
+          width="800" height="1000">
+        <figcaption>Portrait — bijou serpent, tresses</figcaption>
+      </figure>
+
+      <figure class="photo-v" role="listitem">
+        <img
+          src="../assets/portrait-fashion-week-paris-bijoux-perles-boucles-oreilles-coquillages.webp"
+          alt="Portrait Fashion Week Paris — collier de perles et boucles d'oreilles coquillages, street style élégant Paris"
+          loading="lazy"
+          width="800" height="1000">
+        <figcaption>Portrait — perles & coquillages</figcaption>
+      </figure>
+
+    </div>
+    <!-- fin bloc 2 -->
+
+    <h2>Ce qu'un reportage photo doit transmettre</h2>
+    <p>Un reportage réussi ne se limite pas à documenter un événement. Il doit transmettre une ambiance, une énergie et une vision.</p>
+    <p>C'est cette approche qui permet de créer un véritable storytelling visuel autour de la Fashion Week Paris.</p>
 
     <h2>FAQ – Photographie événementielle</h2>
 
     <h3>Comment photographier un événement avec beaucoup de monde ?</h3>
-    <p>Il faut anticiper les déplacements, choisir un bon positionnement et utiliser une vitesse rapide pour figer l’action.</p>
+    <p>Il faut anticiper les déplacements, choisir un bon positionnement et utiliser une vitesse rapide pour figer l'action.</p>
 
     <h3>Quel objectif pour la photographie événementielle ?</h3>
     <p>Un 85mm est particulièrement adapté pour isoler les sujets et obtenir un rendu professionnel en environnement dense.</p>
@@ -217,10 +310,9 @@ let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cur.style.left=mx+'px'; cur.style.top=my+'px'; });
 (function loop(){ rx+=(mx-rx)*.13; ry+=(my-ry)*.13; rng.style.left=rx+'px'; rng.style.top=ry+'px'; requestAnimationFrame(loop); })();
 document.addEventListener('mouseover', e => {
-  if (e.target.closest('a,button')) document.body.classList.add('hovering');
+  if (e.target.closest('a,button,figure')) document.body.classList.add('hovering');
   else document.body.classList.remove('hovering');
 });
-
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 50));
 </script>
