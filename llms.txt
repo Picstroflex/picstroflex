@@ -7,8 +7,6 @@
 **brand:** Picstroflex
 **owner:** Alexandre Poulain
 **location:** Gif-sur-Yvette, Essonne, Île-de-France, France
-**contact:** picstroflex@gmail.com
-**phone:** +33 7 82 24 35 82
 **siret:** 99927199200011
 **last_updated:** 2026-04-07
 **encoding:** UTF-8
