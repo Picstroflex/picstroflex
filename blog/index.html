@@ -55,13 +55,13 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 .nav-active { color:var(--or-clair)!important; }
 .nav-active::after { width:100%!important; }
  
-/* Hero Banner avec image de fond */
+/* Hero Banner principale - Le blog d'abord */
 .hero-banner {
   position: relative;
   width: 100%;
-  height: 85vh;
-  min-height: 620px;
-  max-height: 900px;
+  height: 80vh;
+  min-height: 580px;
+  max-height: 850px;
   overflow: hidden;
   margin-top: 0;
   background: var(--charbon);
@@ -74,20 +74,20 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 30%;
-  filter: brightness(0.7) contrast(1.05) saturate(1.1);
-  transition: transform 8s ease, filter 0.5s ease;
+  object-position: center 35%;
+  filter: brightness(0.55) contrast(1.1) saturate(1.05);
+  transition: transform 10s ease, filter 0.6s ease;
 }
 
 .hero-banner:hover .hero-banner-image {
   transform: scale(1.03);
-  filter: brightness(0.75) contrast(1.08) saturate(1.12);
+  filter: brightness(0.6) contrast(1.12) saturate(1.08);
 }
 
 .hero-banner-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(12,11,9,0.6) 0%, rgba(20,19,16,0.4) 50%, rgba(12,11,9,0.7) 100%);
+  background: linear-gradient(135deg, rgba(12,11,9,0.75) 0%, rgba(20,19,16,0.5) 50%, rgba(12,11,9,0.8) 100%);
   z-index: 1;
 }
 
@@ -102,18 +102,18 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 
 .hero-banner-content {
   position: absolute;
-  bottom: 15%;
+  bottom: 20%;
   left: 0;
   right: 0;
   text-align: center;
   z-index: 10;
   padding: 0 24px;
-  animation: fadeInUp 1.2s ease-out;
+  animation: fadeInUp 1s ease-out;
 }
 
 .hero-banner-eyebrow {
-  font-size: 12px;
-  letter-spacing: 0.45em;
+  font-size: 11px;
+  letter-spacing: 0.48em;
   text-transform: uppercase;
   color: var(--or-clair);
   margin-bottom: 20px;
@@ -126,7 +126,7 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 .hero-banner-eyebrow::before,
 .hero-banner-eyebrow::after {
   content: '';
-  width: 50px;
+  width: 45px;
   height: 1px;
   background: var(--or);
   opacity: 0.6;
@@ -134,12 +134,12 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 
 .hero-banner h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(40px, 7vw, 88px);
+  font-size: clamp(48px, 8vw, 100px);
   font-weight: 300;
-  line-height: 1.08;
+  line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--creme);
-  text-shadow: 0 2px 15px rgba(0,0,0,0.3);
+  text-shadow: 0 2px 20px rgba(0,0,0,0.4);
   margin-bottom: 20px;
 }
 
@@ -149,12 +149,12 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 }
 
 .hero-banner-sub {
-  font-size: 16px;
+  font-size: 15px;
   letter-spacing: 0.12em;
   color: var(--gris-clair);
-  max-width: 600px;
+  max-width: 580px;
   margin: 0 auto;
-  line-height: 1.8;
+  line-height: 1.85;
 }
 
 @keyframes fadeInUp {
@@ -168,27 +168,40 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
   }
 }
 
-.blog-hero { 
-  min-height: 42vh; 
-  display: flex; 
-  align-items: flex-end; 
-  padding: 0 56px 60px; 
-  position: relative; 
-  overflow: hidden; 
+/* Section inspirante sous le hero */
+.hero-inspire {
   background: var(--charbon);
-  border-top: 1px solid var(--rule);
+  padding: 48px 56px;
+  text-align: center;
+  border-bottom: 1px solid var(--rule);
 }
-.blog-hero-grid { position:absolute; inset:0; background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px); background-size:80px 80px; opacity:.3; }
-.blog-hero-glow { position:absolute; inset:0; background:radial-gradient(ellipse 50% 60% at 30% 60%,rgba(201,169,110,.05) 0%,transparent 70%); }
-.grain { position:absolute; inset:0; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.07'/%3E%3C/svg%3E"); background-size:300px; opacity:.4; pointer-events:none; }
-.blog-hero-content { position:relative; z-index:10; max-width:900px; }
-.blog-eyebrow { font-size:11px; letter-spacing:.48em; text-transform:uppercase; color:var(--or); margin-bottom:20px; display:flex; align-items:center; gap:16px; animation:up .9s .3s ease both; }
-.blog-eyebrow::before { content:''; width:36px; height:1px; background:var(--or); }
-.blog-hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(38px,5vw,70px); font-weight:300; line-height:1.04; letter-spacing:-.02em; animation:up .9s .5s ease both; }
-.blog-hero h1 em { font-style:italic; color:var(--or-clair); }
-.blog-hero-sub { font-size:15px; letter-spacing:.08em; color:var(--gris-clair); line-height:1.85; margin-top:24px; max-width:560px; animation:up .9s .7s ease both; }
- 
-.blog-filters { background:var(--charbon); padding:32px 56px; border-bottom:1px solid var(--rule); display:flex; gap:12px; align-items:center; flex-wrap:wrap; position:sticky; top:0; z-index:100; backdrop-filter:blur(10px); }
+
+.hero-inspire p {
+  font-size: 14px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gris-mid);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-inspire span {
+  color: var(--or);
+}
+
+.blog-filters { 
+  background: var(--charbon); 
+  padding: 32px 56px; 
+  border-bottom: 1px solid var(--rule); 
+  display: flex; 
+  gap: 12px; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  position: sticky; 
+  top: 0; 
+  z-index: 100; 
+  backdrop-filter: blur(10px); 
+}
 .filter-label { font-size:11px; letter-spacing:.38em; text-transform:uppercase; color:var(--or); margin-right:8px; }
 .filter-chip { font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--gris-clair); border:1px solid rgba(201,169,110,.2); padding:8px 18px; cursor:none; user-select:none; transition:all .25s; background:transparent; }
 .filter-chip.active, .filter-chip:hover { color:var(--or); border-color:var(--or); background:rgba(201,169,110,.05); }
@@ -257,11 +270,12 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
  
 @media (max-width:1000px) {
   nav { padding:20px 24px; } nav.solid { padding:14px 24px; } .nav-links { display:none; }
-  .hero-banner { height: 65vh; min-height: 500px; }
-  .hero-banner h1 { font-size: clamp(32px, 8vw, 58px); }
+  .hero-banner { height: 65vh; min-height: 480px; }
+  .hero-banner h1 { font-size: clamp(36px, 8vw, 62px); }
   .hero-banner-eyebrow::before,
-  .hero-banner-eyebrow::after { width: 30px; }
-  .blog-hero { padding:0 24px 50px; min-height: 38vh; }
+  .hero-banner-eyebrow::after { width: 28px; }
+  .hero-inspire { padding: 32px 24px; }
+  .hero-inspire p { font-size: 11px; letter-spacing: 0.22em; }
   .blog-filters { padding:24px; top:64px; }
   .blog-main { padding:52px 24px 80px; }
   .article-featured { grid-template-columns:1fr; }
@@ -295,27 +309,21 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
   </ul>
 </nav>
 
-<!-- ==================== HERO BANNER AVEC IMAGE ==================== -->
+<!-- ==================== HERO BANNER : LE BLOG PICSTROFLEX ==================== -->
 <div class="hero-banner">
-  <img class="hero-banner-image" src="../assets/photographe-reflets-pluie-lumiere-doree.webp" alt="Reflets dorés sur l’eau avec ondulations de pluie, photographie artistique et atmosphérique — Picstroflex">
+  <img class="hero-banner-image" src="../assets/photographe-reflets-pluie-lumiere-doree.webp" alt="Photographe reflets de pluie et lumière dorée — Picstroflex">
   <div class="hero-banner-overlay"></div>
   <div class="hero-banner-grain"></div>
   <div class="hero-banner-content">
-    <div class="hero-banner-eyebrow">L'art de capturer l'instant</div>
-    <h1>La photographie<br><em>comme un reflet d'émotion</em></h1>
-    <p class="hero-banner-sub">Pluie, lumière dorée et regards — chaque image raconte une histoire unique</p>
+    <div class="hero-banner-eyebrow">Journal · Coulisses · Conseils</div>
+    <h1>Le blog<br><em>Picstroflex</em></h1>
+    <p class="hero-banner-sub">Coulisses de reportages, conseils photo, lieux de shooting en Essonne et Île-de-France — une fenêtre sur mon travail et ma vision artistique.</p>
   </div>
 </div>
- 
-<div class="blog-hero">
-  <div class="blog-hero-grid"></div>
-  <div class="blog-hero-glow"></div>
-  <div class="grain"></div>
-  <div class="blog-hero-content">
-    <div class="blog-eyebrow">Journal · Coulisses · Conseils</div>
-    <h1>Le blog<br><em>Picstroflex</em></h1>
-    <p class="blog-hero-sub">Coulisses de reportages, conseils photo, lieux de shooting en Essonne et Île-de-France — une fenêtre sur mon travail et ma vision artistique.</p>
-  </div>
+
+<!-- Petite section inspirante avec l'ambiance de l'image -->
+<div class="hero-inspire">
+  <p>— <span>Reflets de pluie, lumière dorée</span> — <br>chaque image raconte une histoire unique</p>
 </div>
  
 <div class="blog-filters" id="blog-filters">
@@ -340,9 +348,6 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
 <script>
 /* ╔══════════════════════════════════════════════════════════════════════════╗
    ║                   ★  ZONE DE CONFIGURATION DU BLOG  ★                  ║
-   ║                                                                          ║
-   ║  Pour ajouter un article, copiez le bloc entre {} et remplissez         ║
-   ║  les champs. L'ordre ici = ordre d'affichage (le 1er = en vedette).     ║
    ╚══════════════════════════════════════════════════════════════════════════╝ */
 
 const ARTICLES = [
