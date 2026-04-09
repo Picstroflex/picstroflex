@@ -55,14 +55,136 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 .nav-active { color:var(--or-clair)!important; }
 .nav-active::after { width:100%!important; }
  
-.blog-hero { min-height:52vh; display:flex; align-items:flex-end; padding:0 56px 80px; position:relative; overflow:hidden; background:var(--charbon); }
+/* Hero Banner avec image de fond */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  min-height: 620px;
+  max-height: 900px;
+  overflow: hidden;
+  margin-top: 0;
+  background: var(--charbon);
+}
+
+.hero-banner-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: brightness(0.7) contrast(1.05) saturate(1.1);
+  transition: transform 8s ease, filter 0.5s ease;
+}
+
+.hero-banner:hover .hero-banner-image {
+  transform: scale(1.03);
+  filter: brightness(0.75) contrast(1.08) saturate(1.12);
+}
+
+.hero-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(12,11,9,0.6) 0%, rgba(20,19,16,0.4) 50%, rgba(12,11,9,0.7) 100%);
+  z-index: 1;
+}
+
+.hero-banner-grain {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E");
+  background-size: 300px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero-banner-content {
+  position: absolute;
+  bottom: 15%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+  padding: 0 24px;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.hero-banner-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: var(--or-clair);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.hero-banner-eyebrow::before,
+.hero-banner-eyebrow::after {
+  content: '';
+  width: 50px;
+  height: 1px;
+  background: var(--or);
+  opacity: 0.6;
+}
+
+.hero-banner h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(40px, 7vw, 88px);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--creme);
+  text-shadow: 0 2px 15px rgba(0,0,0,0.3);
+  margin-bottom: 20px;
+}
+
+.hero-banner h1 em {
+  font-style: italic;
+  color: var(--or-clair);
+}
+
+.hero-banner-sub {
+  font-size: 16px;
+  letter-spacing: 0.12em;
+  color: var(--gris-clair);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.blog-hero { 
+  min-height: 42vh; 
+  display: flex; 
+  align-items: flex-end; 
+  padding: 0 56px 60px; 
+  position: relative; 
+  overflow: hidden; 
+  background: var(--charbon);
+  border-top: 1px solid var(--rule);
+}
 .blog-hero-grid { position:absolute; inset:0; background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px); background-size:80px 80px; opacity:.3; }
 .blog-hero-glow { position:absolute; inset:0; background:radial-gradient(ellipse 50% 60% at 30% 60%,rgba(201,169,110,.05) 0%,transparent 70%); }
 .grain { position:absolute; inset:0; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.07'/%3E%3C/svg%3E"); background-size:300px; opacity:.4; pointer-events:none; }
 .blog-hero-content { position:relative; z-index:10; max-width:900px; }
 .blog-eyebrow { font-size:11px; letter-spacing:.48em; text-transform:uppercase; color:var(--or); margin-bottom:20px; display:flex; align-items:center; gap:16px; animation:up .9s .3s ease both; }
 .blog-eyebrow::before { content:''; width:36px; height:1px; background:var(--or); }
-.blog-hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(44px,6vw,82px); font-weight:300; line-height:1.04; letter-spacing:-.02em; animation:up .9s .5s ease both; }
+.blog-hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(38px,5vw,70px); font-weight:300; line-height:1.04; letter-spacing:-.02em; animation:up .9s .5s ease both; }
 .blog-hero h1 em { font-style:italic; color:var(--or-clair); }
 .blog-hero-sub { font-size:15px; letter-spacing:.08em; color:var(--gris-clair); line-height:1.85; margin-top:24px; max-width:560px; animation:up .9s .7s ease both; }
  
@@ -135,7 +257,11 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
  
 @media (max-width:1000px) {
   nav { padding:20px 24px; } nav.solid { padding:14px 24px; } .nav-links { display:none; }
-  .blog-hero { padding:0 24px 60px; min-height:44vh; }
+  .hero-banner { height: 65vh; min-height: 500px; }
+  .hero-banner h1 { font-size: clamp(32px, 8vw, 58px); }
+  .hero-banner-eyebrow::before,
+  .hero-banner-eyebrow::after { width: 30px; }
+  .blog-hero { padding:0 24px 50px; min-height: 38vh; }
   .blog-filters { padding:24px; top:64px; }
   .blog-main { padding:52px 24px 80px; }
   .article-featured { grid-template-columns:1fr; }
@@ -168,6 +294,18 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
     <li><a href="https://picstroflex.github.io/picstroflex/#devis" class="nav-cta">Réserver</a></li>
   </ul>
 </nav>
+
+<!-- ==================== HERO BANNER AVEC IMAGE ==================== -->
+<div class="hero-banner">
+  <img class="hero-banner-image" src="../assets/photographe-reflets-pluie-lumiere-doree.webp" alt="Photographe reflets de pluie et lumière dorée — Picstroflex">
+  <div class="hero-banner-overlay"></div>
+  <div class="hero-banner-grain"></div>
+  <div class="hero-banner-content">
+    <div class="hero-banner-eyebrow">L'art de capturer l'instant</div>
+    <h1>La photographie<br><em>comme un reflet d'émotion</em></h1>
+    <p class="hero-banner-sub">Pluie, lumière dorée et regards — chaque image raconte une histoire unique</p>
+  </div>
+</div>
  
 <div class="blog-hero">
   <div class="blog-hero-grid"></div>
