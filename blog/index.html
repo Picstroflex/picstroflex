@@ -6,7 +6,21 @@
 <title>Blog — Picstroflex · Photographe Essonne & Île-de-France</title>
 <meta name="description" content="Le blog de Picstroflex : coulisses de reportages, conseils photo, lieux de shooting en Essonne et Île-de-France, portraits et événements.">
 <link rel="canonical" href="https://picstroflex.github.io/picstroflex/blog/index.html">
- 
+
+<!-- ====================== FAVICONS ====================== -->
+<link rel="icon" type="image/png" sizes="16x16" href="/picstroflex/favicon/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/picstroflex/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/picstroflex/favicon/favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/picstroflex/favicon/favicon-64x64.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/picstroflex/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="128x128" href="/picstroflex/favicon/favicon-128x128.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/picstroflex/favicon/favicon-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/picstroflex/favicon/favicon-512x512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/picstroflex/favicon/favicon-180x180.png">
+<link rel="manifest" href="/picstroflex/favicon/site.webmanifest">
+<meta name="theme-color" content="#827f7f">
+<!-- ====================================================== -->
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Josefin+Sans:wght@100;300;400&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -27,6 +41,7 @@ body.hovering .cursor { width:4px; height:4px; }
 nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify-content:space-between; align-items:center; padding:26px 56px; transition:background .4s,padding .4s; }
 nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16px 56px; border-bottom:1px solid var(--rule); }
 .nav-logo-wrap { display:flex; align-items:center; gap:14px; text-decoration:none; }
+.nav-logo-img { height:36px; width:auto; object-fit:contain; display:none; filter:brightness(1.1); }
 .logo-text { font-family:'Cormorant Garamond',serif; font-size:21px; font-weight:300; letter-spacing:.28em; text-transform:uppercase; color:var(--or-clair); }
 .logo-text b { color:var(--or); font-weight:300; }
 .nav-links { display:flex; gap:40px; list-style:none; align-items:center; }
@@ -101,6 +116,8 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 .blog-empty { grid-column:1/-1; padding:80px 0; text-align:center; color:var(--gris-mid); font-family:'Cormorant Garamond',serif; font-size:28px; font-style:italic; }
  
 footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 56px; display:flex; justify-content:space-between; align-items:center; }
+.ft-logo-wrap { display:flex; align-items:center; gap:12px; }
+.ft-logo-img { height:28px; width:auto; object-fit:contain; display:none; filter:brightness(1.1); }
 .ft-logo-text { font-family:'Cormorant Garamond',serif; font-size:19px; font-weight:300; letter-spacing:.28em; text-transform:uppercase; color:var(--or-clair); }
 .ft-logo-text b { color:var(--or); font-weight:300; }
 .ft-copy { font-size:13px; color:var(--gris-clair); letter-spacing:.10em; }
@@ -138,7 +155,8 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
  
 <nav id="nav">
   <a class="nav-logo-wrap" href="../index.html" style="text-decoration:none;">
-    <span class="logo-text">Picstro<b>flex</b></span>
+    <img class="nav-logo-img" id="nav-logo-img" alt="Picstroflex logo">
+    <span class="logo-text" id="nav-logo-text">Picstro<b>flex</b></span>
   </a>
   <ul class="nav-links">
     <li><a href="https://www.instagram.com/picstroflex/" target="_blank">Instagram</a></li>
@@ -169,7 +187,10 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
 <div class="blog-main" id="blog-main"></div>
  
 <footer>
-  <div class="ft-logo-text">Picstro<b>flex</b></div>
+  <div class="ft-logo-wrap">
+    <img class="ft-logo-img" id="ft-logo-img" alt="Picstroflex logo">
+    <div class="ft-logo-text" id="ft-logo-text">Picstro<b>flex</b></div>
+  </div>
   <div class="ft-copy">© 2026 Picstroflex · Tous droits réservés</div>
   <div class="ft-links">
     <a href="https://www.instagram.com/picstroflex/" target="_blank">Instagram</a>
@@ -234,8 +255,32 @@ const ARTICLES = [
 
 /* ════════════════════════════════ FIN CONFIG ═══════════════════════════════ */
 
+/* ╔══════════════════════════════════════════════════════════════╗
+   ║              ★  ZONE DE CONFIGURATION LOGO  ★               ║
+   ╚══════════════════════════════════════════════════════════════╝ */
+const CONFIG = {
+  logo: "../assets/picstroflex-photographe-idf.png",
+  logoAlt: "Picstroflex — Photographe événementiel et portrait en Île-de-France",
+};
+/* ════════════════════════ FIN CONFIG ════════════════════════════ */
+
 let filtreActif = 'Tous';
- 
+
+/* --- Logo nav & footer --- */
+document.addEventListener('DOMContentLoaded', () => {
+  const navImg  = document.getElementById('nav-logo-img');
+  const navTxt  = document.getElementById('nav-logo-text');
+  const ftImg   = document.getElementById('ft-logo-img');
+  const ftTxt   = document.getElementById('ft-logo-text');
+  if (CONFIG.logo) {
+    navImg.src = CONFIG.logo; navImg.alt = CONFIG.logoAlt;
+    navImg.style.display = 'block'; navTxt.style.display = 'none';
+    ftImg.src  = CONFIG.logo; ftImg.alt  = CONFIG.logoAlt;
+    ftImg.style.display  = 'block'; ftTxt.style.display  = 'none';
+  }
+  init();
+});
+
 function init() {
   const cats = ['Tous', ...new Set(ARTICLES.map(a => a.categorie))];
   const bar = document.getElementById('blog-filters');
@@ -336,8 +381,6 @@ document.addEventListener('mouseover', e => {
  
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 50));
- 
-init();
 </script>
 </body>
 </html>
