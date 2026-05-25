@@ -185,24 +185,44 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes pulse { 0%,100% { opacity:.3; } 50% { opacity:1; } }
 @media (max-width:1000px) {
-  nav { padding:20px 24px; } nav.solid { padding:14px 24px; } .nav-links { display:none; }
+  nav { padding:20px 24px; } 
+  nav.solid { padding:14px 24px; } 
+  
+  .nav-links { 
+    display: flex; 
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  
+  .nav-links li:first-child,
+  .nav-links li:nth-child(2),
+  .nav-links li:nth-child(3),
+  .nav-links li:nth-child(4) {
+    display: none;  /* cache Instagram, LinkedIn, Maps et le séparateur */
+  }
+  
   .hero { padding:0 24px 72px; }
   .hero-scroll { display:none; }
   .prest-intro { padding:80px 24px 56px; }
   .prest-intro-inner { grid-template-columns:1fr; gap:28px; }
-  .prestations-grid { padding:0 24px 80px; } .pcard { grid-template-columns:1fr; }
+  .prestations-grid { padding:0 24px 80px; } 
+  .pcard { grid-template-columns:1fr; }
   .pcard-img { min-height:260px; }
   .pcard-img::after { background:linear-gradient(to bottom,transparent 50%,var(--charbon) 100%); }
   .pcard-body { padding:36px 28px; border-left:none; border-top:1px solid var(--rule); }
   .pcard-opts { padding:28px 28px; border-left:none; border-top:1px solid var(--rule); }
-  .droits-note { margin:0 24px; padding:28px 24px; } .divider { margin:0 24px; }
-  .devis-section { padding:80px 24px; } .devis-inner { grid-template-columns:1fr; gap:52px; }
+  .droits-note { margin:0 24px; padding:28px 24px; } 
+  .divider { margin:0 24px; }
+  .devis-section { padding:80px 24px; } 
+  .devis-inner { grid-template-columns:1fr; gap:52px; }
   .form-row { grid-template-columns:1fr; gap:0; }
   footer { flex-direction:column; gap:14px; text-align:center; padding:28px 24px; }
   .ft-links { flex-wrap:wrap; justify-content:center; }
   .hero-sub { font-size:14px; }
   .pcard-desc { font-size:13px; }
   .pcard-list li { font-size:12px; }
+}
   .pcard-opts-list li { font-size:12px; }
   .devis-sub { font-size:13px; }
   .droits-note { font-size:13px; }
