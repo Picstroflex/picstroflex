@@ -58,9 +58,23 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 .nav-links a::after { content:''; position:absolute; bottom:-3px; left:0; width:0; height:1px; background:var(--or); transition:width .3s; }
 .nav-links a:hover { color:var(--or-clair); }
 .nav-links a:hover::after { width:100%; }
-.nav-cta { border:1px solid rgba(201,169,110,.35)!important; padding:10px 24px; color:var(--or)!important; transition:background .3s,color .3s!important; }
-.nav-cta:hover { background:var(--or)!important; color:var(--noir)!important; }
-.nav-cta::after { display:none!important; }
+
+/* ===== BOUTON RÉSERVER (NAVIGATION) - FOND DORÉ TEXTE NOIR ===== */
+.nav-cta { 
+  background: var(--or) !important; 
+  border: 1px solid var(--or) !important; 
+  padding: 10px 24px; 
+  color: var(--noir) !important; 
+  transition: background 0.3s, color 0.3s !important; 
+}
+.nav-cta:hover { 
+  background: transparent !important; 
+  color: var(--or) !important; 
+}
+.nav-cta::after { 
+  display: none !important; 
+}
+
 .nav-active { color:var(--or-clair)!important; }
 .nav-active::after { width:100%!important; }
  
@@ -223,9 +237,33 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 .af-meta { font-size:12px; letter-spacing:.18em; color:var(--gris-mid); margin-bottom:18px; }
 .af-title { font-family:'Cormorant Garamond',serif; font-size:clamp(28px,3.2vw,44px); font-weight:400; line-height:1.12; color:var(--creme); margin-bottom:20px; }
 .af-excerpt { font-size:14px; line-height:1.95; color:var(--gris-clair); margin-bottom:36px; }
-.af-read { font-size:11px; letter-spacing:.32em; text-transform:uppercase; color:var(--or); text-decoration:none; display:flex; align-items:center; gap:14px; transition:gap .3s; }
-.af-read::after { content:'→'; }
-.af-read:hover { gap:20px; }
+
+/* ===== BOUTONS LIRE L'ARTICLE - FOND DORÉ TEXTE NOIR ===== */
+.af-read, .bcard-read {
+  background: var(--or);
+  color: var(--noir);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  text-decoration: none;
+  border: 1px solid var(--or);
+  transition: background 0.3s, color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  width: fit-content;
+}
+.af-read::after, .bcard-read::after {
+  content: '→';
+}
+.af-read:hover, .bcard-read:hover {
+  background: transparent;
+  color: var(--or);
+  gap: 20px;
+}
  
 .blog-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:3px; margin-top:3px; }
 .bcard { background:var(--charbon); position:relative; overflow:hidden; border:1px solid transparent; transition:border-color .4s; display:flex; flex-direction:column; }
@@ -240,9 +278,6 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 .bcard-meta { font-size:12px; letter-spacing:.15em; color:var(--gris-mid); margin-bottom:12px; }
 .bcard-title { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:400; line-height:1.2; color:var(--creme); margin-bottom:14px; }
 .bcard-excerpt { font-size:13px; line-height:1.85; color:var(--gris-clair); margin-bottom:24px; flex:1; }
-.bcard-read { font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--or); text-decoration:none; display:flex; align-items:center; gap:10px; transition:gap .3s; margin-top:auto; }
-.bcard-read::after { content:'→'; }
-.bcard-read:hover { gap:16px; }
 .blog-empty { grid-column:1/-1; padding:80px 0; text-align:center; color:var(--gris-mid); font-family:'Cormorant Garamond',serif; font-size:28px; font-style:italic; }
  
 footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 56px; display:flex; justify-content:space-between; align-items:center; }
@@ -282,6 +317,7 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
   .af-img-overlay { background:linear-gradient(to bottom,transparent 50%,var(--charbon) 100%); }
   .af-body { padding:36px 28px; }
   .blog-grid { grid-template-columns:1fr; }
+  .af-read, .bcard-read { padding: 10px 20px; font-size: 10px; }
   footer { flex-direction:column; gap:14px; text-align:center; padding:28px 24px; }
   .ft-links { flex-wrap:wrap; justify-content:center; }
 }
