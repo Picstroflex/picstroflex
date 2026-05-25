@@ -260,8 +260,23 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
 .cta-block { margin:52px 0 32px; padding:44px 52px; background:var(--brun-clair); border-left:3px solid var(--or); display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap; }
 .cta-text { font-family:'Cormorant Garamond',serif; font-size:26px; font-style:italic; color:var(--or-clair); }
 .cta-sub { font-size:13px; letter-spacing:0.1em; color:var(--gris-mid); margin-top:8px; }
-.cta-btn { font-size:11px; letter-spacing:.32em; text-transform:uppercase; color:var(--or); text-decoration:none; border:1px solid rgba(201,169,110,.4); padding:14px 32px; transition:background .3s,color .3s; display:inline-block; white-space:nowrap; }
-.cta-btn:hover { background:var(--or); color:var(--noir); }
+.cta-btn { 
+  background: var(--or); 
+  color: var(--noir); 
+  font-size: 11px; 
+  letter-spacing: 0.32em; 
+  text-transform: uppercase; 
+  text-decoration: none; 
+  border: 1px solid var(--or); 
+  padding: 14px 32px; 
+  transition: background 0.3s, color 0.3s; 
+  display: inline-block; 
+  white-space: nowrap; 
+}
+.cta-btn:hover { 
+  background: transparent; 
+  color: var(--or); 
+}
 
 .back-link { display:inline-flex; align-items:center; gap:12px; font-size:11px; letter-spacing:.32em; text-transform:uppercase; color:var(--gris-mid); text-decoration:none; margin-bottom:40px; transition:color .3s; }
 .back-link:hover { color:var(--or); }
