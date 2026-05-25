@@ -2,26 +2,129 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog — Picstroflex · Photographe Essonne & Île-de-France</title>
-<meta name="description" content="Le blog de Picstroflex : coulisses de reportages, conseils photo, lieux de shooting en Essonne et Île-de-France, portraits et événements.">
-<link rel="canonical" href="https://picstroflex.github.io/picstroflex/blog/index.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-<!-- ====================== FAVICONS ====================== -->
-<link rel="icon" type="image/png" sizes="16x16" href="/picstroflex/favicon/favicon-16x16.png">
+<title>Photographe Corporate Essonne : Photos d'Équipes, Séminaires & Événements | Picstroflex</title>
+
+<meta name="description" content="Photographe corporate en Essonne et Île-de-France : portraits d'équipes pour site web, couverture de séminaires, team building, soirées château. Devis gratuit sous 24h. À partir de 350 €.">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<meta name="language" content="French">
+<meta name="author" content="Picstroflex - Alexandre Poulain">
+<meta name="copyright" content="Picstroflex">
+<meta name="geo.placename" content="Essonne, Île-de-France, France">
+<meta name="geo.region" content="FR-IDF">
+
+<meta name="keywords" content="photographe corporate Essonne, photographe événement entreprise Île-de-France, shooting photo équipe Essonne, photographe séminaire Massy Palaiseau, photographe team building 91, marque employeur photographe, photographe soirée château Essonne, tarif photographe corporate, photo équipe site web, photographe conférence Saclay, photographe entreprise Gif-sur-Yvette">
+
+<link rel="canonical" href="https://picstroflex.github.io/picstroflex/blog/portraits-equipe-corporate.html">
+<link rel="alternate" hreflang="fr" href="https://picstroflex.github.io/picstroflex/blog/portraits-equipe-corporate.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://picstroflex.github.io/picstroflex/blog/portraits-equipe-corporate.html">
+<meta property="og:title" content="Photographe Corporate Essonne : Photos d'Équipes, Séminaires & Événements | Picstroflex">
+<meta property="og:description" content="Portraits d'équipes pour site web, séminaires, team building, soirées château… Photographe corporate en Essonne et Île-de-France. Devis gratuit sous 24h.">
+<meta property="og:image" content="https://picstroflex.github.io/picstroflex/assets/banniere-laborantins-entreprise-corporate-essonne.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Picstroflex">
+<meta property="article:published_time" content="2026-05-20T08:00:00+00:00">
+<meta property="article:modified_time" content="2026-05-20T08:00:00+00:00">
+<meta property="article:author" content="Alexandre Poulain">
+<meta property="article:section" content="Corporate & Entreprise">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Photographe Corporate Essonne : Photos d'Équipes, Séminaires & Événements">
+<meta name="twitter:description" content="Portraits d'équipes, séminaires, team building, soirées château en Essonne et Île-de-France. Devis gratuit sous 24h.">
+<meta name="twitter:image" content="https://picstroflex.github.io/picstroflex/assets/banniere-laborantins-entreprise-corporate-essonne.webp">
+
+<!-- Schema Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Photographe Corporate en Essonne : Photos d'Équipes, Séminaires et Événements d'Entreprise",
+  "description": "Pourquoi investir dans la photographie corporate ? Portraits d'équipes, marque employeur, couverture de séminaires, team building et soirées château en Essonne et Île-de-France.",
+  "image": "https://picstroflex.github.io/picstroflex/assets/banniere-laborantins-entreprise-corporate-essonne.webp",
+  "datePublished": "2026-05-20T08:00:00+00:00",
+  "dateModified": "2026-05-20T08:00:00+00:00",
+  "wordCount": "3100",
+  "author": {
+    "@type": "Person",
+    "name": "Alexandre Poulain",
+    "jobTitle": "Photographe professionnel",
+    "url": "https://picstroflex.github.io/picstroflex"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Picstroflex"
+  }
+}
+</script>
+
+<!-- Schema FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Combien coûte un photographe corporate en Essonne ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Une demi-journée de portraits d'équipe démarre à partir de 350 €, une journée complète de séminaire à partir de 650 €, une soirée d'entreprise à partir de 500 €. Devis gratuit sous 24h."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de temps dure une séance photo d'équipe en entreprise ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Une session de portraits d'équipe dure entre 2h et 4h selon l'effectif. Pour 10 personnes, une demi-journée suffit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Le photographe se déplace-t-il dans mes locaux en Essonne ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, déplacement partout en Essonne (91) et Île-de-France : Massy, Palaiseau, Saclay, Les Ulis, Évry-Courcouronnes, Gif-sur-Yvette, Orsay, Courtabœuf, Vélizy, Antony."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Peut-on utiliser les photos pour le site web et les supports de communication ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, toutes les photos incluent les droits d'usage pour l'ensemble de vos supports : site web, plaquettes, dossiers de presse, recrutement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quel est le délai de livraison après un événement corporate ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Délai standard de 5 à 7 jours ouvrés. Pour les portraits d'équipe, livraison possible en 48h."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Favicons -->
 <link rel="icon" type="image/png" sizes="32x32" href="/picstroflex/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="48x48" href="/picstroflex/favicon/favicon-48x48.png">
-<link rel="icon" type="image/png" sizes="64x64" href="/picstroflex/favicon/favicon-64x64.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/picstroflex/favicon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="128x128" href="/picstroflex/favicon/favicon-128x128.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/picstroflex/favicon/favicon-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/picstroflex/favicon/favicon-512x512.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/picstroflex/favicon/favicon-180x180.png">
 <link rel="manifest" href="/picstroflex/favicon/site.webmanifest">
 <meta name="theme-color" content="#827f7f">
-<!-- ====================================================== -->
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Josefin+Sans:wght@100;300;400&display=swap" rel="stylesheet">
+
 <style>
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 :root {
@@ -32,16 +135,14 @@
 }
 html { scroll-behavior:smooth; }
 body { background:var(--noir); color:var(--creme); font-family:'Josefin Sans',sans-serif; font-weight:300; cursor:none; overflow-x:hidden; }
- 
+
 .cursor { position:fixed; width:7px; height:7px; background:var(--or); border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); transition:width .15s,height .15s; }
 .cursor-ring { position:fixed; width:34px; height:34px; border:1px solid rgba(201,169,110,.45); border-radius:50%; pointer-events:none; z-index:9998; transform:translate(-50%,-50%); transition:all .2s ease; }
 body.hovering .cursor-ring { width:52px; height:52px; border-color:rgba(201,169,110,.75); }
 body.hovering .cursor { width:4px; height:4px; }
- 
-nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify-content:space-between; align-items:center; padding:26px 56px; transition:background .4s,padding .4s; }
-nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16px 56px; border-bottom:1px solid var(--rule); }
+
+nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify-content:space-between; align-items:center; padding:16px 56px; background:rgba(12,11,9,.94); backdrop-filter:blur(14px); border-bottom:1px solid var(--rule); }
 .nav-logo-wrap { display:flex; align-items:center; gap:14px; text-decoration:none; }
-.nav-logo-img { height:36px; width:auto; object-fit:contain; display:none; filter:brightness(1.1); }
 .logo-text { font-family:'Cormorant Garamond',serif; font-size:21px; font-weight:300; letter-spacing:.28em; text-transform:uppercase; color:var(--or-clair); }
 .logo-text b { color:var(--or); font-weight:300; }
 .nav-links { display:flex; gap:40px; list-style:none; align-items:center; }
@@ -52,249 +153,333 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 .nav-cta { border:1px solid rgba(201,169,110,.35)!important; padding:10px 24px; color:var(--or)!important; transition:background .3s,color .3s!important; }
 .nav-cta:hover { background:var(--or)!important; color:var(--noir)!important; }
 .nav-cta::after { display:none!important; }
-.nav-active { color:var(--or-clair)!important; }
-.nav-active::after { width:100%!important; }
- 
-.hero-banner {
-  position: relative;
-  width: 100%;
-  height: 80vh;
-  min-height: 580px;
-  max-height: 850px;
-  overflow: hidden;
-  margin-top: 0;
-  background: var(--charbon);
-}
 
-.hero-banner-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 35%;
-  filter: brightness(0.55) contrast(1.1) saturate(1.05);
-  transition: transform 10s ease, filter 0.6s ease;
-}
+/* HERO */
+.article-hero { min-height:55vh; display:flex; align-items:flex-end; padding:0 56px 80px; position:relative; overflow:hidden; background:var(--charbon); margin-top:70px; }
+.article-hero-grid { position:absolute; inset:0; background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px); background-size:80px 80px; opacity:.3; }
+.article-hero-glow { position:absolute; inset:0; background:radial-gradient(ellipse 50% 60% at 70% 60%,rgba(201,169,110,.09) 0%,transparent 70%); }
+.grain { position:absolute; inset:0; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.07'/%3E%3C/svg%3E"); background-size:300px; opacity:.4; pointer-events:none; }
+.article-hero-content { position:relative; z-index:10; max-width:900px; }
+.article-cat { font-size:11px; letter-spacing:.48em; text-transform:uppercase; color:var(--or); margin-bottom:20px; display:flex; align-items:center; gap:16px; }
+.article-cat::before { content:''; width:36px; height:1px; background:var(--or); }
+.article-hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(38px,5vw,64px); font-weight:300; line-height:1.08; letter-spacing:-.02em; margin-bottom:24px; }
+.article-hero h1 em { font-style:italic; color:var(--or-clair); }
+.article-meta { font-size:13px; letter-spacing:.15em; color:var(--gris-mid); display:flex; gap:28px; margin-top:16px; flex-wrap:wrap; }
 
-.hero-banner:hover .hero-banner-image {
-  transform: scale(1.03);
-  filter: brightness(0.6) contrast(1.12) saturate(1.08);
-}
+.article-main { max-width:900px; margin:0 auto; padding:80px 56px 120px; }
+.article-body { font-size:17px; line-height:2.05; color:var(--gris-clair); }
+.article-body p { margin-bottom:28px; }
+.article-body h2 { font-family:'Cormorant Garamond',serif; font-size:30px; font-weight:400; color:var(--creme); margin:64px 0 20px; padding-bottom:10px; border-bottom:1px solid var(--rule); }
+.article-body h3 { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:400; color:var(--or-clair); margin:36px 0 14px; }
+.article-body blockquote { border-left:3px solid var(--or); padding:20px 32px; margin:44px 0; color:var(--creme); font-family:'Cormorant Garamond',serif; font-size:24px; font-style:italic; line-height:1.5; background:rgba(201,169,110,.03); }
+.article-body strong { color:var(--or-clair); font-weight:400; }
+.article-body ul { margin:20px 0 32px; padding-left:0; list-style:none; }
+.article-body ul li { padding:10px 0 10px 28px; position:relative; border-bottom:1px solid var(--rule); }
+.article-body ul li:last-child { border-bottom:none; }
+.article-body ul li::before { content:'—'; color:var(--or); position:absolute; left:0; top:10px; }
 
-.hero-banner-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(12,11,9,0.75) 0%, rgba(20,19,16,0.5) 50%, rgba(12,11,9,0.8) 100%);
-  z-index: 1;
-}
+.toc { background:var(--brun-clair); border:1px solid var(--rule); padding:28px 36px; margin:0 0 52px; }
+.toc-title { font-family:'Cormorant Garamond',serif; font-size:16px; letter-spacing:.22em; text-transform:uppercase; color:var(--or); margin-bottom:18px; }
+.toc ol { padding-left:0; list-style:none; counter-reset:toc-counter; }
+.toc ol li { counter-increment:toc-counter; padding:6px 0 6px 28px; position:relative; font-size:14px; letter-spacing:.08em; border-bottom:1px solid var(--rule); }
+.toc ol li:last-child { border-bottom:none; }
+.toc ol li::before { content:counter(toc-counter,decimal-leading-zero); color:var(--or); position:absolute; left:0; top:6px; font-size:11px; letter-spacing:.15em; }
+.toc ol li a { color:var(--gris-clair); text-decoration:none; transition:color .25s; }
+.toc ol li a:hover { color:var(--or-clair); }
 
-.hero-banner-grain {
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E");
-  background-size: 300px;
-  pointer-events: none;
-  z-index: 2;
-}
+.stat-band { display:flex; margin:52px 0 48px; border:1px solid var(--rule); flex-wrap:wrap; }
+.stat-item { flex:1; padding:32px 24px; text-align:center; border-right:1px solid var(--rule); min-width:150px; }
+.stat-item:last-child { border-right:none; }
+.stat-num { font-family:'Cormorant Garamond',serif; font-size:42px; font-weight:300; color:var(--or); display:block; line-height:1; margin-bottom:10px; }
+.stat-label { font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--gris-mid); line-height:1.5; }
 
-.hero-banner-content {
-  position: absolute;
-  bottom: 20%;
-  left: 0;
-  right: 0;
-  text-align: center;
-  z-index: 10;
-  padding: 0 24px;
-  animation: fadeInUp 1s ease-out;
-}
+.tarifs-table { width:100%; border-collapse:collapse; margin:28px 0 40px; }
+.tarifs-table th { font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--or); padding:14px 18px; text-align:left; border-bottom:1px solid rgba(201,169,110,.3); font-weight:300; }
+.tarifs-table td { padding:14px 18px; font-size:15px; color:var(--gris-clair); border-bottom:1px solid var(--rule); vertical-align:top; }
+.tarifs-table tr:last-child td { border-bottom:none; }
+.tarifs-table .prix { color:var(--or-clair); font-family:'Cormorant Garamond',serif; font-size:19px; white-space:nowrap; }
 
-.hero-banner-eyebrow {
-  font-size: 11px;
-  letter-spacing: 0.48em;
-  text-transform: uppercase;
-  color: var(--or-clair);
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-}
+.process { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:28px 0 44px; }
+.process-step { background:var(--brun-clair); padding:24px 26px; border-top:2px solid var(--or); }
+.process-num { font-family:'Cormorant Garamond',serif; font-size:36px; color:rgba(201,169,110,.25); line-height:1; margin-bottom:8px; }
+.process-title { font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:var(--or-clair); margin-bottom:10px; }
+.process-desc { font-size:14px; line-height:1.8; color:var(--gris-clair); }
 
-.hero-banner-eyebrow::before,
-.hero-banner-eyebrow::after {
-  content: '';
-  width: 45px;
-  height: 1px;
-  background: var(--or);
-  opacity: 0.6;
-}
+.faq-item { border-bottom:1px solid var(--rule); padding:0; }
+.faq-item:last-child { border-bottom:none; }
+.faq-q { font-family:'Cormorant Garamond',serif; font-size:20px; color:var(--creme); padding:20px 0 16px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:16px; user-select:none; }
+.faq-q::after { content:'+'; color:var(--or); font-size:22px; font-family:'Josefin Sans',sans-serif; font-weight:100; flex-shrink:0; transition:transform .25s; }
+.faq-item.open .faq-q::after { transform:rotate(45deg); }
+.faq-a { font-size:15px; line-height:1.9; color:var(--gris-clair); max-height:0; overflow:hidden; transition:max-height .4s ease, padding .3s; }
+.faq-item.open .faq-a { max-height:400px; padding-bottom:20px; }
 
-.hero-banner h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(48px, 8vw, 100px);
-  font-weight: 300;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-  color: var(--creme);
-  text-shadow: 0 2px 20px rgba(0,0,0,0.4);
-  margin-bottom: 20px;
-}
+.article-hero-img { width:100%; max-height:520px; object-fit:cover; margin:48px 0 52px; border-radius:2px; }
+.article-tags { display:flex; gap:12px; flex-wrap:wrap; margin:52px 0 32px; padding-top:32px; border-top:1px solid var(--rule); }
+.article-tag { font-size:11px; letter-spacing:.2em; color:var(--gris-clair); border:1px solid rgba(201,169,110,.18); padding:7px 16px; }
 
-.hero-banner h1 em {
-  font-style: italic;
-  color: var(--or-clair);
-}
+.cta-block { margin:52px 0 32px; padding:44px 52px; background:var(--brun-clair); border-left:3px solid var(--or); display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap; }
+.cta-text { font-family:'Cormorant Garamond',serif; font-size:26px; font-style:italic; color:var(--or-clair); }
+.cta-btn { font-size:11px; letter-spacing:.32em; text-transform:uppercase; color:var(--or); text-decoration:none; border:1px solid rgba(201,169,110,.4); padding:14px 32px; transition:background .3s,color .3s; display:inline-block; white-space:nowrap; }
+.cta-btn:hover { background:var(--or); color:var(--noir); }
 
-.hero-banner-sub {
-  font-size: 15px;
-  letter-spacing: 0.12em;
-  color: var(--gris-clair);
-  max-width: 580px;
-  margin: 0 auto;
-  line-height: 1.85;
-}
+.back-link { display:inline-flex; align-items:center; gap:12px; font-size:11px; letter-spacing:.32em; text-transform:uppercase; color:var(--gris-mid); text-decoration:none; margin-bottom:40px; transition:color .3s; }
+.back-link:hover { color:var(--or); }
+.back-link::before { content:'←'; font-size:14px; }
 
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+.related-articles { margin:52px 0 0; padding-top:40px; border-top:1px solid var(--rule); }
+.related-title { font-size:11px; letter-spacing:.38em; text-transform:uppercase; color:var(--or); margin-bottom:24px; }
+.related-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.related-card { background:var(--brun-clair); padding:24px 28px; text-decoration:none; border:1px solid var(--rule); transition:border-color .3s; display:block; }
+.related-card:hover { border-color:rgba(201,169,110,.4); }
+.related-card-cat { font-size:10px; letter-spacing:.32em; text-transform:uppercase; color:var(--or); margin-bottom:8px; }
+.related-card-title { font-family:'Cormorant Garamond',serif; font-size:18px; color:var(--creme); line-height:1.3; }
 
-.blog-filters { 
-  background: var(--charbon); 
-  padding: 32px 56px; 
-  border-bottom: 1px solid var(--rule); 
-  display: flex; 
-  gap: 12px; 
-  align-items: center; 
-  flex-wrap: wrap; 
-  position: sticky; 
-  top: 0; 
-  z-index: 100; 
-  backdrop-filter: blur(10px); 
-}
-.filter-label { font-size:11px; letter-spacing:.38em; text-transform:uppercase; color:var(--or); margin-right:8px; }
-.filter-chip { font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--gris-clair); border:1px solid rgba(201,169,110,.2); padding:8px 18px; cursor:none; user-select:none; transition:all .25s; background:transparent; }
-.filter-chip.active, .filter-chip:hover { color:var(--or); border-color:var(--or); background:rgba(201,169,110,.05); }
- 
-.blog-main { background:var(--noir); padding:80px 56px 120px; }
- 
-.article-featured { display:grid; grid-template-columns:1.2fr 1fr; gap:0; margin-bottom:4px; background:var(--charbon); border:1px solid transparent; transition:border-color .4s; position:relative; overflow:hidden; }
-.article-featured::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(to right,transparent,var(--or),transparent); transform:scaleX(0); transition:transform .6s ease; z-index:2; }
-.article-featured:hover { border-color:var(--rule); }
-.article-featured:hover::before { transform:scaleX(1); }
- 
-.af-img { position:relative; min-height:480px; overflow:hidden; background:var(--brun); }
-.af-img img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .8s ease; }
-.article-featured:hover .af-img img { transform:scale(1.04); }
-.af-img-overlay { position:absolute; inset:0; background:linear-gradient(to right,transparent 60%,var(--charbon) 100%); z-index:1; }
-.af-body { padding:60px 52px; display:flex; flex-direction:column; justify-content:center; }
-.af-badge { display:inline-flex; align-items:center; gap:12px; margin-bottom:28px; }
-.af-badge-tag { font-size:10px; letter-spacing:.42em; text-transform:uppercase; color:var(--or); border:1px solid rgba(201,169,110,.35); padding:6px 14px; }
-.af-badge-new { font-size:10px; letter-spacing:.28em; text-transform:uppercase; color:var(--noir); background:var(--or); padding:6px 12px; }
-.af-meta { font-size:12px; letter-spacing:.18em; color:var(--gris-mid); margin-bottom:18px; }
-.af-title { font-family:'Cormorant Garamond',serif; font-size:clamp(28px,3.2vw,44px); font-weight:400; line-height:1.12; color:var(--creme); margin-bottom:20px; }
-.af-excerpt { font-size:14px; line-height:1.95; color:var(--gris-clair); margin-bottom:36px; }
-.af-read { font-size:11px; letter-spacing:.32em; text-transform:uppercase; color:var(--or); text-decoration:none; display:flex; align-items:center; gap:14px; transition:gap .3s; }
-.af-read::after { content:'→'; }
-.af-read:hover { gap:20px; }
- 
-.blog-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:3px; margin-top:3px; }
-.bcard { background:var(--charbon); position:relative; overflow:hidden; border:1px solid transparent; transition:border-color .4s; display:flex; flex-direction:column; }
-.bcard::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(to right,transparent,var(--or),transparent); transform:scaleX(0); transition:transform .6s ease; z-index:2; }
-.bcard:hover { border-color:var(--rule); }
-.bcard:hover::before { transform:scaleX(1); }
-.bcard-img { position:relative; height:220px; overflow:hidden; background:var(--brun); flex-shrink:0; }
-.bcard-img img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .7s ease; }
-.bcard:hover .bcard-img img { transform:scale(1.06); }
-.bcard-cat { position:absolute; bottom:12px; left:12px; font-size:10px; letter-spacing:.35em; text-transform:uppercase; color:rgba(201,169,110,.85); background:rgba(12,11,9,.55); padding:5px 10px; backdrop-filter:blur(4px); z-index:2; }
-.bcard-body { padding:30px 28px 36px; display:flex; flex-direction:column; flex:1; }
-.bcard-meta { font-size:12px; letter-spacing:.15em; color:var(--gris-mid); margin-bottom:12px; }
-.bcard-title { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:400; line-height:1.2; color:var(--creme); margin-bottom:14px; }
-.bcard-excerpt { font-size:13px; line-height:1.85; color:var(--gris-clair); margin-bottom:24px; flex:1; }
-.bcard-read { font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--or); text-decoration:none; display:flex; align-items:center; gap:10px; transition:gap .3s; margin-top:auto; }
-.bcard-read::after { content:'→'; }
-.bcard-read:hover { gap:16px; }
-.blog-empty { grid-column:1/-1; padding:80px 0; text-align:center; color:var(--gris-mid); font-family:'Cormorant Garamond',serif; font-size:28px; font-style:italic; }
- 
-footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 56px; display:flex; justify-content:space-between; align-items:center; }
-.ft-logo-wrap { display:flex; align-items:center; gap:12px; }
-.ft-logo-img { height:28px; width:auto; object-fit:contain; display:none; filter:brightness(1.1); }
+footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 56px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px; }
 .ft-logo-text { font-family:'Cormorant Garamond',serif; font-size:19px; font-weight:300; letter-spacing:.28em; text-transform:uppercase; color:var(--or-clair); }
 .ft-logo-text b { color:var(--or); font-weight:300; }
 .ft-copy { font-size:13px; color:var(--gris-clair); letter-spacing:.10em; }
-.ft-links { display:flex; gap:24px; }
+.ft-links { display:flex; gap:24px; flex-wrap:wrap; }
 .ft-links a { font-size:12px; letter-spacing:.20em; text-transform:uppercase; color:var(--gris-clair); text-decoration:none; transition:color .3s; }
 .ft-links a:hover { color:var(--or); }
- 
-.reveal { opacity:1; transform:none; transition:opacity .85s ease,transform .85s ease; }
-.reveal.hidden { opacity:0; transform:translateY(44px); }
-.reveal.up { opacity:1; transform:none; }
-.reveal-delay-1 { transition-delay:.12s; }
-.reveal-delay-2 { transition-delay:.24s; }
-.reveal-delay-3 { transition-delay:.36s; }
- 
+
 @media (max-width:1000px) {
-  nav { padding:20px 24px; } nav.solid { padding:14px 24px; } .nav-links { display:none; }
-  .hero-banner { height: 65vh; min-height: 480px; }
-  .hero-banner h1 { font-size: clamp(36px, 8vw, 62px); }
-  .hero-banner-eyebrow::before, .hero-banner-eyebrow::after { width: 28px; }
-  .blog-filters { padding:24px; top:64px; }
-  .blog-main { padding:52px 24px 80px; }
-  .article-featured { grid-template-columns:1fr; }
-  .af-img { min-height:300px; }
-  .af-img-overlay { background:linear-gradient(to bottom,transparent 50%,var(--charbon) 100%); }
-  .af-body { padding:36px 28px; }
-  .blog-grid { grid-template-columns:1fr; }
-  footer { flex-direction:column; gap:14px; text-align:center; padding:28px 24px; }
-  .ft-links { flex-wrap:wrap; justify-content:center; }
+  nav { padding:16px 24px; }
+  .nav-links { display:none; }
+  .article-hero { padding:0 24px 50px; margin-top:60px; min-height:40vh; }
+  .article-main { padding:44px 20px 80px; }
+  .cta-block { flex-direction:column; text-align:center; padding:32px 24px; }
+  footer { flex-direction:column; text-align:center; padding:28px 24px; }
+  .ft-links { justify-content:center; }
+  .stat-band { flex-direction:column; }
+  .stat-item { border-right:none; border-bottom:1px solid var(--rule); }
+  .stat-item:last-child { border-bottom:none; }
+  .process { grid-template-columns:1fr; }
+  .related-grid { grid-template-columns:1fr; }
+  .toc { padding:22px 20px; }
+  .tarifs-table { font-size:14px; }
+  .tarifs-table th, .tarifs-table td { padding:10px 12px; }
 }
 </style>
 </head>
 <body>
- 
+
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="ring"></div>
- 
+
 <nav id="nav">
-  <a class="nav-logo-wrap" href="../index.html" style="text-decoration:none;">
-    <img class="nav-logo-img" id="nav-logo-img" alt="Picstroflex logo">
-    <span class="logo-text" id="nav-logo-text">Picstro<b>flex</b></span>
+  <a class="nav-logo-wrap" href="https://picstroflex.github.io/picstroflex/">
+    <span class="logo-text">Picstro<b>flex</b></span>
   </a>
   <ul class="nav-links">
     <li><a href="https://www.instagram.com/picstroflex/" target="_blank">Instagram</a></li>
     <li><a href="https://www.linkedin.com/in/alexandre-poulain-b1ab191a7" target="_blank">LinkedIn</a></li>
     <li><a href="https://share.google/nZLkT88O3DkEqXSpQ" target="_blank">Google Maps</a></li>
-    <li style="width:1px; height:16px; background:var(--rule); margin:0 4px;"></li>
-    <li><a href="../index.html#prestations">Prestations & Tarifs</a></li>
-    <li><a href="index.html" class="nav-active">Blog</a></li>
+    <li style="width:1px;height:16px;background:var(--rule);margin:0 4px;"></li>
+    <li><a href="https://picstroflex.github.io/picstroflex/#prestations">Prestations & Tarifs</a></li>
+    <li><a href="index.html">Blog</a></li>
     <li><a href="https://picstroflex.github.io/picstroflex/#devis" class="nav-cta">Réserver</a></li>
   </ul>
 </nav>
 
-<div class="hero-banner">
-  <img class="hero-banner-image" src="../assets/photographe-reflets-pluie-lumiere-doree.webp" alt="Photographe reflets de pluie et lumière dorée — Picstroflex">
-  <div class="hero-banner-overlay"></div>
-  <div class="hero-banner-grain"></div>
-  <div class="hero-banner-content">
-    <div class="hero-banner-eyebrow">Journal · Coulisses · Conseils</div>
-    <h1>Le blog<br><em>Picstroflex</em></h1>
-    <p class="hero-banner-sub">Coulisses de reportages, conseils photo, lieux de shooting en Essonne et Île-de-France — une fenêtre sur mon travail et ma vision artistique.</p>
+<main>
+
+<div class="article-hero">
+  <div class="article-hero-grid"></div>
+  <div class="article-hero-glow"></div>
+  <div class="grain"></div>
+  <div class="article-hero-content">
+    <div class="article-cat">Corporate · Événements · Essonne & Île-de-France</div>
+    <h1>Photographe corporate en Essonne (91) : <em>portraits d'équipes, séminaires & événements d'entreprise</em></h1>
+    <div class="article-meta">
+      <span>📅 20 mai 2026</span>
+      <span>⏱ 7 min de lecture</span>
+      <span>📍 Essonne (91) · Île-de-France</span>
+    </div>
   </div>
 </div>
- 
-<div class="blog-filters" id="blog-filters">
-  <span class="filter-label">Filtrer</span>
+
+<div class="article-main">
+
+  <img class="article-hero-img"
+       src="https://picstroflex.github.io/picstroflex/assets/banniere-laborantins-entreprise-corporate-essonne.webp"
+       alt="Photographe corporate en Essonne — portraits d'équipe professionnels pour site web"
+       width="900" height="520" loading="eager">
+
+  <div class="article-body">
+
+    <nav class="toc">
+      <div class="toc-title">Sommaire</div>
+      <ol>
+        <li><a href="#portraits-equipe">Portraits d'équipe corporate pour votre site web</a></li>
+        <li><a href="#marque-employeur">Marque employeur : attirer et fidéliser les talents</a></li>
+        <li><a href="#seminaires">Couverture photographique de séminaires et conférences</a></li>
+        <li><a href="#team-building">Photographe team building en Essonne et 91</a></li>
+        <li><a href="#soirees-chateau">Soirées château et événements prestige</a></li>
+        <li><a href="#processus">Comment se déroule une prestation corporate ?</a></li>
+        <li><a href="#tarifs">Tarifs photographe corporate Essonne</a></li>
+        <li><a href="#faq">Questions fréquentes (FAQ)</a></li>
+      </ol>
+    </nav>
+
+    <p>Dans un monde où votre site web est votre première poignée de main et où vos collaborateurs sont votre meilleur argument commercial, la qualité de vos photos d'entreprise n'est plus un détail — c'est un choix stratégique. Je suis <strong>Alexandre Poulain, photographe corporate en Essonne (91)</strong>, basé à Gif-sur-Yvette, et j'interviens pour des entreprises de toute taille sur l'ensemble du département et de l'Île-de-France : de <strong>Massy</strong> à <strong>Étampes</strong>, de <strong>Palaiseau</strong> à <strong>Draveil</strong>, de <strong>Saclay</strong> à <strong>Corbeil-Essonnes</strong>.</p>
+
+    <div class="stat-band">
+      <div class="stat-item">
+        <span class="stat-num">7 s</span>
+        <span class="stat-label">Pour former une<br>première impression</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">×3</span>
+        <span class="stat-label">Plus de candidatures<br>avec vraies photos d'équipe</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">−40 %</span>
+        <span class="stat-label">De turnover dans les<br>entreprises à forte marque employeur</span>
+      </div>
+    </div>
+
+    <h2 id="portraits-equipe">1. Portraits d'équipe corporate pour votre site web</h2>
+
+    <p>Les photos de stock, ça se voit. Immédiatement. Un visiteur qui arrive sur la page « Notre équipe » de votre site et découvre des visages génériques téléchargés sur Shutterstock repart avec une sensation de méfiance. À l'inverse, des <strong>portraits professionnels cohérents de vos vrais collaborateurs</strong> installent immédiatement la confiance et l'humanité.</p>
+
+    <p>Je réalise des sessions de portraits corporate en studio mobile ou en extérieur, dans vos locaux à <strong>Les Ulis</strong>, <strong>Orsay</strong>, <strong>Bures-sur-Yvette</strong>, <strong>Longjumeau</strong> ou <strong>Chilly-Mazarin</strong>. L'objectif : des images cohérentes pour toute l'équipe, réalisées en une demi-journée, sans perturber votre organisation.</p>
+
+    <blockquote>« Les gens ne font pas affaire avec des entreprises. Ils font affaire avec des personnes. Donnez à voir ces personnes. »</blockquote>
+
+    <h3>Ce qu'une session portraits d'équipe apporte concrètement</h3>
+    <ul>
+      <li><strong>Page « Équipe » du site web :</strong> cohérence visuelle et humanité de la marque employeur</li>
+      <li><strong>Plaquettes commerciales et présentations :</strong> finition professionnelle sur tous les supports</li>
+      <li><strong>Dossiers de presse et communiqués :</strong> des portraits utilisables immédiatement</li>
+      <li><strong>Signatures email et badges :</strong> une identité visuelle unifiée</li>
+      <li><strong>Offres d'emploi et pages Carrières :</strong> les candidats veulent voir à qui ils s'adressent</li>
+    </ul>
+
+    <h2 id="marque-employeur">2. Marque employeur en Essonne : attirer et fidéliser les talents</h2>
+
+    <p>Dans l'Essonne et les Yvelines, le marché des talents est tendu. Les ingénieurs du plateau de <strong>Saclay</strong>, les profils tech du parc d'activités de <strong>Courtabœuf</strong>, les commerciaux des zones d'activités de <strong>Massy-Palaiseau</strong> ont le choix. Ce qui fait pencher la balance, ce n'est plus seulement le salaire — c'est la <strong>perception de votre culture d'entreprise</strong>.</p>
+
+    <h2 id="seminaires">3. Couverture photographique de séminaires et conférences en Essonne</h2>
+
+    <p>Votre équipe se retrouve pour deux jours de séminaire au <strong>Domaine de la Martinière</strong>, dans une salle de conférence à <strong>Courtabœuf</strong>, ou sur le campus de <strong>Paris-Saclay</strong> ? C'est un investissement humain et financier considérable. Pourtant, dans 80 % des cas, il n'en reste aucune trace visuelle.</p>
+
+    <p>Un <strong>photographe de séminaire présent sur place</strong> produit trois types de contenus essentiels : les <strong>temps forts collectifs</strong>, les <strong>moments de cohésion</strong> et les <strong>portraits spontanés</strong> qui illustrent votre culture d'entreprise.</p>
+
+    <h2 id="team-building">4. Photographe team building en Essonne (91) et Île-de-France</h2>
+
+    <p>Escape game à <strong>Palaiseau</strong>, laser game à <strong>Évry</strong>, journée sportive au <strong>Domaine de Villarceaux</strong>, cooking class à <strong>Corbeil-Essonnes</strong> : le team building est un moment rare où vos collaborateurs se révèlent sous un autre jour — plus spontanés, plus complices, plus humains.</p>
+
+    <blockquote>« La photo de team building réussie, c'est celle où tout le monde a oublié qu'il y avait un photographe. »</blockquote>
+
+    <h2 id="soirees-chateau">5. Soirées château et événements prestige en Essonne</h2>
+
+    <p>L'Essonne regorge de lieux d'exception : <strong>Château de Breteuil</strong> à Choisel, <strong>Domaine de Méréville</strong>, <strong>Château de Courson</strong>, <strong>Domaine du Moulin Neuf</strong> à Linas. Je maîtrise la photographie en basse lumière (bougies, éclairages d'ambiance) sans flash intrusif qui casse l'atmosphère.</p>
+
+    <h2 id="processus">6. Comment se déroule une prestation de photographe corporate ?</h2>
+
+    <div class="process">
+      <div class="process-step">
+        <div class="process-num">01</div>
+        <div class="process-title">Devis gratuit sous 24h</div>
+        <div class="process-desc">Remplissez le formulaire avec le type de prestation et la date. Réponse sous 24h.</div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">02</div>
+        <div class="process-title">Brief de préparation</div>
+        <div class="process-desc">Échange de 20 minutes pour définir l'ambiance et les contraintes logistiques.</div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">03</div>
+        <div class="process-title">Jour de la séance</div>
+        <div class="process-desc">Installation 30 min avant, direction de pose naturelle, mise en confiance.</div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">04</div>
+        <div class="process-title">Galerie livrée en 5 jours</div>
+        <div class="process-desc">Lien privé vers votre galerie retouchée en haute définition.</div>
+      </div>
+    </div>
+
+    <h2 id="tarifs">7. Tarifs photographe corporate Essonne et Île-de-France</h2>
+
+    <table class="tarifs-table">
+      <thead>
+        <tr><th>Prestation</th><th>Durée</th><th>À partir de</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Portraits d'équipe</strong> — jusqu'à 10 pers.</td><td>Demi-journée</td><td class="prix">350 €</td></tr>
+        <tr><td><strong>Portraits d'équipe</strong> — 10 à 30 pers.</td><td>Journée</td><td class="prix">580 €</td></tr>
+        <tr><td><strong>Reportage séminaire</strong></td><td>1 journée</td><td class="prix">650 €</td></tr>
+        <tr><td><strong>Team building</strong></td><td>Demi à journée</td><td class="prix">420 €</td></tr>
+        <tr><td><strong>Soirée d'entreprise</strong></td><td>3-6h</td><td class="prix">500 €</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="faq">Questions fréquentes — Photographe corporate Essonne</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Combien coûte un photographe corporate en Essonne ?</div>
+      <div class="faq-a">Une demi-journée de portraits d'équipe démarre à partir de 350 €, une journée complète de séminaire à partir de 650 €, une soirée d'entreprise à partir de 500 €. Devis gratuit sous 24h.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Combien de temps dure une séance photo d'équipe en entreprise ?</div>
+      <div class="faq-a">Une session de portraits dure entre 2h et 4h selon l'effectif. Pour 10 personnes, une demi-journée suffit.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Le photographe se déplace-t-il dans mes locaux en Essonne ?</div>
+      <div class="faq-a">Oui, dans toute l'Essonne et l'Île-de-France : Massy, Palaiseau, Saclay, Les Ulis, Évry, Gif-sur-Yvette, Orsay, Courtabœuf, Vélizy, Antony.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Peut-on utiliser les photos pour le site web et tous nos supports ?</div>
+      <div class="faq-a">Oui, droits d'usage inclus pour site web, plaquettes, dossiers de presse, recrutement.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Quel est le délai de livraison après un événement ?</div>
+      <div class="faq-a">5 à 7 jours ouvrés. Pour les portraits d'équipe, livraison possible en 48h.</div>
+    </div>
+
+  </div>
+
+  <div class="article-tags">
+    <span class="article-tag">Photographe corporate Essonne</span>
+    <span class="article-tag">Portrait équipe entreprise</span>
+    <span class="article-tag">Séminaire photographe 91</span>
+    <span class="article-tag">Team building photographe</span>
+    <span class="article-tag">Soirée château Essonne</span>
+    <span class="article-tag">Marque employeur photo</span>
+  </div>
+
+  <div class="cta-block">
+    <div class="cta-text">Vous organisez un événement ou planifiez un shooting d'équipe en Essonne ?</div>
+    <a class="cta-btn" href="https://picstroflex.github.io/picstroflex/#devis">Devis gratuit sous 24h →</a>
+  </div>
+
+  <div class="related-articles">
+    <div class="related-title">À lire aussi sur le blog</div>
+    <div class="related-grid">
+      <a class="related-card" href="portrait-professionnel-linkedin.html">
+        <div class="related-card-cat">Portrait · Branding</div>
+        <div class="related-card-title">Portrait professionnel : pourquoi les photos au téléphone ne suffisent plus</div>
+      </a>
+      <a class="related-card" href="lieux-shooting-essonne.html">
+        <div class="related-card-cat">Conseils · Essonne</div>
+        <div class="related-card-title">5 lieux secrets pour un shooting photo en Essonne</div>
+      </a>
+    </div>
+  </div>
+
+  <br><br>
+  <a class="back-link" href="index.html">Retour au blog</a>
+
 </div>
- 
-<div class="blog-main" id="blog-main"></div>
- 
+</main>
+
 <footer>
-  <div class="ft-logo-wrap">
-    <img class="ft-logo-img" id="ft-logo-img" alt="Picstroflex logo">
-    <div class="ft-logo-text" id="ft-logo-text">Picstro<b>flex</b></div>
-  </div>
+  <div class="ft-logo-text">Picstro<b>flex</b></div>
   <div class="ft-copy">© 2026 Picstroflex · Tous droits réservés</div>
   <div class="ft-links">
     <a href="https://www.instagram.com/picstroflex/" target="_blank">Instagram</a>
@@ -302,174 +487,25 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
     <a href="https://picstroflex.github.io/picstroflex/#devis">Contact</a>
   </div>
 </footer>
- 
+
 <script>
-const ARTICLES = [
-  {
-    id: 1,
-    titre: "Photographe corporate en Essonne (91) : portraits d'équipes, séminaires & événements d'entreprise",
-    extrait: "Pourquoi investir dans la photographie corporate en Essonne et Île-de-France ? Portraits d'équipes pour site web, marque employeur, couverture de séminaires, team building et soirées château dans le 91. Devis gratuit sous 24h.",
-    categorie: "Corporate",
-    date: "20 mai 2026",
-    lecture: "7 min",
-    image: "https://picstroflex.github.io/picstroflex/assets/shooting-exterieur-nature-femme-robe-parc-essonne.webp",
-    imageAlt: "Photographe corporate Essonne 91 — portraits d'équipe professionnels",
-    url: "portraits-equipe-corporate.html"
-  },
-  {
-    id: 2,
-    titre: "Fashion Week Paris — Dans les coulisses d'un reportage événementiel",
-    extrait: "Retour sur ma couverture de la Fashion Week parisienne : la préparation, les défis techniques et les moments forts capturés en direct.",
-    categorie: "Reportage",
-    date: "28 mars 2026",
-    lecture: "6 min",
-    image: "https://picstroflex.github.io/picstroflex/assets/reportage-evenementiel-paris-fashion-week-robes.webp",
-    imageAlt: "Reportage Fashion Week Paris",
-    url: "fashion-week-paris-reportage-photo.html"
-  },
-  {
-    id: 3,
-    titre: "5 lieux secrets pour un shooting photo en Essonne",
-    extrait: "Forêts de lumière, étangs miroir, ruines romantiques… Voici mes spots préférés dans le 91 pour des shootings extérieurs uniques.",
-    categorie: "Conseils",
-    date: "14 mars 2026",
-    lecture: "4 min",
-    image: "https://picstroflex.github.io/picstroflex/assets/shooting-exterieur-nature-femme-robe-parc-essonne.webp",
-    imageAlt: "Shooting extérieur nature en Essonne",
-    url: "lieux-shooting-essonne.html"
-  },
-  {
-    id: 4,
-    titre: "Portrait professionnel : pourquoi les photos au téléphone ne suffisent plus",
-    extrait: "LinkedIn, portfolio, presse… Votre photo de profil est souvent le premier contact avec un prospect ou un recruteur.",
-    categorie: "Portrait",
-    date: "5 mars 2026",
-    lecture: "3 min",
-    image: "https://picstroflex.github.io/picstroflex/assets/portrait-professionnel-femme-beret-rouge-idf.webp",
-    imageAlt: "Portrait professionnel femme au béret rouge",
-    url: "portrait-professionnel-linkedin.html"
-  }
-];
-
-const CONFIG = {
-  logo: "../assets/picstroflex-photographe-idf.png",
-  logoAlt: "Picstroflex — Photographe événementiel et portrait en Île-de-France",
-};
-
-let filtreActif = 'Tous';
-
-document.addEventListener('DOMContentLoaded', () => {
-  const navImg = document.getElementById('nav-logo-img');
-  const navTxt = document.getElementById('nav-logo-text');
-  const ftImg = document.getElementById('ft-logo-img');
-  const ftTxt = document.getElementById('ft-logo-text');
-  if (CONFIG.logo) {
-    navImg.src = CONFIG.logo; navImg.alt = CONFIG.logoAlt;
-    navImg.style.display = 'block'; navTxt.style.display = 'none';
-    ftImg.src = CONFIG.logo; ftImg.alt = CONFIG.logoAlt;
-    ftImg.style.display = 'block'; ftTxt.style.display = 'none';
-  }
-  init();
-});
-
-function init() {
-  const cats = ['Tous', ...new Set(ARTICLES.map(a => a.categorie))];
-  const bar = document.getElementById('blog-filters');
-  bar.innerHTML = '<span class="filter-label">Filtrer</span>';
-  cats.forEach(cat => {
-    const btn = document.createElement('button');
-    btn.className = 'filter-chip' + (cat === 'Tous' ? ' active' : '');
-    btn.dataset.cat = cat;
-    btn.textContent = cat;
-    btn.onclick = () => filterArticles(cat, btn);
-    bar.appendChild(btn);
-  });
-  renderArticles(ARTICLES);
-}
-
-function filterArticles(cat, btn) {
-  filtreActif = cat;
-  document.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  const filtered = cat === 'Tous' ? ARTICLES : ARTICLES.filter(a => a.categorie === cat);
-  renderArticles(filtered);
-}
-
-function renderArticles(list) {
-  const main = document.getElementById('blog-main');
-  main.innerHTML = '';
-  if (!list.length) {
-    main.innerHTML = '<div class="blog-empty">Aucun article dans cette catégorie pour l\'instant.</div>';
-    return;
-  }
- 
-  const first = list[0];
-  const featured = document.createElement('div');
-  featured.className = 'article-featured reveal';
-  featured.innerHTML = `
-    <div class="af-img">
-      ${first.image ? `<img src="${first.image}" alt="${first.imageAlt}" loading="lazy">` : ''}
-      <div class="af-img-overlay"></div>
-    </div>
-    <div class="af-body">
-      <div class="af-badge">
-        <span class="af-badge-tag">${first.categorie}</span>
-        ${list.indexOf(first) === 0 && filtreActif === 'Tous' ? '<span class="af-badge-new">Nouveau</span>' : ''}
-      </div>
-      <div class="af-meta">${first.date} &ensp;·&ensp; ${first.lecture} de lecture</div>
-      <div class="af-title">${first.titre}</div>
-      <p class="af-excerpt">${first.extrait}</p>
-      <a class="af-read" href="${first.url}">Lire l'article</a>
-    </div>
-  `;
-  main.appendChild(featured);
- 
-  const rest = list.slice(1);
-  if (rest.length) {
-    const grid = document.createElement('div');
-    grid.className = 'blog-grid';
-    rest.forEach((a, i) => {
-      const card = document.createElement('div');
-      card.className = `bcard reveal reveal-delay-${(i % 3) + 1}`;
-      card.innerHTML = `
-        <div class="bcard-img">
-          ${a.image ? `<img src="${a.image}" alt="${a.imageAlt}" loading="lazy">` : ''}
-          <div class="bcard-cat">${a.categorie}</div>
-        </div>
-        <div class="bcard-body">
-          <div class="bcard-meta">${a.date} &ensp;·&ensp; ${a.lecture}</div>
-          <div class="bcard-title">${a.titre}</div>
-          <p class="bcard-excerpt">${a.extrait}</p>
-          <a class="bcard-read" href="${a.url}">Lire l'article</a>
-        </div>
-      `;
-      grid.appendChild(card);
-    });
-    main.appendChild(grid);
-  }
- 
-  requestAnimationFrame(() => {
-    const els = main.querySelectorAll('.reveal');
-    els.forEach(el => el.classList.add('hidden'));
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.remove('hidden'); e.target.classList.add('up'); } });
-    }, { threshold:.1, rootMargin:'0px 0px -40px 0px' });
-    els.forEach(el => obs.observe(el));
-  });
-}
-
 const cur = document.getElementById('cursor');
 const rng = document.getElementById('ring');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cur.style.left=mx+'px'; cur.style.top=my+'px'; });
-(function loop(){ rx+=(mx-rx)*.13; ry+=(my-ry)*.13; rng.style.left=rx+'px'; rng.style.top=ry+'px'; requestAnimationFrame(loop); })();
-document.addEventListener('mouseover', e => {
-  if (e.target.closest('a,button,.filter-chip,.bcard,.article-featured')) document.body.classList.add('hovering');
-  else document.body.classList.remove('hovering');
-});
+let mx = 0, my = 0, rx = 0, ry = 0;
+document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; cur.style.left = mx + 'px'; cur.style.top = my + 'px'; });
+(function loop() { rx += (mx - rx) * 0.13; ry += (my - ry) * 0.13; rng.style.left = rx + 'px'; rng.style.top = ry + 'px'; requestAnimationFrame(loop); })();
+document.addEventListener('mouseover', e => { if (e.target.closest('a, button')) document.body.classList.add('hovering'); else document.body.classList.remove('hovering'); });
 
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 50));
+
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.querySelector('.faq-q').addEventListener('click', () => {
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
 </script>
 </body>
 </html>
