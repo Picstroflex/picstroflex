@@ -55,7 +55,6 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 .nav-active { color:var(--or-clair)!important; }
 .nav-active::after { width:100%!important; }
  
-/* Hero Banner principale - Le blog d'abord */
 .hero-banner {
   position: relative;
   width: 100%;
@@ -158,17 +157,10 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Section inspirante sous le hero */
 .hero-inspire {
   background: var(--charbon);
   padding: 48px 56px;
@@ -185,9 +177,7 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
   margin: 0 auto;
 }
 
-.hero-inspire span {
-  color: var(--or);
-}
+.hero-inspire span { color: var(--or); }
 
 .blog-filters { 
   background: var(--charbon); 
@@ -217,8 +207,6 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 .af-img img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .8s ease; }
 .article-featured:hover .af-img img { transform:scale(1.04); }
 .af-img-overlay { position:absolute; inset:0; background:linear-gradient(to right,transparent 60%,var(--charbon) 100%); z-index:1; }
-.af-img-placeholder { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
-.af-img-placeholder span { font-family:'Cormorant Garamond',serif; font-size:140px; font-weight:300; color:rgba(201,169,110,.05); line-height:1; }
 .af-body { padding:60px 52px; display:flex; flex-direction:column; justify-content:center; }
 .af-badge { display:inline-flex; align-items:center; gap:12px; margin-bottom:28px; }
 .af-badge-tag { font-size:10px; letter-spacing:.42em; text-transform:uppercase; color:var(--or); border:1px solid rgba(201,169,110,.35); padding:6px 14px; }
@@ -238,8 +226,6 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 .bcard-img { position:relative; height:220px; overflow:hidden; background:var(--brun); flex-shrink:0; }
 .bcard-img img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .7s ease; }
 .bcard:hover .bcard-img img { transform:scale(1.06); }
-.bcard-img-placeholder { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
-.bcard-img-placeholder span { font-family:'Cormorant Garamond',serif; font-size:80px; font-weight:300; color:rgba(201,169,110,.07); line-height:1; }
 .bcard-cat { position:absolute; bottom:12px; left:12px; font-size:10px; letter-spacing:.35em; text-transform:uppercase; color:rgba(201,169,110,.85); background:rgba(12,11,9,.55); padding:5px 10px; backdrop-filter:blur(4px); z-index:2; }
 .bcard-body { padding:30px 28px 36px; display:flex; flex-direction:column; flex:1; }
 .bcard-meta { font-size:12px; letter-spacing:.15em; color:var(--gris-mid); margin-bottom:12px; }
@@ -266,14 +252,12 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
 .reveal-delay-1 { transition-delay:.12s; }
 .reveal-delay-2 { transition-delay:.24s; }
 .reveal-delay-3 { transition-delay:.36s; }
-@keyframes up { from { opacity:0; transform:translateY(36px); } to { opacity:1; transform:none; } }
  
 @media (max-width:1000px) {
   nav { padding:20px 24px; } nav.solid { padding:14px 24px; } .nav-links { display:none; }
   .hero-banner { height: 65vh; min-height: 480px; }
   .hero-banner h1 { font-size: clamp(36px, 8vw, 62px); }
-  .hero-banner-eyebrow::before,
-  .hero-banner-eyebrow::after { width: 28px; }
+  .hero-banner-eyebrow::before, .hero-banner-eyebrow::after { width: 28px; }
   .hero-inspire { padding: 32px 24px; }
   .hero-inspire p { font-size: 11px; letter-spacing: 0.22em; }
   .blog-filters { padding:24px; top:64px; }
@@ -309,7 +293,6 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
   </ul>
 </nav>
 
-<!-- ==================== HERO BANNER : LE BLOG PICSTROFLEX ==================== -->
 <div class="hero-banner">
   <img class="hero-banner-image" src="../assets/photographe-reflets-pluie-lumiere-doree.webp" alt="Photographe reflets de pluie et lumière dorée — Picstroflex">
   <div class="hero-banner-overlay"></div>
@@ -341,94 +324,70 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
 </footer>
  
 <script>
-/* ╔══════════════════════════════════════════════════════════════════════════╗
-   ║                   ★  ZONE DE CONFIGURATION DU BLOG  ★                  ║
-   ╚══════════════════════════════════════════════════════════════════════════╝ */
-
 const ARTICLES = [
-
-  /* ── ARTICLE 1 (EN VEDETTE — NOUVEAU : CORPORATE) ───────────────────────── */
   {
     id: 1,
-    titre:     "Photographe corporate en Essonne : portraits d'équipes, séminaires & événements d'entreprise",
-    extrait:   "Pourquoi investir dans la photographie corporate ? Portraits d'équipes pour site web, marque employeur, couverture de séminaires, team building et soirées château en Essonne et Île-de-France. Devis gratuit sous 24h.",
+    titre: "Photographe corporate en Essonne : portraits d'équipes, séminaires & événements d'entreprise",
+    extrait: "Pourquoi investir dans la photographie corporate ? Portraits d'équipes pour site web, marque employeur, couverture de séminaires, team building et soirées château en Essonne et Île-de-France. Devis gratuit sous 24h.",
     categorie: "Corporate",
-    date:      "20 mai 2026",
-    lecture:   "7 min",
-    image:     "https://picstroflex.github.io/picstroflex/assets/banniere-laborantins-entreprise-corporate-essonne.webp",
-    imageAlt:  "Photographe corporate Essonne — portraits d'équipe professionnels pour site web",
-    tags:      ["Corporate", "Portrait", "Séminaire", "Team building", "Essonne"],
-    url:       "photos-corporate-equipes-essonne.html"
+    date: "20 mai 2026",
+    lecture: "7 min",
+    image: "https://picstroflex.github.io/picstroflex/assets/shooting-exterieur-nature-femme-robe-parc-essonne.webp",
+    imageAlt: "Photographe corporate Essonne — portraits d'équipe professionnels",
+    url: "portraits-equipe-corporate.html"
   },
-
-  /* ── ARTICLE 2 (Fashion Week) ──────────────────────────────────────────── */
   {
     id: 2,
-    titre:     "Fashion Week Paris — Dans les coulisses d'un reportage événementiel",
-    extrait:   "Retour sur ma couverture de la Fashion Week parisienne : la préparation, les défis techniques et les moments forts capturés en direct. Comment anticiper l'imprévu quand chaque seconde compte ?",
+    titre: "Fashion Week Paris — Dans les coulisses d'un reportage événementiel",
+    extrait: "Retour sur ma couverture de la Fashion Week parisienne : la préparation, les défis techniques et les moments forts capturés en direct.",
     categorie: "Reportage",
-    date:      "28 mars 2026",
-    lecture:   "6 min",
-    image:     "https://picstroflex.github.io/picstroflex/assets/reportage-evenementiel-paris-fashion-week-robes.webp",
-    imageAlt:  "Reportage Fashion Week Paris — deux femmes en robes rouge et noire",
-    tags:      ["Fashion Week", "Événementiel", "Paris", "Reportage"],
-    url:       "fashion-week-paris-reportage-photo.html"
+    date: "28 mars 2026",
+    lecture: "6 min",
+    image: "https://picstroflex.github.io/picstroflex/assets/reportage-evenementiel-paris-fashion-week-robes.webp",
+    imageAlt: "Reportage Fashion Week Paris",
+    url: "fashion-week-paris-reportage-photo.html"
   },
-
-  /* ── ARTICLE 3 ────────────────────────────────────────────────────────── */
   {
     id: 3,
-    titre:     "5 lieux secrets pour un shooting photo en Essonne",
-    extrait:   "Forêts de lumière, étangs miroir, ruines romantiques… Voici mes spots préférés dans le 91 pour des shootings extérieurs uniques, loin des endroits déjà vus.",
+    titre: "5 lieux secrets pour un shooting photo en Essonne",
+    extrait: "Forêts de lumière, étangs miroir, ruines romantiques… Voici mes spots préférés dans le 91 pour des shootings extérieurs uniques.",
     categorie: "Conseils",
-    date:      "14 mars 2026",
-    lecture:   "4 min",
-    image:     "https://picstroflex.github.io/picstroflex/assets/shooting-exterieur-nature-femme-robe-parc-essonne.webp",
-    imageAlt:  "Shooting extérieur nature en Essonne — femme en robe noire avec bouquet",
-    tags:      ["Essonne", "Lieux", "Shooting extérieur", "Conseils"],
-    url:       "lieux-shooting-essonne.html"
+    date: "14 mars 2026",
+    lecture: "4 min",
+    image: "https://picstroflex.github.io/picstroflex/assets/shooting-exterieur-nature-femme-robe-parc-essonne.webp",
+    imageAlt: "Shooting extérieur nature en Essonne",
+    url: "lieux-shooting-essonne.html"
   },
-
-  /* ── ARTICLE 4 ────────────────────────────────────────────────────────── */
   {
     id: 4,
-    titre:     "Portrait professionnel : pourquoi les photos au téléphone ne suffisent plus",
-    extrait:   "LinkedIn, portfolio, presse… Votre photo de profil est souvent le premier contact que vous avez avec un prospect ou un recruteur. Une étude le prouve : 20 secondes pour faire une impression.",
+    titre: "Portrait professionnel : pourquoi les photos au téléphone ne suffisent plus",
+    extrait: "LinkedIn, portfolio, presse… Votre photo de profil est souvent le premier contact avec un prospect ou un recruteur.",
     categorie: "Portrait",
-    date:      "5 mars 2026",
-    lecture:   "3 min",
-    image:     "https://picstroflex.github.io/picstroflex/assets/portrait-professionnel-femme-beret-rouge-idf.webp",
-    imageAlt:  "Portrait professionnel femme au béret rouge — Île-de-France",
-    tags:      ["Portrait", "LinkedIn", "Branding", "Professionnel"],
-    url:       "portrait-professionnel-linkedin.html"
+    date: "5 mars 2026",
+    lecture: "3 min",
+    image: "https://picstroflex.github.io/picstroflex/assets/portrait-professionnel-femme-beret-rouge-idf.webp",
+    imageAlt: "Portrait professionnel femme au béret rouge",
+    url: "portrait-professionnel-linkedin.html"
   }
-
 ];
 
-/* ════════════════════════════════════ FIN CONFIG ═══════════════════════════════ */
-
-/* ╔══════════════════════════════════════════════════════════════╗
-   ║              ★  ZONE DE CONFIGURATION LOGO  ★               ║
-   ╚══════════════════════════════════════════════════════════════╝ */
 const CONFIG = {
   logo: "../assets/picstroflex-photographe-idf.png",
   logoAlt: "Picstroflex — Photographe événementiel et portrait en Île-de-France",
 };
-/* ════════════════════════ FIN CONFIG ════════════════════════════ */
 
 let filtreActif = 'Tous';
 
-/* --- Logo nav & footer --- */
 document.addEventListener('DOMContentLoaded', () => {
-  const navImg  = document.getElementById('nav-logo-img');
-  const navTxt  = document.getElementById('nav-logo-text');
-  const ftImg   = document.getElementById('ft-logo-img');
-  const ftTxt   = document.getElementById('ft-logo-text');
+  const navImg = document.getElementById('nav-logo-img');
+  const navTxt = document.getElementById('nav-logo-text');
+  const ftImg = document.getElementById('ft-logo-img');
+  const ftTxt = document.getElementById('ft-logo-text');
   if (CONFIG.logo) {
     navImg.src = CONFIG.logo; navImg.alt = CONFIG.logoAlt;
     navImg.style.display = 'block'; navTxt.style.display = 'none';
-    ftImg.src  = CONFIG.logo; ftImg.alt  = CONFIG.logoAlt;
-    ftImg.style.display  = 'block'; ftTxt.style.display  = 'none';
+    ftImg.src = CONFIG.logo; ftImg.alt = CONFIG.logoAlt;
+    ftImg.style.display = 'block'; ftTxt.style.display = 'none';
   }
   init();
 });
@@ -447,7 +406,7 @@ function init() {
   });
   renderArticles(ARTICLES);
 }
- 
+
 function filterArticles(cat, btn) {
   filtreActif = cat;
   document.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
@@ -455,7 +414,7 @@ function filterArticles(cat, btn) {
   const filtered = cat === 'Tous' ? ARTICLES : ARTICLES.filter(a => a.categorie === cat);
   renderArticles(filtered);
 }
- 
+
 function renderArticles(list) {
   const main = document.getElementById('blog-main');
   main.innerHTML = '';
@@ -469,7 +428,6 @@ function renderArticles(list) {
   featured.className = 'article-featured reveal';
   featured.innerHTML = `
     <div class="af-img">
-      <div class="af-img-placeholder"><span>0${first.id}</span></div>
       ${first.image ? `<img src="${first.image}" alt="${first.imageAlt}" loading="lazy">` : ''}
       <div class="af-img-overlay"></div>
     </div>
@@ -495,7 +453,6 @@ function renderArticles(list) {
       card.className = `bcard reveal reveal-delay-${(i % 3) + 1}`;
       card.innerHTML = `
         <div class="bcard-img">
-          <div class="bcard-img-placeholder"><span>0${a.id}</span></div>
           ${a.image ? `<img src="${a.image}" alt="${a.imageAlt}" loading="lazy">` : ''}
           <div class="bcard-cat">${a.categorie}</div>
         </div>
@@ -520,9 +477,19 @@ function renderArticles(list) {
     els.forEach(el => obs.observe(el));
   });
 }
- 
+
 const cur = document.getElementById('cursor');
 const rng = document.getElementById('ring');
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cur.style.left=mx+'px'; cur.style.top=my+'px'; });
-(function loop(){ rx+=(mx-rx)*.13; ry+=(my-
+(function loop(){ rx+=(mx-rx)*.13; ry+=(my-ry)*.13; rng.style.left=rx+'px'; rng.style.top=ry+'px'; requestAnimationFrame(loop); })();
+document.addEventListener('mouseover', e => {
+  if (e.target.closest('a,button,.filter-chip,.bcard,.article-featured')) document.body.classList.add('hovering');
+  else document.body.classList.remove('hovering');
+});
+
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 50));
+</script>
+</body>
+</html>
