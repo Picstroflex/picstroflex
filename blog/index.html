@@ -347,9 +347,23 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
 
 const ARTICLES = [
 
- /* ── ARTICLE 1 (EN VEDETTE — le plus récent) ──────────────────────────── */
-{
+  /* ── ARTICLE 1 (EN VEDETTE — NOUVEAU : CORPORATE) ───────────────────────── */
+  {
     id: 1,
+    titre:     "Photographe corporate en Essonne : portraits d'équipes, séminaires & événements d'entreprise",
+    extrait:   "Pourquoi investir dans la photographie corporate ? Portraits d'équipes pour site web, marque employeur, couverture de séminaires, team building et soirées château en Essonne et Île-de-France. Devis gratuit sous 24h.",
+    categorie: "Corporate",
+    date:      "20 mai 2026",
+    lecture:   "7 min",
+    image:     "https://picstroflex.github.io/picstroflex/assets/banniere-laborantins-entreprise-corporate-essonne.webp",
+    imageAlt:  "Photographe corporate Essonne — portraits d'équipe professionnels pour site web",
+    tags:      ["Corporate", "Portrait", "Séminaire", "Team building", "Essonne"],
+    url:       "photos-corporate-equipes-essonne.html"
+  },
+
+  /* ── ARTICLE 2 (Fashion Week) ──────────────────────────────────────────── */
+  {
+    id: 2,
     titre:     "Fashion Week Paris — Dans les coulisses d'un reportage événementiel",
     extrait:   "Retour sur ma couverture de la Fashion Week parisienne : la préparation, les défis techniques et les moments forts capturés en direct. Comment anticiper l'imprévu quand chaque seconde compte ?",
     categorie: "Reportage",
@@ -359,11 +373,11 @@ const ARTICLES = [
     imageAlt:  "Reportage Fashion Week Paris — deux femmes en robes rouge et noire",
     tags:      ["Fashion Week", "Événementiel", "Paris", "Reportage"],
     url:       "fashion-week-paris-reportage-photo.html"
-},
+  },
 
-  /* ── ARTICLE 2 ────────────────────────────────────────────────────────── */
+  /* ── ARTICLE 3 ────────────────────────────────────────────────────────── */
   {
-    id: 2,
+    id: 3,
     titre:     "5 lieux secrets pour un shooting photo en Essonne",
     extrait:   "Forêts de lumière, étangs miroir, ruines romantiques… Voici mes spots préférés dans le 91 pour des shootings extérieurs uniques, loin des endroits déjà vus.",
     categorie: "Conseils",
@@ -375,9 +389,9 @@ const ARTICLES = [
     url:       "lieux-shooting-essonne.html"
   },
 
-  /* ── ARTICLE 3 ────────────────────────────────────────────────────────── */
+  /* ── ARTICLE 4 ────────────────────────────────────────────────────────── */
   {
-    id: 3,
+    id: 4,
     titre:     "Portrait professionnel : pourquoi les photos au téléphone ne suffisent plus",
     extrait:   "LinkedIn, portfolio, presse… Votre photo de profil est souvent le premier contact que vous avez avec un prospect ou un recruteur. Une étude le prouve : 20 secondes pour faire une impression.",
     categorie: "Portrait",
@@ -391,7 +405,7 @@ const ARTICLES = [
 
 ];
 
-/* ════════════════════════════════ FIN CONFIG ═══════════════════════════════ */
+/* ════════════════════════════════════ FIN CONFIG ═══════════════════════════════ */
 
 /* ╔══════════════════════════════════════════════════════════════╗
    ║              ★  ZONE DE CONFIGURATION LOGO  ★               ║
@@ -462,7 +476,7 @@ function renderArticles(list) {
     <div class="af-body">
       <div class="af-badge">
         <span class="af-badge-tag">${first.categorie}</span>
-        ${list.indexOf(first) === 0 && filtreActif === 'Tous' ? '<span class="af-badge-new">Récent</span>' : ''}
+        ${list.indexOf(first) === 0 && filtreActif === 'Tous' ? '<span class="af-badge-new">Nouveau</span>' : ''}
       </div>
       <div class="af-meta">${first.date} &ensp;·&ensp; ${first.lecture} de lecture</div>
       <div class="af-title">${first.titre}</div>
@@ -511,14 +525,4 @@ const cur = document.getElementById('cursor');
 const rng = document.getElementById('ring');
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cur.style.left=mx+'px'; cur.style.top=my+'px'; });
-(function loop(){ rx+=(mx-rx)*.13; ry+=(my-ry)*.13; rng.style.left=rx+'px'; rng.style.top=ry+'px'; requestAnimationFrame(loop); })();
-document.addEventListener('mouseover', e => {
-  if (e.target.closest('a,button,.filter-chip,.bcard,.article-featured')) document.body.classList.add('hovering');
-  else document.body.classList.remove('hovering');
-});
- 
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 50));
-</script>
-</body>
-</html>
+(function loop(){ rx+=(mx-rx)*.13; ry+=(my-
