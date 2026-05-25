@@ -41,9 +41,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fadeElements.forEach(el => observer.observe(el));
 
+    // 3. Curseur personnalisé (désactivé sur mobile)
+    const cur = document.getElementById('cursor');
+    const rng = document.getElementById('cursor-ring');
+    
+    // Détection des appareils tactiles
+    const isTouchDevice = () => {
+        return (('ontouchstart' in window) ||
+            (navigator.maxTouchPoints > 0) ||
+            (navigator.msMaxTouchPoints > 0));
+    };
+    
+    if (!isTouchDevice() && cur && rng) {
+        // Seulement sur desktop (souris)
+        document.addEventListener('mousemove', e => { 
+            let x = e.clientX; 
+            let y = e.clientY; 
+            cur.style.left = x + 'px'; 
+            cur.style.top = y + 'px';
+            rng.style.left = x + 'px';
+            rng.style.top = y + 'px';
+        });
+        
+        // Effet de survol (agrandissement)
+        const hoverElements = document.querySelectorAll('a, button, .chip, .pcard, .pcard-cta, .btn, .service-card');
+        hoverElements.forEach(el => {
+            el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
+            el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
+        });
+    } else {
+        // Sur mobile : on cache complètement le curseur personnalisé
+        if (cur) cur.style.display = 'none';
+        if (rng) rng.style.display = 'none';
+    }
 
-    // 3. Smooth Scroll (Fallback pour les anciens navigateurs si scroll-behavior: smooth n'est pas supporté)
-    // Ici, nous nous reposons principalement sur le CSS 'scroll-behavior: smooth', 
-    // mais si un script JS était nécessaire pour la compatibilité, il irait ici.
+    // 4. Smooth Scroll (Fallback pour les anciens navigateurs)
+    // Le CSS 'scroll-behavior: smooth' est déjà présent
 
 });
