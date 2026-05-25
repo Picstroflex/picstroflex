@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Photographe Essonne & Gif-sur-Yvette — Picstroflex</title>
-<meta name="description" content="Photographe à Gif-sur-Yvette, Essonne. Portrait livré en 24h, shooting nature en 72h, évenementiel en 7 jours. Devis gratuit.">
+<meta name="description" content="Photographe à Gif-sur-Yvette, Essonne. Portrait livré en 24h, shooting nature en 72h, événementiel en 7 jours. Devis gratuit.">
 
 <link rel="canonical" href="https://picstroflex.github.io/picstroflex/">
 <script type="application/ld+json">
@@ -27,7 +27,7 @@
 }
 </script>
   
-<!-- ====================== FAVICONS (version 2026 propre) ====================== -->
+<!-- ====================== FAVICONS ====================== -->
 <link rel="icon" type="image/png" sizes="16x16" href="/picstroflex/favicon/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/picstroflex/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="/picstroflex/favicon/favicon-48x48.png">
@@ -49,7 +49,7 @@
   --gris:#7a7468; --gris-mid:#a09790; --gris-clair:#c0b9ad;
   --rule:rgba(201,169,110,0.12);
 }
- { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; }
 body { background:var(--noir); color:var(--creme); font-family:'Josefin Sans',sans-serif; font-weight:300; cursor:none; overflow-x:hidden; }
 .cursor { position:fixed; width:7px; height:7px; background:var(--or); border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); transition:width .15s,height .15s; }
 .cursor-ring { position:fixed; width:34px; height:34px; border:1px solid rgba(201,169,110,.45); border-radius:50%; pointer-events:none; z-index:9998; transform:translate(-50%,-50%); transition:all .2s ease; }
@@ -66,9 +66,49 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 .nav-links a::after { content:''; position:absolute; bottom:-3px; left:0; width:0; height:1px; background:var(--or); transition:width .3s; }
 .nav-links a:hover { color:var(--or-clair); }
 .nav-links a:hover::after { width:100%; }
-.nav-cta { border:1px solid rgba(201,169,110,.35)!important; padding:10px 24px; color: var(--or-clair)!important; transition:background .3s,color .3s!important; }
-.nav-cta:hover { background:var(--or)!important; color:var(--noir)!important; }
-.nav-cta::after { display:none!important; }
+
+/* ===== TOUS LES BOUTONS UNIFORMISÉS ===== */
+.btn-gold, .btn-line, .nav-cta, .pcard-cta, .submit-btn {
+  background: var(--or);
+  color: var(--noir) !important;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  padding: 15px 38px;
+  text-decoration: none;
+  border: 1px solid var(--or);
+  transition: background 0.3s, color 0.3s;
+  display: inline-block;
+  cursor: pointer;
+}
+.btn-gold:hover, .btn-line:hover, .nav-cta:hover, .pcard-cta:hover, .submit-btn:hover {
+  background: transparent;
+  color: var(--or) !important;
+}
+.btn-line::before {
+  display: none;
+}
+.nav-cta {
+  padding: 10px 24px !important;
+}
+.nav-cta::after {
+  display: none !important;
+}
+.pcard-cta {
+  padding: 12px 24px;
+  font-size: 10px;
+  align-self: flex-start;
+  margin-top: auto;
+}
+.submit-btn {
+  width: 100%;
+  padding: 20px;
+  font-size: 12px;
+}
+/* ===== FIN BOUTONS ===== */
+
 .hero { min-height:100vh; display:flex; align-items:center; padding:0 56px; position:relative; overflow:hidden; }
 .hero-grid-bg { position:absolute; inset:0; background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px); background-size:80px 80px; opacity:.35; z-index:1; }
 .hero-glow { position:absolute; inset:0; z-index:2; background:radial-gradient(ellipse 60% 60% at 50% 50%,rgba(201,169,110,.04) 0%,transparent 70%); }
@@ -86,12 +126,6 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 .hero-sub { font-size:15px; letter-spacing:.10em; color: #FFFFFF; line-height:1.85; max-width:500px; margin-bottom:48px; animation:up .9s .7s ease both; text-align:center; }
 .hero-ctas { display:flex; gap:20px; align-items:center; animation:up .9s .9s ease both; justify-content:center; }
 
-.btn-gold { background:var(--or); color:var(--noir); font-family:'Josefin Sans',sans-serif; font-size:10px; font-weight:400; letter-spacing:.38em; text-transform:uppercase; padding:15px 38px; text-decoration:none; border:1px solid var(--or); transition:background .3s,color .3s; }
-.btn-gold:hover { background:transparent; color:var(--or); }
-.btn-line { font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--gris-clair); text-decoration:none; display:flex; align-items:center; gap:12px; transition:color .3s; }
-.btn-line::before { content:''; width:28px; height:1px; background:var(--gris); transition:width .3s,background .3s; }
-.btn-line:hover { color:var(--or-clair); }
-.btn-line:hover::before { width:44px; background:var(--or); }
 .hero-scroll { position:absolute; bottom:44px; right:56px; z-index:10; display:flex; flex-direction:column; align-items:center; gap:10px; animation:fadeIn 1s 1.4s ease both; }
 .hero-scroll span { font-size:10px; letter-spacing:.4em; text-transform:uppercase; color:var(--gris-clair); writing-mode:vertical-rl; }
 .scroll-tick { width:1px; height:56px; background:linear-gradient(to bottom,transparent,var(--or)); animation:pulse 2s 2s ease infinite; }
@@ -129,12 +163,10 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 .pcard-opts { padding:36px 44px; border-left:1px solid var(--rule); background:rgba(255,255,255,.015); display:flex; flex-direction:column; justify-content:center; }
 .pcard-opts-title { font-size:11px; letter-spacing:.38em; text-transform:uppercase; color: var(--or-clair); margin-bottom:16px; }
 .pcard-opts-list { list-style:none; display:flex; flex-direction:column; gap:10px; margin-bottom:24px; }
-.pcard-opts-list li { font-size:13px; color:var(--gris-clair); line-height:1.6; display:flex; align-items:baseline; gap:10px; }
+.pcard-opts-list li { font-size:13px; color: #FFFFFF; line-height:1.6; display:flex; align-items:baseline; gap:10px; }
 .pcard-opts-list li::before { content:'◦'; color:var(--or); flex-shrink:0; }
 .opt-price { color:var(--or-clair); white-space:nowrap; }
-.pcard-cta { display:inline-block; font-size:11px; letter-spacing:.32em; text-transform:uppercase; color:var(--or); text-decoration:none; border:1px solid rgba(201,169,110,.3); padding:12px 24px; transition:background .3s,color .3s; align-self:flex-start; margin-top:auto; }
-.pcard-cta:hover { background:var(--or); color:var(--noir); }
-.droits-note { background:var(--brun-clair); margin:0 56px; padding:36px 44px; border-left:2px solid rgba(201,169,110,.3); font-size:14px; line-height:2; color:var(--gris-clair); }
+.droits-note { background:var(--brun-clair); margin:0 56px; padding:36px 44px; border-left:2px solid rgba(201,169,110,.3); font-size:14px; line-height:2; color: #FFFFFF; }
 .droits-note strong { color:var(--or-clair); font-weight:400; }
 .droits-note p+p { margin-top:10px; }
 .divider { margin:0 56px; height:1px; background:linear-gradient(to right,transparent,rgba(201,169,110,.2),transparent); }
@@ -155,15 +187,13 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 .fgroup { display:flex; flex-direction:column; margin-bottom:28px; }
 .flabel { font-size:11px; letter-spacing:.38em; text-transform:uppercase; color:var(--or); margin-bottom:10px; }
 .flabel span { color:var(--gris); margin-left:4px; }
-.finput, .ftextarea { background:transparent; border:none; border-bottom:1px solid rgba(201,169,110,.2); color:var(--creme); font-family:'Josefin Sans',sans-serif; font-weight:300; font-size:15px; padding:10px 0; outline:none; transition:border-color .3s; caret-color:var(--or); cursor:none; width:100%; }
+.finput, .ftextarea { background:transparent; border:none; border-bottom:1px solid rgba(201,169,110,.2); color:var(--creme); font-family:'Josefin Sans',sans-serif; font-weight:300; font-size:15px; padding:10px 0; outline:none; transition:border-color .3s; caret-color:var(--or); cursor:text; width:100%; }
 .finput:focus, .ftextarea:focus { border-color:var(--or); }
 .finput::placeholder, .ftextarea::placeholder { color:var(--gris-mid); }
 .ftextarea { resize:none; height:90px; line-height:1.8; }
 .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:4px; }
-.chip { font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--gris-clair); border:1px solid rgba(201,169,110,.22); padding:9px 18px; cursor:none; user-select:none; transition:all .25s; }
+.chip { font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--gris-clair); border:1px solid rgba(201,169,110,.22); padding:9px 18px; cursor:pointer; user-select:none; transition:all .25s; }
 .chip.on, .chip:hover { color:var(--or); border-color:var(--or); background:rgba(201,169,110,.05); }
-.submit-btn { width:100%; background:var(--or); color:var(--noir); font-family:'Josefin Sans',sans-serif; font-weight:400; font-size:12px; letter-spacing:.38em; text-transform:uppercase; padding:20px; border:1px solid var(--or); cursor:none; transition:background .3s,color .3s; margin-top:8px; }
-.submit-btn:hover { background:transparent; color:var(--or); }
 .form-req { font-size:13px; color:var(--gris-clair); letter-spacing:.05em; margin-bottom:32px; margin-top:-12px; }
 .form-req span { color:var(--or); }
 footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 56px; display:flex; justify-content:space-between; align-items:center; }
@@ -184,22 +214,15 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
 @keyframes up { from { opacity:0; transform:translateY(36px); } to { opacity:1; transform:none; } }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes pulse { 0%,100% { opacity:.3; } 50% { opacity:1; } }
+
 @media (max-width:1000px) {
   nav { padding:20px 24px; } 
   nav.solid { padding:14px 24px; } 
-  
-  .nav-links { 
-    display: flex; 
-    gap: 12px;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-  }
+  .nav-links { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
   .nav-links li:first-child,
   .nav-links li:nth-child(2),
   .nav-links li:nth-child(3),
-  .nav-links li:nth-child(4) {
-    display: none;  /* cache Instagram, LinkedIn, Maps et le séparateur */
-  }
+  .nav-links li:nth-child(4) { display: none; }
   .hero { padding:0 24px 72px; }
   .hero-scroll { display:none; }
   .prest-intro { padding:80px 24px 56px; }
@@ -246,20 +269,14 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
     <li><a href="#prestations">Prestations & Tarifs</a></li>
     <li><a href="/picstroflex/blog/index.html">Blog</a></li>
     <li><a href="#devis" class="nav-cta">Réserver</a></li>
-</ul>
+  </ul>
 </nav>
 
 <div class="hero">
   <div class="hero-grid-bg"></div>
   <div class="hero-glow"></div>
   <div class="hero-photo-bg" id="hero-photo-bg">
-<img 
-  id="hero-img"
-  src="assets/photographe-ile-de-france-reportage-paysage.webp"
-  alt="Photographe Île-de-France — Reportage, portrait et shooting sur mesure"
-  width="1920"
-  height="1080"
-  fetchpriority="high">
+    <img id="hero-img" src="assets/photographe-ile-de-france-reportage-paysage.webp" alt="Photographe Île-de-France — Reportage, portrait et shooting sur mesure" width="1920" height="1080" fetchpriority="high">
   </div>
   <div class="grain"></div>
   <div class="hero-content">
@@ -387,7 +404,7 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
   <p>L'utilisation des images pour des produits, publicités imprimées, campagnes sponsorisées, packaging, affichage ou toute autre exploitation commerciale étendue nécessite l'option <strong>« Droit d'utilisation commerciale »</strong>. Cette licence est valable <strong>3 ans</strong>, renouvelable.</p>
 </div>
 
-<!-- Elfsight Google Reviews | Untitled Google Reviews -->
+<!-- Elfsight Google Reviews -->
 <script src="https://elfsightcdn.com/platform.js" async></script>
 <div style="background:var(--noir); padding:60px 56px;">
   <div class="elfsight-app-b1119942-ba7c-417b-8f22-43686f0524f9" data-elfsight-app-lazy></div>
@@ -464,30 +481,26 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
           <label class="flabel">Message <span>*</span></label>
           <textarea class="finput ftextarea" name="message" placeholder="Décrivez votre projet, vos attentes, le nombre de personnes..." required></textarea>
         </div>
-       <div style="margin-top:20px; font-size:12px; color:#FFFFFF; line-height:1.6;">
-  Les informations collectées sont utilisées uniquement pour vous recontacter.
-  Elles ne sont pas revendues. Vous pouvez demander la suppression de vos données à tout moment
-en envoyant un email à picstroflex@gmail.com.
-</div>
-
-<label style="font-size:12px; color:var(--gris-clair); display:flex; gap:10px; margin-top:10px;">
-  <input type="checkbox" required>
-  J'accepte que mes données soient utilisées pour être recontacté.
-</label>
-
-<button type="submit" class="submit-btn">Envoyer la demande</button>
+        <div style="margin-top:20px; font-size:12px; color:#FFFFFF; line-height:1.6;">
+          Les informations collectées sont utilisées uniquement pour vous recontacter.
+          Elles ne sont pas revendues. Vous pouvez demander la suppression de vos données à tout moment
+          en envoyant un email à picstroflex@gmail.com.
+        </div>
+        <label style="font-size:12px; color:var(--gris-clair); display:flex; gap:10px; margin-top:10px;">
+          <input type="checkbox" required>
+          J'accepte que mes données soient utilisées pour être recontacté.
+        </label>
+        <button type="submit" class="submit-btn">Envoyer la demande</button>
       </form>
     </div>
   </div>
 </section>
+
 <section id="mentions-legales" style="padding:80px 56px; background:var(--charbon); border-top:1px solid var(--rule);">
   <div style="max-width:900px; margin:auto;">
-    
     <div class="s-tag">Légal</div>
     <h2 class="prest-headline" style="margin-bottom:40px;">Mentions légales</h2>
-
     <div style="display:flex; flex-direction:column; gap:28px; font-size:14px; line-height:1.9; color:#FFFFFF;">
-
       <div>
         <strong style="color:var(--or);">Éditeur du site</strong><br>
         Picstroflex<br>
@@ -498,32 +511,24 @@ en envoyant un email à picstroflex@gmail.com.
         Email : picstroflex@gmail.com<br>
         Téléphone : 07 82 24 35 82<br>
       </div>
-
       <div>
         <strong style="color:var(--or);">Hébergement</strong><br>
         GitHub, Inc.<br>
         88 Colin P Kelly Jr St, San Francisco, CA 94107, USA<br>
-        <a href="https://pages.github.com/" target="_blank" style="color:var(--or-clair);">
-          https://pages.github.com
-        </a>
+        <a href="https://pages.github.com/" target="_blank" style="color:var(--or-clair);">https://pages.github.com</a>
       </div>
-
       <div>
         <strong style="color:var(--or);">Propriété intellectuelle</strong><br>
-        L'ensemble du contenu du site (textes, images, photographies, code)
-        est protégé par le droit d'auteur.
+        L'ensemble du contenu du site (textes, images, photographies, code) est protégé par le droit d'auteur.
       </div>
-
       <div>
         <strong style="color:var(--or);">Données personnelles</strong><br>
-        Les données collectées via le formulaire sont utilisées uniquement
-        pour répondre aux demandes. Elles ne sont pas revendues. Vous pouvez demander la suppression de vos données à tout moment
-        en envoyant un email à picstroflex@gmail.com.
+        Les données collectées via le formulaire sont utilisées uniquement pour répondre aux demandes. Elles ne sont pas revendues. Vous pouvez demander la suppression de vos données à tout moment en envoyant un email à picstroflex@gmail.com.
       </div>
-
     </div>
   </div>
 </section>
+
 <footer>
   <div class="ft-logo-wrap">
     <img class="ft-logo-img" id="ft-logo-img" alt="Picstroflex logo">
@@ -538,85 +543,62 @@ en envoyant un email à picstroflex@gmail.com.
 </footer>
 
 <script>
-/* ╔══════════════════════════════════════════════════════════════╗
-   ║              ★  ZONE DE CONFIGURATION PHOTOS  ★             ║
-   ╚══════════════════════════════════════════════════════════════╝ */
 const CONFIG = {
   logo: "assets/picstroflex-photographe-idf.png",
   logoAlt: "Picstroflex — Photographe événementiel et portrait en Île-de-France",
   hero: "assets/photographe-ile-de-france-reportage-paysage.webp",
   heroAlt: "Photographe Île-de-France — Reportage, portrait et shooting sur mesure en Essonne",
   cards: [
-    {
-      photo: "assets/reportage-evenementiel-paris-fashion-week-robes.webp",
-      alt: "Reportage photo événementiel Paris Fashion Week — deux femmes en robes rouge et noire, Île-de-France"
-    },
-    {
-      photo: "assets/shooting-exterieur-nature-femme-robe-parc-essonne.webp",
-      alt: "Shooting extérieur nature — femme en robe noire avec bouquet de fleurs dans un parc, Essonne"
-    },
-    {
-      photo: "assets/portrait-professionnel-femme-beret-rouge-idf.webp",
-      alt: "Portrait professionnel femme au béret rouge — photographe portrait artistique Île-de-France"
-    },
-  ],
+    { photo: "assets/reportage-evenementiel-paris-fashion-week-robes.webp", alt: "Reportage photo événementiel Paris Fashion Week" },
+    { photo: "assets/shooting-exterieur-nature-femme-robe-parc-essonne.webp", alt: "Shooting extérieur nature — femme en robe noire dans un parc" },
+    { photo: "assets/portrait-professionnel-femme-beret-rouge-idf.webp", alt: "Portrait professionnel femme au béret rouge" }
+  ]
 };
-/* ════════════════════════ FIN CONFIG ════════════════════════════ */
+
 document.addEventListener('DOMContentLoaded', () => {
-  // Logo
   const navImg = document.getElementById('nav-logo-img');
   const navTxt = document.getElementById('nav-logo-text');
-  const ftImg  = document.getElementById('ft-logo-img');
-  const ftTxt  = document.getElementById('ft-logo-text');
+  const ftImg = document.getElementById('ft-logo-img');
+  const ftTxt = document.getElementById('ft-logo-text');
   if (CONFIG.logo) {
     navImg.src = CONFIG.logo; navImg.style.display = 'block'; navTxt.style.display = 'none';
-    ftImg.src  = CONFIG.logo; ftImg.style.display  = 'block'; ftTxt.style.display  = 'none';
+    ftImg.src = CONFIG.logo; ftImg.style.display = 'block'; ftTxt.style.display = 'none';
   }
-  // Hero
-  const heroBg  = document.getElementById('hero-photo-bg');
   const heroImg = document.getElementById('hero-img');
-  if (CONFIG.hero) { heroImg.src = CONFIG.hero; }
-  else { heroBg.classList.add('no-photo'); heroImg.style.display = 'none'; }
-  // Cartes
+  if (CONFIG.hero) heroImg.src = CONFIG.hero;
   CONFIG.cards.forEach((card, i) => {
     const img = document.getElementById('card-img-' + i);
-    if (img) { if (card.photo) { img.src = card.photo; img.style.display = 'block'; } else { img.style.display = 'none'; } }
+    if (img && card.photo) img.src = card.photo;
   });
-  // Scroll reveal
   const revealEls = document.querySelectorAll('.reveal');
   revealEls.forEach(el => el.classList.add('hidden'));
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.remove('hidden'); e.target.classList.add('up'); } });
-  }, { threshold:.1, rootMargin:'0px 0px -40px 0px' });
+  }, { threshold: .1, rootMargin: '0px 0px -40px 0px' });
   revealEls.forEach(el => obs.observe(el));
 });
 
-// Curseur
 const cur = document.getElementById('cursor');
 const rng = document.getElementById('ring');
-let mx=0, my=0, rx=0, ry=0;
-document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cur.style.left=mx+'px'; cur.style.top=my+'px'; });
-(function loop() { rx+=(mx-rx)*.13; ry+=(my-ry)*.13; rng.style.left=rx+'px'; rng.style.top=ry+'px'; requestAnimationFrame(loop); })();
-document.querySelectorAll('a,button,.chip,.pcard,.pcard-cta').forEach(el => {
+let mx = 0, my = 0, rx = 0, ry = 0;
+document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; cur.style.left = mx + 'px'; cur.style.top = my + 'px'; });
+(function loop() { rx += (mx - rx) * 0.13; ry += (my - ry) * 0.13; rng.style.left = rx + 'px'; rng.style.top = ry + 'px'; requestAnimationFrame(loop); })();
+document.querySelectorAll('a, button, .chip, .pcard, .pcard-cta').forEach(el => {
   el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
   el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
 });
 
-// Nav scroll
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 50));
 
-// Chips — met à jour le champ caché prestation pour Formspree
 function toggleChip(el) {
   el.classList.toggle('on');
-  document.getElementById('f-prestation').value =
-    [...document.querySelectorAll('.chip.on')].map(c => c.dataset.val).join(', ');
+  document.getElementById('f-prestation').value = [...document.querySelectorAll('.chip.on')].map(c => c.dataset.val).join(', ');
 }
 function selectChip(val) {
   document.querySelectorAll('.chip').forEach(c => { if (c.dataset.val === val) c.classList.add('on'); });
-  document.getElementById('f-prestation').value =
-    [...document.querySelectorAll('.chip.on')].map(c => c.dataset.val).join(', ');
-  setTimeout(() => document.getElementById('devis').scrollIntoView({ behavior:'smooth' }), 100);
+  document.getElementById('f-prestation').value = [...document.querySelectorAll('.chip.on')].map(c => c.dataset.val).join(', ');
+  setTimeout(() => document.getElementById('devis').scrollIntoView({ behavior: 'smooth' }), 100);
 }
 </script>
 </body>
