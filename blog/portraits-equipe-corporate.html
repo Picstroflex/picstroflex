@@ -300,7 +300,11 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
 
 @media (max-width:1000px) {
   nav { padding:16px 24px; }
-  .nav-links { display:none; }
+  .nav-links { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
+  .nav-links li:first-child,
+  .nav-links li:nth-child(2),
+  .nav-links li:nth-child(3),
+  .nav-links li:nth-child(4) { display: none; }
   .article-hero { padding:0 24px 50px; margin-top:60px; min-height:40vh; }
   .article-main { padding:44px 20px 80px; }
   .cta-block { flex-direction:column; text-align:center; padding:32px 24px; }
