@@ -154,7 +154,7 @@
 :root {
   --noir:#0c0b09; --charbon:#141310; --brun:#1c1913; --brun-clair:#252016;
   --or:#c9a96e; --or-clair:#e2cfa0; --or-pale:#f0e8d4; --creme:#f0e8d8;
-  --gris:#7a7468; --gris-mid:#a09790; --gris-clair:#c0b9ad;
+  --blanc:#ffffff; --gris:#7a7468; --gris-mid:#a09790; --gris-clair:#c0b9ad;
   --rule:rgba(201,169,110,0.12);
 }
 html { scroll-behavior:smooth; }
@@ -170,7 +170,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
 .logo-text { font-family:'Cormorant Garamond',serif; font-size:21px; font-weight:300; letter-spacing:.28em; text-transform:uppercase; color:var(--or-clair); }
 .logo-text b { color:var(--or); font-weight:300; }
 .nav-links { display:flex; gap:40px; list-style:none; align-items:center; }
-.nav-links a { font-size:11px; letter-spacing:.35em; text-transform:uppercase; color:var(--gris-mid); text-decoration:none; transition:color .3s; position:relative; }
+.nav-links a { font-size:11px; letter-spacing:.35em; text-transform:uppercase; color:var(--blanc); text-decoration:none; transition:color .3s; position:relative; }
 .nav-links a::after { content:''; position:absolute; bottom:-3px; left:0; width:0; height:1px; background:var(--or); transition:width .3s; }
 .nav-links a:hover { color:var(--or-clair); }
 .nav-links a:hover::after { width:100%; }
@@ -187,10 +187,10 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
 .article-cat::before { content:''; width:36px; height:1px; background:var(--or); }
 .article-hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(38px,5vw,64px); font-weight:300; line-height:1.08; letter-spacing:-.02em; margin-bottom:24px; }
 .article-hero h1 em { font-style:italic; color:var(--or-clair); }
-.article-meta { font-size:13px; letter-spacing:.15em; color:var(--gris-mid); display:flex; gap:28px; margin-top:16px; flex-wrap:wrap; }
+.article-meta { font-size:13px; letter-spacing:.15em; color:var(--blanc); display:flex; gap:28px; margin-top:16px; flex-wrap:wrap; }
 
 .article-main { max-width:900px; margin:0 auto; padding:80px 56px 120px; }
-.article-body { font-size:17px; line-height:2.05; color:var(--gris-clair); }
+.article-body { font-size:17px; line-height:2.05; color:var(--blanc); }
 .article-body p { margin-bottom:28px; }
 .article-body h2 { font-family:'Cormorant Garamond',serif; font-size:30px; font-weight:400; color:var(--creme); margin:64px 0 20px; padding-bottom:10px; border-bottom:1px solid var(--rule); }
 .article-body h3 { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:400; color:var(--or-clair); margin:36px 0 14px; }
@@ -209,7 +209,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
 .toc ol li { counter-increment:toc-counter; padding:6px 0 6px 28px; position:relative; font-size:14px; letter-spacing:.08em; border-bottom:1px solid var(--rule); }
 .toc ol li:last-child { border-bottom:none; }
 .toc ol li::before { content:counter(toc-counter,decimal-leading-zero); color:var(--or); position:absolute; left:0; top:6px; font-size:11px; letter-spacing:.15em; }
-.toc ol li a { color:var(--gris-clair); text-decoration:none; transition:color .25s; }
+.toc ol li a { color:var(--blanc); text-decoration:none; transition:color .25s; }
 .toc ol li a:hover { color:var(--or-clair); }
 .toc-content { transition: all 0.3s ease; }
 .toc-content.collapsed { display: none; }
@@ -218,11 +218,11 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
 .stat-item { flex:1; padding:32px 24px; text-align:center; border-right:1px solid var(--rule); min-width:150px; }
 .stat-item:last-child { border-right:none; }
 .stat-num { font-family:'Cormorant Garamond',serif; font-size:42px; font-weight:300; color:var(--or); display:block; line-height:1; margin-bottom:10px; }
-.stat-label { font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--gris-mid); line-height:1.5; }
+.stat-label { font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--blanc); line-height:1.5; }
 
 .tarifs-table { width:100%; border-collapse:collapse; margin:28px 0 40px; }
 .tarifs-table th { font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--or); padding:14px 18px; text-align:left; border-bottom:1px solid rgba(201,169,110,.3); font-weight:300; }
-.tarifs-table td { padding:14px 18px; font-size:15px; color:var(--gris-clair); border-bottom:1px solid var(--rule); vertical-align:top; }
+.tarifs-table td { padding:14px 18px; font-size:15px; color:var(--blanc); border-bottom:1px solid var(--rule); vertical-align:top; }
 .tarifs-table tr:last-child td { border-bottom:none; }
 .tarifs-table .prix { color:var(--or-clair); font-family:'Cormorant Garamond',serif; font-size:19px; white-space:nowrap; }
 
@@ -230,18 +230,18 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
 .process-step { background:var(--brun-clair); padding:24px 26px; border-top:2px solid var(--or); }
 .process-num { font-family:'Cormorant Garamond',serif; font-size:36px; color:rgba(201,169,110,.25); line-height:1; margin-bottom:8px; }
 .process-title { font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:var(--or-clair); margin-bottom:10px; }
-.process-desc { font-size:14px; line-height:1.8; color:var(--gris-clair); }
+.process-desc { font-size:14px; line-height:1.8; color:var(--blanc); }
 
 .faq-item { border-bottom:1px solid var(--rule); padding:0; }
 .faq-item:last-child { border-bottom:none; }
 .faq-q { font-family:'Cormorant Garamond',serif; font-size:20px; color:var(--creme); padding:20px 0 16px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:16px; user-select:none; }
 .faq-q::after { content:'+'; color:var(--or); font-size:22px; font-family:'Josefin Sans',sans-serif; font-weight:100; flex-shrink:0; transition:transform .25s; }
 .faq-item.open .faq-q::after { transform:rotate(45deg); }
-.faq-a { font-size:15px; line-height:1.9; color:var(--gris-clair); max-height:0; overflow:hidden; transition:max-height .4s ease, padding .3s; }
+.faq-a { font-size:15px; line-height:1.9; color:var(--blanc); max-height:0; overflow:hidden; transition:max-height .4s ease, padding .3s; }
 .faq-item.open .faq-a { max-height:400px; padding-bottom:20px; }
 
 .villes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; margin: 28px 0 32px; padding: 24px; background: var(--brun-clair); border: 1px solid var(--rule); border-radius: 2px; }
-.villes-grid span { font-size: 13px; color: var(--gris-clair); padding: 6px 0; letter-spacing: 0.02em; }
+.villes-grid span { font-size: 13px; color: var(--blanc); padding: 6px 0; letter-spacing: 0.02em; }
 .villes-grid span:hover { color: var(--or-clair); }
 
 .article-hero-img { 
@@ -255,11 +255,11 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
 }
 
 .article-tags { display:flex; gap:12px; flex-wrap:wrap; margin:52px 0 32px; padding-top:32px; border-top:1px solid var(--rule); }
-.article-tag { font-size:11px; letter-spacing:.2em; color:var(--gris-clair); border:1px solid rgba(201,169,110,.18); padding:7px 16px; }
+.article-tag { font-size:11px; letter-spacing:.2em; color:var(--blanc); border:1px solid rgba(201,169,110,.18); padding:7px 16px; }
 
 .cta-block { margin:52px 0 32px; padding:44px 52px; background:var(--brun-clair); border-left:3px solid var(--or); display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap; }
 .cta-text { font-family:'Cormorant Garamond',serif; font-size:26px; font-style:italic; color:var(--or-clair); }
-.cta-sub { font-size:13px; letter-spacing:0.1em; color:var(--gris-mid); margin-top:8px; }
+.cta-sub { font-size:13px; letter-spacing:0.1em; color:var(--blanc); margin-top:8px; }
 .cta-btn { 
   background: var(--or); 
   color: var(--noir); 
@@ -278,7 +278,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
   color: var(--or); 
 }
 
-.back-link { display:inline-flex; align-items:center; gap:12px; font-size:11px; letter-spacing:.32em; text-transform:uppercase; color:var(--gris-mid); text-decoration:none; margin-bottom:40px; transition:color .3s; }
+.back-link { display:inline-flex; align-items:center; gap:12px; font-size:11px; letter-spacing:.32em; text-transform:uppercase; color:var(--blanc); text-decoration:none; margin-bottom:40px; transition:color .3s; }
 .back-link:hover { color:var(--or); }
 .back-link::before { content:'←'; font-size:14px; }
 
@@ -293,9 +293,9 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
 footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 56px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px; }
 .ft-logo-text { font-family:'Cormorant Garamond',serif; font-size:19px; font-weight:300; letter-spacing:.28em; text-transform:uppercase; color:var(--or-clair); }
 .ft-logo-text b { color:var(--or); font-weight:300; }
-.ft-copy { font-size:13px; color:var(--gris-clair); letter-spacing:.10em; }
+.ft-copy { font-size:13px; color:var(--blanc); letter-spacing:.10em; }
 .ft-links { display:flex; gap:24px; flex-wrap:wrap; }
-.ft-links a { font-size:12px; letter-spacing:.20em; text-transform:uppercase; color:var(--gris-clair); text-decoration:none; transition:color .3s; }
+.ft-links a { font-size:12px; letter-spacing:.20em; text-transform:uppercase; color:var(--blanc); text-decoration:none; transition:color .3s; }
 .ft-links a:hover { color:var(--or); }
 
 @media (max-width:1000px) {
@@ -522,11 +522,11 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
         <tr><th>Prestation</th><th>Durée</th><th>À partir de</th></tr>
       </thead>
       <tbody>
-        <tr><td><strong>Portraits d'équipe</strong> — jusqu'à 10 pers.</span></td><td>Demi-journée</span></td><td class="prix">390 €</span></td></tr>
-        <tr><td><strong>Portraits d'équipe</strong> — 10 à 30 pers.</span></span></td><td>Journée</span></td><td class="prix">650 €</span></td></tr>
-        <tr><td><strong>Reportage séminaire</strong></span></span></td><td>1 journée</span></td><td class="prix">890 €</span></td></tr>
-        <tr><td><strong>Team building</strong></span></span></td><td>Demi-journée</span></td><td class="prix">490 €</span></td></tr>
-        <tr><td><strong>Soirée d'entreprise</strong></span></span></td><td>3-6h</span></td><td class="prix">590 €</span></td></tr>
+        <tr><td><strong>Portraits d'équipe</strong> — jusqu'à 10 pers.</td><td>Demi-journée</td><td class="prix">390 €</td></tr>
+        <tr><td><strong>Portraits d'équipe</strong> — 10 à 30 pers.</td><td>Journée</td><td class="prix">650 €</td></tr>
+        <tr><td><strong>Reportage séminaire</strong></td><td>1 journée</td><td class="prix">890 €</td></tr>
+        <tr><td><strong>Team building</strong></td><td>Demi-journée</td><td class="prix">490 €</td></tr>
+        <tr><td><strong>Soirée d'entreprise</strong></td><td>3-6h</td><td class="prix">590 €</td></tr>
       </tbody>
     </table>
 
