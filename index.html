@@ -70,14 +70,64 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 .nav-logo-img { height:36px; width:auto; object-fit:contain; display:none; filter:brightness(1.1); }
 .logo-text { font-family:'Cormorant Garamond',serif; font-size:21px; font-weight:300; letter-spacing:.28em; text-transform:uppercase; color:var(--or-clair); }
 .logo-text b { color:var(--or); font-weight:300; }
-.nav-links { display:flex; gap:40px; list-style:none; }
+
+/* Styles communs pour les menus */
+.nav-links { display:flex; gap:40px; list-style:none; align-items:center; }
 .nav-links a { font-size:11px; letter-spacing:.35em; text-transform:uppercase; color: var(--blanc); text-decoration:none; transition:color .3s; position:relative; }
 .nav-links a::after { content:''; position:absolute; bottom:-3px; left:0; width:0; height:1px; background:var(--or); transition:width .3s; }
 .nav-links a:hover { color:var(--or-clair); }
 .nav-links a:hover::after { width:100%; }
+.nav-cta { background: var(--or) !important; border: 1px solid var(--or) !important; padding: 10px 24px; color: var(--noir) !important; transition: background 0.3s, color 0.3s !important; }
+.nav-cta:hover { background: transparent !important; color: var(--or) !important; }
+.nav-cta::after { display: none !important; }
+
+/* Par défaut (plein écran PC > 1100px) : afficher MENU COMPLET (6 liens) */
+.full-menu {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  align-items: center;
+}
+
+/* MENU REDUIT (3 liens) - caché par défaut */
+.compact-menu {
+  display: none;
+  gap: 40px;
+  list-style: none;
+  align-items: center;
+}
+
+/* QUAND LA FENÊTRE EST RÉDUITE (demi-écran ≤ 1100px) : basculer vers le menu compact */
+@media (max-width: 1100px) {
+  .full-menu {
+    display: none !important;
+  }
+  .compact-menu {
+    display: flex !important;
+  }
+}
+
+/* Sur mobile, on garde le même comportement (compact-menu déjà affiché) */
+@media (max-width: 1000px) {
+  nav { padding: 20px 24px; } 
+  nav.solid { padding: 14px 24px; }
+  .compact-menu {
+    gap: 12px;
+  }
+  .compact-menu a {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+  }
+  .compact-menu .nav-cta {
+    padding: 6px 12px !important;
+  }
+  .full-menu {
+    display: none !important;
+  }
+}
 
 /* BOUTONS */
-.btn-gold, .btn-line, .nav-cta, .pcard-cta, .submit-btn, .btn-corporate, .back-btn-resa {
+.btn-gold, .btn-line, .pcard-cta, .submit-btn, .btn-corporate, .back-btn-resa {
   background: var(--or);
   color: var(--noir) !important;
   font-family: 'Josefin Sans', sans-serif;
@@ -92,13 +142,11 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
   display: inline-block;
   cursor: pointer;
 }
-.btn-gold:hover, .btn-line:hover, .nav-cta:hover, .pcard-cta:hover, .submit-btn:hover, .btn-corporate:hover, .back-btn-resa:hover {
+.btn-gold:hover, .btn-line:hover, .pcard-cta:hover, .submit-btn:hover, .btn-corporate:hover, .back-btn-resa:hover {
   background: transparent;
   color: var(--or) !important;
 }
 .btn-line::before { display: none; }
-.nav-cta { padding: 0 !important; margin: 0; line-height: normal; }
-.nav-cta::after { display: none !important; }
 .pcard-cta { padding: 12px 24px; font-size: 10px; align-self: flex-start; margin-top: auto; }
 .submit-btn { width: 100%; padding: 20px; font-size: 12px; margin-top: 2rem; }
 .btn-corporate { background: transparent; border-color: var(--or-clair); color: var(--or-clair) !important; padding: 12px 28px; font-size: 9px; }
@@ -284,9 +332,6 @@ footer { background: var(--noir); border-top: 1px solid var(--rule); padding: 36
 
 /* Responsive */
 @media (max-width:1000px) {
-  nav { padding: 20px 24px; } nav.solid { padding: 14px 24px; } 
-  .nav-links { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
-  .nav-links li:first-child, .nav-links li:nth-child(2), .nav-links li:nth-child(3), .nav-links li:nth-child(4) { display: none; }
   .hero { padding: 0 24px 72px; }
   .hero-scroll { display: none; }
   .prest-intro { padding: 80px 24px 56px; }
@@ -318,11 +363,19 @@ footer { background: var(--noir); border-top: 1px solid var(--rule); padding: 36
     <img class="nav-logo-img" id="nav-logo-img" alt="Picstroflex logo">
     <span class="logo-text" id="nav-logo-text">Picstro<b>flex</b></span>
   </a>
-  <ul class="nav-links">
+  
+  <!-- MENU COMPLET (plein écran PC > 1100px) : 6 liens -->
+  <ul class="nav-links full-menu">
     <li><a href="https://www.instagram.com/picstroflex/" target="_blank">Instagram</a></li>
     <li><a href="https://www.linkedin.com/in/alexandre-poulain-b1ab191a7" target="_blank">LinkedIn</a></li>
     <li><a href="https://share.google/nZLkT88O3DkEqXSpQ" target="_blank">Avis Google</a></li>
-    <li style="width:1px; height:16px; background:var(--rule); margin:0 4px;"></li>
+    <li><a href="#prestations">Prestations & Tarifs</a></li>
+    <li><a href="/picstroflex/blog/index.html">Blog</a></li>
+    <li><a href="#devis" class="nav-cta">Planifier un appel</a></li>
+  </ul>
+
+  <!-- MENU COMPACT (demi-écran ≤ 1100px + mobile) : 3 liens -->
+  <ul class="nav-links compact-menu">
     <li><a href="#prestations">Prestations & Tarifs</a></li>
     <li><a href="/picstroflex/blog/index.html">Blog</a></li>
     <li><a href="#devis" class="nav-cta">Planifier un appel</a></li>
@@ -625,7 +678,6 @@ function selectPresta(el) {
 }
 
 function openResaWithPresta(prestaLabel) {
-  // Réinitialiser l'état de la réservation
   resaState = { 
     prestation: null, 
     prestaLabel: null, 
@@ -635,12 +687,10 @@ function openResaWithPresta(prestaLabel) {
     shootSlot: null 
   };
   
-  // Désactiver les boutons
   document.getElementById('btn1').disabled = true;
   document.getElementById('btn2').disabled = true;
   document.getElementById('btn3').disabled = true;
   
-  // Trouver et sélectionner la carte de prestation correspondante
   const cards = document.querySelectorAll('#step1 .presta-card');
   let targetCard = null;
   for (let card of cards) {
@@ -654,7 +704,6 @@ function openResaWithPresta(prestaLabel) {
     selectPresta(targetCard);
   }
   
-  // Aller à l'étape 1 (choix de la prestation) et scroll jusqu'à la réservation
   goToStep(1);
   document.getElementById('devis').scrollIntoView({ behavior: 'smooth' });
 }
