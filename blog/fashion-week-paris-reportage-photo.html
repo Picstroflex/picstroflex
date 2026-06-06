@@ -7,13 +7,13 @@
 <meta name="description" content="Plongez dans les coulisses d'un reportage photo à la Fashion Week Paris : préparation, réglages et conseils concrets d'un photographe événementiel.">
 <link rel="canonical" href="https://picstroflex.github.io/picstroflex/blog/fashion-week-paris-reportage.html">
 
-<!-- ====================== SCHEMA JSON-LD ====================== -->
+<!-- SCHEMA JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": ["Photographer", "ProfessionalService", "LocalBusiness"],
   "name": "Picstroflex – Photographe, Portrait, Corporate & Événementiel",
-  "description": "Photographe professionnel en Île-de-France spécialisé en portraits, événements et photographie corporate. Reportage Fashion Week Paris : coulisses et conseils.",
+  "description": "Photographe professionnel en Île-de-France spécialisé en portraits, événements et photographie corporate.",
   "url": "https://picstroflex.github.io/picstroflex/blog/fashion-week-paris-reportage.html",
   "telephone": "+33782243582",
   "email": "picstroflex@gmail.com",
@@ -28,7 +28,7 @@
 }
 </script>
 
-<!-- ====================== OPEN GRAPH / TWITTER CARD ====================== -->
+<!-- OPEN GRAPH / TWITTER CARD -->
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://picstroflex.github.io/picstroflex/blog/fashion-week-paris-reportage.html">
 <meta property="og:title" content="Fashion Week Paris — Dans les coulisses d'un reportage événementiel | Picstroflex">
@@ -44,7 +44,7 @@
 <meta name="twitter:description" content="Préparation, réglages et conseils concrets d'un photographe événementiel lors de la Fashion Week Paris.">
 <meta name="twitter:image" content="https://picstroflex.github.io/picstroflex/assets/reportage-evenementiel-paris-fashion-week-robes.webp">
 
-<!-- ====================== FAVICONS ====================== -->
+<!-- FAVICONS -->
 <link rel="icon" type="image/png" sizes="16x16" href="/picstroflex/favicon/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/picstroflex/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="/picstroflex/favicon/favicon-48x48.png">
@@ -56,7 +56,6 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/picstroflex/favicon/favicon-180x180.png">
 <link rel="manifest" href="/picstroflex/favicon/site.webmanifest">
 <meta name="theme-color" content="#827f7f">
-<!-- ====================================================== -->
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Josefin+Sans:wght@100;300;400&display=swap" rel="stylesheet">
 
@@ -80,7 +79,9 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
 .nav-logo-wrap { display:flex; align-items:center; gap:14px; text-decoration:none; }
 .logo-text { font-family:'Cormorant Garamond',serif; font-size:21px; font-weight:300; letter-spacing:.28em; text-transform:uppercase; color:var(--or-clair); }
 .logo-text b { color:var(--or); font-weight:300; }
-.nav-links { display:flex; gap:40px; list-style:none; align-items:center; flex-wrap:wrap; }
+
+/* Menu de base */
+.nav-links { display:flex; gap:40px; list-style:none; align-items:center; }
 .nav-links a { font-size:11px; letter-spacing:.35em; text-transform:uppercase; color:var(--blanc); text-decoration:none; transition:color .3s; position:relative; }
 .nav-links a::after { content:''; position:absolute; bottom:-3px; left:0; width:0; height:1px; background:var(--or); transition:width .3s; }
 .nav-links a:hover { color:var(--or-clair); }
@@ -89,27 +90,34 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
 .nav-cta:hover { background:var(--or)!important; color:var(--noir)!important; }
 .nav-cta::after { display:none!important; }
 
-/* ===== VERSION DESKTOP (>= 1200px) : masquer les liens sociaux ===== */
-@media (min-width: 1200px) {
-  .nav-links .social-only {
+/* Version DESKTOP (>= 1000px) : afficher le menu desktop, cacher le menu mobile */
+@media (min-width: 1000px) {
+  .mobile-menu {
     display: none !important;
   }
-  .nav-links .separator {
-    display: none !important;
+  .desktop-menu {
+    display: flex !important;
   }
 }
 
-/* ===== VERSION MOBILE ET TABLETTE (< 1200px) : tout afficher ===== */
-@media (max-width: 1199px) {
+/* Version MOBILE (< 1000px) : afficher le menu mobile, cacher le menu desktop */
+@media (max-width: 999px) {
   nav { padding:16px 24px; }
-  .nav-links { gap: 12px; justify-content: flex-end; }
-  .nav-links a { font-size: 9px; letter-spacing: 0.2em; }
-  .nav-cta { padding: 6px 12px !important; }
-  .social-only {
-    display: block !important;
+  .desktop-menu {
+    display: none !important;
   }
-  .separator {
-    display: block !important;
+  .mobile-menu {
+    display: flex !important;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .mobile-menu a {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+  }
+  .mobile-menu .nav-cta {
+    padding: 6px 12px !important;
   }
 }
 
@@ -138,7 +146,6 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
 .article-tags { display:flex; gap:12px; flex-wrap:wrap; margin:56px 0 32px; padding-top:32px; border-top:1px solid var(--rule); }
 .article-tag { font-size:11px; letter-spacing:.2em; color:var(--blanc); border:1px solid rgba(201,169,110,.18); padding:7px 16px; }
 
-/* ─── GRILLE PHOTOS VERTICALES ─── */
 .photo-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:48px 0; }
 .photo-grid.duo { grid-template-columns:repeat(2,1fr); max-width:600px; margin-left:auto; margin-right:auto; }
 
@@ -230,11 +237,19 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
   <a class="nav-logo-wrap" href="https://picstroflex.github.io/picstroflex/index.html" style="text-decoration:none;">
     <span class="logo-text">Picstro<b>flex</b></span>
   </a>
-  <ul class="nav-links">
-    <li class="social-only"><a href="https://www.instagram.com/picstroflex/" target="_blank">Instagram</a></li>
-    <li class="social-only"><a href="https://www.linkedin.com/in/alexandre-poulain-b1ab191a7" target="_blank">LinkedIn</a></li>
-    <li class="social-only"><a href="https://share.google/nZLkT88O3DkEqXSpQ" target="_blank">Avis Google</a></li>
-    <li class="separator" style="width:1px;height:16px;background:var(--rule);margin:0 4px;"></li>
+  
+  <!-- MENU DESKTOP (>= 1000px) : seulement 3 liens -->
+  <ul class="nav-links desktop-menu">
+    <li><a href="https://picstroflex.github.io/picstroflex/#prestations">Prestations & Tarifs</a></li>
+    <li><a href="https://picstroflex.github.io/picstroflex/blog/index.html">Blog</a></li>
+    <li><a href="https://picstroflex.github.io/picstroflex/#devis" class="nav-cta">Planifier un appel</a></li>
+  </ul>
+
+  <!-- MENU MOBILE (< 1000px) : tous les liens -->
+  <ul class="nav-links mobile-menu">
+    <li><a href="https://www.instagram.com/picstroflex/" target="_blank">Instagram</a></li>
+    <li><a href="https://www.linkedin.com/in/alexandre-poulain-b1ab191a7" target="_blank">LinkedIn</a></li>
+    <li><a href="https://share.google/nZLkT88O3DkEqXSpQ" target="_blank">Avis Google</a></li>
     <li><a href="https://picstroflex.github.io/picstroflex/#prestations">Prestations & Tarifs</a></li>
     <li><a href="https://picstroflex.github.io/picstroflex/blog/index.html">Blog</a></li>
     <li><a href="https://picstroflex.github.io/picstroflex/#devis" class="nav-cta">Planifier un appel</a></li>
@@ -266,38 +281,20 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
     <p>La Fashion Week Paris est un terrain exigeant pour tout photographe événementiel. Entre lumière changeante, foule dense et timing imprévisible, chaque instant doit être anticipé pour capturer des images fortes et exploitables.</p>
     <p>Dans cet article, je vous emmène dans les coulisses d'un reportage photo en conditions réelles, avec des conseils concrets issus du terrain.</p>
 
-    <!-- ─── BLOC 1 — Ambiance & street style (photos 1, 2, 3) ─── -->
-    <div class="photo-grid" role="list" aria-label="Galerie reportage Fashion Week Paris">
-
-      <figure class="photo-v" role="listitem">
-        <img
-          src="../assets/fashion-week-paris-street-style-robe-blanche-foule-reportage.webp"
-          alt="Reportage Fashion Week Paris — street style, femme en robe blanche marchant dans la foule entourée de photographes"
-          loading="lazy"
-          width="800" height="1200">
+    <div class="photo-grid">
+      <figure class="photo-v">
+        <img src="../assets/fashion-week-paris-street-style-robe-blanche-foule-reportage.webp" alt="Street style Fashion Week" loading="lazy" width="800" height="1200">
         <figcaption>Street style — foule Fashion Week</figcaption>
       </figure>
-
-      <figure class="photo-v" role="listitem">
-        <img
-          src="../assets/portrait-fashion-week-paris-expression-coulisses-evenementiel.webp"
-          alt="Portrait Fashion Week Paris — expression intense en coulisses, reportage événementiel photographe Paris"
-          loading="lazy"
-          width="800" height="1000">
+      <figure class="photo-v">
+        <img src="../assets/portrait-fashion-week-paris-expression-coulisses-evenementiel.webp" alt="Portrait Fashion Week" loading="lazy" width="800" height="1000">
         <figcaption>Portrait — expression coulisses</figcaption>
       </figure>
-
-      <figure class="photo-v" role="listitem">
-        <img
-          src="../assets/portrait-noir-blanc-fashion-week-paris-regard-intense-85mm.webp"
-          alt="Portrait noir et blanc Fashion Week Paris — regard intense, photographie au Samyang 85mm f/1.4, photographe événementiel"
-          loading="lazy"
-          width="800" height="1000">
+      <figure class="photo-v">
+        <img src="../assets/portrait-noir-blanc-fashion-week-paris-regard-intense-85mm.webp" alt="Portrait noir et blanc" loading="lazy" width="800" height="1000">
         <figcaption>Portrait N&B — 85mm f/1.4</figcaption>
       </figure>
-
     </div>
-    <!-- fin bloc 1 -->
 
     <h2>Préparer un reportage photo événementiel</h2>
     <p>Un bon reportage événementiel à Paris commence toujours par une préparation rigoureuse. Quelques jours avant le défilé, je repère les marques, les lieux et les horaires afin d'optimiser mes déplacements.</p>
@@ -323,29 +320,16 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
 
     <div class="section-rule"><span>Galerie</span></div>
 
-    <!-- ─── BLOC 2 — Moments forts & détails (photos 4, 5) ─── -->
-    <div class="photo-grid duo" role="list" aria-label="Portraits Fashion Week Paris — bijoux et accessoires">
-
-      <figure class="photo-v" role="listitem">
-        <img
-          src="../assets/portrait-modele-fashion-week-paris-bijou-serpent-tresses.webp"
-          alt="Portrait modèle Fashion Week Paris — bijou serpent spectaculaire et tresses, maquillage graphique, Sony A7R3"
-          loading="lazy"
-          width="800" height="1000">
+    <div class="photo-grid duo">
+      <figure class="photo-v">
+        <img src="../assets/portrait-modele-fashion-week-paris-bijou-serpent-tresses.webp" alt="Bijou serpent" loading="lazy" width="800" height="1000">
         <figcaption>Portrait — bijou serpent, tresses</figcaption>
       </figure>
-
-      <figure class="photo-v" role="listitem">
-        <img
-          src="../assets/portrait-fashion-week-paris-bijoux-perles-boucles-oreilles-coquillages.webp"
-          alt="Portrait Fashion Week Paris — collier de perles et boucles d'oreilles coquillages, street style élégant Paris"
-          loading="lazy"
-          width="800" height="1000">
+      <figure class="photo-v">
+        <img src="../assets/portrait-fashion-week-paris-bijoux-perles-boucles-oreilles-coquillages.webp" alt="Perles et coquillages" loading="lazy" width="800" height="1000">
         <figcaption>Portrait — perles & coquillages</figcaption>
       </figure>
-
     </div>
-    <!-- fin bloc 2 -->
 
     <h2>Ce qu'un reportage photo doit transmettre</h2>
     <p>Un reportage réussi ne se limite pas à documenter un événement. Il doit transmettre une ambiance, une énergie et une vision.</p>
@@ -377,16 +361,16 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
       <div>
         <div style="font-family:'Cormorant Garamond',serif; font-size:42px; font-weight:300; color:var(--or-clair); line-height:1;">À partir de 590 €</div>
         <div style="font-size:12px; letter-spacing:.18em; color:var(--blanc); margin-top:4px;">Journée complète · 8h de présence</div>
+      </div>
+      <ul style="list-style:none; display:flex; flex-direction:column; gap:8px; justify-content:center;">
+        <li style="font-size:13px; color:var(--blanc); display:flex; gap:10px; align-items:baseline;"><span style="color:var(--or);">—</span> 8h de présence sur place</li>
+        <li style="font-size:13px; color:var(--blanc); display:flex; gap:10px; align-items:baseline;"><span style="color:var(--or);">—</span> 75 photos Ultra HD retouchées</li>
+        <li style="font-size:13px; color:var(--blanc); display:flex; gap:10px; align-items:baseline;"><span style="color:var(--or);">—</span> Droit d'utilisation commerciale 3 ans*</li>
+        <li style="font-size:13px; color:var(--blanc); display:flex; gap:10px; align-items:baseline;"><span style="color:var(--or);">—</span> Livraison sous 7 jours</li>
+      </ul>
     </div>
-    <ul style="list-style:none; display:flex; flex-direction:column; gap:8px; justify-content:center;">
-      <li style="font-size:13px; color:var(--blanc); display:flex; gap:10px; align-items:baseline;"><span style="color:var(--or);">—</span> 8h de présence sur place</li>
-      <li style="font-size:13px; color:var(--blanc); display:flex; gap:10px; align-items:baseline;"><span style="color:var(--or);">—</span> 75 photos Ultra HD retouchées</li>
-      <li style="font-size:13px; color:var(--blanc); display:flex; gap:10px; align-items:baseline;"><span style="color:var(--or);">—</span> Droit d'utilisation commerciale 3 ans*</li>
-      <li style="font-size:13px; color:var(--blanc); display:flex; gap:10px; align-items:baseline;"><span style="color:var(--or);">—</span> Livraison sous 7 jours</li>
-    </ul>
+    <a class="cta-btn" href="https://picstroflex.github.io/picstroflex/#devis">Planifier un appel →</a>
   </div>
-  <a class="cta-btn" href="https://picstroflex.github.io/picstroflex/#devis">Planifier un appel →</a>
-</div>
 
   <a class="back-link" href="https://picstroflex.github.io/picstroflex/blog/index.html">Retour au blog</a>
 </div>
