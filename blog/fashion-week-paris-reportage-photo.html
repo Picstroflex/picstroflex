@@ -80,7 +80,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
 .logo-text { font-family:'Cormorant Garamond',serif; font-size:21px; font-weight:300; letter-spacing:.28em; text-transform:uppercase; color:var(--or-clair); }
 .logo-text b { color:var(--or); font-weight:300; }
 
-/* Menu de base */
+/* Styles communs pour les menus */
 .nav-links { display:flex; gap:40px; list-style:none; align-items:center; }
 .nav-links a { font-size:11px; letter-spacing:.35em; text-transform:uppercase; color:var(--blanc); text-decoration:none; transition:color .3s; position:relative; }
 .nav-links a::after { content:''; position:absolute; bottom:-3px; left:0; width:0; height:1px; background:var(--or); transition:width .3s; }
@@ -90,34 +90,47 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
 .nav-cta:hover { background:var(--or)!important; color:var(--noir)!important; }
 .nav-cta::after { display:none!important; }
 
-/* Version DESKTOP (>= 1000px) : afficher le menu desktop, cacher le menu mobile */
-@media (min-width: 1000px) {
-  .mobile-menu {
+/* Par défaut (plein écran PC) : afficher MENU COMPLET (6 liens) */
+.full-menu {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  align-items: center;
+}
+
+/* MENU REDUIT (3 liens) - caché par défaut */
+.compact-menu {
+  display: none;
+  gap: 40px;
+  list-style: none;
+  align-items: center;
+}
+
+/* QUAND LA FENÊTRE EST RÉDUITE (demi-écran ≤ 1100px) : basculer vers le menu compact */
+@media (max-width: 1100px) {
+  .full-menu {
     display: none !important;
   }
-  .desktop-menu {
+  .compact-menu {
     display: flex !important;
   }
 }
 
-/* Version MOBILE (< 1000px) : afficher le menu mobile, cacher le menu desktop */
-@media (max-width: 999px) {
+/* Sur mobile, on garde le même comportement (compact-menu déjà affiché) */
+@media (max-width: 1000px) {
   nav { padding:16px 24px; }
-  .desktop-menu {
-    display: none !important;
-  }
-  .mobile-menu {
-    display: flex !important;
+  .compact-menu {
     gap: 12px;
-    flex-wrap: wrap;
-    justify-content: flex-end;
   }
-  .mobile-menu a {
+  .compact-menu a {
     font-size: 9px;
     letter-spacing: 0.2em;
   }
-  .mobile-menu .nav-cta {
+  .compact-menu .nav-cta {
     padding: 6px 12px !important;
+  }
+  .full-menu {
+    display: none !important;
   }
 }
 
@@ -238,18 +251,18 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
     <span class="logo-text">Picstro<b>flex</b></span>
   </a>
   
-  <!-- MENU DESKTOP (>= 1000px) : seulement 3 liens -->
-  <ul class="nav-links desktop-menu">
+  <!-- MENU COMPLET (plein écran PC > 1100px) : 6 liens -->
+  <ul class="nav-links full-menu">
+    <li><a href="https://www.instagram.com/picstroflex/" target="_blank">Instagram</a></li>
+    <li><a href="https://www.linkedin.com/in/alexandre-poulain-b1ab191a7" target="_blank">LinkedIn</a></li>
+    <li><a href="https://share.google/nZLkT88O3DkEqXSpQ" target="_blank">Avis Google</a></li>
     <li><a href="https://picstroflex.github.io/picstroflex/#prestations">Prestations & Tarifs</a></li>
     <li><a href="https://picstroflex.github.io/picstroflex/blog/index.html">Blog</a></li>
     <li><a href="https://picstroflex.github.io/picstroflex/#devis" class="nav-cta">Planifier un appel</a></li>
   </ul>
 
-  <!-- MENU MOBILE (< 1000px) : tous les liens -->
-  <ul class="nav-links mobile-menu">
-    <li><a href="https://www.instagram.com/picstroflex/" target="_blank">Instagram</a></li>
-    <li><a href="https://www.linkedin.com/in/alexandre-poulain-b1ab191a7" target="_blank">LinkedIn</a></li>
-    <li><a href="https://share.google/nZLkT88O3DkEqXSpQ" target="_blank">Avis Google</a></li>
+  <!-- MENU COMPACT (demi-écran ≤ 1100px + mobile) : 3 liens -->
+  <ul class="nav-links compact-menu">
     <li><a href="https://picstroflex.github.io/picstroflex/#prestations">Prestations & Tarifs</a></li>
     <li><a href="https://picstroflex.github.io/picstroflex/blog/index.html">Blog</a></li>
     <li><a href="https://picstroflex.github.io/picstroflex/#devis" class="nav-cta">Planifier un appel</a></li>
