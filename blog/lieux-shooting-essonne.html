@@ -192,14 +192,78 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
 .nav-logo-wrap { display:flex; align-items:center; gap:14px; text-decoration:none; }
 .logo-text { font-family:'Cormorant Garamond',serif; font-size:21px; font-weight:300; letter-spacing:.28em; text-transform:uppercase; color:var(--or-clair); }
 .logo-text b { color:var(--or); font-weight:300; }
+
+/* Styles communs pour les menus */
 .nav-links { display:flex; gap:40px; list-style:none; align-items:center; }
 .nav-links a { font-size:11px; letter-spacing:.35em; text-transform:uppercase; color:var(--blanc); text-decoration:none; transition:color .3s; position:relative; }
 .nav-links a::after { content:''; position:absolute; bottom:-3px; left:0; width:0; height:1px; background:var(--or); transition:width .3s; }
 .nav-links a:hover { color:var(--or-clair); }
 .nav-links a:hover::after { width:100%; }
-.nav-cta { border:1px solid rgba(201,169,110,.35)!important; padding:10px 24px; color:var(--or)!important; transition:background .3s,color .3s!important; }
-.nav-cta:hover { background:var(--or)!important; color:var(--noir)!important; }
-.nav-cta::after { display:none!important; }
+.nav-cta { background: var(--or) !important; border: 1px solid var(--or) !important; padding: 10px 24px; color: var(--noir) !important; transition: background 0.3s, color 0.3s !important; }
+.nav-cta:hover { background: transparent !important; color: var(--or) !important; }
+.nav-cta::after { display: none !important; }
+
+/* Par défaut (plein écran PC > 1100px) : afficher MENU COMPLET (6 liens) */
+.full-menu {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  align-items: center;
+}
+
+/* MENU REDUIT (3 liens) - caché par défaut */
+.compact-menu {
+  display: none;
+  gap: 40px;
+  list-style: none;
+  align-items: center;
+}
+
+/* QUAND LA FENÊTRE EST RÉDUITE (demi-écran ≤ 1100px) : basculer vers le menu compact */
+@media (max-width: 1100px) {
+  .full-menu {
+    display: none !important;
+  }
+  .compact-menu {
+    display: flex !important;
+  }
+}
+
+/* Sur mobile, on garde le même comportement (compact-menu déjà affiché) */
+@media (max-width: 1000px) {
+  nav { padding: 16px 20px; } 
+  nav.solid { padding: 12px 20px; }
+  .compact-menu {
+    gap: 8px;
+  }
+  .compact-menu a {
+    font-size: 8px;
+    letter-spacing: 0.15em;
+    white-space: nowrap;
+  }
+  .compact-menu .nav-cta {
+    padding: 5px 10px !important;
+    font-size: 8px;
+    letter-spacing: 0.15em;
+  }
+  .full-menu {
+    display: none !important;
+  }
+}
+
+/* Pour les très petits écrans (moins de 400px) */
+@media (max-width: 450px) {
+  .compact-menu {
+    gap: 6px;
+  }
+  .compact-menu a {
+    font-size: 7px;
+    letter-spacing: 0.1em;
+  }
+  .compact-menu .nav-cta {
+    padding: 4px 8px !important;
+  }
+}
 
 .article-hero { min-height:55vh; display:flex; align-items:flex-end; padding:0 56px 80px; position:relative; overflow:hidden; background:var(--charbon); margin-top:70px; }
 .article-hero-grid { position:absolute; inset:0; background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px); background-size:80px 80px; opacity:.3; }
@@ -259,12 +323,6 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
 .ft-links a:hover { color:var(--or); }
 
 @media (max-width:1000px) {
-  nav { padding:16px 24px; }
-  .nav-links { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
-  .nav-links li:first-child,
-  .nav-links li:nth-child(2),
-  .nav-links li:nth-child(3),
-  .nav-links li:nth-child(4) { display: none; }
   .article-hero { padding:0 24px 50px; margin-top:60px; min-height:45vh; }
   .article-main { padding:50px 24px 80px; }
   .cta-block { flex-direction:column; text-align:center; padding:32px 28px; }
@@ -282,14 +340,22 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
   <a class="nav-logo-wrap" href="https://picstroflex.github.io/picstroflex/" style="text-decoration:none;" aria-label="Accueil Picstroflex">
     <span class="logo-text">Picstro<b>flex</b></span>
   </a>
-  <ul class="nav-links">
+  
+  <!-- MENU COMPLET (plein écran PC > 1100px) : 6 liens -->
+  <ul class="nav-links full-menu">
     <li><a href="https://www.instagram.com/picstroflex/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
     <li><a href="https://www.linkedin.com/in/alexandre-poulain-b1ab191a7" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-    <li><a href="https://share.google/nZLkT88O3DkEqXSpQ" target="_blank" rel="noopener noreferrer">Google Maps</a></li>
-    <li style="width:1px; height:16px; background:var(--rule); margin:0 4px;" aria-hidden="true"></li>
+    <li><a href="https://share.google/nZLkT88O3DkEqXSpQ" target="_blank" rel="noopener noreferrer">Avis Google</a></li>
     <li><a href="https://picstroflex.github.io/picstroflex/#prestations">Prestations & Tarifs</a></li>
     <li><a href="https://picstroflex.github.io/picstroflex/blog/index.html">Blog</a></li>
-    <li><a href="https://picstroflex.github.io/picstroflex/#devis" class="nav-cta">réserver</a></li>
+    <li><a href="https://picstroflex.github.io/picstroflex/#devis" class="nav-cta">Réserver</a></li>
+  </ul>
+
+  <!-- MENU COMPACT (demi-écran ≤ 1100px + mobile) : 3 liens courts -->
+  <ul class="nav-links compact-menu">
+    <li><a href="https://picstroflex.github.io/picstroflex/#prestations">Prestations</a></li>
+    <li><a href="https://picstroflex.github.io/picstroflex/blog/index.html">Blog</a></li>
+    <li><a href="https://picstroflex.github.io/picstroflex/#devis" class="nav-cta">Appel</a></li>
   </ul>
 </nav>
 
