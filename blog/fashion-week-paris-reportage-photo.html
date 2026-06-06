@@ -80,7 +80,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
 .nav-logo-wrap { display:flex; align-items:center; gap:14px; text-decoration:none; }
 .logo-text { font-family:'Cormorant Garamond',serif; font-size:21px; font-weight:300; letter-spacing:.28em; text-transform:uppercase; color:var(--or-clair); }
 .logo-text b { color:var(--or); font-weight:300; }
-.nav-links { display:flex; gap:40px; list-style:none; align-items:center; }
+.nav-links { display:flex; gap:40px; list-style:none; align-items:center; flex-wrap:wrap; }
 .nav-links a { font-size:11px; letter-spacing:.35em; text-transform:uppercase; color:var(--blanc); text-decoration:none; transition:color .3s; position:relative; }
 .nav-links a::after { content:''; position:absolute; bottom:-3px; left:0; width:0; height:1px; background:var(--or); transition:width .3s; }
 .nav-links a:hover { color:var(--or-clair); }
@@ -88,6 +88,30 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
 .nav-cta { border:1px solid rgba(201,169,110,.35)!important; padding:10px 24px; color:var(--or)!important; transition:background .3s,color .3s!important; }
 .nav-cta:hover { background:var(--or)!important; color:var(--noir)!important; }
 .nav-cta::after { display:none!important; }
+
+/* ===== VERSION DESKTOP (>= 1200px) : masquer les liens sociaux ===== */
+@media (min-width: 1200px) {
+  .nav-links .social-only {
+    display: none !important;
+  }
+  .nav-links .separator {
+    display: none !important;
+  }
+}
+
+/* ===== VERSION MOBILE ET TABLETTE (< 1200px) : tout afficher ===== */
+@media (max-width: 1199px) {
+  nav { padding:16px 24px; }
+  .nav-links { gap: 12px; justify-content: flex-end; }
+  .nav-links a { font-size: 9px; letter-spacing: 0.2em; }
+  .nav-cta { padding: 6px 12px !important; }
+  .social-only {
+    display: block !important;
+  }
+  .separator {
+    display: block !important;
+  }
+}
 
 .article-hero { min-height:55vh; display:flex; align-items:flex-end; padding:0 56px 80px; position:relative; overflow:hidden; background:var(--charbon); margin-top:70px; }
 .article-hero-grid { position:absolute; inset:0; background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px); background-size:80px 80px; opacity:.3; }
@@ -183,8 +207,6 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
 .ft-links a:hover { color:var(--or); }
 
 @media (max-width:1000px) {
-  nav { padding:16px 24px; }
-  .nav-links { display:none; }
   .article-hero { padding:0 24px 50px; margin-top:60px; min-height:45vh; }
   .article-main { padding:50px 24px 80px; }
   .photo-grid { grid-template-columns:repeat(2,1fr); }
@@ -209,10 +231,10 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
     <span class="logo-text">Picstro<b>flex</b></span>
   </a>
   <ul class="nav-links">
-    <li><a href="https://www.instagram.com/picstroflex/" target="_blank">Instagram</a></li>
-    <li><a href="https://www.linkedin.com/in/alexandre-poulain-b1ab191a7" target="_blank">LinkedIn</a></li>
-    <li><a href="https://share.google/nZLkT88O3DkEqXSpQ" target="_blank">Google Maps</a></li>
-    <li style="width:1px;height:16px;background:var(--rule);margin:0 4px;"></li>
+    <li class="social-only"><a href="https://www.instagram.com/picstroflex/" target="_blank">Instagram</a></li>
+    <li class="social-only"><a href="https://www.linkedin.com/in/alexandre-poulain-b1ab191a7" target="_blank">LinkedIn</a></li>
+    <li class="social-only"><a href="https://share.google/nZLkT88O3DkEqXSpQ" target="_blank">Avis Google</a></li>
+    <li class="separator" style="width:1px;height:16px;background:var(--rule);margin:0 4px;"></li>
     <li><a href="https://picstroflex.github.io/picstroflex/#prestations">Prestations & Tarifs</a></li>
     <li><a href="https://picstroflex.github.io/picstroflex/blog/index.html">Blog</a></li>
     <li><a href="https://picstroflex.github.io/picstroflex/#devis" class="nav-cta">Planifier un appel</a></li>
