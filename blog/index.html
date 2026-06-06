@@ -90,13 +90,17 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 .nav-logo-img { height:36px; width:auto; object-fit:contain; display:none; filter:brightness(1.1); }
 .logo-text { font-family:'Cormorant Garamond',serif; font-size:21px; font-weight:300; letter-spacing:.28em; text-transform:uppercase; color:var(--or-clair); }
 .logo-text b { color:var(--or); font-weight:300; }
+
+/* Styles communs pour les menus */
 .nav-links { display:flex; gap:40px; list-style:none; align-items:center; }
 .nav-links a { font-size:11px; letter-spacing:.35em; text-transform:uppercase; color:#FFFFFF; text-decoration:none; transition:color .3s; position:relative; }
 .nav-links a::after { content:''; position:absolute; bottom:-3px; left:0; width:0; height:1px; background:var(--or); transition:width .3s; }
 .nav-links a:hover { color:var(--or-clair); }
 .nav-links a:hover::after { width:100%; }
+.nav-active { color:var(--or-clair)!important; }
+.nav-active::after { width:100%!important; }
 
-/* ===== BOUTON RÉSERVER (NAVIGATION) - FOND DORÉ TEXTE NOIR ===== */
+/* Bouton CTA */
 .nav-cta { 
   background: var(--or) !important; 
   border: 1px solid var(--or) !important; 
@@ -112,8 +116,56 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
   display: none !important; 
 }
 
-.nav-active { color:var(--or-clair)!important; }
-.nav-active::after { width:100%!important; }
+/* Par défaut (plein écran PC) : afficher MENU COMPLET (6 liens) */
+.nav-links {
+  display: flex;
+}
+
+/* MENU COMPLET par défaut */
+.full-menu {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  align-items: center;
+}
+
+/* MENU REDUIT (3 liens) - caché par défaut */
+.compact-menu {
+  display: none;
+  gap: 40px;
+  list-style: none;
+  align-items: center;
+}
+
+/* QUAND LA FENÊTRE EST RÉDUITE (demi-écran) : basculer vers le menu compact */
+@media (max-width: 1100px) {
+  .full-menu {
+    display: none !important;
+  }
+  .compact-menu {
+    display: flex !important;
+  }
+}
+
+/* Sur mobile, on garde le même comportement (compact-menu déjà affiché) */
+@media (max-width: 1000px) {
+  nav { padding:20px 24px; } 
+  nav.solid { padding:14px 24px; }
+  .compact-menu {
+    gap: 12px;
+  }
+  .compact-menu a {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+  }
+  .compact-menu .nav-cta {
+    padding: 6px 12px !important;
+  }
+  /* On cache également le full-menu au cas où */
+  .full-menu {
+    display: none !important;
+  }
+}
  
 .hero-banner {
   position: relative;
@@ -335,13 +387,6 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
 .reveal-delay-3 { transition-delay:.36s; }
  
 @media (max-width:1000px) {
-  nav { padding:20px 24px; } 
-  nav.solid { padding:14px 24px; } 
-  .nav-links { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
-  .nav-links li:first-child,
-  .nav-links li:nth-child(2),
-  .nav-links li:nth-child(3),
-  .nav-links li:nth-child(4) { display: none; }
   .hero-banner { height: 65vh; min-height: 480px; }
   .hero-banner h1 { font-size: clamp(36px, 8vw, 62px); }
   .hero-banner-eyebrow::before, .hero-banner-eyebrow::after { width: 28px; }
@@ -370,11 +415,19 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
     <img class="nav-logo-img" id="nav-logo-img" alt="Picstroflex logo">
     <span class="logo-text" id="nav-logo-text">Picstro<b>flex</b></span>
   </a>
-  <ul class="nav-links">
+  
+  <!-- MENU COMPLET (plein écran PC) : 6 liens -->
+  <ul class="nav-links full-menu">
     <li><a href="https://www.instagram.com/picstroflex/" target="_blank">Instagram</a></li>
     <li><a href="https://www.linkedin.com/in/alexandre-poulain-b1ab191a7" target="_blank">LinkedIn</a></li>
-    <li><a href="https://share.google/nZLkT88O3DkEqXSpQ" target="_blank">Google Maps</a></li>
-    <li style="width:1px; height:16px; background:var(--rule); margin:0 4px;"></li>
+    <li><a href="https://share.google/nZLkT88O3DkEqXSpQ" target="_blank">Avis Google</a></li>
+    <li><a href="../index.html#prestations">Prestations & Tarifs</a></li>
+    <li><a href="index.html" class="nav-active">Blog</a></li>
+    <li><a href="https://picstroflex.github.io/picstroflex/#devis" class="nav-cta">Planifier un appel</a></li>
+  </ul>
+
+  <!-- MENU COMPACT (demi-écran PC + mobile) : 3 liens -->
+  <ul class="nav-links compact-menu">
     <li><a href="../index.html#prestations">Prestations & Tarifs</a></li>
     <li><a href="index.html" class="nav-active">Blog</a></li>
     <li><a href="https://picstroflex.github.io/picstroflex/#devis" class="nav-cta">Planifier un appel</a></li>
