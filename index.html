@@ -54,7 +54,7 @@
 :root {
   --noir:#0c0b09; --charbon:#141310; --brun:#1c1913; --brun-clair:#252016;
   --or:#c9a96e; --or-clair:#e2cfa0; --or-pale:#f0e8d4;
-  --blanc:#ffffff; --blanc-pur:#ffffff;
+  --blanc:#ffffff;
   --gris:#7a7468; --gris-mid:#a09790; --gris-clair:#c0b9ad;
   --rule:rgba(201,169,110,0.12);
 }
@@ -100,7 +100,7 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 .nav-cta { padding: 0 !important; margin: 0; line-height: normal; }
 .nav-cta::after { display: none !important; }
 .pcard-cta { padding: 12px 24px; font-size: 10px; align-self: flex-start; margin-top: auto; }
-.submit-btn { width: 100%; padding: 20px; font-size: 12px; }
+.submit-btn { width: 100%; padding: 20px; font-size: 12px; margin-top: 2rem; }
 .btn-corporate { background: transparent; border-color: var(--or-clair); color: var(--or-clair) !important; padding: 12px 28px; font-size: 9px; }
 .btn-corporate:hover { background: var(--or); color: var(--noir) !important; border-color: var(--or); }
 .back-btn-resa { background: transparent; color: var(--or) !important; border-color: var(--or); padding: 8px 20px; font-size: 9px; margin-bottom: 20px; display: inline-flex; align-items: center; gap: 8px; }
@@ -204,7 +204,7 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 .presta-price { font-size: 11px; color: var(--blanc); }
 .devis-badge { display: inline-block; background: var(--or); color: var(--noir); font-size: 8px; letter-spacing: 0.1em; padding: 3px 8px; border-radius: 20px; margin-top: 8px; font-weight: 600; }
 
-/* CALENDRIER CORRIGÉ */
+/* CALENDRIER */
 .calendar-container { margin-bottom: 1.5rem; background: var(--charbon); border-radius: 6px; padding: 0.5rem; }
 .fc { background: var(--charbon); color: var(--blanc); }
 .fc .fc-toolbar-title { font-size: 0.9rem; color: var(--blanc); font-weight: 300; }
@@ -213,47 +213,16 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 .fc .fc-daygrid-day { background: var(--brun); border-color: var(--rule); cursor: pointer; }
 .fc .fc-daygrid-day-number { color: var(--blanc); font-size: 12px; font-weight: 300; text-decoration: none; }
 .fc-daygrid-day-frame { display: flex; justify-content: center; align-items: center; min-height: 40px; }
-
-/* Jour sélectionné */
-.fc-daygrid-day.fc-day-selected {
-  background: rgba(201, 169, 110, 0.2) !important;
-}
-.fc-daygrid-day.fc-day-selected .fc-daygrid-day-number {
-  background: var(--or) !important;
-  color: var(--noir) !important;
-  border-radius: 50%;
-  width: 28px;
-  height: 28px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Jour actuel */
-.fc-daygrid-day.fc-day-today {
-  background: transparent !important;
-}
-.fc-daygrid-day.fc-day-today .fc-daygrid-day-number {
-  border: 1px solid var(--or);
-  border-radius: 50%;
-  width: 28px;
-  height: 28px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  color: var(--or) !important;
-}
-
-/* Jour passé */
-.fc-daygrid-day.fc-day-past .fc-daygrid-day-number {
-  opacity: 0.3;
-}
+.fc-daygrid-day.fc-day-selected { background: rgba(201, 169, 110, 0.2) !important; }
+.fc-daygrid-day.fc-day-selected .fc-daygrid-day-number { background: var(--or) !important; color: var(--noir) !important; border-radius: 50%; width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; }
+.fc-daygrid-day.fc-day-today { background: transparent !important; }
+.fc-daygrid-day.fc-day-today .fc-daygrid-day-number { border: 1px solid var(--or); border-radius: 50%; width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; background: transparent; color: var(--or) !important; }
+.fc-daygrid-day.fc-day-past .fc-daygrid-day-number { opacity: 0.3; }
 
 /* Créneaux horaires */
-.slots-section { margin-top: 1rem; padding-top: 1rem; border-top: 0.5px solid var(--rule); }
+.slots-section { margin-top: 1rem; padding-top: 1rem; border-top: 0.5px solid var(--rule); margin-bottom: 1rem; }
 .slots-title { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blanc); margin-bottom: 0.75rem; }
-.slots-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+.slots-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1rem; }
 .slot-btn { border: 0.5px solid var(--rule); border-radius: 4px; padding: 6px 12px; font-size: 12px; color: var(--blanc); cursor: pointer; background: var(--brun); transition: all 0.2s; font-family: 'Josefin Sans', sans-serif; }
 .slot-btn:hover { border-color: var(--or); color: var(--or); }
 .slot-btn.sel-slot { background: var(--or); color: var(--noir); border-color: var(--or); font-weight: 500; }
@@ -274,7 +243,7 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 .recap-row:last-child { border-bottom: none; }
 .recap-key { color: var(--blanc); }
 .recap-val { color: var(--or-clair); text-align: right; }
-.err { font-size: 11px; color: #e07070; margin-top: 6px; display: none; }
+.err { font-size: 11px; color: #e07070; margin-top: 6px; margin-bottom: 1rem; display: none; }
 .success-msg { text-align: center; padding: 1.5rem; }
 .success-msg h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 300; color: var(--or-clair); margin-bottom: 0.5rem; }
 .success-msg p { color: var(--blanc); }
@@ -472,7 +441,7 @@ footer { background: var(--noir); border-top: 1px solid var(--rule); padding: 36
             <div class="presta-card" data-val="seminaire" data-label="Reportage séminaire" onclick="selectPresta(this)"><div class="presta-name">Séminaire</div><div class="presta-price">À partir de 650 €</div><div class="devis-badge">Devis 48h</div></div>
             <div class="presta-card" data-val="team_building" data-label="Team building / Soirée" onclick="selectPresta(this)"><div class="presta-name">Team building</div><div class="presta-price">À partir de 490 €</div><div class="devis-badge">Devis 48h</div></div>
           </div>
-          <button class="submit-btn" id="btn1" disabled onclick="goToStep(2)" style="margin-top:1rem;">Choisir mon créneau call →</button>
+          <button class="submit-btn" id="btn1" disabled onclick="goToStep(2)">Choisir mon créneau call →</button>
         </div>
 
         <div class="step" id="step2">
@@ -480,7 +449,10 @@ footer { background: var(--noir); border-top: 1px solid var(--rule); padding: 36
           <p class="step-title">Réservez votre <em>call gratuit</em></p>
           <p class="step-sub">30 minutes · Lundi au dimanche 9h–16h · Devis sous 48h après l'appel</p>
           <div class="calendar-container"><div id="callCalendar"></div></div>
-          <div class="slots-section" id="slotsSectionCall" style="display:none"><p class="slots-title" id="slotsTitleCall"></p><div class="slots-grid" id="slotsGridCall"></div></div>
+          <div class="slots-section" id="slotsSectionCall" style="display:none">
+            <p class="slots-title" id="slotsTitleCall"></p>
+            <div class="slots-grid" id="slotsGridCall"></div>
+          </div>
           <p class="err" id="err2">Veuillez sélectionner un créneau</p>
           <button class="submit-btn" id="btn2" disabled onclick="goToStep(3)">Choisir date et heure de shooting →</button>
         </div>
@@ -490,7 +462,10 @@ footer { background: var(--noir); border-top: 1px solid var(--rule); padding: 36
           <p class="step-title">Date et heure de <em>shooting souhaitée</em></p>
           <p class="step-sub">Sélectionnez une date puis un créneau horaire</p>
           <div class="calendar-container"><div id="shootCalendar"></div></div>
-          <div class="slots-section" id="slotsSectionShoot" style="display:none"><p class="slots-title" id="slotsTitleShoot"></p><div class="slots-grid" id="slotsGridShoot"></div></div>
+          <div class="slots-section" id="slotsSectionShoot" style="display:none">
+            <p class="slots-title" id="slotsTitleShoot"></p>
+            <div class="slots-grid" id="slotsGridShoot"></div>
+          </div>
           <p class="err" id="err3">Veuillez sélectionner une date et un créneau</p>
           <button class="submit-btn" id="btn3" disabled onclick="goToStep(4)">Mes coordonnées →</button>
         </div>
@@ -529,9 +504,30 @@ footer { background: var(--noir); border-top: 1px solid var(--rule); padding: 36
     <div class="s-tag">Légal</div>
     <h2 class="prest-headline" style="margin-bottom:40px;">Mentions légales</h2>
     <div style="display:flex; flex-direction:column; gap:28px; font-size:14px; line-height:1.9; color:var(--blanc);">
-      <div><strong style="color:var(--or);">Éditeur du site</strong><br>Picstroflex · Poulain Alexandre · Micro-entrepreneur · N° SIRET : 99927199200011 · Gif-sur-Yvette · picstroflex@gmail.com · 07 82 24 35 82</div>
-      <div><strong style="color:var(--or);">Hébergement</strong><br>GitHub, Inc. · 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA</div>
-      <div><strong style="color:var(--or);">Données personnelles</strong><br>Les données collectées sont utilisées uniquement pour répondre aux demandes. Suppression sur demande à picstroflex@gmail.com.</div>
+      <div>
+        <strong style="color:var(--or);">Éditeur du site</strong><br>
+        Picstroflex<br>
+        Poulain Alexandre<br>
+        Statut : Micro-entrepreneur<br>
+        N° SIRET : 99927199200011<br>
+        Localisation : Gif-sur-Yvette — Essonne, France<br>
+        Email : picstroflex@gmail.com<br>
+        Téléphone : 07 82 24 35 82<br>
+      </div>
+      <div>
+        <strong style="color:var(--or);">Hébergement</strong><br>
+        GitHub, Inc.<br>
+        88 Colin P Kelly Jr St, San Francisco, CA 94107, USA<br>
+        <a href="https://pages.github.com/" target="_blank" style="color:var(--or-clair);">https://pages.github.com</a>
+      </div>
+      <div>
+        <strong style="color:var(--or);">Propriété intellectuelle</strong><br>
+        L'ensemble du contenu du site (textes, images, photographies, code) est protégé par le droit d'auteur.
+      </div>
+      <div>
+        <strong style="color:var(--or);">Données personnelles</strong><br>
+        Les données collectées via le formulaire sont utilisées uniquement pour répondre aux demandes. Elles ne sont pas revendues. Vous pouvez demander la suppression de vos données à tout moment en envoyant un email à picstroflex@gmail.com.
+      </div>
     </div>
   </div>
 </section>
@@ -618,7 +614,6 @@ function goToStep(n) {
   if(n===2 && callCalendar) callCalendar.render();
   if(n===3 && shootCalendar) shootCalendar.render();
   if(n===4) renderRecapStep();
-  // PLUS DE SCROLL - la page reste où elle est
 }
 
 function selectPresta(el) {
@@ -630,10 +625,38 @@ function selectPresta(el) {
 }
 
 function openResaWithPresta(prestaLabel) {
-  const card = Array.from(document.querySelectorAll('#step1 .presta-card')).find(c => c.dataset.label === prestaLabel);
-  if(card) selectPresta(card);
+  // Réinitialiser l'état de la réservation
+  resaState = { 
+    prestation: null, 
+    prestaLabel: null, 
+    callDate: null, 
+    callSlot: null, 
+    shootDate: null,
+    shootSlot: null 
+  };
+  
+  // Désactiver les boutons
+  document.getElementById('btn1').disabled = true;
+  document.getElementById('btn2').disabled = true;
+  document.getElementById('btn3').disabled = true;
+  
+  // Trouver et sélectionner la carte de prestation correspondante
+  const cards = document.querySelectorAll('#step1 .presta-card');
+  let targetCard = null;
+  for (let card of cards) {
+    if (card.dataset.label === prestaLabel) {
+      targetCard = card;
+      break;
+    }
+  }
+  
+  if (targetCard) {
+    selectPresta(targetCard);
+  }
+  
+  // Aller à l'étape 1 (choix de la prestation) et scroll jusqu'à la réservation
+  goToStep(1);
   document.getElementById('reservation').scrollIntoView({ behavior: 'smooth' });
-  setTimeout(() => goToStep(2), 300);
 }
 
 function initReservationSystem() {
