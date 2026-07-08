@@ -200,8 +200,18 @@ nav.solid {
 .btn-line::before { display: none; }
 .pcard-cta { padding: 12px 24px; font-size: 10px; align-self: flex-start; margin-top: auto; }
 .submit-btn { width: 100%; padding: 20px; font-size: 12px; margin-top: 2rem; }
-.btn-corporate { background: transparent; border-color: var(--or-clair); color: var(--or-clair) !important; padding: 12px 28px; font-size: 9px; }
-.btn-corporate:hover { background: var(--or); color: var(--noir) !important; border-color: var(--or); }
+.btn-corporate { 
+  background: var(--or); /* Fond doré */
+  border-color: var(--or); 
+  color: var(--noir) !important; /* Texte noir */
+  padding: 12px 28px; 
+  font-size: 9px; 
+}
+.btn-corporate:hover { 
+  background: transparent; /* Devient transparent au survol */
+  color: var(--or) !important; /* Texte devient doré */
+  border-color: var(--or); 
+}
 .back-btn-resa { background: transparent; color: var(--or) !important; border-color: var(--or); padding: 8px 20px; font-size: 9px; margin-bottom: 20px; display: inline-flex; align-items: center; gap: 8px; }
 .back-btn-resa:hover { background: var(--or); color: var(--noir) !important; }
 
