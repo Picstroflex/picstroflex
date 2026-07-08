@@ -224,38 +224,6 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
     display: none !important;
   }
 }
-
-/* ====================== FIL D'ARIANE ====================== */
-.breadcrumb {
-  background: var(--charbon);
-  padding: 14px 56px;
-  font-size: 12px;
-  letter-spacing: 0.15em;
-  color: var(--gris-mid);
-  border-bottom: 1px solid var(--rule);
-}
-.breadcrumb a {
-  color: var(--or-clair);
-  text-decoration: none;
-  transition: color 0.3s;
-}
-.breadcrumb a:hover {
-  color: var(--or);
-}
-.breadcrumb span {
-  margin: 0 8px;
-  color: var(--gris);
-}
-.breadcrumb strong {
-  font-weight: 400;
-  color: var(--creme);
-}
-@media (max-width: 1000px) {
-  .breadcrumb {
-    padding: 12px 24px;
-    font-size: 11px;
-  }
-}
  
 .hero-banner {
   position: relative;
@@ -524,15 +492,14 @@ footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 
   </ul>
 </nav>
 
-<!-- ====================== FIL D'ARIANE VISIBLE ====================== -->
-<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<!-- ====================== FIL D'ARIANE SCHEMA (invisible, SEO uniquement) ====================== -->
+<div itemscope itemtype="https://schema.org/BreadcrumbList" aria-hidden="true" style="display:none;">
   <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-    <a itemprop="item" href="../index.html"><span itemprop="name">Accueil</span></a>
+    <a itemprop="item" href="https://picstroflex.github.io/picstroflex/"><span itemprop="name">Accueil</span></a>
     <meta itemprop="position" content="1">
   </span>
-  <span>›</span>
   <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-    <strong itemprop="name">Blog</strong>
+    <a itemprop="item" href="https://picstroflex.github.io/picstroflex/blog/index.html"><span itemprop="name">Blog</span></a>
     <meta itemprop="position" content="2">
   </span>
 </div>
