@@ -95,12 +95,13 @@ nav {
   justify-content:space-between; 
   align-items:center; 
   padding:26px 56px; 
-  transition:background .4s,padding .4s,border-color .4s; 
-  background: var(--noir); /* Fond noir */
+  transition:background .4s ease, padding .4s ease, border-color .4s ease; 
+  background: rgba(12, 11, 9, 0.3); /* Semi-transparent au départ */
 }
+
 nav.solid { 
-  background: var(--noir); /* Fond noir même en scroll */
-  backdrop-filter: blur(14px); 
+  background: var(--noir); /* Noir pur */
+  backdrop-filter: blur(10px);
   padding:16px 56px; 
   border-bottom:1px solid var(--rule); 
 }
