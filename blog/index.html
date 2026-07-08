@@ -114,10 +114,74 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/picstroflex/favicon/favicon-180x180.png">
 <link rel="manifest" href="/picstroflex/favicon/site.webmanifest">
 <meta name="theme-color" content="#827f7f">
-<!-- ====================================================== -->
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Josefin+Sans:wght@100;300;400&display=swap" rel="stylesheet">
+<!-- ====================== POLICE POPPINS EN LOCAL ====================== -->
 <style>
+/* ===== DECLARATION DE LA POLICE POPPINS EN LOCAL ===== */
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 :root {
   --noir:#0c0b09; --charbon:#141310; --brun:#1c1913; --brun-clair:#252016;
@@ -126,7 +190,29 @@
   --rule:rgba(201,169,110,0.12);
 }
 html { scroll-behavior:smooth; }
-body { background:var(--noir); color:var(--creme); font-family:'Josefin Sans',sans-serif; font-weight:300; cursor:none; overflow-x:hidden; }
+
+/* ===== TOUT EN POPPINS ===== */
+body, 
+.hero-banner h1, .hero-banner h1 em,
+.af-title, .bcard-title,
+.logo-text, .ft-logo-text,
+.nav-links a, .nav-cta,
+.af-read, .bcard-read,
+.af-badge-tag, .af-badge-new, .af-meta, .af-excerpt,
+.bcard-meta, .bcard-excerpt,
+.hero-banner-eyebrow, .hero-banner-sub,
+.hero-inspire p,
+.filter-label, .filter-chip,
+.blog-empty,
+.ft-copy, .ft-links a,
+.hero-banner h1, .hero-banner h1 em,
+.pcard-img-fallback-num,
+.success-msg h3,
+.s-tag {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+body { background:var(--noir); color:var(--creme); font-weight:300; cursor:none; overflow-x:hidden; }
 .cursor { 
   position:fixed; 
   width:7px; 
@@ -146,25 +232,24 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
 nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16px 56px; border-bottom:1px solid var(--rule); }
 .nav-logo-wrap { display:flex; align-items:center; gap:14px; text-decoration:none; }
 .nav-logo-img { height:36px; width:auto; object-fit:contain; display:none; filter:brightness(1.1); }
-.logo-text { font-family:'Cormorant Garamond',serif; font-size:21px; font-weight:300; letter-spacing:.28em; text-transform:uppercase; color:var(--or-clair); }
+.logo-text { font-family:'Poppins',sans-serif; font-size:21px; font-weight:300; letter-spacing:.28em; text-transform:uppercase; color:var(--or-clair); }
 .logo-text b { color:var(--or); font-weight:300; }
 
-/* Styles communs pour les menus */
 .nav-links { display:flex; gap:40px; list-style:none; align-items:center; }
-.nav-links a { font-size:11px; letter-spacing:.35em; text-transform:uppercase; color:#FFFFFF; text-decoration:none; transition:color .3s; position:relative; }
+.nav-links a { font-size:11px; letter-spacing:.35em; text-transform:uppercase; color:#FFFFFF; text-decoration:none; transition:color .3s; position:relative; font-family:'Poppins',sans-serif; }
 .nav-links a::after { content:''; position:absolute; bottom:-3px; left:0; width:0; height:1px; background:var(--or); transition:width .3s; }
 .nav-links a:hover { color:var(--or-clair); }
 .nav-links a:hover::after { width:100%; }
 .nav-active { color:var(--or-clair)!important; }
 .nav-active::after { width:100%!important; }
 
-/* Bouton CTA */
 .nav-cta { 
   background: var(--or) !important; 
   border: 1px solid var(--or) !important; 
   padding: 10px 24px; 
   color: var(--noir) !important; 
   transition: background 0.3s, color 0.3s !important; 
+  font-family:'Poppins',sans-serif !important;
 }
 .nav-cta:hover { 
   background: transparent !important; 
@@ -174,55 +259,20 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
   display: none !important; 
 }
 
-/* Par défaut (plein écran PC) : afficher MENU COMPLET (6 liens) */
-.nav-links {
-  display: flex;
-}
+.full-menu { display: flex; gap: 40px; list-style: none; align-items: center; }
+.compact-menu { display: none; gap: 40px; list-style: none; align-items: center; }
 
-/* MENU COMPLET par défaut */
-.full-menu {
-  display: flex;
-  gap: 40px;
-  list-style: none;
-  align-items: center;
-}
-
-/* MENU REDUIT (3 liens) - caché par défaut */
-.compact-menu {
-  display: none;
-  gap: 40px;
-  list-style: none;
-  align-items: center;
-}
-
-/* QUAND LA FENÊTRE EST RÉDUITE (demi-écran) : basculer vers le menu compact */
 @media (max-width: 1100px) {
-  .full-menu {
-    display: none !important;
-  }
-  .compact-menu {
-    display: flex !important;
-  }
+  .full-menu { display: none !important; }
+  .compact-menu { display: flex !important; }
 }
-
-/* Sur mobile, on garde le même comportement (compact-menu déjà affiché) */
 @media (max-width: 1000px) {
   nav { padding:20px 24px; } 
   nav.solid { padding:14px 24px; }
-  .compact-menu {
-    gap: 12px;
-  }
-  .compact-menu a {
-    font-size: 9px;
-    letter-spacing: 0.2em;
-  }
-  .compact-menu .nav-cta {
-    padding: 6px 12px !important;
-  }
-  /* On cache également le full-menu au cas où */
-  .full-menu {
-    display: none !important;
-  }
+  .compact-menu { gap: 12px; }
+  .compact-menu a { font-size: 9px; letter-spacing: 0.2em; }
+  .compact-menu .nav-cta { padding: 6px 12px !important; }
+  .full-menu { display: none !important; }
 }
  
 .hero-banner {
@@ -290,6 +340,7 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
   align-items: center;
   justify-content: center;
   gap: 18px;
+  font-family:'Poppins',sans-serif;
 }
 
 .hero-banner-eyebrow::before,
@@ -302,7 +353,7 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 }
 
 .hero-banner h1 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: clamp(48px, 8vw, 100px);
   font-weight: 300;
   line-height: 1.05;
@@ -324,6 +375,7 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
   max-width: 580px;
   margin: 0 auto;
   line-height: 1.85;
+  font-family:'Poppins',sans-serif;
 }
 
 @keyframes fadeInUp {
@@ -345,6 +397,7 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
   color: var(--gris-mid);
   max-width: 700px;
   margin: 0 auto;
+  font-family:'Poppins',sans-serif;
 }
 
 .hero-inspire span { color: var(--or); }
@@ -362,8 +415,8 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
   z-index: 100; 
   backdrop-filter: blur(10px); 
 }
-.filter-label { font-size:11px; letter-spacing:.38em; text-transform:uppercase; color:var(--or); margin-right:8px; }
-.filter-chip { font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--gris-clair); border:1px solid rgba(201,169,110,.2); padding:8px 18px; cursor:pointer; user-select:none; transition:all .25s; background:transparent; }
+.filter-label { font-size:11px; letter-spacing:.38em; text-transform:uppercase; color:var(--or); margin-right:8px; font-family:'Poppins',sans-serif; }
+.filter-chip { font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--gris-clair); border:1px solid rgba(201,169,110,.2); padding:8px 18px; cursor:pointer; user-select:none; transition:all .25s; background:transparent; font-family:'Poppins',sans-serif; }
 .filter-chip.active, .filter-chip:hover { color:var(--or); border-color:var(--or); background:rgba(201,169,110,.05); }
  
 .blog-main { background:var(--noir); padding:80px 56px 120px; }
@@ -379,17 +432,16 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 .af-img-overlay { position:absolute; inset:0; background:linear-gradient(to right,transparent 60%,var(--charbon) 100%); z-index:1; }
 .af-body { padding:60px 52px; display:flex; flex-direction:column; justify-content:center; }
 .af-badge { display:inline-flex; align-items:center; gap:12px; margin-bottom:28px; }
-.af-badge-tag { font-size:10px; letter-spacing:.42em; text-transform:uppercase; color:var(--or); border:1px solid rgba(201,169,110,.35); padding:6px 14px; }
-.af-badge-new { font-size:10px; letter-spacing:.28em; text-transform:uppercase; color:var(--noir); background:var(--or); padding:6px 12px; }
-.af-meta { font-size:12px; letter-spacing:.18em; color:var(--gris-mid); margin-bottom:18px; }
-.af-title { font-family:'Cormorant Garamond',serif; font-size:clamp(28px,3.2vw,44px); font-weight:400; line-height:1.12; color:var(--creme); margin-bottom:20px; }
-.af-excerpt { font-size:14px; line-height:1.95; color:var(--gris-clair); margin-bottom:36px; }
+.af-badge-tag { font-size:10px; letter-spacing:.42em; text-transform:uppercase; color:var(--or); border:1px solid rgba(201,169,110,.35); padding:6px 14px; font-family:'Poppins',sans-serif; }
+.af-badge-new { font-size:10px; letter-spacing:.28em; text-transform:uppercase; color:var(--noir); background:var(--or); padding:6px 12px; font-family:'Poppins',sans-serif; }
+.af-meta { font-size:12px; letter-spacing:.18em; color:var(--gris-mid); margin-bottom:18px; font-family:'Poppins',sans-serif; }
+.af-title { font-family:'Poppins',sans-serif; font-size:clamp(28px,3.2vw,44px); font-weight:400; line-height:1.12; color:var(--creme); margin-bottom:20px; }
+.af-excerpt { font-size:14px; line-height:1.95; color:var(--gris-clair); margin-bottom:36px; font-family:'Poppins',sans-serif; }
 
-/* ===== BOUTONS LIRE L'ARTICLE - FOND DORÉ TEXTE NOIR ===== */
 .af-read, .bcard-read {
   background: var(--or);
   color: var(--noir);
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 11px;
   font-weight: 400;
   letter-spacing: 0.32em;
@@ -403,14 +455,8 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
   gap: 14px;
   width: fit-content;
 }
-.af-read::after, .bcard-read::after {
-  content: '→';
-}
-.af-read:hover, .bcard-read:hover {
-  background: transparent;
-  color: var(--or);
-  gap: 20px;
-}
+.af-read::after, .bcard-read::after { content: '→'; }
+.af-read:hover, .bcard-read:hover { background: transparent; color: var(--or); gap: 20px; }
  
 .blog-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:3px; margin-top:3px; }
 .bcard { background:var(--charbon); position:relative; overflow:hidden; border:1px solid transparent; transition:border-color .4s; display:flex; flex-direction:column; }
@@ -420,21 +466,21 @@ nav.solid { background:rgba(12,11,9,.94); backdrop-filter:blur(14px); padding:16
 .bcard-img { position:relative; height:220px; overflow:hidden; background:var(--brun); flex-shrink:0; }
 .bcard-img img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .7s ease; }
 .bcard:hover .bcard-img img { transform:scale(1.06); }
-.bcard-cat { position:absolute; bottom:12px; left:12px; font-size:10px; letter-spacing:.35em; text-transform:uppercase; color:rgba(201,169,110,.85); background:rgba(12,11,9,.55); padding:5px 10px; backdrop-filter:blur(4px); z-index:2; }
+.bcard-cat { position:absolute; bottom:12px; left:12px; font-size:10px; letter-spacing:.35em; text-transform:uppercase; color:rgba(201,169,110,.85); background:rgba(12,11,9,.55); padding:5px 10px; backdrop-filter:blur(4px); z-index:2; font-family:'Poppins',sans-serif; }
 .bcard-body { padding:30px 28px 36px; display:flex; flex-direction:column; flex:1; }
-.bcard-meta { font-size:12px; letter-spacing:.15em; color:var(--gris-mid); margin-bottom:12px; }
-.bcard-title { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:400; line-height:1.2; color:var(--creme); margin-bottom:14px; }
-.bcard-excerpt { font-size:13px; line-height:1.85; color:var(--gris-clair); margin-bottom:24px; flex:1; }
-.blog-empty { grid-column:1/-1; padding:80px 0; text-align:center; color:var(--gris-mid); font-family:'Cormorant Garamond',serif; font-size:28px; font-style:italic; }
+.bcard-meta { font-size:12px; letter-spacing:.15em; color:var(--gris-mid); margin-bottom:12px; font-family:'Poppins',sans-serif; }
+.bcard-title { font-family:'Poppins',sans-serif; font-size:22px; font-weight:400; line-height:1.2; color:var(--creme); margin-bottom:14px; }
+.bcard-excerpt { font-size:13px; line-height:1.85; color:var(--gris-clair); margin-bottom:24px; flex:1; font-family:'Poppins',sans-serif; }
+.blog-empty { grid-column:1/-1; padding:80px 0; text-align:center; color:var(--gris-mid); font-family:'Poppins',sans-serif; font-size:28px; font-style:italic; }
  
 footer { background:var(--noir); border-top:1px solid var(--rule); padding:36px 56px; display:flex; justify-content:space-between; align-items:center; }
 .ft-logo-wrap { display:flex; align-items:center; gap:12px; }
 .ft-logo-img { height:28px; width:auto; object-fit:contain; display:none; filter:brightness(1.1); }
-.ft-logo-text { font-family:'Cormorant Garamond',serif; font-size:19px; font-weight:300; letter-spacing:.28em; text-transform:uppercase; color:var(--or-clair); }
+.ft-logo-text { font-family:'Poppins',sans-serif; font-size:19px; font-weight:300; letter-spacing:.28em; text-transform:uppercase; color:var(--or-clair); }
 .ft-logo-text b { color:var(--or); font-weight:300; }
-.ft-copy { font-size:13px; color:var(--gris-clair); letter-spacing:.10em; }
+.ft-copy { font-size:13px; color:var(--gris-clair); letter-spacing:.10em; font-family:'Poppins',sans-serif; }
 .ft-links { display:flex; gap:24px; }
-.ft-links a { font-size:12px; letter-spacing:.20em; text-transform:uppercase; color:var(--gris-clair); text-decoration:none; transition:color .3s; }
+.ft-links a { font-size:12px; letter-spacing:.20em; text-transform:uppercase; color:var(--gris-clair); text-decoration:none; transition:color .3s; font-family:'Poppins',sans-serif; }
 .ft-links a:hover { color:var(--or); }
  
 .reveal { opacity:1; transform:none; transition:opacity .85s ease,transform .85s ease; }
@@ -645,10 +691,8 @@ function initFilters() {
     btn.className = 'filter-chip' + (cat === 'Tous' ? ' active' : '');
     btn.textContent = cat;
     btn.onclick = function() {
-      // Mettre à jour les classes actives
       document.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
       this.classList.add('active');
-      // Appliquer le filtre
       filterArticles(cat);
     };
     bar.appendChild(btn);
@@ -660,24 +704,19 @@ function filterArticles(cat) {
   const cards = document.querySelectorAll('.bcard');
   
   if (cat === 'Tous') {
-    // Afficher tous les articles
     if (featured) featured.style.display = 'grid';
     cards.forEach(c => c.style.display = 'flex');
   } else {
-    // Filtrer l'article mis en avant
     if (featured) {
       const featuredCat = featured.querySelector('.af-badge-tag')?.textContent;
       featured.style.display = featuredCat === cat ? 'grid' : 'none';
     }
-    
-    // Filtrer les cartes
     cards.forEach(card => {
       const cardCat = card.getAttribute('data-category');
       card.style.display = cardCat === cat ? 'flex' : 'none';
     });
   }
   
-  // Gérer le message "aucun article"
   handleEmptyState(cat);
 }
 
@@ -704,11 +743,7 @@ function handleEmptyState(cat) {
 // ====================== ANIMATIONS AU SCROLL ======================
 function initReveal() {
   const els = document.querySelectorAll('.reveal');
-  
-  // Cacher initialement les éléments
   els.forEach(el => el.classList.add('hidden'));
-  
-  // Observer l'apparition au scroll
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -717,7 +752,6 @@ function initReveal() {
       }
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  
   els.forEach(el => obs.observe(el));
 }
 
