@@ -84,22 +84,81 @@ body { background:var(--blanc); color:var(--noir); font-family:'Josefin Sans',sa
 body.hovering .cursor-ring { width:52px; height:52px; border-color:rgba(201,169,110,.75); }
 body.hovering .cursor { width:4px; height:4px; }
 
-/* NAVIGATION - Version claire (pour fond blanc) */
-nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify-content:space-between; align-items:center; padding:26px 56px; transition:background .4s,padding .4s,border-color .4s; }
-nav.solid { background:rgba(255,255,255,.94); backdrop-filter:blur(14px); padding:16px 56px; border-bottom:1px solid var(--rule); }
+/* NAVIGATION - Version sombre (fond noir, texte blanc) */
+nav { 
+  position:fixed; 
+  top:0; 
+  left:0; 
+  right:0; 
+  z-index:200; 
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center; 
+  padding:26px 56px; 
+  transition:background .4s,padding .4s,border-color .4s; 
+  background: var(--noir); /* Fond noir */
+}
+nav.solid { 
+  background: var(--noir); /* Fond noir même en scroll */
+  backdrop-filter: blur(14px); 
+  padding:16px 56px; 
+  border-bottom:1px solid var(--rule); 
+}
 .nav-logo-wrap { display:flex; align-items:center; gap:14px; text-decoration:none; }
 .nav-logo-img { height:36px; width:auto; object-fit:contain; display:none; filter:brightness(1.1); }
-.logo-text { font-family:'Cormorant Garamond',serif; font-size:21px; font-weight:300; letter-spacing:.28em; text-transform:uppercase; color:var(--noir); }
-.logo-text b { color:var(--or); font-weight:300; }
+.logo-text { 
+  font-family:'Cormorant Garamond',serif; 
+  font-size:21px; 
+  font-weight:300; 
+  letter-spacing:.28em; 
+  text-transform:uppercase; 
+  color:var(--blanc); /* Logo en blanc */
+}
+.logo-text b { 
+  color:var(--or); /* Le "b" reste en doré */
+  font-weight:300; 
+}
 
 .nav-links { display:flex; gap:40px; list-style:none; align-items:center; }
-.nav-links a { font-size:11px; letter-spacing:.35em; text-transform:uppercase; color: var(--noir); text-decoration:none; transition:color .3s; position:relative; }
-.nav-links a::after { content:''; position:absolute; bottom:-3px; left:0; width:0; height:1px; background:var(--or); transition:width .3s; }
-.nav-links a:hover { color:var(--or); }
-.nav-links a:hover::after { width:100%; }
-.nav-cta { background: var(--or) !important; border: 1px solid var(--or) !important; padding: 10px 24px; color: var(--blanc) !important; transition: background 0.3s, color 0.3s !important; }
-.nav-cta:hover { background: transparent !important; color: var(--or) !important; }
-.nav-cta::after { display: none !important; }
+.nav-links a { 
+  font-size:11px; 
+  letter-spacing:.35em; 
+  text-transform:uppercase; 
+  color: var(--blanc); /* Textes des liens en blanc */
+  text-decoration:none; 
+  transition:color .3s; 
+  position:relative; 
+}
+.nav-links a::after { 
+  content:''; 
+  position:absolute; 
+  bottom:-3px; 
+  left:0; 
+  width:0; 
+  height:1px; 
+  background:var(--or); 
+  transition:width .3s; 
+}
+.nav-links a:hover { 
+  color:var(--or-clair); /* Survol en doré clair */
+}
+.nav-links a:hover::after { 
+  width:100%; 
+}
+.nav-cta { 
+  background: var(--or) !important; 
+  border: 1px solid var(--or) !important; 
+  padding: 10px 24px; 
+  color: var(--noir) !important; /* Bouton Réserver avec texte noir */
+  transition: background 0.3s, color 0.3s !important; 
+}
+.nav-cta:hover { 
+  background: transparent !important; 
+  color: var(--or) !important; 
+}
+.nav-cta::after { 
+  display: none !important; 
+}
 
 .full-menu { display:flex; gap:40px; list-style:none; align-items:center; }
 .compact-menu { display:none; gap:40px; list-style:none; align-items:center; }
