@@ -1,20 +1,51 @@
 picstroflex-site/
-├── index.html                 # Page d'accueil | Menu : Accueil / Présentations / Réserver / Prestations / Contact
-├── sitemap.xml                # Sitemap pour Google Search Console
-├── robots.txt                 # Fichier robots pour SEO
-├── googlea9c76baaff915e15.html
-├── favicon/
-│   ├── favicon.ico            # Favicon classique
-│   ├── favicon.svg            # Favicon SVG
-│   ├── favicon-96x96.png      # Favicon 96x96 px
-│   ├── apple-touch-icon.png   # Apple Touch Icon
-│   ├── site.webmanifest       # Manifest pour PWA
-│   └── logo-google.png        # Logo pour JSON-LD / Google
+│
+├── index.html                                 # ✅ PAGE D'ACCUEIL (vitrine commerciale)
+├── sitemap.xml                                # Plan du site SEO
+├── robots.txt                                 # Instructions aux moteurs
+├── googlea9c76baaff915e15.html                # Validation Google Search Console
+├── Structure du site.txt                      # Votre documentation
+├── llms.txt                                   # Fichier pour IA
+│
+├── preparer-shooting-photo-guide-complet.html # 📝 Article de blog (à la racine)
+├── fashion-week-paris-reportage-photo.html    # 📝 Article/Page (à la racine)
+├── lieux-shooting-essonne.html                # 📝 Page thématique
+├── portrait-professionnel-linkedin.html       # 📝 Page thématique
+├── portraits-equipe-corporate.html            # 📝 Page thématique
+│
+├── favicon/                                   # Toutes vos icônes
+│   ├── favicon.ico
+│   ├── favicon.svg
+│   ├── favicon-96x96.png
+│   ├── apple-touch-icon.png
+│   ├── site.webmanifest
+│   ├── logo-google.png
+│   └── (tous les autres favicon-*.ico / .png)
+│
 ├── assets/
 │   ├── css/
-│   │   └── style.css          # Styles principaux (si séparé)
+│   │   └── style.css                          # Styles principaux
 │   ├── js/
-│   │   └── scripts.js         # Scripts JS éventuels
-│   └── img/
-│       ├── logo2.png          # Logo affiché dans le header
-│       └── regard-intense-oeil-marron-eclairage-artistique.jpg # Hero banner
+│   │   └── scripts.js                         # Scripts JS
+│   └── img/                                   # 📸 TOUTES vos photos (centralisées)
+│       ├── logo2.png
+│       ├── regard-intense-oeil-marron-eclairage-artistique.jpg
+│       ├── banniere-entreprise-corporate-essonne.webp
+│       ├── fashion-week-paris-street-style-robe-blanche-foule-reportage.webp
+│       ├── photographe-ile-de-france-reportage-paysage.webp
+│       ├── photographe-lookbook-createur-mode-piece-vetement-essonne.webp
+│       ├── photographe-reflets-pluie-lumiere-doree.webp
+│       ├── picstroflex-photographe-idf.png
+│       ├── portrait-fashion-week-paris-bijoux-perles-boucles-oreilles-coquillages.webp
+│       ├── portrait-fashion-week-paris-expression-coulisses-evenementiel.webp
+│       ├── portrait-modele-fashion-week-paris-bijou-serpent-tresses.webp
+│       ├── portrait-noir-blanc-fashion-week-paris-regard-intense-85mm.webp
+│       ├── portrait-professionnel-femme-beret-rouge-idf.webp
+│       ├── reportage-evenementiel-paris-fashion-week-robes.webp
+│       └── shooting-exterieur-nature-femme-robe-parc-essonne.webp
+│
+├── fonts/
+│   └── Poppins-Regular.woff2                  # Police d'écriture
+│
+└── blog/                                      # 📌 DOSSIER BLOG
+    └── index.html                             # ✅ PAGE D'ACCUEIL DU BLOG (liste des articles)
