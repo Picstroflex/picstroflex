@@ -14,22 +14,14 @@ picstroflex-site/
 ├── portraits-equipe-corporate.html            # 📝 Page thématique
 │
 ├── favicon/                                   # Toutes vos icônes
-│   ├── favicon.ico
-│   ├── favicon.svg
 │   ├── favicon-96x96.png
-│   ├── apple-touch-icon.png
 │   ├── site.webmanifest
 │   ├── logo-google.png
 │   └── (tous les autres favicon-*.ico / .png)
 │
 ├── assets/
-│   ├── css/
-│   │   └── style.css                          # Styles principaux
-│   ├── js/
-│   │   └── scripts.js                         # Scripts JS
-│   └── img/                                   # 📸 TOUTES vos photos (centralisées)
-│       ├── logo2.png
-│       ├── regard-intense-oeil-marron-eclairage-artistique.jpg
+│       ├── assetscssstyle.css                          # Styles principaux
+│       ├── assetsjsscripts.js                         # Scripts JS
 │       ├── banniere-entreprise-corporate-essonne.webp
 │       ├── fashion-week-paris-street-style-robe-blanche-foule-reportage.webp
 │       ├── photographe-ile-de-france-reportage-paysage.webp
