@@ -179,7 +179,7 @@ body,
 body.hovering .cursor-ring { width:52px; height:52px; border-color:rgba(201,169,110,.75); }
 body.hovering .cursor { width:4px; height:4px; }
 
-/* NAVIGATION - Version sombre (fond noir, texte blanc) */
+/* NAVIGATION */
 nav { 
   position:fixed; 
   top:0; 
@@ -274,7 +274,7 @@ nav.solid {
   .full-menu { display: none !important; }
 }
 
-/* BOUTONS - Tous en Poppins */
+/* BOUTONS */
 .btn-gold, .btn-line, .pcard-cta, .submit-btn, .btn-corporate, .back-btn-resa {
   background: var(--or);
   color: var(--noir) !important;
@@ -312,7 +312,7 @@ nav.solid {
 .back-btn-resa { background: transparent; color: var(--or) !important; border-color: var(--or); padding: 8px 20px; font-size: 9px; margin-bottom: 20px; display: inline-flex; align-items: center; gap: 8px; }
 .back-btn-resa:hover { background: var(--or); color: var(--noir) !important; }
 
-/* HERO - Version sombre */
+/* HERO */
 .hero { min-height:100vh; display:flex; align-items:center; padding:0 56px; position:relative; overflow:hidden; background:transparent; }
 .hero-grid-bg { position:absolute; inset:0; background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px); background-size:80px 80px; opacity:.35; z-index:1; }
 .hero-glow { position:absolute; inset:0; z-index:2; background:radial-gradient(ellipse 60% 60% at 50% 50%,rgba(201,169,110,.04) 0%,transparent 70%); }
@@ -422,6 +422,24 @@ nav.solid {
 .fc-daygrid-day.fc-day-today { background: transparent !important; }
 .fc-daygrid-day.fc-day-today .fc-daygrid-day-number { border: 1px solid var(--or); border-radius: 50%; width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; background: transparent; color: var(--or) !important; }
 .fc-daygrid-day.fc-day-past .fc-daygrid-day-number { opacity: 0.3; }
+
+/* ===== JOUR FERMÉ (22 septembre 2026 uniquement) ===== */
+.fc-daygrid-day.fc-day-closed {
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0,0,0,.03),
+    rgba(0,0,0,.03) 6px,
+    rgba(0,0,0,.06) 6px,
+    rgba(0,0,0,.06) 12px
+  ) !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+}
+.fc-daygrid-day.fc-day-closed .fc-daygrid-day-number {
+  color: var(--gris-mid) !important;
+  opacity: 0.35 !important;
+  text-decoration: line-through;
+}
 
 .slots-section { margin-top: 1rem; padding-top: 1rem; border-top: 0.5px solid var(--rule); margin-bottom: 1rem; }
 .slots-title { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--noir); margin-bottom: 0.75rem; font-family: 'Poppins', sans-serif !important; }
@@ -537,7 +555,7 @@ footer { background: var(--blanc); border-top: 1px solid var(--rule); padding: 3
   </ul>
 </nav>
 
-<!-- HERO - Version sombre -->
+<!-- HERO -->
 <div class="hero">
   <div class="hero-grid-bg"></div>
   <div class="hero-glow"></div>
@@ -557,7 +575,7 @@ footer { background: var(--blanc); border-top: 1px solid var(--rule); padding: 3
   <div class="hero-scroll"><div class="scroll-tick"></div><span>Défiler</span></div>
 </div>
 
-<!-- RESTE DU SITE - Version claire (fond blanc) -->
+<!-- PRESTATIONS -->
 <div class="prest-intro" id="prestations">
   <div class="prest-intro-inner">
     <div class="reveal">
@@ -699,7 +717,7 @@ footer { background: var(--blanc); border-top: 1px solid var(--rule); padding: 3
       </div>
     </div>
   </div>
-</div>
+</section>
 
 <div class="reviews-after">
   <div class="reveal">
@@ -807,6 +825,11 @@ let resaState = {
 let callCalendar = null, shootCalendar = null;
 const SLOTS = ['09:00', '09:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', '13:30', '14:00', '14:30', '15:00', '15:30'];
 
+// ===== FONCTION UTILITAIRE : VÉRIFIER SI UNE DATE EST FERMÉE =====
+function isDateClosed(date) {
+  return date.getFullYear() === 2026 && date.getMonth() === 8 && date.getDate() === 22;
+}
+
 function goToStep(n) {
   for(let i=1;i<=5;i++) document.getElementById('step'+i).classList.remove('active');
   document.getElementById('step'+n).classList.add('active');
@@ -860,10 +883,16 @@ function openResaWithPresta(prestaLabel) {
 
 function initReservationSystem() {
   const today = new Date(); today.setHours(0,0,0,0);
+  
   callCalendar = new FullCalendar.Calendar(document.getElementById('callCalendar'), {
     initialView: 'dayGridMonth', locale: 'fr', firstDay: 1, height: 'auto', validRange: { start: today },
+    dayCellClassNames: (arg) => {
+      if (isDateClosed(arg.date)) return ['fc-day-closed'];
+      return [];
+    },
     dateClick: (info) => {
       if(info.date < today) return;
+      if (isDateClosed(info.date)) return;
       resaState.callDate = info.date; resaState.callSlot = null;
       document.getElementById('btn2').disabled = true;
       const section = document.getElementById('slotsSectionCall'); section.style.display = 'block';
@@ -882,14 +911,19 @@ function initReservationSystem() {
         };
         grid.appendChild(btn);
       });
-    }, selectable: true, selectAllow: (info) => info.start >= today
+    }, selectable: true, selectAllow: (info) => info.start >= today && !isDateClosed(info.start)
   });
   callCalendar.render();
 
   shootCalendar = new FullCalendar.Calendar(document.getElementById('shootCalendar'), {
     initialView: 'dayGridMonth', locale: 'fr', firstDay: 1, height: 'auto', validRange: { start: today },
+    dayCellClassNames: (arg) => {
+      if (isDateClosed(arg.date)) return ['fc-day-closed'];
+      return [];
+    },
     dateClick: (info) => {
       if(info.date < today) return;
+      if (isDateClosed(info.date)) return;
       resaState.shootDate = info.date; resaState.shootSlot = null;
       document.getElementById('btn3').disabled = true;
       const section = document.getElementById('slotsSectionShoot'); section.style.display = 'block';
@@ -908,7 +942,7 @@ function initReservationSystem() {
         };
         grid.appendChild(btn);
       });
-    }, selectable: true, selectAllow: (info) => info.start >= today
+    }, selectable: true, selectAllow: (info) => info.start >= today && !isDateClosed(info.start)
   });
   shootCalendar.render();
 }
